@@ -1,0 +1,862 @@
+{
+  "schema_version": 1,
+  "stage": "artifact_inventory_marco_10",
+  "created_at_utc": "2026-09-05T04:04:32.109917+00:00",
+  "status": "completed",
+  "scope": {
+    "included": [
+      "serialized models",
+      "model metadata",
+      "metric reports",
+      "metric tables",
+      "scientific figures"
+    ],
+    "excluded": [
+      "raw CSV datasets",
+      "processed feature matrices",
+      "predictions and evaluated Parquets",
+      "Marco 10 output files themselves"
+    ],
+    "reason": "Marco 10 consolidates final models, metrics and figures without duplicating large intermediate datasets."
+  },
+  "summary": {
+    "artifact_count": 47,
+    "total_size_bytes": 47923777,
+    "counts_by_category": {
+      "figure": 17,
+      "metric_report": 16,
+      "metric_table": 6,
+      "model": 4,
+      "model_metadata": 4
+    },
+    "counts_by_experiment": {
+      "baseline_20k": 22,
+      "expanded_100k": 25
+    },
+    "aggregate_sha256": "1ca51d7a053efc3acc5f30590346255260c8cba0b90f502fe5b888ac3a027de0"
+  },
+  "experiment_validation": {
+    "baseline_20k": {
+      "status": "passed",
+      "model_input_schema_sha256": "07bd5818c91930b6ceb8178e160d9365260f6b92f629fa02ef14227cfaa113a4",
+      "split_records": {
+        "train": 20000,
+        "validation": 10000,
+        "test": 20000
+      },
+      "training_is_benign_only": true,
+      "zero_hash_overlap": true,
+      "models": {
+        "isolation_forest": {
+          "model_sha256": "1d7bd1b69dd8505cf6b06e813b94a93e34c05bd303de55c3a45f8886176d599c",
+          "configuration_matches_metadata": true,
+          "feature_count": 60,
+          "schema_sha256": "07bd5818c91930b6ceb8178e160d9365260f6b92f629fa02ef14227cfaa113a4",
+          "thresholds_frozen": true
+        },
+        "lof": {
+          "model_sha256": "1e4a8b96759bcf1844e8884d2d09c2361065d646096b0e6959fd90cd9d8ce382",
+          "configuration_matches_metadata": true,
+          "feature_count": 60,
+          "schema_sha256": "07bd5818c91930b6ceb8178e160d9365260f6b92f629fa02ef14227cfaa113a4",
+          "thresholds_frozen": true
+        }
+      },
+      "source_artifact_count": 22
+    },
+    "expanded_100k": {
+      "status": "passed",
+      "model_input_schema_sha256": "07bd5818c91930b6ceb8178e160d9365260f6b92f629fa02ef14227cfaa113a4",
+      "split_records": {
+        "train": 100000,
+        "validation": 50000,
+        "test": 100000
+      },
+      "training_is_benign_only": true,
+      "zero_hash_overlap": true,
+      "models": {
+        "isolation_forest": {
+          "model_sha256": "d6f7754e14bbc7adb453eb298559efeebdccad98f59143283dc74a78211b4f40",
+          "configuration_matches_metadata": true,
+          "feature_count": 60,
+          "schema_sha256": "07bd5818c91930b6ceb8178e160d9365260f6b92f629fa02ef14227cfaa113a4",
+          "thresholds_frozen": true
+        },
+        "lof": {
+          "model_sha256": "6c014381d6dc5fc70a46941a450e2a60dc7b83b1bb0fcee43a7653107814df41",
+          "configuration_matches_metadata": true,
+          "feature_count": 60,
+          "schema_sha256": "07bd5818c91930b6ceb8178e160d9365260f6b92f629fa02ef14227cfaa113a4",
+          "thresholds_frozen": true
+        }
+      },
+      "source_artifact_count": 25
+    }
+  },
+  "artifacts": [
+    {
+      "artifact_id": "baseline_20k:model:models/isolation_forest.joblib",
+      "experiment": "baseline_20k",
+      "category": "model",
+      "relative_path": "models/isolation_forest.joblib",
+      "filename": "isolation_forest.joblib",
+      "size_bytes": 1245806,
+      "sha256": "1d7bd1b69dd8505cf6b06e813b94a93e34c05bd303de55c3a45f8886176d599c",
+      "integrity": "verified"
+    },
+    {
+      "artifact_id": "baseline_20k:model_metadata:models/isolation_forest_metadata.json",
+      "experiment": "baseline_20k",
+      "category": "model_metadata",
+      "relative_path": "models/isolation_forest_metadata.json",
+      "filename": "isolation_forest_metadata.json",
+      "size_bytes": 4394,
+      "sha256": "a9f427c6110f823992a1a292f8962deef90a37dab6555b830997b21f4057f850",
+      "integrity": "verified",
+      "json_metadata": {
+        "schema_version": 1,
+        "stage": "isolation_forest_training_marco_6"
+      }
+    },
+    {
+      "artifact_id": "baseline_20k:model:models/lof.joblib",
+      "experiment": "baseline_20k",
+      "category": "model",
+      "relative_path": "models/lof.joblib",
+      "filename": "lof.joblib",
+      "size_bytes": 7149474,
+      "sha256": "1e4a8b96759bcf1844e8884d2d09c2361065d646096b0e6959fd90cd9d8ce382",
+      "integrity": "verified"
+    },
+    {
+      "artifact_id": "baseline_20k:model_metadata:models/lof_metadata.json",
+      "experiment": "baseline_20k",
+      "category": "model_metadata",
+      "relative_path": "models/lof_metadata.json",
+      "filename": "lof_metadata.json",
+      "size_bytes": 13917,
+      "sha256": "aee42dbcedf2003589265eb01f93e74760852d75b08cb87e5bb3818d7f1631e4",
+      "integrity": "verified",
+      "json_metadata": {
+        "schema_version": 1,
+        "stage": "lof_training_marco_8"
+      }
+    },
+    {
+      "artifact_id": "baseline_20k:figure:reports/figures/isolation_forest_confusion_matrices.png",
+      "experiment": "baseline_20k",
+      "category": "figure",
+      "relative_path": "reports/figures/isolation_forest_confusion_matrices.png",
+      "filename": "isolation_forest_confusion_matrices.png",
+      "size_bytes": 110543,
+      "sha256": "056dcb074f3ea21a34a3ac4d49e52ab033a8eb717aadb553cf58727c4a3f4798",
+      "integrity": "verified",
+      "image_metadata": {
+        "format": "PNG",
+        "width_pixels": 1589,
+        "height_pixels": 1403
+      }
+    },
+    {
+      "artifact_id": "baseline_20k:figure:reports/figures/isolation_forest_roc_pr_curves.png",
+      "experiment": "baseline_20k",
+      "category": "figure",
+      "relative_path": "reports/figures/isolation_forest_roc_pr_curves.png",
+      "filename": "isolation_forest_roc_pr_curves.png",
+      "size_bytes": 125058,
+      "sha256": "1488f63e30d806f0559adde49458de2b3a525ad94f4fc15b635cea5ebe2feff3",
+      "integrity": "verified",
+      "image_metadata": {
+        "format": "PNG",
+        "width_pixels": 2063,
+        "height_pixels": 869
+      }
+    },
+    {
+      "artifact_id": "baseline_20k:figure:reports/figures/isolation_forest_score_distributions.png",
+      "experiment": "baseline_20k",
+      "category": "figure",
+      "relative_path": "reports/figures/isolation_forest_score_distributions.png",
+      "filename": "isolation_forest_score_distributions.png",
+      "size_bytes": 66906,
+      "sha256": "3cd9a304309518ad0093982ea232b15929f1edf526956b2185cb2426eaa16d9d",
+      "integrity": "verified",
+      "image_metadata": {
+        "format": "PNG",
+        "width_pixels": 2062,
+        "height_pixels": 870
+      }
+    },
+    {
+      "artifact_id": "baseline_20k:figure:reports/figures/model_comparison_attack_detection.png",
+      "experiment": "baseline_20k",
+      "category": "figure",
+      "relative_path": "reports/figures/model_comparison_attack_detection.png",
+      "filename": "model_comparison_attack_detection.png",
+      "size_bytes": 95266,
+      "sha256": "e254d17380aa5339f57b992b870c94954c5fc58df304cc2ed6246619148ea56a",
+      "integrity": "verified",
+      "image_metadata": {
+        "format": "PNG",
+        "width_pixels": 2378,
+        "height_pixels": 1418
+      }
+    },
+    {
+      "artifact_id": "baseline_20k:figure:reports/figures/model_comparison_confusion_matrices.png",
+      "experiment": "baseline_20k",
+      "category": "figure",
+      "relative_path": "reports/figures/model_comparison_confusion_matrices.png",
+      "filename": "model_comparison_confusion_matrices.png",
+      "size_bytes": 114586,
+      "sha256": "1cb3f2e3b16f8321eda24f4363bef529168d276e5cc10ba3cc078e397bc60e7a",
+      "integrity": "verified",
+      "image_metadata": {
+        "format": "PNG",
+        "width_pixels": 1589,
+        "height_pixels": 1397
+      }
+    },
+    {
+      "artifact_id": "baseline_20k:figure:reports/figures/model_comparison_roc_pr_curves.png",
+      "experiment": "baseline_20k",
+      "category": "figure",
+      "relative_path": "reports/figures/model_comparison_roc_pr_curves.png",
+      "filename": "model_comparison_roc_pr_curves.png",
+      "size_bytes": 265354,
+      "sha256": "56dfdea40cefac01c8ef5e302f7380662e1b8012cb83c271f010b5d43805ffbe",
+      "integrity": "verified",
+      "image_metadata": {
+        "format": "PNG",
+        "width_pixels": 2063,
+        "height_pixels": 1575
+      }
+    },
+    {
+      "artifact_id": "baseline_20k:figure:reports/figures/model_comparison_test_metrics.png",
+      "experiment": "baseline_20k",
+      "category": "figure",
+      "relative_path": "reports/figures/model_comparison_test_metrics.png",
+      "filename": "model_comparison_test_metrics.png",
+      "size_bytes": 68877,
+      "sha256": "aa1099686adaac68846e3e4b0b3c99eb63301910e24827ef0365bf938d41f5dd",
+      "integrity": "verified",
+      "image_metadata": {
+        "format": "PNG",
+        "width_pixels": 2064,
+        "height_pixels": 869
+      }
+    },
+    {
+      "artifact_id": "baseline_20k:metric_table:reports/metrics/attack_category_comparison.csv",
+      "experiment": "baseline_20k",
+      "category": "metric_table",
+      "relative_path": "reports/metrics/attack_category_comparison.csv",
+      "filename": "attack_category_comparison.csv",
+      "size_bytes": 7128,
+      "sha256": "6ea343dcd4ac4904a77ff8a712113a2ca5021198338bbcc96fbfaa316beb6102",
+      "integrity": "verified",
+      "csv_metadata": {
+        "row_count": 56,
+        "columns": [
+          "split",
+          "attack_category",
+          "model",
+          "model_label",
+          "support",
+          "native_detected",
+          "native_detection_rate",
+          "calibrated_f1_detected",
+          "calibrated_f1_detection_rate",
+          "anomaly_score_mean",
+          "anomaly_score_median"
+        ]
+      }
+    },
+    {
+      "artifact_id": "baseline_20k:metric_report:reports/metrics/data_split_report.json",
+      "experiment": "baseline_20k",
+      "category": "metric_report",
+      "relative_path": "reports/metrics/data_split_report.json",
+      "filename": "data_split_report.json",
+      "size_bytes": 14697,
+      "sha256": "1ba88dbcec689ba1597459aa22f6b4a403c7729fb42a750f1e8c1ed783cebd95",
+      "integrity": "verified",
+      "json_metadata": {
+        "stage": "data_split_marco_5"
+      }
+    },
+    {
+      "artifact_id": "baseline_20k:metric_report:reports/metrics/isolation_forest_evaluation.json",
+      "experiment": "baseline_20k",
+      "category": "metric_report",
+      "relative_path": "reports/metrics/isolation_forest_evaluation.json",
+      "filename": "isolation_forest_evaluation.json",
+      "size_bytes": 22559,
+      "sha256": "ea919fcb190b0147c996b261690e2fac8915476561c99cada77d410d6be39669",
+      "integrity": "verified",
+      "json_metadata": {
+        "schema_version": 1,
+        "stage": "isolation_forest_evaluation_marco_7",
+        "status": "completed_with_labels_after_frozen_predictions"
+      }
+    },
+    {
+      "artifact_id": "baseline_20k:metric_report:reports/metrics/isolation_forest_training.json",
+      "experiment": "baseline_20k",
+      "category": "metric_report",
+      "relative_path": "reports/metrics/isolation_forest_training.json",
+      "filename": "isolation_forest_training.json",
+      "size_bytes": 9923,
+      "sha256": "6a39e4a98a9ac8900dd646c3be0c3341a287c3bc5efb83ae409732e52f10a086",
+      "integrity": "verified",
+      "json_metadata": {
+        "schema_version": 1,
+        "stage": "isolation_forest_training_marco_6",
+        "status": "completed_without_labels"
+      }
+    },
+    {
+      "artifact_id": "baseline_20k:metric_report:reports/metrics/lof_evaluation.json",
+      "experiment": "baseline_20k",
+      "category": "metric_report",
+      "relative_path": "reports/metrics/lof_evaluation.json",
+      "filename": "lof_evaluation.json",
+      "size_bytes": 24202,
+      "sha256": "c6352ff4e771a63a0a464c12225ee548fc447caa91f882c44707a4c00a9f1427",
+      "integrity": "verified",
+      "json_metadata": {
+        "schema_version": 1,
+        "stage": "lof_evaluation_marco_9",
+        "status": "completed_with_labels_after_frozen_predictions"
+      }
+    },
+    {
+      "artifact_id": "baseline_20k:metric_report:reports/metrics/lof_training.json",
+      "experiment": "baseline_20k",
+      "category": "metric_report",
+      "relative_path": "reports/metrics/lof_training.json",
+      "filename": "lof_training.json",
+      "size_bytes": 19204,
+      "sha256": "cd5a1ae92ed8f1b2cfca03cc1e58563939019524a255c372bcd2c7278953e943",
+      "integrity": "verified",
+      "json_metadata": {
+        "schema_version": 1,
+        "stage": "lof_training_marco_8",
+        "status": "completed_without_labels"
+      }
+    },
+    {
+      "artifact_id": "baseline_20k:metric_report:reports/metrics/model_comparison.json",
+      "experiment": "baseline_20k",
+      "category": "metric_report",
+      "relative_path": "reports/metrics/model_comparison.json",
+      "filename": "model_comparison.json",
+      "size_bytes": 63566,
+      "sha256": "8b7b74bc060c6b7ba7a2d271eff52f488443625c464d1af8ccc0d19500aa00e3",
+      "integrity": "verified",
+      "json_metadata": {
+        "schema_version": 1,
+        "stage": "isolation_forest_lof_comparison_marco_9",
+        "status": "completed"
+      }
+    },
+    {
+      "artifact_id": "baseline_20k:metric_table:reports/metrics/model_comparison_summary.csv",
+      "experiment": "baseline_20k",
+      "category": "metric_table",
+      "relative_path": "reports/metrics/model_comparison_summary.csv",
+      "filename": "model_comparison_summary.csv",
+      "size_bytes": 1840,
+      "sha256": "0fcf39983344ac1fc3e22b53ba0982222daae859b89ff5c031c2e813728c089f",
+      "integrity": "verified",
+      "csv_metadata": {
+        "row_count": 8,
+        "columns": [
+          "model",
+          "model_label",
+          "split",
+          "operating_point",
+          "threshold",
+          "roc_auc",
+          "average_precision",
+          "true_negative",
+          "false_positive",
+          "false_negative",
+          "true_positive",
+          "accuracy",
+          "balanced_accuracy",
+          "precision",
+          "recall_tpr",
+          "f1_score",
+          "specificity_tnr",
+          "false_positive_rate",
+          "false_negative_rate"
+        ]
+      }
+    },
+    {
+      "artifact_id": "baseline_20k:metric_report:reports/metrics/monday_feature_selection.json",
+      "experiment": "baseline_20k",
+      "category": "metric_report",
+      "relative_path": "reports/metrics/monday_feature_selection.json",
+      "filename": "monday_feature_selection.json",
+      "size_bytes": 26051,
+      "sha256": "7bd9b809449dd571be4845d0b6126ea65299f1fd418b6e828b1f547db96f922c",
+      "integrity": "verified",
+      "json_metadata": {
+        "stage": "feature_selection_marco_4"
+      }
+    },
+    {
+      "artifact_id": "baseline_20k:metric_report:reports/metrics/monday_inspection.json",
+      "experiment": "baseline_20k",
+      "category": "metric_report",
+      "relative_path": "reports/metrics/monday_inspection.json",
+      "filename": "monday_inspection.json",
+      "size_bytes": 3676,
+      "sha256": "2f2416c6ebff5906ea33ebe2d4e028226552c1637b0f965a5a87dfafad6d31e9",
+      "integrity": "verified",
+      "json_metadata": {}
+    },
+    {
+      "artifact_id": "baseline_20k:metric_report:reports/metrics/monday_preprocessing.json",
+      "experiment": "baseline_20k",
+      "category": "metric_report",
+      "relative_path": "reports/metrics/monday_preprocessing.json",
+      "filename": "monday_preprocessing.json",
+      "size_bytes": 19061,
+      "sha256": "d618407c17701de122739be2c97c4532a6d0a8b59e7db0e067cf37bab6a02726",
+      "integrity": "verified",
+      "json_metadata": {
+        "stage": "preprocessing_marco_3"
+      }
+    },
+    {
+      "artifact_id": "expanded_100k:figure:experiments/scale_100k/figures/isolation_forest/isolation_forest_confusion_matrices.png",
+      "experiment": "expanded_100k",
+      "category": "figure",
+      "relative_path": "experiments/scale_100k/figures/isolation_forest/isolation_forest_confusion_matrices.png",
+      "filename": "isolation_forest_confusion_matrices.png",
+      "size_bytes": 112073,
+      "sha256": "b0d21a71c12ac44c7ba45df2bc3884aa7a8027b8d4f75e79ee0a5b22bfb93f0f",
+      "integrity": "verified",
+      "image_metadata": {
+        "format": "PNG",
+        "width_pixels": 1589,
+        "height_pixels": 1397
+      }
+    },
+    {
+      "artifact_id": "expanded_100k:figure:experiments/scale_100k/figures/isolation_forest/isolation_forest_roc_pr_curves.png",
+      "experiment": "expanded_100k",
+      "category": "figure",
+      "relative_path": "experiments/scale_100k/figures/isolation_forest/isolation_forest_roc_pr_curves.png",
+      "filename": "isolation_forest_roc_pr_curves.png",
+      "size_bytes": 120275,
+      "sha256": "5e90abdf76e6b169857488b2f9e8bbebd9d2894f171d1c84aa9b34ff8580ebd2",
+      "integrity": "verified",
+      "image_metadata": {
+        "format": "PNG",
+        "width_pixels": 2063,
+        "height_pixels": 869
+      }
+    },
+    {
+      "artifact_id": "expanded_100k:figure:experiments/scale_100k/figures/isolation_forest/isolation_forest_score_distributions.png",
+      "experiment": "expanded_100k",
+      "category": "figure",
+      "relative_path": "experiments/scale_100k/figures/isolation_forest/isolation_forest_score_distributions.png",
+      "filename": "isolation_forest_score_distributions.png",
+      "size_bytes": 65838,
+      "sha256": "272825967835fbba5457468c677d5001281b7f84aa80ce0c16e66489cd214cde",
+      "integrity": "verified",
+      "image_metadata": {
+        "format": "PNG",
+        "width_pixels": 2062,
+        "height_pixels": 870
+      }
+    },
+    {
+      "artifact_id": "expanded_100k:figure:experiments/scale_100k/figures/model_comparison/model_comparison_attack_detection.png",
+      "experiment": "expanded_100k",
+      "category": "figure",
+      "relative_path": "experiments/scale_100k/figures/model_comparison/model_comparison_attack_detection.png",
+      "filename": "model_comparison_attack_detection.png",
+      "size_bytes": 95344,
+      "sha256": "529e9d4e69bb1f56fd9110771cec159dc4cea94da662f608c1e5ef78a8fc2492",
+      "integrity": "verified",
+      "image_metadata": {
+        "format": "PNG",
+        "width_pixels": 2378,
+        "height_pixels": 1418
+      }
+    },
+    {
+      "artifact_id": "expanded_100k:figure:experiments/scale_100k/figures/model_comparison/model_comparison_confusion_matrices.png",
+      "experiment": "expanded_100k",
+      "category": "figure",
+      "relative_path": "experiments/scale_100k/figures/model_comparison/model_comparison_confusion_matrices.png",
+      "filename": "model_comparison_confusion_matrices.png",
+      "size_bytes": 114453,
+      "sha256": "86561b827184a8011f2980333427f75d8ad3de8bfd20d32b0d798c689b17d274",
+      "integrity": "verified",
+      "image_metadata": {
+        "format": "PNG",
+        "width_pixels": 1589,
+        "height_pixels": 1397
+      }
+    },
+    {
+      "artifact_id": "expanded_100k:figure:experiments/scale_100k/figures/model_comparison/model_comparison_roc_pr_curves.png",
+      "experiment": "expanded_100k",
+      "category": "figure",
+      "relative_path": "experiments/scale_100k/figures/model_comparison/model_comparison_roc_pr_curves.png",
+      "filename": "model_comparison_roc_pr_curves.png",
+      "size_bytes": 265100,
+      "sha256": "91d20c0d519c23c0b1c14ff947f0e8dbfabd5415ee2e7ddc5fcf5c2a7e7a8a96",
+      "integrity": "verified",
+      "image_metadata": {
+        "format": "PNG",
+        "width_pixels": 2063,
+        "height_pixels": 1575
+      }
+    },
+    {
+      "artifact_id": "expanded_100k:figure:experiments/scale_100k/figures/model_comparison/model_comparison_test_metrics.png",
+      "experiment": "expanded_100k",
+      "category": "figure",
+      "relative_path": "experiments/scale_100k/figures/model_comparison/model_comparison_test_metrics.png",
+      "filename": "model_comparison_test_metrics.png",
+      "size_bytes": 70015,
+      "sha256": "6b53f999bb0c6946f9c6b6d1cb78ebae669930e163df1a4f9dfa9c07be91e940",
+      "integrity": "verified",
+      "image_metadata": {
+        "format": "PNG",
+        "width_pixels": 2064,
+        "height_pixels": 869
+      }
+    },
+    {
+      "artifact_id": "expanded_100k:figure:experiments/scale_100k/figures/scale_comparison/scale_comparison_ranking.png",
+      "experiment": "expanded_100k",
+      "category": "figure",
+      "relative_path": "experiments/scale_100k/figures/scale_comparison/scale_comparison_ranking.png",
+      "filename": "scale_comparison_ranking.png",
+      "size_bytes": 135600,
+      "sha256": "c997c55ec6e6174834c81c2ecb12a5097fe61d7272fb12ed96628c68f59f7af5",
+      "integrity": "verified",
+      "image_metadata": {
+        "format": "PNG",
+        "width_pixels": 2064,
+        "height_pixels": 869
+      }
+    },
+    {
+      "artifact_id": "expanded_100k:figure:experiments/scale_100k/figures/scale_comparison/scale_comparison_test_metrics.png",
+      "experiment": "expanded_100k",
+      "category": "figure",
+      "relative_path": "experiments/scale_100k/figures/scale_comparison/scale_comparison_test_metrics.png",
+      "filename": "scale_comparison_test_metrics.png",
+      "size_bytes": 137028,
+      "sha256": "f0fd55f498e500acf177f2d59806923af8c23c42c6c74eadf9509aa43b2632a4",
+      "integrity": "verified",
+      "image_metadata": {
+        "format": "PNG",
+        "width_pixels": 2064,
+        "height_pixels": 1575
+      }
+    },
+    {
+      "artifact_id": "expanded_100k:figure:experiments/scale_100k/figures/scale_comparison/scale_comparison_timing.png",
+      "experiment": "expanded_100k",
+      "category": "figure",
+      "relative_path": "experiments/scale_100k/figures/scale_comparison/scale_comparison_timing.png",
+      "filename": "scale_comparison_timing.png",
+      "size_bytes": 72091,
+      "sha256": "e506c4815ad10dadda555dce948f6fa47740b42efd0ed579418dda482bec9c7b",
+      "integrity": "verified",
+      "image_metadata": {
+        "format": "PNG",
+        "width_pixels": 2064,
+        "height_pixels": 896
+      }
+    },
+    {
+      "artifact_id": "expanded_100k:metric_table:experiments/scale_100k/metrics/attack_category_comparison.csv",
+      "experiment": "expanded_100k",
+      "category": "metric_table",
+      "relative_path": "experiments/scale_100k/metrics/attack_category_comparison.csv",
+      "filename": "attack_category_comparison.csv",
+      "size_bytes": 7700,
+      "sha256": "68fb3cea788ced6abacf2e0b6f7324c606d9d80f6ed6ce4dd9cd9a5a51291d6e",
+      "integrity": "verified",
+      "csv_metadata": {
+        "row_count": 56,
+        "columns": [
+          "split",
+          "attack_category",
+          "model",
+          "model_label",
+          "support",
+          "native_detected",
+          "native_detection_rate",
+          "calibrated_f1_detected",
+          "calibrated_f1_detection_rate",
+          "anomaly_score_mean",
+          "anomaly_score_median"
+        ]
+      }
+    },
+    {
+      "artifact_id": "expanded_100k:metric_report:experiments/scale_100k/metrics/data_split_report.json",
+      "experiment": "expanded_100k",
+      "category": "metric_report",
+      "relative_path": "experiments/scale_100k/metrics/data_split_report.json",
+      "filename": "data_split_report.json",
+      "size_bytes": 14869,
+      "sha256": "3d0ec7bf1b821272fc7eeb4180bc3e04a615841d0b2a64f90c7fad9729e60e47",
+      "integrity": "verified",
+      "json_metadata": {
+        "stage": "data_split_marco_5"
+      }
+    },
+    {
+      "artifact_id": "expanded_100k:metric_report:experiments/scale_100k/metrics/isolation_forest_evaluation.json",
+      "experiment": "expanded_100k",
+      "category": "metric_report",
+      "relative_path": "experiments/scale_100k/metrics/isolation_forest_evaluation.json",
+      "filename": "isolation_forest_evaluation.json",
+      "size_bytes": 23154,
+      "sha256": "87d69d47162c07d6c53149d324cb7dbc89e2c4d0f09ee3364368328e57409494",
+      "integrity": "verified",
+      "json_metadata": {
+        "schema_version": 1,
+        "stage": "isolation_forest_evaluation_marco_7",
+        "status": "completed_with_labels_after_frozen_predictions"
+      }
+    },
+    {
+      "artifact_id": "expanded_100k:metric_report:experiments/scale_100k/metrics/isolation_forest_training.json",
+      "experiment": "expanded_100k",
+      "category": "metric_report",
+      "relative_path": "experiments/scale_100k/metrics/isolation_forest_training.json",
+      "filename": "isolation_forest_training.json",
+      "size_bytes": 10078,
+      "sha256": "d4b66873d62c229a6f9c8e913d4045c0a82e19d444ea4ca9ca573d13aa6c3b1b",
+      "integrity": "verified",
+      "json_metadata": {
+        "schema_version": 1,
+        "stage": "isolation_forest_training_marco_6",
+        "status": "completed_without_labels"
+      }
+    },
+    {
+      "artifact_id": "expanded_100k:metric_report:experiments/scale_100k/metrics/lof_evaluation.json",
+      "experiment": "expanded_100k",
+      "category": "metric_report",
+      "relative_path": "experiments/scale_100k/metrics/lof_evaluation.json",
+      "filename": "lof_evaluation.json",
+      "size_bytes": 24902,
+      "sha256": "d97079a22a0bc302df673bc1683bca5c6a95b33b78bd15fa6d36efe5cdc9f737",
+      "integrity": "verified",
+      "json_metadata": {
+        "schema_version": 1,
+        "stage": "lof_evaluation_marco_9",
+        "status": "completed_with_labels_after_frozen_predictions"
+      }
+    },
+    {
+      "artifact_id": "expanded_100k:metric_report:experiments/scale_100k/metrics/lof_training.json",
+      "experiment": "expanded_100k",
+      "category": "metric_report",
+      "relative_path": "experiments/scale_100k/metrics/lof_training.json",
+      "filename": "lof_training.json",
+      "size_bytes": 19382,
+      "sha256": "7b4b6a4e16fb26996572fff50e29e594e3906f1da59b52d53b8dfd35cae30ad5",
+      "integrity": "verified",
+      "json_metadata": {
+        "schema_version": 1,
+        "stage": "lof_training_marco_8",
+        "status": "completed_without_labels"
+      }
+    },
+    {
+      "artifact_id": "expanded_100k:metric_report:experiments/scale_100k/metrics/model_comparison.json",
+      "experiment": "expanded_100k",
+      "category": "metric_report",
+      "relative_path": "experiments/scale_100k/metrics/model_comparison.json",
+      "filename": "model_comparison.json",
+      "size_bytes": 64727,
+      "sha256": "9d4e6157e2bb034b4527c755a3ef4c802b68441fc287753954e1f5a96335ecda",
+      "integrity": "verified",
+      "json_metadata": {
+        "schema_version": 1,
+        "stage": "isolation_forest_lof_comparison_marco_9",
+        "status": "completed"
+      }
+    },
+    {
+      "artifact_id": "expanded_100k:metric_table:experiments/scale_100k/metrics/model_comparison_summary.csv",
+      "experiment": "expanded_100k",
+      "category": "metric_table",
+      "relative_path": "experiments/scale_100k/metrics/model_comparison_summary.csv",
+      "filename": "model_comparison_summary.csv",
+      "size_bytes": 1898,
+      "sha256": "14b4c955fb61d9f33d8a18ae2fc0ac89a1b50cafb4156ec123388320ef12bb03",
+      "integrity": "verified",
+      "csv_metadata": {
+        "row_count": 8,
+        "columns": [
+          "model",
+          "model_label",
+          "split",
+          "operating_point",
+          "threshold",
+          "roc_auc",
+          "average_precision",
+          "true_negative",
+          "false_positive",
+          "false_negative",
+          "true_positive",
+          "accuracy",
+          "balanced_accuracy",
+          "precision",
+          "recall_tpr",
+          "f1_score",
+          "specificity_tnr",
+          "false_positive_rate",
+          "false_negative_rate"
+        ]
+      }
+    },
+    {
+      "artifact_id": "expanded_100k:metric_report:experiments/scale_100k/metrics/scale_comparison.json",
+      "experiment": "expanded_100k",
+      "category": "metric_report",
+      "relative_path": "experiments/scale_100k/metrics/scale_comparison.json",
+      "filename": "scale_comparison.json",
+      "size_bytes": 26262,
+      "sha256": "9eadaa6d3538c21399b887cb2ff5c8fec76de5ac90df78de39f0b4068fd3abac",
+      "integrity": "verified",
+      "json_metadata": {
+        "schema_version": 1,
+        "stage": "sample_scale_20k_vs_100k_comparison",
+        "status": "completed"
+      }
+    },
+    {
+      "artifact_id": "expanded_100k:metric_table:experiments/scale_100k/metrics/scale_comparison_deltas.csv",
+      "experiment": "expanded_100k",
+      "category": "metric_table",
+      "relative_path": "experiments/scale_100k/metrics/scale_comparison_deltas.csv",
+      "filename": "scale_comparison_deltas.csv",
+      "size_bytes": 15134,
+      "sha256": "e0a760fd5fc4cfef15e42a6021cbf31eb6033144f42f69b692d35cf300e9ae9c",
+      "integrity": "verified",
+      "csv_metadata": {
+        "row_count": 112,
+        "columns": [
+          "model",
+          "model_label",
+          "split",
+          "operating_point",
+          "metric",
+          "baseline_20k",
+          "expanded_100k",
+          "delta_100k_minus_20k",
+          "higher_is_better",
+          "winner"
+        ]
+      }
+    },
+    {
+      "artifact_id": "expanded_100k:metric_table:experiments/scale_100k/metrics/scale_comparison_summary.csv",
+      "experiment": "expanded_100k",
+      "category": "metric_table",
+      "relative_path": "experiments/scale_100k/metrics/scale_comparison_summary.csv",
+      "filename": "scale_comparison_summary.csv",
+      "size_bytes": 5034,
+      "sha256": "1d61499992554daedeb287bf096dc3b80f3698467f2afbeb4c69170d7b0b7a76",
+      "integrity": "verified",
+      "csv_metadata": {
+        "row_count": 16,
+        "columns": [
+          "experiment",
+          "experiment_label",
+          "model",
+          "model_label",
+          "split",
+          "records",
+          "operating_point",
+          "threshold",
+          "roc_auc",
+          "average_precision",
+          "true_negative",
+          "false_positive",
+          "false_negative",
+          "true_positive",
+          "accuracy",
+          "balanced_accuracy",
+          "precision",
+          "recall_tpr",
+          "f1_score",
+          "specificity_tnr",
+          "false_positive_rate",
+          "false_negative_rate",
+          "fit_seconds",
+          "inference_validation_seconds",
+          "inference_test_seconds"
+        ]
+      }
+    },
+    {
+      "artifact_id": "expanded_100k:model:experiments/scale_100k/models/isolation_forest.joblib",
+      "experiment": "expanded_100k",
+      "category": "model",
+      "relative_path": "experiments/scale_100k/models/isolation_forest.joblib",
+      "filename": "isolation_forest.joblib",
+      "size_bytes": 1294831,
+      "sha256": "d6f7754e14bbc7adb453eb298559efeebdccad98f59143283dc74a78211b4f40",
+      "integrity": "verified"
+    },
+    {
+      "artifact_id": "expanded_100k:model_metadata:experiments/scale_100k/models/isolation_forest_metadata.json",
+      "experiment": "expanded_100k",
+      "category": "model_metadata",
+      "relative_path": "experiments/scale_100k/models/isolation_forest_metadata.json",
+      "filename": "isolation_forest_metadata.json",
+      "size_bytes": 4517,
+      "sha256": "36629c3d3198782f2eb1245ab8e622bbb4a4329030960c9eed23ff479c26bb0d",
+      "integrity": "verified",
+      "json_metadata": {
+        "schema_version": 1,
+        "stage": "isolation_forest_training_marco_6"
+      }
+    },
+    {
+      "artifact_id": "expanded_100k:model:experiments/scale_100k/models/lof.joblib",
+      "experiment": "expanded_100k",
+      "category": "model",
+      "relative_path": "experiments/scale_100k/models/lof.joblib",
+      "filename": "lof.joblib",
+      "size_bytes": 35737321,
+      "sha256": "6c014381d6dc5fc70a46941a450e2a60dc7b83b1bb0fcee43a7653107814df41",
+      "integrity": "verified"
+    },
+    {
+      "artifact_id": "expanded_100k:model_metadata:experiments/scale_100k/models/lof_metadata.json",
+      "experiment": "expanded_100k",
+      "category": "model_metadata",
+      "relative_path": "experiments/scale_100k/models/lof_metadata.json",
+      "filename": "lof_metadata.json",
+      "size_bytes": 14063,
+      "sha256": "3984d7d554de780a290cc521f849f60a36fb7cb4551734ce49768532bfdeb288",
+      "integrity": "verified",
+      "json_metadata": {
+        "schema_version": 1,
+        "stage": "lof_training_marco_8"
+      }
+    }
+  ]
+}

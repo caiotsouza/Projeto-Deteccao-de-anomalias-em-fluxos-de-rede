@@ -1,0 +1,106 @@
+{
+  "status": "validated_for_exploratory_v4_extraction",
+  "scenario": "lab05_slow",
+  "repetition": 3,
+  "source_files_unchanged": true,
+  "source_sha256": {
+    "received/2a2c43e4-35c8-4b41-94d6-4ea1230a9517.zip": "45ab0a5802073e13c2e501f22e888e9d558bcf593d04e774d17147472e579d03",
+    "received/run_manifest.json": "03f12187cc5e4f81ecfe65cd9ea4ada8448b8663abe0fd49f9d92ce511ca4bb2",
+    "received/requests.jsonl": "4cb196156985aba1aec00ebb07dcf00b9ff3a74443de028777336c710bc0c4a9"
+  },
+  "pcap_sha256": "8ccd35ed25f1b4bbb49ec4b5e70f92c54cac71b165bbda6126b635541da1cd78",
+  "packets": 9358,
+  "connections": 6,
+  "successful_http_responses": 6,
+  "total_http_body_bytes": 12582912,
+  "truncated_packet_records": 0,
+  "tcp_rst_packets": 0,
+  "capture_drop_counter_available": false,
+  "capture_span_seconds": 155.420746,
+  "connection_start_interval_seconds": {
+    "min": 18.485532999038696,
+    "median": 18.50421404838562,
+    "max": 65.88471698760986
+  },
+  "details": [
+    {
+      "request_number": 1,
+      "source_port": 61059,
+      "packets": 1579,
+      "started_at_utc": "2026-10-26T00:58:57.901848+00:00",
+      "http_status": 200,
+      "body_bytes": 2097152,
+      "body_sha256": "21ad43464ff341f863b1149c5a11d95fb8a325bb44ad51ed4afc17979ad44245",
+      "server_payload_span_seconds": 0.006688,
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    },
+    {
+      "request_number": 2,
+      "source_port": 61060,
+      "packets": 1554,
+      "started_at_utc": "2026-10-26T00:59:16.454466+00:00",
+      "http_status": 200,
+      "body_bytes": 2097152,
+      "body_sha256": "21ad43464ff341f863b1149c5a11d95fb8a325bb44ad51ed4afc17979ad44245",
+      "server_payload_span_seconds": 0.007736,
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    },
+    {
+      "request_number": 3,
+      "source_port": 61061,
+      "packets": 1523,
+      "started_at_utc": "2026-10-26T01:00:22.339183+00:00",
+      "http_status": 200,
+      "body_bytes": 2097152,
+      "body_sha256": "21ad43464ff341f863b1149c5a11d95fb8a325bb44ad51ed4afc17979ad44245",
+      "server_payload_span_seconds": 0.006809,
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    },
+    {
+      "request_number": 4,
+      "source_port": 61062,
+      "packets": 1561,
+      "started_at_utc": "2026-10-26T01:00:40.834133+00:00",
+      "http_status": 200,
+      "body_bytes": 2097152,
+      "body_sha256": "21ad43464ff341f863b1149c5a11d95fb8a325bb44ad51ed4afc17979ad44245",
+      "server_payload_span_seconds": 0.006183,
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    },
+    {
+      "request_number": 5,
+      "source_port": 61063,
+      "packets": 1537,
+      "started_at_utc": "2026-10-26T01:00:59.338347+00:00",
+      "http_status": 200,
+      "body_bytes": 2097152,
+      "body_sha256": "21ad43464ff341f863b1149c5a11d95fb8a325bb44ad51ed4afc17979ad44245",
+      "server_payload_span_seconds": 0.006865,
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    },
+    {
+      "request_number": 6,
+      "source_port": 61064,
+      "packets": 1604,
+      "started_at_utc": "2026-10-26T01:01:17.823880+00:00",
+      "http_status": 200,
+      "body_bytes": 2097152,
+      "body_sha256": "21ad43464ff341f863b1149c5a11d95fb8a325bb44ad51ed4afc17979ad44245",
+      "server_payload_span_seconds": 0.006925,
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    }
+  ],
+  "pcap": "./data/lab/lab05_slow/r3/input/2a2c43e4-35c8-4b41-94d6-4ea1230a9517_hn2.pcap",
+  "limitations": [
+    "Only filtered traffic was examined; no claim about all VM traffic.",
+    "No packet-drop counter was supplied; do not claim zero capture drops.",
+    "Parser restricted to one HTTP/1.0 GET per distinct TCP 5-tuple.",
+    "Planned activity does not create independent ground-truth labels."
+  ]
+}

@@ -1,0 +1,113 @@
+model,model_label,split,operating_point,metric,baseline_20k,expanded_100k,delta_100k_minus_20k,higher_is_better,winner
+isolation_forest,Isolation Forest,validation,native,accuracy,0.6846,0.68026,-0.0043400000000000105,True,baseline_20k
+isolation_forest,Isolation Forest,validation,native,balanced_accuracy,0.6846,0.68026,-0.0043400000000000105,True,baseline_20k
+isolation_forest,Isolation Forest,validation,native,precision,0.9120535714285715,0.8958973908459984,-0.016156180582573065,True,baseline_20k
+isolation_forest,Isolation Forest,validation,native,recall_tpr,0.4086,0.40792,-0.0006800000000000139,True,baseline_20k
+isolation_forest,Isolation Forest,validation,native,f1_score,0.5643646408839779,0.5605914850342193,-0.0037731558497585693,True,baseline_20k
+isolation_forest,Isolation Forest,validation,native,specificity_tnr,0.9606,0.9526,-0.008000000000000007,True,baseline_20k
+isolation_forest,Isolation Forest,validation,native,false_positive_rate,0.0394,0.0474,0.008,False,baseline_20k
+isolation_forest,Isolation Forest,validation,native,false_negative_rate,0.5914,0.59208,0.0006800000000000139,False,baseline_20k
+isolation_forest,Isolation Forest,validation,native,roc_auc,0.82651698,0.8204786111999999,-0.006038368800000082,True,baseline_20k
+isolation_forest,Isolation Forest,validation,native,average_precision,0.8092401279105783,0.8119375840707366,0.0026974561601582625,True,expanded_100k
+isolation_forest,Isolation Forest,validation,native,fit_seconds,0.37622839998221025,0.9313533999957144,0.5551250000135042,False,baseline_20k
+isolation_forest,Isolation Forest,validation,native,inference_validation_seconds,0.08451529999729246,0.6063212999724783,0.5218059999751858,False,baseline_20k
+isolation_forest,Isolation Forest,validation,native,inference_test_seconds,0.15473190002376214,1.123455599998124,0.9687236999743618,False,baseline_20k
+isolation_forest,Isolation Forest,validation,native,threshold,0.5,0.5,0.0,,not_applicable
+isolation_forest,Isolation Forest,validation,validation_f1_calibrated,accuracy,0.7428,0.743,0.00019999999999997797,True,expanded_100k
+isolation_forest,Isolation Forest,validation,validation_f1_calibrated,balanced_accuracy,0.7428,0.743,0.00019999999999997797,True,expanded_100k
+isolation_forest,Isolation Forest,validation,validation_f1_calibrated,precision,0.6738258877434136,0.6755983350676379,0.0017724473242243244,True,expanded_100k
+isolation_forest,Isolation Forest,validation,validation_f1_calibrated,recall_tpr,0.9412,0.93492,-0.006280000000000063,True,baseline_20k
+isolation_forest,Isolation Forest,validation,validation_f1_calibrated,f1_score,0.7853805073431241,0.7843815021142359,-0.0009990052288882945,True,baseline_20k
+isolation_forest,Isolation Forest,validation,validation_f1_calibrated,specificity_tnr,0.5444,0.55108,0.006680000000000019,True,expanded_100k
+isolation_forest,Isolation Forest,validation,validation_f1_calibrated,false_positive_rate,0.4556,0.44892,-0.006680000000000019,False,expanded_100k
+isolation_forest,Isolation Forest,validation,validation_f1_calibrated,false_negative_rate,0.0588,0.06508,0.006280000000000001,False,baseline_20k
+isolation_forest,Isolation Forest,validation,validation_f1_calibrated,roc_auc,0.82651698,0.8204786111999999,-0.006038368800000082,True,baseline_20k
+isolation_forest,Isolation Forest,validation,validation_f1_calibrated,average_precision,0.8092401279105783,0.8119375840707366,0.0026974561601582625,True,expanded_100k
+isolation_forest,Isolation Forest,validation,validation_f1_calibrated,fit_seconds,0.37622839998221025,0.9313533999957144,0.5551250000135042,False,baseline_20k
+isolation_forest,Isolation Forest,validation,validation_f1_calibrated,inference_validation_seconds,0.08451529999729246,0.6063212999724783,0.5218059999751858,False,baseline_20k
+isolation_forest,Isolation Forest,validation,validation_f1_calibrated,inference_test_seconds,0.15473190002376214,1.123455599998124,0.9687236999743618,False,baseline_20k
+isolation_forest,Isolation Forest,validation,validation_f1_calibrated,threshold,0.33493336095591913,0.3368281464292285,0.001894785473309346,,not_applicable
+isolation_forest,Isolation Forest,test,native,accuracy,0.678,0.68182,0.0038199999999999346,True,expanded_100k
+isolation_forest,Isolation Forest,test,native,balanced_accuracy,0.6779999999999999,0.68182,0.0038200000000000456,True,expanded_100k
+isolation_forest,Isolation Forest,test,native,precision,0.8900087642418931,0.8973686511058659,0.00735988686397282,True,expanded_100k
+isolation_forest,Isolation Forest,test,native,recall_tpr,0.4062,0.4106,0.004400000000000015,True,expanded_100k
+isolation_forest,Isolation Forest,test,native,f1_score,0.5578137874210382,0.5634073382913911,0.005593550870352959,True,expanded_100k
+isolation_forest,Isolation Forest,test,native,specificity_tnr,0.9498,0.95304,0.0032400000000000206,True,expanded_100k
+isolation_forest,Isolation Forest,test,native,false_positive_rate,0.0502,0.04696,-0.00324,False,expanded_100k
+isolation_forest,Isolation Forest,test,native,false_negative_rate,0.5938,0.5894,-0.0043999999999999595,False,expanded_100k
+isolation_forest,Isolation Forest,test,native,roc_auc,0.823602035,0.8231742362,-0.00042779879999998993,True,baseline_20k
+isolation_forest,Isolation Forest,test,native,average_precision,0.8094769434337948,0.8142302884703011,0.004753345036506262,True,expanded_100k
+isolation_forest,Isolation Forest,test,native,fit_seconds,0.37622839998221025,0.9313533999957144,0.5551250000135042,False,baseline_20k
+isolation_forest,Isolation Forest,test,native,inference_validation_seconds,0.08451529999729246,0.6063212999724783,0.5218059999751858,False,baseline_20k
+isolation_forest,Isolation Forest,test,native,inference_test_seconds,0.15473190002376214,1.123455599998124,0.9687236999743618,False,baseline_20k
+isolation_forest,Isolation Forest,test,native,threshold,0.5,0.5,0.0,,not_applicable
+isolation_forest,Isolation Forest,test,validation_f1_calibrated,accuracy,0.74185,0.74803,0.006179999999999963,True,expanded_100k
+isolation_forest,Isolation Forest,test,validation_f1_calibrated,balanced_accuracy,0.74185,0.74803,0.006179999999999963,True,expanded_100k
+isolation_forest,Isolation Forest,test,validation_f1_calibrated,precision,0.6740053241240377,0.6797918146628587,0.005786490538820965,True,expanded_100k
+isolation_forest,Isolation Forest,test,validation_f1_calibrated,recall_tpr,0.9368,0.9378,0.0010000000000000009,True,expanded_100k
+isolation_forest,Isolation Forest,test,validation_f1_calibrated,f1_score,0.7839658563119796,0.7882195718500214,0.00425371553804188,True,expanded_100k
+isolation_forest,Isolation Forest,test,validation_f1_calibrated,specificity_tnr,0.5469,0.55826,0.011359999999999926,True,expanded_100k
+isolation_forest,Isolation Forest,test,validation_f1_calibrated,false_positive_rate,0.4531,0.44174,-0.011359999999999981,False,expanded_100k
+isolation_forest,Isolation Forest,test,validation_f1_calibrated,false_negative_rate,0.0632,0.0622,-0.0010000000000000078,False,expanded_100k
+isolation_forest,Isolation Forest,test,validation_f1_calibrated,roc_auc,0.823602035,0.8231742362,-0.00042779879999998993,True,baseline_20k
+isolation_forest,Isolation Forest,test,validation_f1_calibrated,average_precision,0.8094769434337948,0.8142302884703011,0.004753345036506262,True,expanded_100k
+isolation_forest,Isolation Forest,test,validation_f1_calibrated,fit_seconds,0.37622839998221025,0.9313533999957144,0.5551250000135042,False,baseline_20k
+isolation_forest,Isolation Forest,test,validation_f1_calibrated,inference_validation_seconds,0.08451529999729246,0.6063212999724783,0.5218059999751858,False,baseline_20k
+isolation_forest,Isolation Forest,test,validation_f1_calibrated,inference_test_seconds,0.15473190002376214,1.123455599998124,0.9687236999743618,False,baseline_20k
+isolation_forest,Isolation Forest,test,validation_f1_calibrated,threshold,0.33493336095591913,0.3368281464292285,0.001894785473309346,,not_applicable
+lof,Local Outlier Factor,validation,native,accuracy,0.7618,0.82812,0.06631999999999993,True,expanded_100k
+lof,Local Outlier Factor,validation,native,balanced_accuracy,0.7618,0.82812,0.06631999999999993,True,expanded_100k
+lof,Local Outlier Factor,validation,native,precision,0.7840711805555556,0.7796985815602837,-0.00437259899527187,True,baseline_20k
+lof,Local Outlier Factor,validation,native,recall_tpr,0.7226,0.91468,0.19208000000000003,True,expanded_100k
+lof,Local Outlier Factor,validation,native,f1_score,0.7520815986677769,0.8418126932705051,0.08973109460272821,True,expanded_100k
+lof,Local Outlier Factor,validation,native,specificity_tnr,0.801,0.74156,-0.05944000000000005,True,baseline_20k
+lof,Local Outlier Factor,validation,native,false_positive_rate,0.199,0.25844,0.05943999999999999,False,baseline_20k
+lof,Local Outlier Factor,validation,native,false_negative_rate,0.2774,0.08532,-0.19207999999999997,False,expanded_100k
+lof,Local Outlier Factor,validation,native,roc_auc,0.77768514,0.8710299016,0.09334476160000005,True,expanded_100k
+lof,Local Outlier Factor,validation,native,average_precision,0.7161577332212837,0.8046573904716341,0.08849965725035036,True,expanded_100k
+lof,Local Outlier Factor,validation,native,fit_seconds,2.781584800002747,9.984387000033166,7.202802200030419,False,baseline_20k
+lof,Local Outlier Factor,validation,native,inference_validation_seconds,0.4685525999957463,4.299916300049517,3.831363700053771,False,baseline_20k
+lof,Local Outlier Factor,validation,native,inference_test_seconds,0.5105067000113195,7.389643399976194,6.879136699964874,False,baseline_20k
+lof,Local Outlier Factor,validation,native,threshold,1.5,1.5,0.0,,not_applicable
+lof,Local Outlier Factor,validation,validation_f1_calibrated,accuracy,0.7623,0.83276,0.07045999999999997,True,expanded_100k
+lof,Local Outlier Factor,validation,validation_f1_calibrated,balanced_accuracy,0.7623,0.83276,0.07045999999999997,True,expanded_100k
+lof,Local Outlier Factor,validation,validation_f1_calibrated,precision,0.7760471479688487,0.7928400450577302,0.016792897088881542,True,expanded_100k
+lof,Local Outlier Factor,validation,validation_f1_calibrated,recall_tpr,0.7374,0.90092,0.16352,True,expanded_100k
+lof,Local Outlier Factor,validation,validation_f1_calibrated,f1_score,0.756230130243052,0.8434316956261234,0.08720156538307144,True,expanded_100k
+lof,Local Outlier Factor,validation,validation_f1_calibrated,specificity_tnr,0.7872,0.7646,-0.022600000000000064,True,baseline_20k
+lof,Local Outlier Factor,validation,validation_f1_calibrated,false_positive_rate,0.2128,0.2354,0.02260000000000001,False,baseline_20k
+lof,Local Outlier Factor,validation,validation_f1_calibrated,false_negative_rate,0.2626,0.09908,-0.16352,False,expanded_100k
+lof,Local Outlier Factor,validation,validation_f1_calibrated,roc_auc,0.77768514,0.8710299016,0.09334476160000005,True,expanded_100k
+lof,Local Outlier Factor,validation,validation_f1_calibrated,average_precision,0.7161577332212837,0.8046573904716341,0.08849965725035036,True,expanded_100k
+lof,Local Outlier Factor,validation,validation_f1_calibrated,fit_seconds,2.781584800002747,9.984387000033166,7.202802200030419,False,baseline_20k
+lof,Local Outlier Factor,validation,validation_f1_calibrated,inference_validation_seconds,0.4685525999957463,4.299916300049517,3.831363700053771,False,baseline_20k
+lof,Local Outlier Factor,validation,validation_f1_calibrated,inference_test_seconds,0.5105067000113195,7.389643399976194,6.879136699964874,False,baseline_20k
+lof,Local Outlier Factor,validation,validation_f1_calibrated,threshold,1.4449170084747471,1.6046928359157646,0.15977582744101748,,not_applicable
+lof,Local Outlier Factor,test,native,accuracy,0.76395,0.82976,0.06581000000000004,True,expanded_100k
+lof,Local Outlier Factor,test,native,balanced_accuracy,0.76395,0.82976,0.06581000000000004,True,expanded_100k
+lof,Local Outlier Factor,test,native,precision,0.7847049940675224,0.7808475846562649,-0.003857409411257451,True,baseline_20k
+lof,Local Outlier Factor,test,native,recall_tpr,0.7275,0.91684,0.18933999999999995,True,expanded_100k
+lof,Local Outlier Factor,test,native,f1_score,0.755020497120025,0.8433969901019244,0.08837649298189942,True,expanded_100k
+lof,Local Outlier Factor,test,native,specificity_tnr,0.8004,0.74268,-0.057719999999999994,True,baseline_20k
+lof,Local Outlier Factor,test,native,false_positive_rate,0.1996,0.25732,0.057719999999999994,False,baseline_20k
+lof,Local Outlier Factor,test,native,false_negative_rate,0.2725,0.08316,-0.18934,False,expanded_100k
+lof,Local Outlier Factor,test,native,roc_auc,0.781720185,0.8712791064,0.08955892139999999,True,expanded_100k
+lof,Local Outlier Factor,test,native,average_precision,0.7266010647498519,0.8044410566070392,0.07783999185718737,True,expanded_100k
+lof,Local Outlier Factor,test,native,fit_seconds,2.781584800002747,9.984387000033166,7.202802200030419,False,baseline_20k
+lof,Local Outlier Factor,test,native,inference_validation_seconds,0.4685525999957463,4.299916300049517,3.831363700053771,False,baseline_20k
+lof,Local Outlier Factor,test,native,inference_test_seconds,0.5105067000113195,7.389643399976194,6.879136699964874,False,baseline_20k
+lof,Local Outlier Factor,test,native,threshold,1.5,1.5,0.0,,not_applicable
+lof,Local Outlier Factor,test,validation_f1_calibrated,accuracy,0.7636,0.83402,0.07042000000000004,True,expanded_100k
+lof,Local Outlier Factor,test,validation_f1_calibrated,balanced_accuracy,0.7636000000000001,0.83402,0.07041999999999993,True,expanded_100k
+lof,Local Outlier Factor,test,validation_f1_calibrated,precision,0.7756168966959431,0.79414561978231,0.018528723086366883,True,expanded_100k
+lof,Local Outlier Factor,test,validation_f1_calibrated,recall_tpr,0.7418,0.9018,0.16000000000000003,True,expanded_100k
+lof,Local Outlier Factor,test,validation_f1_calibrated,f1_score,0.7583316295236148,0.8445559946805522,0.08622436515693743,True,expanded_100k
+lof,Local Outlier Factor,test,validation_f1_calibrated,specificity_tnr,0.7854,0.76624,-0.019159999999999955,True,baseline_20k
+lof,Local Outlier Factor,test,validation_f1_calibrated,false_positive_rate,0.2146,0.23376,0.019159999999999983,False,baseline_20k
+lof,Local Outlier Factor,test,validation_f1_calibrated,false_negative_rate,0.2582,0.0982,-0.15999999999999998,False,expanded_100k
+lof,Local Outlier Factor,test,validation_f1_calibrated,roc_auc,0.781720185,0.8712791064,0.08955892139999999,True,expanded_100k
+lof,Local Outlier Factor,test,validation_f1_calibrated,average_precision,0.7266010647498519,0.8044410566070392,0.07783999185718737,True,expanded_100k
+lof,Local Outlier Factor,test,validation_f1_calibrated,fit_seconds,2.781584800002747,9.984387000033166,7.202802200030419,False,baseline_20k
+lof,Local Outlier Factor,test,validation_f1_calibrated,inference_validation_seconds,0.4685525999957463,4.299916300049517,3.831363700053771,False,baseline_20k
+lof,Local Outlier Factor,test,validation_f1_calibrated,inference_test_seconds,0.5105067000113195,7.389643399976194,6.879136699964874,False,baseline_20k
+lof,Local Outlier Factor,test,validation_f1_calibrated,threshold,1.4449170084747471,1.6046928359157646,0.15977582744101748,,not_applicable

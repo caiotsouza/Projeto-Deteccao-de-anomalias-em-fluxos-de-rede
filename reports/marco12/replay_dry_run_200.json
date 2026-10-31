@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "stage": "offline_prediction_replay_marco_12",
+  "created_at_utc": "2026-09-06T16:05:24.099715+00:00",
+  "status": "dry_run",
+  "mode": "offline_replay",
+  "configuration": {
+    "limit": 200,
+    "offset": 0,
+    "batch_size": 50,
+    "interval_milliseconds": 1000,
+    "start_time": "2026-01-01T00:00:00+00:00",
+    "namespace": "cicids2017-test-expanded-100k-v1",
+    "dry_run": true
+  },
+  "model": {
+    "experiment": "expanded_100k",
+    "key": "isolation_forest",
+    "sha256": "d6f7754e14bbc7adb453eb298559efeebdccad98f59143283dc74a78211b4f40",
+    "operating_point": "validation_fpr_operational",
+    "threshold": 0.615824439899627,
+    "positive_rule": "anomaly_score >= threshold"
+  },
+  "methodology": {
+    "frozen_predictions_used": true,
+    "model_deserialized": false,
+    "predictions_recomputed": false,
+    "labels_loaded": false,
+    "binary_labels_loaded": false,
+    "test_truth_persisted": false,
+    "timestamps_simulated": true,
+    "ips_or_protocol_fabricated": false,
+    "destination_port_from_selected_feature": true,
+    "balanced_test_set_warning": true
+  },
+  "counts": {
+    "attempted": 200,
+    "inserted": 0,
+    "duplicates": 0,
+    "conflicts": 0,
+    "would_insert_in_dry_run": 200
+  },
+  "repository_initialization": null,
+  "source_sha256_before": {
+    "features": "6369d7e79dc9fda73deaaba455b00bcbc2a9b9ae95072ccba22a004d2ce0ecb2",
+    "predictions": "dbd3106cb133c7df564b2a9f4f43968c26b3236f8b05dd26f1d8526f396e991b",
+    "provenance": "f50d3c1ce06d40a29d1a58adf302603553de8a25c8f9190436098bdccab484f1",
+    "registry": "5705e4c770e6271f8f7fea83f57653d15dc0b1725cdb59b3909d5bbaa84aff74",
+    "model": "d6f7754e14bbc7adb453eb298559efeebdccad98f59143283dc74a78211b4f40"
+  },
+  "source_sha256_after": {
+    "features": "6369d7e79dc9fda73deaaba455b00bcbc2a9b9ae95072ccba22a004d2ce0ecb2",
+    "predictions": "dbd3106cb133c7df564b2a9f4f43968c26b3236f8b05dd26f1d8526f396e991b",
+    "provenance": "f50d3c1ce06d40a29d1a58adf302603553de8a25c8f9190436098bdccab484f1",
+    "registry": "5705e4c770e6271f8f7fea83f57653d15dc0b1725cdb59b3909d5bbaa84aff74",
+    "model": "d6f7754e14bbc7adb453eb298559efeebdccad98f59143283dc74a78211b4f40"
+  },
+  "source_integrity_unchanged": true,
+  "preview": [
+    {
+      "schema_version": 1,
+      "event_id": "replay-8a71d16ebf1225ecccf0a904b4b48150f953ea7e924769b82b40ac16efcef627",
+      "observed_at": "2026-01-01T00:00:00+00:00",
+      "processed_at_utc": "2026-01-01T00:00:00+00:00",
+      "source": "offline_replay",
+      "model": {
+        "experiment": "expanded_100k",
+        "key": "isolation_forest",
+        "display_name": "Isolation Forest",
+        "sha256": "d6f7754e14bbc7adb453eb298559efeebdccad98f59143283dc74a78211b4f40",
+        "operating_point": "validation_fpr_operational",
+        "threshold": 0.615824439899627,
+        "positive_rule": "anomaly_score >= threshold"
+      },
+      "classification": {
+        "status": "anomaly",
+        "is_anomaly": true,
+        "predicted_anomaly": 1,
+        "native_predicted_anomaly": 1,
+        "sklearn_native_prediction": -1,
+        "anomaly_score": 0.6289170447808043,
+        "score_samples": -0.6289170447808043,
+        "decision_function": -0.12891704478080435,
+        "threshold_distance": 0.013092604881177361,
+        "anomaly_score_is_probability": false
+      },
+      "context": {
+        "dataset": "CIC-IDS2017",
+        "dataset_split": "test",
+        "dataset_provenance_ref": "5fb4a2182ce86233",
+        "dataset_source_row": 153978,
+        "dataset_record_hash": "ab2478904fe52920",
+        "replay_namespace": "cicids2017-test-expanded-100k-v1",
+        "replay_sequence": 0,
+        "timestamp_origin": "simulated_sequence",
+        "context_origin": "processed_cicids_features",
+        "dataset_balance_warning": "experimental_balanced_50_50",
+        "dst_port": 80,
+        "flow_duration": 98362711.0,
+        "total_fwd_packets": 7.0,
+        "total_backward_packets": 6.0,
+        "total_fwd_bytes": 343.0,
+        "total_backward_bytes": 11595.0
+      }
+    },
+    {
+      "schema_version": 1,
+      "event_id": "replay-ceec08420c560ce332a2e873b4564a37f507a746773dc2bc42f7a90106cfbaba",
+      "observed_at": "2026-01-01T00:00:01+00:00",
+      "processed_at_utc": "2026-01-01T00:00:01+00:00",
+      "source": "offline_replay",
+      "model": {
+        "experiment": "expanded_100k",
+        "key": "isolation_forest",
+        "display_name": "Isolation Forest",
+        "sha256": "d6f7754e14bbc7adb453eb298559efeebdccad98f59143283dc74a78211b4f40",
+        "operating_point": "validation_fpr_operational",
+        "threshold": 0.615824439899627,
+        "positive_rule": "anomaly_score >= threshold"
+      },
+      "classification": {
+        "status": "anomaly",
+        "is_anomaly": true,
+        "predicted_anomaly": 1,
+        "native_predicted_anomaly": 1,
+        "sklearn_native_prediction": -1,
+        "anomaly_score": 0.6301957563771978,
+        "score_samples": -0.6301957563771978,
+        "decision_function": -0.13019575637719782,
+        "threshold_distance": 0.014371316477570839,
+        "anomaly_score_is_probability": false
+      },
+      "context": {
+        "dataset": "CIC-IDS2017",
+        "dataset_split": "test",
+        "dataset_provenance_ref": "5fb4a2182ce86233",
+        "dataset_source_row": 73670,
+        "dataset_record_hash": "55aee9bfeed65d70",
+        "replay_namespace": "cicids2017-test-expanded-100k-v1",
+        "replay_sequence": 1,
+        "timestamp_origin": "simulated_sequence",
+        "context_origin": "processed_cicids_features",
+        "dataset_balance_warning": "experimental_balanced_50_50",
+        "dst_port": 80,
+        "flow_duration": 111379772.0,
+        "total_fwd_packets": 5.0,
+        "total_backward_packets": 3.0,
+        "total_fwd_bytes": 530.0,
+        "total_backward_bytes": 0.0
+      }
+    },
+    {
+      "schema_version": 1,
+      "event_id": "replay-b6152de4a95d17a9f68854fd994c38bf5812f9fc9a77ef12de45af15d6076654",
+      "observed_at": "2026-01-01T00:00:02+00:00",
+      "processed_at_utc": "2026-01-01T00:00:02+00:00",
+      "source": "offline_replay",
+      "model": {
+        "experiment": "expanded_100k",
+        "key": "isolation_forest",
+        "display_name": "Isolation Forest",
+        "sha256": "d6f7754e14bbc7adb453eb298559efeebdccad98f59143283dc74a78211b4f40",
+        "operating_point": "validation_fpr_operational",
+        "threshold": 0.615824439899627,
+        "positive_rule": "anomaly_score >= threshold"
+      },
+      "classification": {
+        "status": "normal",
+        "is_anomaly": false,
+        "predicted_anomaly": 0,
+        "native_predicted_anomaly": 0,
+        "sklearn_native_prediction": 1,
+        "anomaly_score": 0.35399331636500514,
+        "score_samples": -0.35399331636500514,
+        "decision_function": 0.14600668363499486,
+        "threshold_distance": -0.26183112353462185,
+        "anomaly_score_is_probability": false
+      },
+      "context": {
+        "dataset": "CIC-IDS2017",
+        "dataset_split": "test",
+        "dataset_provenance_ref": "d1f9bbcf54112b71",
+        "dataset_source_row": 383610,
+        "dataset_record_hash": "d1d538fb2d8f1264",
+        "replay_namespace": "cicids2017-test-expanded-100k-v1",
+        "replay_sequence": 2,
+        "timestamp_origin": "simulated_sequence",
+        "context_origin": "processed_cicids_features",
+        "dataset_balance_warning": "experimental_balanced_50_50",
+        "dst_port": 443,
+        "flow_duration": 292.0,
+        "total_fwd_packets": 3.0,
+        "total_backward_packets": 1.0,
+        "total_fwd_bytes": 0.0,
+        "total_backward_bytes": 0.0
+      }
+    }
+  ]
+}

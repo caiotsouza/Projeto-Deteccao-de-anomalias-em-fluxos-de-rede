@@ -1,0 +1,77 @@
+name: tcc-network-anomaly
+
+services:
+  mongodb:
+    image: mongo:8.0
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping').ok"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+  api:
+    build:
+      context: ..
+      dockerfile: infra/api/Dockerfile
+    restart: unless-stopped
+    environment:
+      TCC_MONGODB_URI: mongodb://mongodb:27017
+      TCC_MONGODB_DATABASE: tcc_network_anomaly
+      TCC_MONGODB_COLLECTION: network_flow_predictions
+      TCC_DASHBOARD_WINDOW_HOURS: "24"
+      TCC_DASHBOARD_MAX_RECORDS: "100000"
+      TCC_DASHBOARD_MAX_WINDOW_DAYS: "31"
+    ports:
+      - "127.0.0.1:8000:8000"
+    depends_on:
+      mongo-init:
+        condition: service_completed_successfully
+
+  mongo-init:
+    build:
+      context: ..
+      dockerfile: infra/api/Dockerfile
+    restart: "no"
+    environment:
+      TCC_MONGODB_URI: mongodb://mongodb:27017
+      TCC_MONGODB_DATABASE: tcc_network_anomaly
+      TCC_MONGODB_COLLECTION: network_flow_predictions
+    command: ["python", "initialize_mongodb.py"]
+    depends_on:
+      mongodb:
+        condition: service_healthy
+
+  grafana:
+    image: grafana/grafana:12.2.5
+    restart: unless-stopped
+    environment:
+      GF_SECURITY_ADMIN_USER: ${TCC_GRAFANA_ADMIN_USER:-admin}
+      GF_SECURITY_ADMIN_PASSWORD: ${TCC_GRAFANA_ADMIN_PASSWORD:?Defina TCC_GRAFANA_ADMIN_PASSWORD em infra/.env}
+      GF_USERS_ALLOW_SIGN_UP: "false"
+      GF_AUTH_ANONYMOUS_ENABLED: "false"
+      GF_PLUGINS_PREINSTALL: yesoreyeram-infinity-datasource@4.0.0
+    ports:
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./grafana/dashboards:/var/lib/grafana/dashboards:ro
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O - http://127.0.0.1:3000/api/health >/dev/null 2>&1"]
+      interval: 10s
+      timeout: 5s
+      retries: 15
+      start_period: 30s
+
+volumes:
+  mongodb_data:
+  grafana_data:

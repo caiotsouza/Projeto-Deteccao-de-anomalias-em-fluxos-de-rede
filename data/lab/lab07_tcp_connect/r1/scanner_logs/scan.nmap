@@ -1,0 +1,22 @@
+# Nmap 7.99 scan initiated Sun Oct 25 22:48:19 2026 as: /usr/lib/nmap/nmap -n -Pn -sT -p 21,22,23,25,53,80,110,135,139,143,443,445,3389,8000,8080 --max-rate 10 --scan-delay 100ms --max-retries 1 --host-timeout 120s -oA /tmp/lab07-r1/scan 172.31.50.161
+Nmap scan report for 172.31.50.161
+Host is up.
+
+PORT     STATE    SERVICE
+21/tcp   filtered ftp
+22/tcp   filtered ssh
+23/tcp   filtered telnet
+25/tcp   filtered smtp
+53/tcp   filtered domain
+80/tcp   filtered http
+110/tcp  filtered pop3
+135/tcp  filtered msrpc
+139/tcp  filtered netbios-ssn
+143/tcp  filtered imap
+443/tcp  filtered https
+445/tcp  filtered microsoft-ds
+3389/tcp filtered ms-wbt-server
+8000/tcp filtered http-alt
+8080/tcp filtered http-proxy
+
+# Nmap done at Sun Oct 25 22:48:24 2026 -- 1 IP address (1 host up) scanned in 5.56 seconds

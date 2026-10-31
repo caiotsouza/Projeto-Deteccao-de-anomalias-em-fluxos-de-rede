@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "stage": "marco_10_final_artifact_consolidation",
+  "created_at_utc": "2026-09-05T04:04:32.109917+00:00",
+  "status": "completed",
+  "methodology": {
+    "models_loaded": false,
+    "models_retrained": false,
+    "models_modified": false,
+    "predictions_recomputed": false,
+    "metrics_recomputed": false,
+    "thresholds_recalibrated": false,
+    "source_artifacts_modified": false,
+    "large_artifacts_duplicated": false
+  },
+  "source_integrity": {
+    "artifact_count": 47,
+    "aggregate_sha256_before": "1ca51d7a053efc3acc5f30590346255260c8cba0b90f502fe5b888ac3a027de0",
+    "aggregate_sha256_after": "1ca51d7a053efc3acc5f30590346255260c8cba0b90f502fe5b888ac3a027de0",
+    "unchanged": true,
+    "experiments": {
+      "baseline_20k": {
+        "status": "passed",
+        "model_input_schema_sha256": "07bd5818c91930b6ceb8178e160d9365260f6b92f629fa02ef14227cfaa113a4",
+        "split_records": {
+          "train": 20000,
+          "validation": 10000,
+          "test": 20000
+        },
+        "training_is_benign_only": true,
+        "zero_hash_overlap": true,
+        "models": {
+          "isolation_forest": {
+            "model_sha256": "1d7bd1b69dd8505cf6b06e813b94a93e34c05bd303de55c3a45f8886176d599c",
+            "configuration_matches_metadata": true,
+            "feature_count": 60,
+            "schema_sha256": "07bd5818c91930b6ceb8178e160d9365260f6b92f629fa02ef14227cfaa113a4",
+            "thresholds_frozen": true
+          },
+          "lof": {
+            "model_sha256": "1e4a8b96759bcf1844e8884d2d09c2361065d646096b0e6959fd90cd9d8ce382",
+            "configuration_matches_metadata": true,
+            "feature_count": 60,
+            "schema_sha256": "07bd5818c91930b6ceb8178e160d9365260f6b92f629fa02ef14227cfaa113a4",
+            "thresholds_frozen": true
+          }
+        },
+        "source_artifact_count": 22
+      },
+      "expanded_100k": {
+        "status": "passed",
+        "model_input_schema_sha256": "07bd5818c91930b6ceb8178e160d9365260f6b92f629fa02ef14227cfaa113a4",
+        "split_records": {
+          "train": 100000,
+          "validation": 50000,
+          "test": 100000
+        },
+        "training_is_benign_only": true,
+        "zero_hash_overlap": true,
+        "models": {
+          "isolation_forest": {
+            "model_sha256": "d6f7754e14bbc7adb453eb298559efeebdccad98f59143283dc74a78211b4f40",
+            "configuration_matches_metadata": true,
+            "feature_count": 60,
+            "schema_sha256": "07bd5818c91930b6ceb8178e160d9365260f6b92f629fa02ef14227cfaa113a4",
+            "thresholds_frozen": true
+          },
+          "lof": {
+            "model_sha256": "6c014381d6dc5fc70a46941a450e2a60dc7b83b1bb0fcee43a7653107814df41",
+            "configuration_matches_metadata": true,
+            "feature_count": 60,
+            "schema_sha256": "07bd5818c91930b6ceb8178e160d9365260f6b92f629fa02ef14227cfaa113a4",
+            "thresholds_frozen": true
+          }
+        },
+        "source_artifact_count": 25
+      }
+    }
+  },
+  "validation": {
+    "all_sources_non_empty": true,
+    "all_model_hashes_match_training_reports_and_metadata": true,
+    "all_feature_schemas_match": true,
+    "all_split_leakage_checks_passed": true,
+    "all_thresholds_frozen_before_test": true,
+    "metrics_summary_rows": 16,
+    "figure_catalog_rows": 17,
+    "status": "passed"
+  },
+  "outputs": {
+    "inventory": {
+      "relative_path": "reports/final/artifact_inventory.json",
+      "size_bytes": 33288,
+      "sha256": "7a4ff07fc6020e7031c238f6f680fd74cdd039bfdbddaa707e437616dbddb09d"
+    },
+    "registry": {
+      "relative_path": "reports/final/model_registry.json",
+      "size_bytes": 33640,
+      "sha256": "5771ff34b671759d86a801abf100ce708f6ec0204a636f7989be7ae8f0b58d26"
+    },
+    "metrics": {
+      "relative_path": "reports/final/metrics_summary.csv",
+      "size_bytes": 6697,
+      "sha256": "593d805c78ee498d2615dfb08dc625a1ce48969ea5d0e44a89b82e41da5d4e19"
+    },
+    "figures": {
+      "relative_path": "reports/final/figure_catalog.csv",
+      "size_bytes": 4204,
+      "sha256": "4da25833d983a7188c63a5298a86e6e1d5a3da5e4bd2600c6411f1a2d6440967"
+    },
+    "summary": {
+      "relative_path": "reports/final/MARCO_10_SUMMARY.md",
+      "size_bytes": 2721,
+      "sha256": "aa87b8d4ee5b7cacdd1f1628e0e2e813d00718eb2bbecfd2c6e615a822bb3781"
+    }
+  }
+}

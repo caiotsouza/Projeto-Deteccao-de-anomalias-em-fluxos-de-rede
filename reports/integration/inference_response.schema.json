@@ -1,0 +1,143 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:tcc-network-anomaly:inference-response:v1",
+  "title": "Network anomaly inference response",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "event_id",
+    "event_id_generated",
+    "observed_at",
+    "processed_at_utc",
+    "source",
+    "model",
+    "prediction",
+    "context"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "event_id_generated": {
+      "type": "boolean"
+    },
+    "observed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "processed_at_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "source": {
+      "type": "string"
+    },
+    "context": {
+      "type": "object"
+    },
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "experiment",
+        "key",
+        "display_name",
+        "sha256",
+        "operating_point",
+        "threshold",
+        "positive_rule"
+      ],
+      "properties": {
+        "experiment": {
+          "type": "string"
+        },
+        "key": {
+          "enum": [
+            "isolation_forest",
+            "lof"
+          ]
+        },
+        "display_name": {
+          "type": "string"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "operating_point": {
+          "enum": [
+            "native",
+            "validation_f1_calibrated",
+            "validation_fpr_operational"
+          ]
+        },
+        "threshold": {
+          "type": "number"
+        },
+        "positive_rule": {
+          "type": "string"
+        }
+      }
+    },
+    "prediction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label",
+        "predicted_anomaly",
+        "native_predicted_anomaly",
+        "sklearn_native_prediction",
+        "anomaly_score",
+        "score_samples",
+        "decision_function",
+        "threshold_distance",
+        "anomaly_score_is_probability"
+      ],
+      "properties": {
+        "label": {
+          "enum": [
+            "normal",
+            "anomaly"
+          ]
+        },
+        "predicted_anomaly": {
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "native_predicted_anomaly": {
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "sklearn_native_prediction": {
+          "enum": [
+            -1,
+            1
+          ]
+        },
+        "anomaly_score": {
+          "type": "number"
+        },
+        "score_samples": {
+          "type": "number"
+        },
+        "decision_function": {
+          "type": "number"
+        },
+        "threshold_distance": {
+          "type": "number"
+        },
+        "anomaly_score_is_probability": {
+          "const": false
+        }
+      }
+    }
+  }
+}

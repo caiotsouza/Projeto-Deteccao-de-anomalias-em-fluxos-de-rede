@@ -1,0 +1,165 @@
+{
+  "scope": "allow-listed separate publication copy",
+  "secret_pattern_scan": "passed",
+  "private_feedback_and_audio_included": false,
+  "credentials_included": false,
+  "originals_modified": false,
+  "packet_review": [
+    {
+      "accepted": true,
+      "packets": 42,
+      "ipv4_endpoints": [
+        "172.31.50.161",
+        "172.31.60.10"
+      ],
+      "credential_headers_found": false,
+      "reason": "controlled_lab_endpoints_only",
+      "path": "data/lab/lab08_tcp_responsive/r1/input/3cd2b79b-5189-4314-8a17-e91d3083fc84_hn2.pcap"
+    },
+    {
+      "accepted": true,
+      "packets": 2474,
+      "ipv4_endpoints": [
+        "172.31.50.161",
+        "172.31.60.10"
+      ],
+      "credential_headers_found": false,
+      "reason": "controlled_lab_endpoints_only",
+      "path": "data/lab/lab04_medium/r1/input/63a3484e-e5f1-468c-b64e-b27e6a54b4c5_hn2.pcap"
+    },
+    {
+      "accepted": true,
+      "packets": 2459,
+      "ipv4_endpoints": [
+        "172.31.50.161",
+        "172.31.60.10"
+      ],
+      "credential_headers_found": false,
+      "reason": "controlled_lab_endpoints_only",
+      "path": "data/lab/lab04_medium/r2/input/df80c68c-553a-494e-98b9-f538314825f3_hn2.pcap"
+    },
+    {
+      "accepted": true,
+      "packets": 2482,
+      "ipv4_endpoints": [
+        "172.31.50.161",
+        "172.31.60.10"
+      ],
+      "credential_headers_found": false,
+      "reason": "controlled_lab_endpoints_only",
+      "path": "data/lab/lab04_medium/r3/input/0621e505-fef3-4dd8-9dee-62238de1b542_hn2.pcap"
+    },
+    {
+      "accepted": true,
+      "packets": 39,
+      "ipv4_endpoints": [
+        "172.31.50.161",
+        "172.31.60.10"
+      ],
+      "credential_headers_found": false,
+      "reason": "controlled_lab_endpoints_only",
+      "path": "data/lab/lab07_tcp_connect/r1/input/986da696-6f6d-49db-b266-be1d148a04fd_hn2.pcap"
+    },
+    {
+      "accepted": true,
+      "packets": 663,
+      "ipv4_endpoints": [
+        "172.31.50.161",
+        "172.31.60.10"
+      ],
+      "credential_headers_found": false,
+      "reason": "controlled_lab_endpoints_only",
+      "path": "data/lab/lab03_small/r1/input/4d08662e-9f98-4c52-9c92-bec76eda4683_hn2.pcap"
+    },
+    {
+      "accepted": true,
+      "packets": 662,
+      "ipv4_endpoints": [
+        "172.31.50.161",
+        "172.31.60.10"
+      ],
+      "credential_headers_found": false,
+      "reason": "controlled_lab_endpoints_only",
+      "path": "data/lab/lab03_small/r2/input/2f62bb51-9efa-4bc0-8f06-fdca29d2ab27_hn2.pcap"
+    },
+    {
+      "accepted": true,
+      "packets": 662,
+      "ipv4_endpoints": [
+        "172.31.50.161",
+        "172.31.60.10"
+      ],
+      "credential_headers_found": false,
+      "reason": "controlled_lab_endpoints_only",
+      "path": "data/lab/lab03_small/r3/input/b13c09b1-4b53-474e-af7c-dc4142c2b5c3_hn2.pcap"
+    },
+    {
+      "accepted": true,
+      "packets": 9245,
+      "ipv4_endpoints": [
+        "172.31.50.161",
+        "172.31.60.10"
+      ],
+      "credential_headers_found": false,
+      "reason": "controlled_lab_endpoints_only",
+      "path": "data/lab/lab05_slow/r1/input/a21d9530-64fc-4145-a022-ac55d3d8c1f5_hn2.pcap"
+    },
+    {
+      "accepted": true,
+      "packets": 9422,
+      "ipv4_endpoints": [
+        "172.31.50.161",
+        "172.31.60.10"
+      ],
+      "credential_headers_found": false,
+      "reason": "controlled_lab_endpoints_only",
+      "path": "data/lab/lab05_slow/r2/input/1ae34db6-7028-42b2-8626-5667c83263a7_hn2.pcap"
+    },
+    {
+      "accepted": true,
+      "packets": 9358,
+      "ipv4_endpoints": [
+        "172.31.50.161",
+        "172.31.60.10"
+      ],
+      "credential_headers_found": false,
+      "reason": "controlled_lab_endpoints_only",
+      "path": "data/lab/lab05_slow/r3/input/2a2c43e4-35c8-4b41-94d6-4ea1230a9517_hn2.pcap"
+    },
+    {
+      "accepted": true,
+      "packets": 10116,
+      "ipv4_endpoints": [
+        "172.31.50.161",
+        "172.31.60.10"
+      ],
+      "credential_headers_found": false,
+      "reason": "controlled_lab_endpoints_only",
+      "path": "data/lab/lab06_serverpaced/r1/input/74e5299f-a775-455c-b68c-5849663641e6_hn2.pcap"
+    },
+    {
+      "accepted": true,
+      "packets": 10087,
+      "ipv4_endpoints": [
+        "172.31.50.161",
+        "172.31.60.10"
+      ],
+      "credential_headers_found": false,
+      "reason": "controlled_lab_endpoints_only",
+      "path": "data/lab/lab06_serverpaced/r2/input/25a0caf0-d8f9-4327-84b7-9d1066cb8174_hn2.pcap"
+    },
+    {
+      "accepted": true,
+      "packets": 10098,
+      "ipv4_endpoints": [
+        "172.31.50.161",
+        "172.31.60.10"
+      ],
+      "credential_headers_found": false,
+      "reason": "controlled_lab_endpoints_only",
+      "path": "data/lab/lab06_serverpaced/r3/input/dfd0b203-cb60-461d-82f7-5cdfd262dbfb_hn2.pcap"
+    }
+  ],
+  "excluded": [],
+  "limitations": "Automated screening is not a forensic guarantee. Only controlled lab captures are allow-listed."
+}

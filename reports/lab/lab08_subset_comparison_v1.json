@@ -1,0 +1,956 @@
+{
+  "status": "restricted_descriptive_comparison_completed",
+  "fixed_model_identity": {
+    "isolation_forest": {
+      "model_sha256": "d6f7754e14bbc7adb453eb298559efeebdccad98f59143283dc74a78211b4f40",
+      "operating_point": "validation_fpr_operational",
+      "threshold": 0.615824439899627
+    },
+    "lof": {
+      "model_sha256": "6c014381d6dc5fc70a46941a450e2a60dc7b83b1bb0fcee43a7653107814df41",
+      "operating_point": "validation_fpr_operational",
+      "threshold": 91.08685969933371
+    }
+  },
+  "comparison_rows": [
+    {
+      "scenario": "lab03_small",
+      "title": "LAB03 — HTTP pequeno",
+      "sessions": 3,
+      "population": "benign_synthetic_http_exports",
+      "models": {
+        "isolation_forest": {
+          "all_segments": {
+            "segments": 180,
+            "signaled_segments": 0,
+            "signal_rate": 0.0
+          },
+          "with_payload": {
+            "segments": 90,
+            "signaled_segments": 0,
+            "signal_rate": 0.0
+          },
+          "zero_payload": {
+            "segments": 90,
+            "signaled_segments": 0,
+            "signal_rate": 0.0
+          }
+        },
+        "lof": {
+          "all_segments": {
+            "segments": 180,
+            "signaled_segments": 103,
+            "signal_rate": 0.5722222222222222
+          },
+          "with_payload": {
+            "segments": 90,
+            "signaled_segments": 13,
+            "signal_rate": 0.14444444444444443
+          },
+          "zero_payload": {
+            "segments": 90,
+            "signaled_segments": 90,
+            "signal_rate": 1.0
+          }
+        }
+      }
+    },
+    {
+      "scenario": "lab04_medium",
+      "title": "LAB04 — HTTP médio",
+      "sessions": 3,
+      "population": "benign_synthetic_http_exports",
+      "models": {
+        "isolation_forest": {
+          "all_segments": {
+            "segments": 72,
+            "signaled_segments": 0,
+            "signal_rate": 0.0
+          },
+          "with_payload": {
+            "segments": 36,
+            "signaled_segments": 0,
+            "signal_rate": 0.0
+          },
+          "zero_payload": {
+            "segments": 36,
+            "signaled_segments": 0,
+            "signal_rate": 0.0
+          }
+        },
+        "lof": {
+          "all_segments": {
+            "segments": 72,
+            "signaled_segments": 72,
+            "signal_rate": 1.0
+          },
+          "with_payload": {
+            "segments": 36,
+            "signaled_segments": 36,
+            "signal_rate": 1.0
+          },
+          "zero_payload": {
+            "segments": 36,
+            "signaled_segments": 36,
+            "signal_rate": 1.0
+          }
+        }
+      }
+    },
+    {
+      "scenario": "lab05_slow",
+      "title": "LAB05 — limite no cliente",
+      "sessions": 3,
+      "population": "benign_synthetic_http_exports",
+      "models": {
+        "isolation_forest": {
+          "all_segments": {
+            "segments": 36,
+            "signaled_segments": 18,
+            "signal_rate": 0.5
+          },
+          "with_payload": {
+            "segments": 18,
+            "signaled_segments": 18,
+            "signal_rate": 1.0
+          },
+          "zero_payload": {
+            "segments": 18,
+            "signaled_segments": 0,
+            "signal_rate": 0.0
+          }
+        },
+        "lof": {
+          "all_segments": {
+            "segments": 36,
+            "signaled_segments": 36,
+            "signal_rate": 1.0
+          },
+          "with_payload": {
+            "segments": 18,
+            "signaled_segments": 18,
+            "signal_rate": 1.0
+          },
+          "zero_payload": {
+            "segments": 18,
+            "signaled_segments": 18,
+            "signal_rate": 1.0
+          }
+        }
+      }
+    },
+    {
+      "scenario": "lab06_serverpaced",
+      "title": "LAB06 — controle no servidor",
+      "sessions": 3,
+      "population": "benign_synthetic_http_exports",
+      "models": {
+        "isolation_forest": {
+          "all_segments": {
+            "segments": 36,
+            "signaled_segments": 18,
+            "signal_rate": 0.5
+          },
+          "with_payload": {
+            "segments": 18,
+            "signaled_segments": 18,
+            "signal_rate": 1.0
+          },
+          "zero_payload": {
+            "segments": 18,
+            "signaled_segments": 0,
+            "signal_rate": 0.0
+          }
+        },
+        "lof": {
+          "all_segments": {
+            "segments": 36,
+            "signaled_segments": 36,
+            "signal_rate": 1.0
+          },
+          "with_payload": {
+            "segments": 18,
+            "signaled_segments": 18,
+            "signal_rate": 1.0
+          },
+          "zero_payload": {
+            "segments": 18,
+            "signaled_segments": 18,
+            "signal_rate": 1.0
+          }
+        }
+      }
+    },
+    {
+      "scenario": "lab08_r1_partial_export_only",
+      "title": "LAB08 — reconhecimento, recorte exportado",
+      "sessions": 1,
+      "population": "exported_records_only",
+      "models": {
+        "isolation_forest": {
+          "all_segments": {
+            "segments": 4,
+            "signaled_segments": 0,
+            "signal_rate": 0.0
+          },
+          "with_payload": {
+            "segments": 0,
+            "signaled_segments": 0,
+            "signal_rate": null
+          },
+          "zero_payload": {
+            "segments": 4,
+            "signaled_segments": 0,
+            "signal_rate": 0.0
+          }
+        },
+        "lof": {
+          "all_segments": {
+            "segments": 4,
+            "signaled_segments": 1,
+            "signal_rate": 0.25
+          },
+          "with_payload": {
+            "segments": 0,
+            "signaled_segments": 0,
+            "signal_rate": null
+          },
+          "zero_payload": {
+            "segments": 4,
+            "signaled_segments": 1,
+            "signal_rate": 0.25
+          }
+        }
+      }
+    }
+  ],
+  "lab08_evaluation_scope": {
+    "population": "exported_records_only",
+    "denominator_records": 4,
+    "partial_export_explicitly_accepted": true,
+    "coverage": {
+      "captured_packets": 42,
+      "represented_packets": 16,
+      "unrepresented_packets": 26,
+      "captured_endpoint_groups": 30,
+      "represented_endpoint_groups": 4,
+      "unrepresented_endpoint_groups": 26,
+      "all_unrepresented_groups_are_single_packet": true,
+      "full_packet_coverage": false,
+      "unrepresented_groups": [
+        {
+          "source": [
+            "172.31.60.10",
+            41836
+          ],
+          "destination": [
+            "172.31.50.161",
+            21
+          ],
+          "packets": 1,
+          "forward_packets": 1,
+          "backward_packets": 0,
+          "payload_bytes": 0,
+          "duration_us": 0,
+          "first_fin_prefix_packets": 1,
+          "first_fin_prefix_forward_packets": 1,
+          "first_fin_prefix_backward_packets": 0,
+          "first_fin_prefix_duration_us": 0,
+          "forward_initial_window_raw": 64240,
+          "backward_initial_window_raw": null,
+          "backward_last_window_raw": null
+        },
+        {
+          "source": [
+            "172.31.60.10",
+            41842
+          ],
+          "destination": [
+            "172.31.50.161",
+            21
+          ],
+          "packets": 1,
+          "forward_packets": 1,
+          "backward_packets": 0,
+          "payload_bytes": 0,
+          "duration_us": 0,
+          "first_fin_prefix_packets": 1,
+          "first_fin_prefix_forward_packets": 1,
+          "first_fin_prefix_backward_packets": 0,
+          "first_fin_prefix_duration_us": 0,
+          "forward_initial_window_raw": 64240,
+          "backward_initial_window_raw": null,
+          "backward_last_window_raw": null
+        },
+        {
+          "source": [
+            "172.31.60.10",
+            38082
+          ],
+          "destination": [
+            "172.31.50.161",
+            80
+          ],
+          "packets": 1,
+          "forward_packets": 1,
+          "backward_packets": 0,
+          "payload_bytes": 0,
+          "duration_us": 0,
+          "first_fin_prefix_packets": 1,
+          "first_fin_prefix_forward_packets": 1,
+          "first_fin_prefix_backward_packets": 0,
+          "first_fin_prefix_duration_us": 0,
+          "forward_initial_window_raw": 64240,
+          "backward_initial_window_raw": null,
+          "backward_last_window_raw": null
+        },
+        {
+          "source": [
+            "172.31.60.10",
+            42910
+          ],
+          "destination": [
+            "172.31.50.161",
+            23
+          ],
+          "packets": 1,
+          "forward_packets": 1,
+          "backward_packets": 0,
+          "payload_bytes": 0,
+          "duration_us": 0,
+          "first_fin_prefix_packets": 1,
+          "first_fin_prefix_forward_packets": 1,
+          "first_fin_prefix_backward_packets": 0,
+          "first_fin_prefix_duration_us": 0,
+          "forward_initial_window_raw": 64240,
+          "backward_initial_window_raw": null,
+          "backward_last_window_raw": null
+        },
+        {
+          "source": [
+            "172.31.60.10",
+            38088
+          ],
+          "destination": [
+            "172.31.50.161",
+            80
+          ],
+          "packets": 1,
+          "forward_packets": 1,
+          "backward_packets": 0,
+          "payload_bytes": 0,
+          "duration_us": 0,
+          "first_fin_prefix_packets": 1,
+          "first_fin_prefix_forward_packets": 1,
+          "first_fin_prefix_backward_packets": 0,
+          "first_fin_prefix_duration_us": 0,
+          "forward_initial_window_raw": 64240,
+          "backward_initial_window_raw": null,
+          "backward_last_window_raw": null
+        },
+        {
+          "source": [
+            "172.31.60.10",
+            42924
+          ],
+          "destination": [
+            "172.31.50.161",
+            23
+          ],
+          "packets": 1,
+          "forward_packets": 1,
+          "backward_packets": 0,
+          "payload_bytes": 0,
+          "duration_us": 0,
+          "first_fin_prefix_packets": 1,
+          "first_fin_prefix_forward_packets": 1,
+          "first_fin_prefix_backward_packets": 0,
+          "first_fin_prefix_duration_us": 0,
+          "forward_initial_window_raw": 64240,
+          "backward_initial_window_raw": null,
+          "backward_last_window_raw": null
+        },
+        {
+          "source": [
+            "172.31.60.10",
+            41612
+          ],
+          "destination": [
+            "172.31.50.161",
+            143
+          ],
+          "packets": 1,
+          "forward_packets": 1,
+          "backward_packets": 0,
+          "payload_bytes": 0,
+          "duration_us": 0,
+          "first_fin_prefix_packets": 1,
+          "first_fin_prefix_forward_packets": 1,
+          "first_fin_prefix_backward_packets": 0,
+          "first_fin_prefix_duration_us": 0,
+          "forward_initial_window_raw": 64240,
+          "backward_initial_window_raw": null,
+          "backward_last_window_raw": null
+        },
+        {
+          "source": [
+            "172.31.60.10",
+            34484
+          ],
+          "destination": [
+            "172.31.50.161",
+            25
+          ],
+          "packets": 1,
+          "forward_packets": 1,
+          "backward_packets": 0,
+          "payload_bytes": 0,
+          "duration_us": 0,
+          "first_fin_prefix_packets": 1,
+          "first_fin_prefix_forward_packets": 1,
+          "first_fin_prefix_backward_packets": 0,
+          "first_fin_prefix_duration_us": 0,
+          "forward_initial_window_raw": 64240,
+          "backward_initial_window_raw": null,
+          "backward_last_window_raw": null
+        },
+        {
+          "source": [
+            "172.31.60.10",
+            41626
+          ],
+          "destination": [
+            "172.31.50.161",
+            143
+          ],
+          "packets": 1,
+          "forward_packets": 1,
+          "backward_packets": 0,
+          "payload_bytes": 0,
+          "duration_us": 0,
+          "first_fin_prefix_packets": 1,
+          "first_fin_prefix_forward_packets": 1,
+          "first_fin_prefix_backward_packets": 0,
+          "first_fin_prefix_duration_us": 0,
+          "forward_initial_window_raw": 64240,
+          "backward_initial_window_raw": null,
+          "backward_last_window_raw": null
+        },
+        {
+          "source": [
+            "172.31.60.10",
+            34490
+          ],
+          "destination": [
+            "172.31.50.161",
+            25
+          ],
+          "packets": 1,
+          "forward_packets": 1,
+          "backward_packets": 0,
+          "payload_bytes": 0,
+          "duration_us": 0,
+          "first_fin_prefix_packets": 1,
+          "first_fin_prefix_forward_packets": 1,
+          "first_fin_prefix_backward_packets": 0,
+          "first_fin_prefix_duration_us": 0,
+          "forward_initial_window_raw": 64240,
+          "backward_initial_window_raw": null,
+          "backward_last_window_raw": null
+        },
+        {
+          "source": [
+            "172.31.60.10",
+            56872
+          ],
+          "destination": [
+            "172.31.50.161",
+            22
+          ],
+          "packets": 1,
+          "forward_packets": 1,
+          "backward_packets": 0,
+          "payload_bytes": 0,
+          "duration_us": 0,
+          "first_fin_prefix_packets": 1,
+          "first_fin_prefix_forward_packets": 1,
+          "first_fin_prefix_backward_packets": 0,
+          "first_fin_prefix_duration_us": 0,
+          "forward_initial_window_raw": 64240,
+          "backward_initial_window_raw": null,
+          "backward_last_window_raw": null
+        },
+        {
+          "source": [
+            "172.31.60.10",
+            48372
+          ],
+          "destination": [
+            "172.31.50.161",
+            443
+          ],
+          "packets": 1,
+          "forward_packets": 1,
+          "backward_packets": 0,
+          "payload_bytes": 0,
+          "duration_us": 0,
+          "first_fin_prefix_packets": 1,
+          "first_fin_prefix_forward_packets": 1,
+          "first_fin_prefix_backward_packets": 0,
+          "first_fin_prefix_duration_us": 0,
+          "forward_initial_window_raw": 64240,
+          "backward_initial_window_raw": null,
+          "backward_last_window_raw": null
+        },
+        {
+          "source": [
+            "172.31.60.10",
+            56874
+          ],
+          "destination": [
+            "172.31.50.161",
+            22
+          ],
+          "packets": 1,
+          "forward_packets": 1,
+          "backward_packets": 0,
+          "payload_bytes": 0,
+          "duration_us": 0,
+          "first_fin_prefix_packets": 1,
+          "first_fin_prefix_forward_packets": 1,
+          "first_fin_prefix_backward_packets": 0,
+          "first_fin_prefix_duration_us": 0,
+          "forward_initial_window_raw": 64240,
+          "backward_initial_window_raw": null,
+          "backward_last_window_raw": null
+        },
+        {
+          "source": [
+            "172.31.60.10",
+            48388
+          ],
+          "destination": [
+            "172.31.50.161",
+            443
+          ],
+          "packets": 1,
+          "forward_packets": 1,
+          "backward_packets": 0,
+          "payload_bytes": 0,
+          "duration_us": 0,
+          "first_fin_prefix_packets": 1,
+          "first_fin_prefix_forward_packets": 1,
+          "first_fin_prefix_backward_packets": 0,
+          "first_fin_prefix_duration_us": 0,
+          "forward_initial_window_raw": 64240,
+          "backward_initial_window_raw": null,
+          "backward_last_window_raw": null
+        },
+        {
+          "source": [
+            "172.31.60.10",
+            56152
+          ],
+          "destination": [
+            "172.31.50.161",
+            53
+          ],
+          "packets": 1,
+          "forward_packets": 1,
+          "backward_packets": 0,
+          "payload_bytes": 0,
+          "duration_us": 0,
+          "first_fin_prefix_packets": 1,
+          "first_fin_prefix_forward_packets": 1,
+          "first_fin_prefix_backward_packets": 0,
+          "first_fin_prefix_duration_us": 0,
+          "forward_initial_window_raw": 64240,
+          "backward_initial_window_raw": null,
+          "backward_last_window_raw": null
+        },
+        {
+          "source": [
+            "172.31.60.10",
+            33228
+          ],
+          "destination": [
+            "172.31.50.161",
+            110
+          ],
+          "packets": 1,
+          "forward_packets": 1,
+          "backward_packets": 0,
+          "payload_bytes": 0,
+          "duration_us": 0,
+          "first_fin_prefix_packets": 1,
+          "first_fin_prefix_forward_packets": 1,
+          "first_fin_prefix_backward_packets": 0,
+          "first_fin_prefix_duration_us": 0,
+          "forward_initial_window_raw": 64240,
+          "backward_initial_window_raw": null,
+          "backward_last_window_raw": null
+        },
+        {
+          "source": [
+            "172.31.60.10",
+            49212
+          ],
+          "destination": [
+            "172.31.50.161",
+            53
+          ],
+          "packets": 1,
+          "forward_packets": 1,
+          "backward_packets": 0,
+          "payload_bytes": 0,
+          "duration_us": 0,
+          "first_fin_prefix_packets": 1,
+          "first_fin_prefix_forward_packets": 1,
+          "first_fin_prefix_backward_packets": 0,
+          "first_fin_prefix_duration_us": 0,
+          "forward_initial_window_raw": 64240,
+          "backward_initial_window_raw": null,
+          "backward_last_window_raw": null
+        },
+        {
+          "source": [
+            "172.31.60.10",
+            33240
+          ],
+          "destination": [
+            "172.31.50.161",
+            110
+          ],
+          "packets": 1,
+          "forward_packets": 1,
+          "backward_packets": 0,
+          "payload_bytes": 0,
+          "duration_us": 0,
+          "first_fin_prefix_packets": 1,
+          "first_fin_prefix_forward_packets": 1,
+          "first_fin_prefix_backward_packets": 0,
+          "first_fin_prefix_duration_us": 0,
+          "forward_initial_window_raw": 64240,
+          "backward_initial_window_raw": null,
+          "backward_last_window_raw": null
+        },
+        {
+          "source": [
+            "172.31.60.10",
+            59128
+          ],
+          "destination": [
+            "172.31.50.161",
+            8080
+          ],
+          "packets": 1,
+          "forward_packets": 1,
+          "backward_packets": 0,
+          "payload_bytes": 0,
+          "duration_us": 0,
+          "first_fin_prefix_packets": 1,
+          "first_fin_prefix_forward_packets": 1,
+          "first_fin_prefix_backward_packets": 0,
+          "first_fin_prefix_duration_us": 0,
+          "forward_initial_window_raw": 64240,
+          "backward_initial_window_raw": null,
+          "backward_last_window_raw": null
+        },
+        {
+          "source": [
+            "172.31.60.10",
+            59120
+          ],
+          "destination": [
+            "172.31.50.161",
+            3389
+          ],
+          "packets": 1,
+          "forward_packets": 1,
+          "backward_packets": 0,
+          "payload_bytes": 0,
+          "duration_us": 0,
+          "first_fin_prefix_packets": 1,
+          "first_fin_prefix_forward_packets": 1,
+          "first_fin_prefix_backward_packets": 0,
+          "first_fin_prefix_duration_us": 0,
+          "forward_initial_window_raw": 64240,
+          "backward_initial_window_raw": null,
+          "backward_last_window_raw": null
+        },
+        {
+          "source": [
+            "172.31.60.10",
+            59144
+          ],
+          "destination": [
+            "172.31.50.161",
+            8080
+          ],
+          "packets": 1,
+          "forward_packets": 1,
+          "backward_packets": 0,
+          "payload_bytes": 0,
+          "duration_us": 0,
+          "first_fin_prefix_packets": 1,
+          "first_fin_prefix_forward_packets": 1,
+          "first_fin_prefix_backward_packets": 0,
+          "first_fin_prefix_duration_us": 0,
+          "forward_initial_window_raw": 64240,
+          "backward_initial_window_raw": null,
+          "backward_last_window_raw": null
+        },
+        {
+          "source": [
+            "172.31.60.10",
+            59132
+          ],
+          "destination": [
+            "172.31.50.161",
+            3389
+          ],
+          "packets": 1,
+          "forward_packets": 1,
+          "backward_packets": 0,
+          "payload_bytes": 0,
+          "duration_us": 0,
+          "first_fin_prefix_packets": 1,
+          "first_fin_prefix_forward_packets": 1,
+          "first_fin_prefix_backward_packets": 0,
+          "first_fin_prefix_duration_us": 0,
+          "forward_initial_window_raw": 64240,
+          "backward_initial_window_raw": null,
+          "backward_last_window_raw": null
+        },
+        {
+          "source": [
+            "172.31.60.10",
+            57078
+          ],
+          "destination": [
+            "172.31.50.161",
+            5985
+          ],
+          "packets": 1,
+          "forward_packets": 1,
+          "backward_packets": 0,
+          "payload_bytes": 0,
+          "duration_us": 0,
+          "first_fin_prefix_packets": 1,
+          "first_fin_prefix_forward_packets": 1,
+          "first_fin_prefix_backward_packets": 0,
+          "first_fin_prefix_duration_us": 0,
+          "forward_initial_window_raw": 64240,
+          "backward_initial_window_raw": null,
+          "backward_last_window_raw": null
+        },
+        {
+          "source": [
+            "172.31.60.10",
+            55666
+          ],
+          "destination": [
+            "172.31.50.161",
+            8000
+          ],
+          "packets": 1,
+          "forward_packets": 1,
+          "backward_packets": 0,
+          "payload_bytes": 0,
+          "duration_us": 0,
+          "first_fin_prefix_packets": 1,
+          "first_fin_prefix_forward_packets": 1,
+          "first_fin_prefix_backward_packets": 0,
+          "first_fin_prefix_duration_us": 0,
+          "forward_initial_window_raw": 64240,
+          "backward_initial_window_raw": null,
+          "backward_last_window_raw": null
+        },
+        {
+          "source": [
+            "172.31.60.10",
+            57080
+          ],
+          "destination": [
+            "172.31.50.161",
+            5985
+          ],
+          "packets": 1,
+          "forward_packets": 1,
+          "backward_packets": 0,
+          "payload_bytes": 0,
+          "duration_us": 0,
+          "first_fin_prefix_packets": 1,
+          "first_fin_prefix_forward_packets": 1,
+          "first_fin_prefix_backward_packets": 0,
+          "first_fin_prefix_duration_us": 0,
+          "forward_initial_window_raw": 64240,
+          "backward_initial_window_raw": null,
+          "backward_last_window_raw": null
+        },
+        {
+          "source": [
+            "172.31.60.10",
+            55682
+          ],
+          "destination": [
+            "172.31.50.161",
+            8000
+          ],
+          "packets": 1,
+          "forward_packets": 1,
+          "backward_packets": 0,
+          "payload_bytes": 0,
+          "duration_us": 0,
+          "first_fin_prefix_packets": 1,
+          "first_fin_prefix_forward_packets": 1,
+          "first_fin_prefix_backward_packets": 0,
+          "first_fin_prefix_duration_us": 0,
+          "forward_initial_window_raw": 64240,
+          "backward_initial_window_raw": null,
+          "backward_last_window_raw": null
+        }
+      ]
+    },
+    "whole_scan_detection_measured": false,
+    "limitations": [
+      "Selection is conditional on extractor export, not on model scores.",
+      "No inference is produced for unrepresented packets/groups.",
+      "No precision, recall, FPR, F1 or whole-scan detection estimate is computed.",
+      "A small set of correlated exported records is not an independent attack sample."
+    ]
+  },
+  "lab08_records": [
+    {
+      "csv_data_row": 1,
+      "source_port": 37416,
+      "target_port": 135,
+      "isolation_forest": {
+        "label": "normal",
+        "predicted_anomaly": 0,
+        "native_predicted_anomaly": 0,
+        "sklearn_native_prediction": 1,
+        "anomaly_score": 0.39503515618629975,
+        "score_samples": -0.39503515618629975,
+        "decision_function": 0.10496484381370025,
+        "threshold_distance": -0.22078928371332723,
+        "anomaly_score_is_probability": false
+      },
+      "lof": {
+        "label": "normal",
+        "predicted_anomaly": 0,
+        "native_predicted_anomaly": 1,
+        "sklearn_native_prediction": -1,
+        "anomaly_score": 35.98162682351817,
+        "score_samples": -35.98162682351817,
+        "decision_function": -34.48162682351817,
+        "threshold_distance": -55.105232875815545,
+        "anomaly_score_is_probability": false
+      }
+    },
+    {
+      "csv_data_row": 2,
+      "source_port": 37422,
+      "target_port": 135,
+      "isolation_forest": {
+        "label": "normal",
+        "predicted_anomaly": 0,
+        "native_predicted_anomaly": 0,
+        "sklearn_native_prediction": 1,
+        "anomaly_score": 0.39503515618629975,
+        "score_samples": -0.39503515618629975,
+        "decision_function": 0.10496484381370025,
+        "threshold_distance": -0.22078928371332723,
+        "anomaly_score_is_probability": false
+      },
+      "lof": {
+        "label": "normal",
+        "predicted_anomaly": 0,
+        "native_predicted_anomaly": 1,
+        "sklearn_native_prediction": -1,
+        "anomaly_score": 35.9816278338178,
+        "score_samples": -35.9816278338178,
+        "decision_function": -34.4816278338178,
+        "threshold_distance": -55.10523186551592,
+        "anomaly_score_is_probability": false
+      }
+    },
+    {
+      "csv_data_row": 3,
+      "source_port": 56628,
+      "target_port": 139,
+      "isolation_forest": {
+        "label": "normal",
+        "predicted_anomaly": 0,
+        "native_predicted_anomaly": 0,
+        "sklearn_native_prediction": 1,
+        "anomaly_score": 0.3666999943954883,
+        "score_samples": -0.3666999943954883,
+        "decision_function": 0.13330000560451172,
+        "threshold_distance": -0.2491244455041387,
+        "anomaly_score_is_probability": false
+      },
+      "lof": {
+        "label": "anomaly",
+        "predicted_anomaly": 1,
+        "native_predicted_anomaly": 1,
+        "sklearn_native_prediction": -1,
+        "anomaly_score": 222.22343337436564,
+        "score_samples": -222.22343337436564,
+        "decision_function": -220.72343337436564,
+        "threshold_distance": 131.1365736750319,
+        "anomaly_score_is_probability": false
+      }
+    },
+    {
+      "csv_data_row": 4,
+      "source_port": 45000,
+      "target_port": 445,
+      "isolation_forest": {
+        "label": "normal",
+        "predicted_anomaly": 0,
+        "native_predicted_anomaly": 0,
+        "sklearn_native_prediction": 1,
+        "anomaly_score": 0.39503515618629975,
+        "score_samples": -0.39503515618629975,
+        "decision_function": 0.10496484381370025,
+        "threshold_distance": -0.22078928371332723,
+        "anomaly_score_is_probability": false
+      },
+      "lof": {
+        "label": "normal",
+        "predicted_anomaly": 0,
+        "native_predicted_anomaly": 1,
+        "sklearn_native_prediction": -1,
+        "anomaly_score": 35.98158848857759,
+        "score_samples": -35.98158848857759,
+        "decision_function": -34.48158848857759,
+        "threshold_distance": -55.10527121075612,
+        "anomaly_score_is_probability": false
+      }
+    }
+  ],
+  "source_sha256": {
+    "reports/lab/lab_capture_summary_complete_r1_r3.json": "2e4fe1f8fbbca145f39af9d9741bbf6d3fe5c7b1135124acb64477ddf58901f8",
+    "data/lab/lab03_small/r1/inference/run_manifest.json": "b65c6b7b92e33bc51b71b2effdaadc8016aea21ab023f0f2732c636f50491966",
+    "data/lab/lab03_small/r2/inference/run_manifest.json": "35162dd204edd49f55b3e544a244f2a53700c44f801378383e59d1902aef4212",
+    "data/lab/lab03_small/r3/inference/run_manifest.json": "49f94fd6732d3f2532702d6fa807e07d9b1371d2e3eb070e21c7b7904fbef824",
+    "data/lab/lab04_medium/r1/inference/run_manifest.json": "d140ed4876411c8c37d61492463c9fccec11f77e58b0f87e9cdaf4ee35322c24",
+    "data/lab/lab04_medium/r2/inference/run_manifest.json": "12b3ec40913efef0c68a1bbea6d9e2dfd13b63f440d33c4790733b3b02203277",
+    "data/lab/lab04_medium/r3/inference/run_manifest.json": "7a30693caf2f75fdba3b59bf2a898199bc544a7f5b4bbcad19650c0ae45c71b2",
+    "data/lab/lab05_slow/r1/inference/run_manifest.json": "1ce753bb164f50eed77a4bb5f18a63d531c40e289f1484efacf572e63bbc372c",
+    "data/lab/lab05_slow/r2/inference/run_manifest.json": "1005935798d31015177b67f2bb2b49fd45515cca9041f695267d2a7e41ef7a70",
+    "data/lab/lab05_slow/r3/inference/run_manifest.json": "752d399a00ac6f6f4eb702eb095db14fc40c4aa7d30bf251c8e52e996464479f",
+    "data/lab/lab06_serverpaced/r1/inference/run_manifest.json": "7a7de52f95c51c9752f5d21c2380bfac4654721103f69cd4a9ce7b5d6d21d343",
+    "data/lab/lab06_serverpaced/r2/inference/run_manifest.json": "c27fe3a5cd6bc5c6387adf5004792e0c4d75123cddc1de9ff7a98b7103ac2e85",
+    "data/lab/lab06_serverpaced/r3/inference/run_manifest.json": "3b441c9be24e27177c83f0329ad2abb8882d65d05e1e73257c7c7996c077669d",
+    "data/lab/lab08_tcp_responsive/r1/inference_exported_subset/run_manifest.json": "b1c092c002eec54771786071935999276015db243144f5828a4c48ecc9298fcd",
+    "data/lab/lab08_tcp_responsive/r1/extraction_audit.json": "4fa80b12a5e4b4934748108e9d7269eb4ef6a2a21c27d6bf132c60d0a089fb7e"
+  },
+  "models_loaded_by_comparison": false,
+  "models_retrained": false,
+  "thresholds_recalibrated": false,
+  "database_written": false,
+  "supervised_metrics_computed": false,
+  "implementation_sha256": "3b1765e716a897e3b94b6cde65dec017db13d37baf4f12b646134f63ef60d6ca"
+}

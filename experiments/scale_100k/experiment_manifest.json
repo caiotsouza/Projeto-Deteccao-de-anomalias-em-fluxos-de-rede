@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "stage": "scale_100k_experiment",
+  "created_at_utc": "2026-09-04T02:53:13.108251+00:00",
+  "status": "completed",
+  "experiment_dir": "./experiments/scale_100k",
+  "configuration": {
+    "splits": {
+      "train_benign_size": 100000,
+      "validation_benign_size": 25000,
+      "validation_attack_size": 25000,
+      "test_benign_size": 50000,
+      "test_attack_size": 50000,
+      "minimum_attack_per_split": 5,
+      "chunk_size": 100000,
+      "random_state": 42,
+      "candidate_buffer_ratio": 0.25
+    },
+    "isolation_forest": {
+      "n_estimators": 200,
+      "max_samples": 2048,
+      "contamination": "auto",
+      "max_features": 1.0,
+      "bootstrap": false,
+      "random_state": 42,
+      "n_jobs": -1
+    },
+    "lof": {
+      "n_neighbors": 20,
+      "contamination": "auto",
+      "novelty": true,
+      "algorithm": "auto",
+      "leaf_size": 30,
+      "metric": "minkowski",
+      "p": 2,
+      "n_jobs": -1
+    }
+  },
+  "outputs": {
+    "train": {
+      "records": 100000,
+      "feature_count": 60,
+      "label_present_in_features": false,
+      "binary_distribution": {
+        "0": 100000
+      },
+      "label_distribution": {
+        "BENIGN": 100000
+      },
+      "source_distribution": {
+        "Monday-WorkingHours.pcap_ISCX.csv": 100000
+      }
+    },
+    "validation": {
+      "records": 50000,
+      "feature_count": 60,
+      "label_present_in_features": false,
+      "binary_distribution": {
+        "0": 25000,
+        "1": 25000
+      },
+      "label_distribution": {
+        "BENIGN": 25000,
+        "DoS Hulk": 10336,
+        "PortScan": 7111,
+        "DDoS": 5729,
+        "DoS GoldenEye": 465,
+        "FTP-Patator": 360,
+        "SSH-Patator": 268,
+        "DoS slowloris": 264,
+        "DoS Slowhttptest": 251,
+        "Bot": 93,
+        "Web Attack - Brute Force": 72,
+        "Web Attack - XSS": 34,
+        "Web Attack - Sql Injection": 6,
+        "Infiltration": 6,
+        "Heartbleed": 5
+      },
+      "source_distribution": {
+        "Wednesday-workingHours.pcap_ISCX.csv": 17639,
+        "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv": 9009,
+        "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv": 7267,
+        "Tuesday-WorkingHours.pcap_ISCX.csv": 6800,
+        "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv": 3855,
+        "Friday-WorkingHours-Morning.pcap_ISCX.csv": 2919,
+        "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv": 2511
+      }
+    },
+    "test": {
+      "records": 100000,
+      "feature_count": 60,
+      "label_present_in_features": false,
+      "binary_distribution": {
+        "0": 50000,
+        "1": 50000
+      },
+      "label_distribution": {
+        "BENIGN": 50000,
+        "DoS Hulk": 20699,
+        "PortScan": 14238,
+        "DDoS": 11470,
+        "DoS GoldenEye": 926,
+        "FTP-Patator": 715,
+        "SSH-Patator": 532,
+        "DoS slowloris": 523,
+        "DoS Slowhttptest": 497,
+        "Bot": 180,
+        "Web Attack - Brute Force": 139,
+        "Web Attack - XSS": 63,
+        "Infiltration": 7,
+        "Web Attack - Sql Injection": 6,
+        "Heartbleed": 5
+      },
+      "source_distribution": {
+        "Wednesday-workingHours.pcap_ISCX.csv": 34974,
+        "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv": 18088,
+        "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv": 14534,
+        "Tuesday-WorkingHours.pcap_ISCX.csv": 13855,
+        "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv": 7682,
+        "Friday-WorkingHours-Morning.pcap_ISCX.csv": 5783,
+        "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv": 5084
+      }
+    }
+  },
+  "baseline_integrity": {
+    "hashes_before": {
+      "isolation_forest_model": "1d7bd1b69dd8505cf6b06e813b94a93e34c05bd303de55c3a45f8886176d599c",
+      "lof_model": "1e4a8b96759bcf1844e8884d2d09c2361065d646096b0e6959fd90cd9d8ce382",
+      "split_report": "1ba88dbcec689ba1597459aa22f6b4a403c7729fb42a750f1e8c1ed783cebd95",
+      "comparison_report": "8b7b74bc060c6b7ba7a2d271eff52f488443625c464d1af8ccc0d19500aa00e3"
+    },
+    "hashes_after": {
+      "isolation_forest_model": "1d7bd1b69dd8505cf6b06e813b94a93e34c05bd303de55c3a45f8886176d599c",
+      "lof_model": "1e4a8b96759bcf1844e8884d2d09c2361065d646096b0e6959fd90cd9d8ce382",
+      "split_report": "1ba88dbcec689ba1597459aa22f6b4a403c7729fb42a750f1e8c1ed783cebd95",
+      "comparison_report": "8b7b74bc060c6b7ba7a2d271eff52f488443625c464d1af8ccc0d19500aa00e3"
+    },
+    "unchanged": true
+  },
+  "stage_wall_clock_seconds": {
+    "create_splits": 50.012199399992824,
+    "save_splits": 0.8399970000027679,
+    "train_isolation_forest": 4.290284199989401,
+    "train_lof": 23.867437300039455,
+    "evaluate_isolation_forest": 2.1648271000012755,
+    "evaluate_and_compare_models": 3.664825599989854,
+    "compare_20k_and_100k": 1.43667030002689
+  },
+  "reports": {
+    "expanded_model_comparison": "./experiments/scale_100k/metrics/model_comparison.json",
+    "scale_comparison": "./experiments/scale_100k/metrics/scale_comparison.json"
+  },
+  "expanded_status": "completed",
+  "scale_comparison_status": "completed"
+}

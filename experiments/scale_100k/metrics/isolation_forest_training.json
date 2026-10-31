@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "stage": "isolation_forest_training_marco_6",
+  "created_at_utc": "2026-09-04T02:52:41.695245+00:00",
+  "status": "completed_without_labels",
+  "configuration": {
+    "n_estimators": 200,
+    "max_samples": 2048,
+    "contamination": "auto",
+    "max_features": 1.0,
+    "bootstrap": false,
+    "random_state": 42,
+    "n_jobs": -1
+  },
+  "effective_max_samples": 2048,
+  "learned_offset": -0.5,
+  "inputs": {
+    "train": {
+      "path": "./experiments/scale_100k/data/splits/X_train.parquet",
+      "records": 100000,
+      "features": 60,
+      "schema_sha256": "07bd5818c91930b6ceb8178e160d9365260f6b92f629fa02ef14227cfaa113a4"
+    },
+    "validation": {
+      "path": "./experiments/scale_100k/data/splits/X_validation.parquet",
+      "records": 50000,
+      "features": 60,
+      "schema_sha256": "07bd5818c91930b6ceb8178e160d9365260f6b92f629fa02ef14227cfaa113a4"
+    },
+    "test": {
+      "path": "./experiments/scale_100k/data/splits/X_test.parquet",
+      "records": 100000,
+      "features": 60,
+      "schema_sha256": "07bd5818c91930b6ceb8178e160d9365260f6b92f629fa02ef14227cfaa113a4"
+    }
+  },
+  "input_validation": {
+    "expected_schema_sha256": "07bd5818c91930b6ceb8178e160d9365260f6b92f629fa02ef14227cfaa113a4",
+    "all_schemas_match": true,
+    "all_features_numeric": true,
+    "nan_count": 0,
+    "infinity_count": 0,
+    "label_columns_loaded": false,
+    "status": "passed"
+  },
+  "methodology": {
+    "training_input": "X_train only",
+    "labels_loaded": false,
+    "labels_used": false,
+    "scaler_used": false,
+    "validation_and_test_used_for_fit": false,
+    "threshold_source": "IsolationForest contamination parameter and learned offset_"
+  },
+  "score_semantics": {
+    "sklearn_prediction": "1=normal, -1=anomaly",
+    "predicted_anomaly": "0=normal, 1=anomaly",
+    "score_samples": "lower values indicate more abnormal observations",
+    "decision_function": "negative values are predicted as anomalies",
+    "anomaly_score": "-score_samples; higher values indicate more abnormal observations"
+  },
+  "timing_seconds": {
+    "training": 0.9313533999957144,
+    "inference_total": 2.7238717999425717,
+    "training_and_inference": 3.655225199938286
+  },
+  "predictions_without_ground_truth": {
+    "train": {
+      "records": 100000,
+      "predicted_normal": 96575,
+      "predicted_anomaly": 3425,
+      "predicted_anomaly_rate": 0.03425,
+      "score_statistics": {
+        "score_samples_lower_is_more_abnormal": {
+          "minimum": -0.7361644443204152,
+          "p01": -0.568610016497467,
+          "p05": -0.48117964609032177,
+          "p25": -0.358778230323436,
+          "median": -0.33527561183489113,
+          "p75": -0.31740126638694827,
+          "p95": -0.312925532302111,
+          "p99": -0.3122979999908069,
+          "maximum": -0.3121033370467357,
+          "mean": -0.3528253699010325,
+          "standard_deviation": 0.053894460205414406
+        },
+        "decision_function_negative_is_anomaly": {
+          "minimum": -0.23616444432041517,
+          "p01": -0.06861001649746695,
+          "p05": 0.018820353909678237,
+          "p25": 0.14122176967656402,
+          "median": 0.16472438816510887,
+          "p75": 0.18259873361305173,
+          "p95": 0.187074467697889,
+          "p99": 0.18770200000919313,
+          "maximum": 0.1878966629532643,
+          "mean": 0.14717463009896747,
+          "standard_deviation": 0.053894460205414406
+        },
+        "anomaly_score_higher_is_more_abnormal": {
+          "minimum": 0.3121033370467357,
+          "p01": 0.3122979999908069,
+          "p05": 0.312925532302111,
+          "p25": 0.31740126638694827,
+          "median": 0.33527561183489113,
+          "p75": 0.358778230323436,
+          "p95": 0.4811796460903217,
+          "p99": 0.5686100164974662,
+          "maximum": 0.7361644443204152,
+          "mean": 0.3528253699010325,
+          "standard_deviation": 0.053894460205414406
+        }
+      },
+      "inference_seconds": 0.9940948999719694
+    },
+    "validation": {
+      "records": 50000,
+      "predicted_normal": 38617,
+      "predicted_anomaly": 11383,
+      "predicted_anomaly_rate": 0.22766,
+      "score_statistics": {
+        "score_samples_lower_is_more_abnormal": {
+          "minimum": -0.7270751354859564,
+          "p01": -0.6722691480466303,
+          "p05": -0.6418305379227305,
+          "p25": -0.491835542134714,
+          "median": -0.3533786603236111,
+          "p75": -0.33031798825305747,
+          "p95": -0.3137799587384686,
+          "p99": -0.31241995303327497,
+          "maximum": -0.3121033370467357,
+          "mean": -0.41793553907840947,
+          "standard_deviation": 0.11876806646457946
+        },
+        "decision_function_negative_is_anomaly": {
+          "minimum": -0.22707513548595637,
+          "p01": -0.17226914804663035,
+          "p05": -0.14183053792273043,
+          "p25": 0.008164457865286023,
+          "median": 0.1466213396763889,
+          "p75": 0.16968201174694253,
+          "p95": 0.1862200412615314,
+          "p99": 0.18758004696672503,
+          "maximum": 0.1878966629532643,
+          "mean": 0.08206446092159053,
+          "standard_deviation": 0.11876806646457946
+        },
+        "anomaly_score_higher_is_more_abnormal": {
+          "minimum": 0.3121033370467357,
+          "p01": 0.31241995303327497,
+          "p05": 0.3137799587384686,
+          "p25": 0.33031798825305747,
+          "median": 0.3533786603236111,
+          "p75": 0.491835542134714,
+          "p95": 0.6418305379227304,
+          "p99": 0.6722691480466304,
+          "maximum": 0.7270751354859564,
+          "mean": 0.41793553907840947,
+          "standard_deviation": 0.11876806646457946
+        }
+      },
+      "inference_seconds": 0.6063212999724783
+    },
+    "test": {
+      "records": 100000,
+      "predicted_normal": 77122,
+      "predicted_anomaly": 22878,
+      "predicted_anomaly_rate": 0.22878,
+      "score_statistics": {
+        "score_samples_lower_is_more_abnormal": {
+          "minimum": -0.7516460746708964,
+          "p01": -0.6727135260311292,
+          "p05": -0.6425006620356577,
+          "p25": -0.49176115832695455,
+          "median": -0.3533786603236111,
+          "p75": -0.330085572461328,
+          "p95": -0.3137586755759759,
+          "p99": -0.3123845772205864,
+          "maximum": -0.3121033370467357,
+          "mean": -0.41808190675893,
+          "standard_deviation": 0.11910693983916944
+        },
+        "decision_function_negative_is_anomaly": {
+          "minimum": -0.2516460746708964,
+          "p01": -0.1727135260311292,
+          "p05": -0.1425006620356577,
+          "p25": 0.00823884167304545,
+          "median": 0.1466213396763889,
+          "p75": 0.16991442753867197,
+          "p95": 0.1862413244240241,
+          "p99": 0.18761542277941362,
+          "maximum": 0.1878966629532643,
+          "mean": 0.08191809324107002,
+          "standard_deviation": 0.11910693983916944
+        },
+        "anomaly_score_higher_is_more_abnormal": {
+          "minimum": 0.3121033370467357,
+          "p01": 0.3123845772205864,
+          "p05": 0.31375867557597586,
+          "p25": 0.330085572461328,
+          "median": 0.3533786603236111,
+          "p75": 0.49176115832695455,
+          "p95": 0.6425006620356577,
+          "p99": 0.6727135260311291,
+          "maximum": 0.7516460746708964,
+          "mean": 0.41808190675893,
+          "standard_deviation": 0.11910693983916944
+        }
+      },
+      "inference_seconds": 1.123455599998124
+    }
+  },
+  "evaluation_deferred_to_marco_7": true,
+  "metrics_not_calculated": [
+    "confusion_matrix",
+    "precision",
+    "recall",
+    "f1_score",
+    "false_positive_rate",
+    "roc_auc",
+    "pr_auc"
+  ],
+  "libraries": {
+    "python": "3.12.14",
+    "numpy": "2.5.2",
+    "pandas": "3.0.1",
+    "scikit_learn": "1.9.0",
+    "joblib": "1.5.3"
+  },
+  "model_sha256": "d6f7754e14bbc7adb453eb298559efeebdccad98f59143283dc74a78211b4f40",
+  "artifacts": {
+    "model": "./experiments/scale_100k/models/isolation_forest.joblib",
+    "metadata": "./experiments/scale_100k/models/isolation_forest_metadata.json",
+    "report": "./experiments/scale_100k/metrics/isolation_forest_training.json",
+    "predictions_train": "./experiments/scale_100k/data/predictions/isolation_forest_train_predictions.parquet",
+    "predictions_validation": "./experiments/scale_100k/data/predictions/isolation_forest_validation_predictions.parquet",
+    "predictions_test": "./experiments/scale_100k/data/predictions/isolation_forest_test_predictions.parquet"
+  },
+  "prediction_columns": [
+    "row_position",
+    "record_hash",
+    "sklearn_prediction",
+    "predicted_anomaly",
+    "score_samples",
+    "decision_function",
+    "anomaly_score"
+  ]
+}

@@ -1,0 +1,4 @@
+# Nmap 7.99 scan initiated Sun Oct 25 22:48:19 2026 as: /usr/lib/nmap/nmap -n -Pn -sT -p 21,22,23,25,53,80,110,135,139,143,443,445,3389,8000,8080 --max-rate 10 --scan-delay 100ms --max-retries 1 --host-timeout 120s -oA /tmp/lab07-r1/scan 172.31.50.161
+Host: 172.31.50.161 ()	Status: Up
+Host: 172.31.50.161 ()	Ports: 21/filtered/tcp//ftp///, 22/filtered/tcp//ssh///, 23/filtered/tcp//telnet///, 25/filtered/tcp//smtp///, 53/filtered/tcp//domain///, 80/filtered/tcp//http///, 110/filtered/tcp//pop3///, 135/filtered/tcp//msrpc///, 139/filtered/tcp//netbios-ssn///, 143/filtered/tcp//imap///, 443/filtered/tcp//https///, 445/filtered/tcp//microsoft-ds///, 3389/filtered/tcp//ms-wbt-server///, 8000/filtered/tcp//http-alt///, 8080/filtered/tcp//http-proxy///
+# Nmap done at Sun Oct 25 22:48:24 2026 -- 1 IP address (1 host up) scanned in 5.56 seconds

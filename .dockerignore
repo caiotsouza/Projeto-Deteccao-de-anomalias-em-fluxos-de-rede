@@ -1,0 +1,16 @@
+*
+!requirements.txt
+!requirements.lock.txt
+!run_dashboard_api.py
+!initialize_mongodb.py
+!src/
+!src/**
+!reports/
+!reports/integration/
+!reports/integration/mongodb_prediction.schema.json
+!reports/operational/
+!reports/operational/model_registry_operational.json
+!experiments/
+!experiments/scale_100k/
+!experiments/scale_100k/models/
+!experiments/scale_100k/models/isolation_forest.joblib

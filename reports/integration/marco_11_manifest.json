@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "stage": "integration_and_dashboard_preparation_marco_11",
+  "created_at_utc": "2026-09-05T19:22:54.447646+00:00",
+  "status": "completed",
+  "scope": {
+    "structured_inference_layer": "implemented",
+    "monitoring_document_builder": "implemented",
+    "dashboard_aggregation_builder": "implemented",
+    "mongodb_connection": "not_implemented",
+    "fastapi_server": "not_implemented",
+    "grafana_provisioning": "not_implemented",
+    "pfsense_squid_feature_extractor": "not_implemented"
+  },
+  "selection": {
+    "experiment": "expanded_100k",
+    "model": "isolation_forest",
+    "operating_point": "validation_fpr_operational",
+    "production_approved": false
+  },
+  "methodology": {
+    "model_loaded_during_contract_generation": false,
+    "model_modified": false,
+    "threshold_modified": false,
+    "source_artifacts_modified": false,
+    "anomaly_score_treated_as_probability": false,
+    "live_ground_truth_assumed": false
+  },
+  "source_integrity": {
+    "sources": [
+      {
+        "relative_path": "reports/operational/model_registry_operational.json",
+        "sha256": "5705e4c770e6271f8f7fea83f57653d15dc0b1725cdb59b3909d5bbaa84aff74",
+        "size_bytes": 42019
+      },
+      {
+        "relative_path": "experiments/scale_100k/models/isolation_forest_metadata.json",
+        "sha256": "36629c3d3198782f2eb1245ab8e622bbb4a4329030960c9eed23ff479c26bb0d",
+        "size_bytes": 4517
+      },
+      {
+        "relative_path": "experiments/scale_100k/models/isolation_forest.joblib",
+        "sha256": "d6f7754e14bbc7adb453eb298559efeebdccad98f59143283dc74a78211b4f40",
+        "size_bytes": 1294831
+      }
+    ],
+    "aggregate_sha256_before": "607a4ccef41a495487cc5384e5c7a914f20170286567f8a66d67f2dc425dc263",
+    "aggregate_sha256_after": "607a4ccef41a495487cc5384e5c7a914f20170286567f8a66d67f2dc425dc263",
+    "unchanged": true
+  },
+  "validation": {
+    "feature_count": 60,
+    "request_requires_all_features": true,
+    "labels_forbidden_from_model_input": true,
+    "calibrated_threshold_independent_from_test": true,
+    "dashboard_panel_count": 11,
+    "status": "passed"
+  },
+  "outputs": {
+    "request_schema": {
+      "relative_path": "reports/integration/inference_request.schema.json",
+      "sha256": "76e634eca0f332cfd601d6ea194fa6d14c1a7fa31d03174bd04810efe7ec77e8",
+      "size_bytes": 11611
+    },
+    "response_schema": {
+      "relative_path": "reports/integration/inference_response.schema.json",
+      "sha256": "77d08c91d86ba173065a2ecc2dfbb1a3c076df1ca3e3889456f16fdbfb5b3950",
+      "size_bytes": 3106
+    },
+    "mongodb_schema": {
+      "relative_path": "reports/integration/mongodb_prediction.schema.json",
+      "sha256": "70eb6ceea4c9635f2b474ef70425ba0f6f31fae7d24533eff7eb570498881c4a",
+      "size_bytes": 2418
+    },
+    "grafana_spec": {
+      "relative_path": "reports/integration/grafana_dashboard_spec.json",
+      "sha256": "26d913e22d1bebe50e7614734270048aa308129b432d6d7a5422d04b814fe304",
+      "size_bytes": 5296
+    },
+    "summary": {
+      "relative_path": "reports/integration/MARCO_11_SUMMARY.md",
+      "sha256": "ad21764c921a314fe0fad12fa644cd5d16411d849b5632e1965f131bbccf4444",
+      "size_bytes": 1701
+    }
+  }
+}

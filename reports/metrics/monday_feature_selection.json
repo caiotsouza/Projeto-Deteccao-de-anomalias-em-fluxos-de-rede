@@ -1,0 +1,769 @@
+{
+  "stage": "feature_selection_marco_4",
+  "configuration": {
+    "near_constant_threshold": 0.999,
+    "correlation_threshold": 0.995,
+    "correlation_sample_size": null,
+    "random_state": 42,
+    "drop_constant_features": true
+  },
+  "methodology": {
+    "labels_used": false,
+    "attack_records_used": false,
+    "automatic_correlation_removal": false,
+    "selection_principle": "remove only zero-variance features and numerically confirmed redundancies",
+    "cicflowmeter_feature_reference": "https://github.com/ahlashkari/CICFlowMeter/blob/master/ReadMe.txt"
+  },
+  "input": {
+    "records": 502650,
+    "feature_count": 78,
+    "memory_usage_mb": 116.486,
+    "label_present": false,
+    "feature_columns": [
+      "destination_port",
+      "flow_duration",
+      "total_fwd_packets",
+      "total_backward_packets",
+      "total_length_of_fwd_packets",
+      "total_length_of_bwd_packets",
+      "fwd_packet_length_max",
+      "fwd_packet_length_min",
+      "fwd_packet_length_mean",
+      "fwd_packet_length_std",
+      "bwd_packet_length_max",
+      "bwd_packet_length_min",
+      "bwd_packet_length_mean",
+      "bwd_packet_length_std",
+      "flow_bytes_s",
+      "flow_packets_s",
+      "flow_iat_mean",
+      "flow_iat_std",
+      "flow_iat_max",
+      "flow_iat_min",
+      "fwd_iat_total",
+      "fwd_iat_mean",
+      "fwd_iat_std",
+      "fwd_iat_max",
+      "fwd_iat_min",
+      "bwd_iat_total",
+      "bwd_iat_mean",
+      "bwd_iat_std",
+      "bwd_iat_max",
+      "bwd_iat_min",
+      "fwd_psh_flags",
+      "bwd_psh_flags",
+      "fwd_urg_flags",
+      "bwd_urg_flags",
+      "fwd_header_length",
+      "bwd_header_length",
+      "fwd_packets_s",
+      "bwd_packets_s",
+      "min_packet_length",
+      "max_packet_length",
+      "packet_length_mean",
+      "packet_length_std",
+      "packet_length_variance",
+      "fin_flag_count",
+      "syn_flag_count",
+      "rst_flag_count",
+      "psh_flag_count",
+      "ack_flag_count",
+      "urg_flag_count",
+      "cwe_flag_count",
+      "ece_flag_count",
+      "down_up_ratio",
+      "average_packet_size",
+      "avg_fwd_segment_size",
+      "avg_bwd_segment_size",
+      "fwd_header_length_1",
+      "fwd_avg_bytes_bulk",
+      "fwd_avg_packets_bulk",
+      "fwd_avg_bulk_rate",
+      "bwd_avg_bytes_bulk",
+      "bwd_avg_packets_bulk",
+      "bwd_avg_bulk_rate",
+      "subflow_fwd_packets",
+      "subflow_fwd_bytes",
+      "subflow_bwd_packets",
+      "subflow_bwd_bytes",
+      "init_win_bytes_forward",
+      "init_win_bytes_backward",
+      "act_data_pkt_fwd",
+      "min_seg_size_forward",
+      "active_mean",
+      "active_std",
+      "active_max",
+      "active_min",
+      "idle_mean",
+      "idle_std",
+      "idle_max",
+      "idle_min"
+    ],
+    "feature_dtypes": {
+      "destination_port": "int32",
+      "flow_duration": "int32",
+      "total_fwd_packets": "int32",
+      "total_backward_packets": "int32",
+      "total_length_of_fwd_packets": "int32",
+      "total_length_of_bwd_packets": "int32",
+      "fwd_packet_length_max": "int16",
+      "fwd_packet_length_min": "int16",
+      "fwd_packet_length_mean": "float32",
+      "fwd_packet_length_std": "float32",
+      "bwd_packet_length_max": "int16",
+      "bwd_packet_length_min": "int16",
+      "bwd_packet_length_mean": "float32",
+      "bwd_packet_length_std": "float32",
+      "flow_bytes_s": "float32",
+      "flow_packets_s": "float32",
+      "flow_iat_mean": "float32",
+      "flow_iat_std": "float32",
+      "flow_iat_max": "int32",
+      "flow_iat_min": "int32",
+      "fwd_iat_total": "int32",
+      "fwd_iat_mean": "float32",
+      "fwd_iat_std": "float32",
+      "fwd_iat_max": "int32",
+      "fwd_iat_min": "int32",
+      "bwd_iat_total": "int32",
+      "bwd_iat_mean": "float32",
+      "bwd_iat_std": "float32",
+      "bwd_iat_max": "int32",
+      "bwd_iat_min": "int32",
+      "fwd_psh_flags": "int8",
+      "bwd_psh_flags": "int8",
+      "fwd_urg_flags": "int8",
+      "bwd_urg_flags": "int8",
+      "fwd_header_length": "int32",
+      "bwd_header_length": "int32",
+      "fwd_packets_s": "float32",
+      "bwd_packets_s": "float32",
+      "min_packet_length": "int16",
+      "max_packet_length": "int16",
+      "packet_length_mean": "float32",
+      "packet_length_std": "float32",
+      "packet_length_variance": "float32",
+      "fin_flag_count": "int8",
+      "syn_flag_count": "int8",
+      "rst_flag_count": "int8",
+      "psh_flag_count": "int8",
+      "ack_flag_count": "int8",
+      "urg_flag_count": "int8",
+      "cwe_flag_count": "int8",
+      "ece_flag_count": "int8",
+      "down_up_ratio": "int8",
+      "average_packet_size": "float32",
+      "avg_fwd_segment_size": "float32",
+      "avg_bwd_segment_size": "float32",
+      "fwd_header_length_1": "int32",
+      "fwd_avg_bytes_bulk": "int8",
+      "fwd_avg_packets_bulk": "int8",
+      "fwd_avg_bulk_rate": "int8",
+      "bwd_avg_bytes_bulk": "int8",
+      "bwd_avg_packets_bulk": "int8",
+      "bwd_avg_bulk_rate": "int8",
+      "subflow_fwd_packets": "int32",
+      "subflow_fwd_bytes": "int32",
+      "subflow_bwd_packets": "int32",
+      "subflow_bwd_bytes": "int32",
+      "init_win_bytes_forward": "int32",
+      "init_win_bytes_backward": "int32",
+      "act_data_pkt_fwd": "int32",
+      "min_seg_size_forward": "int32",
+      "active_mean": "float32",
+      "active_std": "float32",
+      "active_max": "int32",
+      "active_min": "int32",
+      "idle_mean": "float32",
+      "idle_std": "float32",
+      "idle_max": "int32",
+      "idle_min": "int32"
+    }
+  },
+  "constant_analysis": {
+    "found_count": 10,
+    "features": [
+      "bwd_psh_flags",
+      "fwd_urg_flags",
+      "bwd_urg_flags",
+      "cwe_flag_count",
+      "fwd_avg_bytes_bulk",
+      "fwd_avg_packets_bulk",
+      "fwd_avg_bulk_rate",
+      "bwd_avg_bytes_bulk",
+      "bwd_avg_packets_bulk",
+      "bwd_avg_bulk_rate"
+    ],
+    "decision": "excluded"
+  },
+  "near_constant_analysis": {
+    "threshold": 0.999,
+    "found_count": 2,
+    "features": {
+      "rst_flag_count": {
+        "most_frequent_value": "0",
+        "most_frequent_count": 502578,
+        "most_frequent_ratio": 0.99985676,
+        "unique_values": 2,
+        "decision": "retained",
+        "reason": "baixa variabilidade nao prova irrelevancia em seguranca"
+      },
+      "ece_flag_count": {
+        "most_frequent_value": "0",
+        "most_frequent_count": 502577,
+        "most_frequent_ratio": 0.99985477,
+        "unique_values": 2,
+        "decision": "retained",
+        "reason": "baixa variabilidade nao prova irrelevancia em seguranca"
+      }
+    },
+    "decision": "retained_for_security_review"
+  },
+  "redundancy_analysis": {
+    "rules_evaluated": [
+      {
+        "excluded": "fwd_header_length_1",
+        "retained": "fwd_header_length",
+        "relation": "allclose",
+        "reason": "segunda exportacao do comprimento de cabecalho forward",
+        "validation": "confirmed",
+        "excluded_from_selection": true,
+        "different_rows_exact_comparison": 0,
+        "maximum_absolute_difference": 0.0,
+        "maximum_relative_difference": 0.0,
+        "rtol": 1e-05,
+        "atol": 1e-06
+      },
+      {
+        "excluded": "subflow_fwd_packets",
+        "retained": "total_fwd_packets",
+        "relation": "allclose",
+        "reason": "equivalente ao total de pacotes forward no conjunto de treino",
+        "validation": "confirmed",
+        "excluded_from_selection": true,
+        "different_rows_exact_comparison": 0,
+        "maximum_absolute_difference": 0.0,
+        "maximum_relative_difference": 0.0,
+        "rtol": 1e-05,
+        "atol": 1e-06
+      },
+      {
+        "excluded": "subflow_fwd_bytes",
+        "retained": "total_length_of_fwd_packets",
+        "relation": "allclose",
+        "reason": "equivalente ao total de bytes forward no conjunto de treino",
+        "validation": "confirmed",
+        "excluded_from_selection": true,
+        "different_rows_exact_comparison": 0,
+        "maximum_absolute_difference": 0.0,
+        "maximum_relative_difference": 0.0,
+        "rtol": 1e-05,
+        "atol": 1e-06
+      },
+      {
+        "excluded": "subflow_bwd_packets",
+        "retained": "total_backward_packets",
+        "relation": "allclose",
+        "reason": "equivalente ao total de pacotes backward no conjunto de treino",
+        "validation": "confirmed",
+        "excluded_from_selection": true,
+        "different_rows_exact_comparison": 0,
+        "maximum_absolute_difference": 0.0,
+        "maximum_relative_difference": 0.0,
+        "rtol": 1e-05,
+        "atol": 1e-06
+      },
+      {
+        "excluded": "subflow_bwd_bytes",
+        "retained": "total_length_of_bwd_packets",
+        "relation": "allclose",
+        "reason": "equivalente ao total de bytes backward no conjunto de treino",
+        "validation": "confirmed",
+        "excluded_from_selection": true,
+        "different_rows_exact_comparison": 0,
+        "maximum_absolute_difference": 0.0,
+        "maximum_relative_difference": 0.0,
+        "rtol": 1e-05,
+        "atol": 1e-06
+      },
+      {
+        "excluded": "avg_fwd_segment_size",
+        "retained": "fwd_packet_length_mean",
+        "relation": "allclose",
+        "reason": "mesma media de tamanho observada na direcao forward",
+        "validation": "confirmed",
+        "excluded_from_selection": true,
+        "different_rows_exact_comparison": 0,
+        "maximum_absolute_difference": 0.0,
+        "maximum_relative_difference": 0.0,
+        "rtol": 1e-05,
+        "atol": 1e-06
+      },
+      {
+        "excluded": "avg_bwd_segment_size",
+        "retained": "bwd_packet_length_mean",
+        "relation": "allclose",
+        "reason": "mesma media de tamanho observada na direcao backward",
+        "validation": "confirmed",
+        "excluded_from_selection": true,
+        "different_rows_exact_comparison": 0,
+        "maximum_absolute_difference": 0.0,
+        "maximum_relative_difference": 0.0,
+        "rtol": 1e-05,
+        "atol": 1e-06
+      },
+      {
+        "excluded": "packet_length_variance",
+        "retained": "packet_length_std",
+        "relation": "square",
+        "reason": "variancia e transformacao deterministica do desvio-padrao",
+        "validation": "confirmed",
+        "excluded_from_selection": true,
+        "different_rows_exact_comparison": 377990,
+        "maximum_absolute_difference": 2.4226534366607666,
+        "maximum_relative_difference": 1.7504540859134288e-07,
+        "rtol": 1e-05,
+        "atol": 1e-06
+      }
+    ],
+    "confirmed_exclusion_count": 8,
+    "confirmed_exclusions": [
+      "fwd_header_length_1",
+      "subflow_fwd_packets",
+      "subflow_fwd_bytes",
+      "subflow_bwd_packets",
+      "subflow_bwd_bytes",
+      "avg_fwd_segment_size",
+      "avg_bwd_segment_size",
+      "packet_length_variance"
+    ]
+  },
+  "correlation_analysis": {
+    "method": "pearson",
+    "threshold_absolute": 0.995,
+    "input_records": 502650,
+    "records_used": 502650,
+    "sampling_enabled": false,
+    "random_state": null,
+    "constant_features_excluded_from_calculation": [
+      "bwd_psh_flags",
+      "fwd_urg_flags",
+      "bwd_urg_flags",
+      "cwe_flag_count",
+      "fwd_avg_bytes_bulk",
+      "fwd_avg_packets_bulk",
+      "fwd_avg_bulk_rate",
+      "bwd_avg_bytes_bulk",
+      "bwd_avg_packets_bulk",
+      "bwd_avg_bulk_rate"
+    ],
+    "high_correlation_pair_count_before_selection": 27,
+    "high_correlation_pairs_before_selection": [
+      {
+        "feature_a": "total_fwd_packets",
+        "feature_b": "subflow_fwd_packets",
+        "pearson_correlation": 1.0,
+        "absolute_correlation": 1.0
+      },
+      {
+        "feature_a": "total_backward_packets",
+        "feature_b": "subflow_bwd_packets",
+        "pearson_correlation": 1.0,
+        "absolute_correlation": 1.0
+      },
+      {
+        "feature_a": "total_length_of_fwd_packets",
+        "feature_b": "subflow_fwd_bytes",
+        "pearson_correlation": 1.0,
+        "absolute_correlation": 1.0
+      },
+      {
+        "feature_a": "total_length_of_bwd_packets",
+        "feature_b": "subflow_bwd_bytes",
+        "pearson_correlation": 1.0,
+        "absolute_correlation": 1.0
+      },
+      {
+        "feature_a": "fwd_packet_length_mean",
+        "feature_b": "avg_fwd_segment_size",
+        "pearson_correlation": 1.0,
+        "absolute_correlation": 1.0
+      },
+      {
+        "feature_a": "bwd_packet_length_mean",
+        "feature_b": "avg_bwd_segment_size",
+        "pearson_correlation": 1.0,
+        "absolute_correlation": 1.0
+      },
+      {
+        "feature_a": "fwd_psh_flags",
+        "feature_b": "syn_flag_count",
+        "pearson_correlation": 1.0,
+        "absolute_correlation": 1.0
+      },
+      {
+        "feature_a": "fwd_header_length",
+        "feature_b": "fwd_header_length_1",
+        "pearson_correlation": 1.0,
+        "absolute_correlation": 1.0
+      },
+      {
+        "feature_a": "total_fwd_packets",
+        "feature_b": "act_data_pkt_fwd",
+        "pearson_correlation": 0.9995091883,
+        "absolute_correlation": 0.9995091883
+      },
+      {
+        "feature_a": "subflow_fwd_packets",
+        "feature_b": "act_data_pkt_fwd",
+        "pearson_correlation": 0.9995091883,
+        "absolute_correlation": 0.9995091883
+      },
+      {
+        "feature_a": "total_backward_packets",
+        "feature_b": "act_data_pkt_fwd",
+        "pearson_correlation": 0.9994532102,
+        "absolute_correlation": 0.9994532102
+      },
+      {
+        "feature_a": "subflow_bwd_packets",
+        "feature_b": "act_data_pkt_fwd",
+        "pearson_correlation": 0.9994532102,
+        "absolute_correlation": 0.9994532102
+      },
+      {
+        "feature_a": "total_fwd_packets",
+        "feature_b": "total_backward_packets",
+        "pearson_correlation": 0.999322142,
+        "absolute_correlation": 0.999322142
+      },
+      {
+        "feature_a": "total_fwd_packets",
+        "feature_b": "subflow_bwd_packets",
+        "pearson_correlation": 0.999322142,
+        "absolute_correlation": 0.999322142
+      },
+      {
+        "feature_a": "total_backward_packets",
+        "feature_b": "subflow_fwd_packets",
+        "pearson_correlation": 0.999322142,
+        "absolute_correlation": 0.999322142
+      },
+      {
+        "feature_a": "subflow_fwd_packets",
+        "feature_b": "subflow_bwd_packets",
+        "pearson_correlation": 0.999322142,
+        "absolute_correlation": 0.999322142
+      },
+      {
+        "feature_a": "total_fwd_packets",
+        "feature_b": "total_length_of_bwd_packets",
+        "pearson_correlation": 0.9990197047,
+        "absolute_correlation": 0.9990197047
+      },
+      {
+        "feature_a": "total_fwd_packets",
+        "feature_b": "subflow_bwd_bytes",
+        "pearson_correlation": 0.9990197047,
+        "absolute_correlation": 0.9990197047
+      },
+      {
+        "feature_a": "total_length_of_bwd_packets",
+        "feature_b": "subflow_fwd_packets",
+        "pearson_correlation": 0.9990197047,
+        "absolute_correlation": 0.9990197047
+      },
+      {
+        "feature_a": "subflow_fwd_packets",
+        "feature_b": "subflow_bwd_bytes",
+        "pearson_correlation": 0.9990197047,
+        "absolute_correlation": 0.9990197047
+      },
+      {
+        "feature_a": "total_length_of_bwd_packets",
+        "feature_b": "act_data_pkt_fwd",
+        "pearson_correlation": 0.9984356063,
+        "absolute_correlation": 0.9984356063
+      },
+      {
+        "feature_a": "subflow_bwd_bytes",
+        "feature_b": "act_data_pkt_fwd",
+        "pearson_correlation": 0.9984356063,
+        "absolute_correlation": 0.9984356063
+      },
+      {
+        "feature_a": "flow_duration",
+        "feature_b": "fwd_iat_total",
+        "pearson_correlation": 0.9974291923,
+        "absolute_correlation": 0.9974291923
+      },
+      {
+        "feature_a": "total_backward_packets",
+        "feature_b": "total_length_of_bwd_packets",
+        "pearson_correlation": 0.9973109083,
+        "absolute_correlation": 0.9973109083
+      },
+      {
+        "feature_a": "total_backward_packets",
+        "feature_b": "subflow_bwd_bytes",
+        "pearson_correlation": 0.9973109083,
+        "absolute_correlation": 0.9973109083
+      },
+      {
+        "feature_a": "total_length_of_bwd_packets",
+        "feature_b": "subflow_bwd_packets",
+        "pearson_correlation": 0.9973109083,
+        "absolute_correlation": 0.9973109083
+      },
+      {
+        "feature_a": "subflow_bwd_packets",
+        "feature_b": "subflow_bwd_bytes",
+        "pearson_correlation": 0.9973109083,
+        "absolute_correlation": 0.9973109083
+      }
+    ],
+    "high_correlation_pair_count_retained": 8,
+    "high_correlation_pairs_retained": [
+      {
+        "feature_a": "fwd_psh_flags",
+        "feature_b": "syn_flag_count",
+        "pearson_correlation": 1.0,
+        "absolute_correlation": 1.0
+      },
+      {
+        "feature_a": "total_fwd_packets",
+        "feature_b": "act_data_pkt_fwd",
+        "pearson_correlation": 0.9995091883,
+        "absolute_correlation": 0.9995091883
+      },
+      {
+        "feature_a": "total_backward_packets",
+        "feature_b": "act_data_pkt_fwd",
+        "pearson_correlation": 0.9994532102,
+        "absolute_correlation": 0.9994532102
+      },
+      {
+        "feature_a": "total_fwd_packets",
+        "feature_b": "total_backward_packets",
+        "pearson_correlation": 0.999322142,
+        "absolute_correlation": 0.999322142
+      },
+      {
+        "feature_a": "total_fwd_packets",
+        "feature_b": "total_length_of_bwd_packets",
+        "pearson_correlation": 0.9990197047,
+        "absolute_correlation": 0.9990197047
+      },
+      {
+        "feature_a": "total_length_of_bwd_packets",
+        "feature_b": "act_data_pkt_fwd",
+        "pearson_correlation": 0.9984356063,
+        "absolute_correlation": 0.9984356063
+      },
+      {
+        "feature_a": "flow_duration",
+        "feature_b": "fwd_iat_total",
+        "pearson_correlation": 0.9974291923,
+        "absolute_correlation": 0.9974291923
+      },
+      {
+        "feature_a": "total_backward_packets",
+        "feature_b": "total_length_of_bwd_packets",
+        "pearson_correlation": 0.9973109083,
+        "absolute_correlation": 0.9973109083
+      }
+    ],
+    "decision": "reported_only_no_automatic_exclusion"
+  },
+  "explicit_retention_decisions": {
+    "syn_flag_count_and_fwd_psh_flags": {
+      "decision": "retain_both",
+      "reason": "flags TCP semanticamente diferentes apesar da igualdade no Monday"
+    },
+    "near_constant_tcp_flags": {
+      "features": [
+        "rst_flag_count",
+        "ece_flag_count"
+      ],
+      "decision": "retain",
+      "reason": "eventos raros podem carregar sinal de seguranca"
+    }
+  },
+  "selection": {
+    "selected_feature_count": 60,
+    "selected_features": [
+      "destination_port",
+      "flow_duration",
+      "total_fwd_packets",
+      "total_backward_packets",
+      "total_length_of_fwd_packets",
+      "total_length_of_bwd_packets",
+      "fwd_packet_length_max",
+      "fwd_packet_length_min",
+      "fwd_packet_length_mean",
+      "fwd_packet_length_std",
+      "bwd_packet_length_max",
+      "bwd_packet_length_min",
+      "bwd_packet_length_mean",
+      "bwd_packet_length_std",
+      "flow_bytes_s",
+      "flow_packets_s",
+      "flow_iat_mean",
+      "flow_iat_std",
+      "flow_iat_max",
+      "flow_iat_min",
+      "fwd_iat_total",
+      "fwd_iat_mean",
+      "fwd_iat_std",
+      "fwd_iat_max",
+      "fwd_iat_min",
+      "bwd_iat_total",
+      "bwd_iat_mean",
+      "bwd_iat_std",
+      "bwd_iat_max",
+      "bwd_iat_min",
+      "fwd_psh_flags",
+      "fwd_header_length",
+      "bwd_header_length",
+      "fwd_packets_s",
+      "bwd_packets_s",
+      "min_packet_length",
+      "max_packet_length",
+      "packet_length_mean",
+      "packet_length_std",
+      "fin_flag_count",
+      "syn_flag_count",
+      "rst_flag_count",
+      "psh_flag_count",
+      "ack_flag_count",
+      "urg_flag_count",
+      "ece_flag_count",
+      "down_up_ratio",
+      "average_packet_size",
+      "init_win_bytes_forward",
+      "init_win_bytes_backward",
+      "act_data_pkt_fwd",
+      "min_seg_size_forward",
+      "active_mean",
+      "active_std",
+      "active_max",
+      "active_min",
+      "idle_mean",
+      "idle_std",
+      "idle_max",
+      "idle_min"
+    ],
+    "excluded_feature_count": 18,
+    "excluded_features": {
+      "bwd_psh_flags": {
+        "category": "constant_in_normal_training_data",
+        "reason": "sem variacao para aprender o comportamento normal",
+        "unique_values": 1
+      },
+      "fwd_urg_flags": {
+        "category": "constant_in_normal_training_data",
+        "reason": "sem variacao para aprender o comportamento normal",
+        "unique_values": 1
+      },
+      "bwd_urg_flags": {
+        "category": "constant_in_normal_training_data",
+        "reason": "sem variacao para aprender o comportamento normal",
+        "unique_values": 1
+      },
+      "cwe_flag_count": {
+        "category": "constant_in_normal_training_data",
+        "reason": "sem variacao para aprender o comportamento normal",
+        "unique_values": 1
+      },
+      "fwd_avg_bytes_bulk": {
+        "category": "constant_in_normal_training_data",
+        "reason": "sem variacao para aprender o comportamento normal",
+        "unique_values": 1
+      },
+      "fwd_avg_packets_bulk": {
+        "category": "constant_in_normal_training_data",
+        "reason": "sem variacao para aprender o comportamento normal",
+        "unique_values": 1
+      },
+      "fwd_avg_bulk_rate": {
+        "category": "constant_in_normal_training_data",
+        "reason": "sem variacao para aprender o comportamento normal",
+        "unique_values": 1
+      },
+      "bwd_avg_bytes_bulk": {
+        "category": "constant_in_normal_training_data",
+        "reason": "sem variacao para aprender o comportamento normal",
+        "unique_values": 1
+      },
+      "bwd_avg_packets_bulk": {
+        "category": "constant_in_normal_training_data",
+        "reason": "sem variacao para aprender o comportamento normal",
+        "unique_values": 1
+      },
+      "bwd_avg_bulk_rate": {
+        "category": "constant_in_normal_training_data",
+        "reason": "sem variacao para aprender o comportamento normal",
+        "unique_values": 1
+      },
+      "fwd_header_length_1": {
+        "category": "confirmed_redundancy",
+        "reason": "segunda exportacao do comprimento de cabecalho forward",
+        "retained_equivalent": "fwd_header_length",
+        "relation": "allclose"
+      },
+      "subflow_fwd_packets": {
+        "category": "confirmed_redundancy",
+        "reason": "equivalente ao total de pacotes forward no conjunto de treino",
+        "retained_equivalent": "total_fwd_packets",
+        "relation": "allclose"
+      },
+      "subflow_fwd_bytes": {
+        "category": "confirmed_redundancy",
+        "reason": "equivalente ao total de bytes forward no conjunto de treino",
+        "retained_equivalent": "total_length_of_fwd_packets",
+        "relation": "allclose"
+      },
+      "subflow_bwd_packets": {
+        "category": "confirmed_redundancy",
+        "reason": "equivalente ao total de pacotes backward no conjunto de treino",
+        "retained_equivalent": "total_backward_packets",
+        "relation": "allclose"
+      },
+      "subflow_bwd_bytes": {
+        "category": "confirmed_redundancy",
+        "reason": "equivalente ao total de bytes backward no conjunto de treino",
+        "retained_equivalent": "total_length_of_bwd_packets",
+        "relation": "allclose"
+      },
+      "avg_fwd_segment_size": {
+        "category": "confirmed_redundancy",
+        "reason": "mesma media de tamanho observada na direcao forward",
+        "retained_equivalent": "fwd_packet_length_mean",
+        "relation": "allclose"
+      },
+      "avg_bwd_segment_size": {
+        "category": "confirmed_redundancy",
+        "reason": "mesma media de tamanho observada na direcao backward",
+        "retained_equivalent": "bwd_packet_length_mean",
+        "relation": "allclose"
+      },
+      "packet_length_variance": {
+        "category": "confirmed_redundancy",
+        "reason": "variancia e transformacao deterministica do desvio-padrao",
+        "retained_equivalent": "packet_length_std",
+        "relation": "square"
+      }
+    },
+    "feature_schema_sha256": "f4bc0bbe1ffd2ef1b9aeb86923eccd4344d8bf38ec76eba4d5cf161258c7c33a",
+    "memory_usage_mb": 96.352,
+    "memory_reduction_mb": 20.133,
+    "memory_reduction_percentage": 17.283932
+  },
+  "source_features_path": "./data/processed/monday_features.parquet",
+  "artifacts": {
+    "selected_features_path": "./data/processed/monday_selected_features.parquet",
+    "manifest_path": "./data/processed/monday_feature_manifest.json",
+    "report_path": "./reports/metrics/monday_feature_selection.json",
+    "format": "parquet_snappy_and_json_utf8"
+  }
+}

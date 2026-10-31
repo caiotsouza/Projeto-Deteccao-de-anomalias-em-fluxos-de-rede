@@ -1,0 +1,180 @@
+{
+  "status": "captured_scan_scope_validated",
+  "scenario": "lab08_tcp_responsive_r1",
+  "scanner": {
+    "args": "/usr/lib/nmap/nmap -n -Pn -sT -p 21,22,23,25,53,80,110,135,139,143,443,445,3389,5985,8000,8080 --max-rate 10 --scan-delay 100ms --max-retries 1 --host-timeout 120s -oA /tmp/lab08-r1/scan 172.31.50.161",
+    "nmap_version": "7.99",
+    "scan_type": "connect",
+    "target": "172.31.50.161",
+    "actual_ports": [
+      21,
+      22,
+      23,
+      25,
+      53,
+      80,
+      110,
+      135,
+      139,
+      143,
+      443,
+      445,
+      3389,
+      5985,
+      8000,
+      8080
+    ],
+    "planned_ports": [
+      21,
+      22,
+      23,
+      25,
+      53,
+      80,
+      110,
+      135,
+      139,
+      143,
+      443,
+      445,
+      3389,
+      5985,
+      8000,
+      8080
+    ],
+    "missing_planned_ports": [],
+    "unexpected_ports": [],
+    "port_results": {
+      "21": {
+        "state": "filtered",
+        "reason": "no-response"
+      },
+      "22": {
+        "state": "filtered",
+        "reason": "no-response"
+      },
+      "23": {
+        "state": "filtered",
+        "reason": "no-response"
+      },
+      "25": {
+        "state": "filtered",
+        "reason": "no-response"
+      },
+      "53": {
+        "state": "filtered",
+        "reason": "no-response"
+      },
+      "80": {
+        "state": "filtered",
+        "reason": "no-response"
+      },
+      "110": {
+        "state": "filtered",
+        "reason": "no-response"
+      },
+      "135": {
+        "state": "open",
+        "reason": "syn-ack"
+      },
+      "139": {
+        "state": "open",
+        "reason": "syn-ack"
+      },
+      "143": {
+        "state": "filtered",
+        "reason": "no-response"
+      },
+      "443": {
+        "state": "filtered",
+        "reason": "no-response"
+      },
+      "445": {
+        "state": "open",
+        "reason": "syn-ack"
+      },
+      "3389": {
+        "state": "filtered",
+        "reason": "no-response"
+      },
+      "5985": {
+        "state": "filtered",
+        "reason": "no-response"
+      },
+      "8000": {
+        "state": "filtered",
+        "reason": "no-response"
+      },
+      "8080": {
+        "state": "filtered",
+        "reason": "no-response"
+      }
+    },
+    "host_status_reason": "user-set",
+    "host_reachability_proven_by_scanner_status": false,
+    "start_epoch_seconds": 1793058604,
+    "finish_epoch_seconds": 1793058608,
+    "scanner_elapsed_seconds": 4.12
+  },
+  "capture": {
+    "packets": 42,
+    "direction_counts": {
+      "kali_to_windows": 38,
+      "windows_to_kali": 4
+    },
+    "tcp_flags_counts": {
+      "2": 30,
+      "18": 4,
+      "16": 4,
+      "20": 4
+    },
+    "packets_by_target_port": {
+      "21": 2,
+      "22": 2,
+      "23": 2,
+      "25": 2,
+      "53": 2,
+      "80": 2,
+      "110": 2,
+      "135": 8,
+      "139": 4,
+      "143": 2,
+      "443": 2,
+      "445": 4,
+      "3389": 2,
+      "5985": 2,
+      "8000": 2,
+      "8080": 2
+    },
+    "payload_bytes": 0,
+    "endpoint_groups": 30,
+    "first_packet_utc": "2026-10-26T23:50:04.863926+00:00",
+    "last_packet_utc": "2026-10-26T23:50:08.765385+00:00",
+    "capture_span_seconds": 3.901459,
+    "reverse_packets_observed": true,
+    "capture_drop_counter_available": false,
+    "truncated_packet_records": 0
+  },
+  "source_sha256": {
+    "received/3cd2b79b-5189-4314-8a17-e91d3083fc84.zip": "7f713558068e3bfaa30604f93155173f172a1b402e43646bb1fff19d91b74c03",
+    "received/scan (3).nmap": "0d7242c197b9e809b91f994c89dd99d04579ad2e2326bb456f5510c1dee5b0df",
+    "received/scan (3).gnmap": "c14be2d6ef45bcda8155d55577b5ded43ab1802cd50033cf4a0ba9f3549f1e13",
+    "received/scan (3).xml": "cab903af6f3c11b478fc04947eb2030471a08858e96908dbc4d9f6e39ce8d67b"
+  },
+  "pcap": "./data/lab/lab08_tcp_responsive/r1/input/3cd2b79b-5189-4314-8a17-e91d3083fc84_hn2.pcap",
+  "pcap_sha256": "bf12f11f3237aa30dd26e54965560f6b819a5b3fb71dd9b6f07c7aed2836a677",
+  "source_files_unchanged_at_import": true,
+  "saved_copies_match_import_hashes": true,
+  "planned_activity": "port_scan",
+  "ground_truth_labels_generated": false,
+  "windows_reachability_established": false,
+  "filtering_location_established": false,
+  "models_loaded": false,
+  "database_written": false,
+  "limitations": [
+    "hn2 observations do not establish filtering location for unresponsive ports.",
+    "-Pn host status is user-set, not a host response.",
+    "Services named by port tables do not prove services are installed.",
+    "Missing planned ports are preserved, not silently repaired."
+  ]
+}

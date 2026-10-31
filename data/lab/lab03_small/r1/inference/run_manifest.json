@@ -1,0 +1,557 @@
+{
+  "schema_version": 1,
+  "status": "exploratory_inference_completed",
+  "created_at_utc": "2026-10-25T21:30:03.840413+00:00",
+  "methodology": {
+    "adapter_version": "lab-v4-exploratory-v1",
+    "scenario": "lab03_small_r1",
+    "experimental_v4_accepted": true,
+    "structural_audit": {
+      "profile": "v4",
+      "source_commit": "98a5ebad0df579cc8b43eedd3421b3ae87699901",
+      "image_id": "sha256:c6e330bb0e79ff20f014fe6b6108afda5799a22e78bbd7309b9b7dbaaaa0d508",
+      "csv_sha256": "00cc552b951be5d71be5b2fe7986a3de98aa296e31a91b3ae4c5dca227422474",
+      "rows": 60,
+      "raw_columns": 84,
+      "feature_count": 60,
+      "schema_sha256": "07bd5818c91930b6ceb8178e160d9365260f6b92f629fa02ef14227cfaa113a4",
+      "dtypes": {
+        "int64": 39,
+        "float64": 21
+      },
+      "packet_count_sum": 663,
+      "payload_bytes_sum": 500730,
+      "packet_count_pairs": [
+        {
+          "forward": 2,
+          "backward": 1,
+          "rows": 30
+        },
+        {
+          "forward": 4,
+          "backward": 15,
+          "rows": 27
+        },
+        {
+          "forward": 5,
+          "backward": 15,
+          "rows": 3
+        }
+      ],
+      "flag_values": {
+        "fin_flag_count": [
+          1
+        ],
+        "syn_flag_count": [
+          0,
+          2
+        ],
+        "rst_flag_count": [
+          0
+        ],
+        "psh_flag_count": [
+          0,
+          5
+        ],
+        "ack_flag_count": [
+          3,
+          18,
+          19
+        ],
+        "urg_flag_count": [
+          0
+        ],
+        "ece_flag_count": [
+          0
+        ]
+      },
+      "payload_rows": [
+        {
+          "flow_duration": 1620,
+          "total_fwd_packets": 5,
+          "total_backward_packets": 15,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 794.8095238095239,
+          "average_packet_size": 834.55
+        },
+        {
+          "flow_duration": 12072,
+          "total_fwd_packets": 5,
+          "total_backward_packets": 15,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 794.8095238095239,
+          "average_packet_size": 834.55
+        },
+        {
+          "flow_duration": 1762,
+          "total_fwd_packets": 4,
+          "total_backward_packets": 15,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 834.55,
+          "average_packet_size": 878.4736842105264
+        },
+        {
+          "flow_duration": 10022,
+          "total_fwd_packets": 4,
+          "total_backward_packets": 15,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 834.55,
+          "average_packet_size": 878.4736842105264
+        },
+        {
+          "flow_duration": 9618,
+          "total_fwd_packets": 4,
+          "total_backward_packets": 15,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 834.55,
+          "average_packet_size": 878.4736842105264
+        },
+        {
+          "flow_duration": 1699,
+          "total_fwd_packets": 4,
+          "total_backward_packets": 15,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 834.55,
+          "average_packet_size": 878.4736842105264
+        },
+        {
+          "flow_duration": 10096,
+          "total_fwd_packets": 4,
+          "total_backward_packets": 15,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 834.55,
+          "average_packet_size": 878.4736842105264
+        },
+        {
+          "flow_duration": 1752,
+          "total_fwd_packets": 4,
+          "total_backward_packets": 15,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 834.55,
+          "average_packet_size": 878.4736842105264
+        },
+        {
+          "flow_duration": 10075,
+          "total_fwd_packets": 4,
+          "total_backward_packets": 15,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 834.55,
+          "average_packet_size": 878.4736842105264
+        },
+        {
+          "flow_duration": 9361,
+          "total_fwd_packets": 4,
+          "total_backward_packets": 15,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 834.55,
+          "average_packet_size": 878.4736842105264
+        },
+        {
+          "flow_duration": 1687,
+          "total_fwd_packets": 4,
+          "total_backward_packets": 15,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 834.55,
+          "average_packet_size": 878.4736842105264
+        },
+        {
+          "flow_duration": 1953,
+          "total_fwd_packets": 4,
+          "total_backward_packets": 15,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 834.55,
+          "average_packet_size": 878.4736842105264
+        },
+        {
+          "flow_duration": 1688,
+          "total_fwd_packets": 4,
+          "total_backward_packets": 15,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 834.55,
+          "average_packet_size": 878.4736842105264
+        },
+        {
+          "flow_duration": 1861,
+          "total_fwd_packets": 4,
+          "total_backward_packets": 15,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 834.55,
+          "average_packet_size": 878.4736842105264
+        },
+        {
+          "flow_duration": 1603,
+          "total_fwd_packets": 4,
+          "total_backward_packets": 15,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 834.55,
+          "average_packet_size": 878.4736842105264
+        },
+        {
+          "flow_duration": 1805,
+          "total_fwd_packets": 4,
+          "total_backward_packets": 15,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 834.55,
+          "average_packet_size": 878.4736842105264
+        },
+        {
+          "flow_duration": 10017,
+          "total_fwd_packets": 4,
+          "total_backward_packets": 15,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 834.55,
+          "average_packet_size": 878.4736842105264
+        },
+        {
+          "flow_duration": 1631,
+          "total_fwd_packets": 4,
+          "total_backward_packets": 15,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 834.55,
+          "average_packet_size": 878.4736842105264
+        },
+        {
+          "flow_duration": 1682,
+          "total_fwd_packets": 4,
+          "total_backward_packets": 15,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 834.55,
+          "average_packet_size": 878.4736842105264
+        },
+        {
+          "flow_duration": 2023,
+          "total_fwd_packets": 5,
+          "total_backward_packets": 15,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 794.8095238095239,
+          "average_packet_size": 834.55
+        },
+        {
+          "flow_duration": 2005,
+          "total_fwd_packets": 4,
+          "total_backward_packets": 15,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 834.55,
+          "average_packet_size": 878.4736842105264
+        },
+        {
+          "flow_duration": 10054,
+          "total_fwd_packets": 4,
+          "total_backward_packets": 15,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 834.55,
+          "average_packet_size": 878.4736842105264
+        },
+        {
+          "flow_duration": 1858,
+          "total_fwd_packets": 4,
+          "total_backward_packets": 15,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 834.55,
+          "average_packet_size": 878.4736842105264
+        },
+        {
+          "flow_duration": 1563,
+          "total_fwd_packets": 4,
+          "total_backward_packets": 15,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 834.55,
+          "average_packet_size": 878.4736842105264
+        },
+        {
+          "flow_duration": 1895,
+          "total_fwd_packets": 4,
+          "total_backward_packets": 15,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 834.55,
+          "average_packet_size": 878.4736842105264
+        },
+        {
+          "flow_duration": 1674,
+          "total_fwd_packets": 4,
+          "total_backward_packets": 15,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 834.55,
+          "average_packet_size": 878.4736842105264
+        },
+        {
+          "flow_duration": 1699,
+          "total_fwd_packets": 4,
+          "total_backward_packets": 15,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 834.55,
+          "average_packet_size": 878.4736842105264
+        },
+        {
+          "flow_duration": 1860,
+          "total_fwd_packets": 4,
+          "total_backward_packets": 15,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 834.55,
+          "average_packet_size": 878.4736842105264
+        },
+        {
+          "flow_duration": 1594,
+          "total_fwd_packets": 4,
+          "total_backward_packets": 15,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 834.55,
+          "average_packet_size": 878.4736842105264
+        },
+        {
+          "flow_duration": 9959,
+          "total_fwd_packets": 4,
+          "total_backward_packets": 15,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 834.55,
+          "average_packet_size": 878.4736842105264
+        }
+      ],
+      "label_ignored": true,
+      "structural_validation": "passed",
+      "semantic_compatibility": "not_established",
+      "automatic_inference_allowed": false
+    },
+    "label_used": false,
+    "rows_dropped": 0,
+    "features_imputed": false,
+    "flags_clipped": false,
+    "segments_merged": false,
+    "timestamp_timezone": "UTC",
+    "timestamp_precision": "second",
+    "semantic_compatibility": "not_established",
+    "limitations": [
+      "Exact feature-calculation equivalence with CIC-IDS2017 is not established.",
+      "Environment shift and extractor changes are confounded in this experiment.",
+      "Exported segments are not independent connections or requests.",
+      "CSV timestamps have second precision and refer to exported flow starts in UTC.",
+      "Scores are not probabilities; signal rate is not precision, recall or FPR.",
+      "Endpoint grouping does not separate reuse of the same TCP 5-tuple.",
+      "No ground-truth labels are inferred from the extractor Label column."
+    ]
+  },
+  "models": {
+    "isolation_forest": {
+      "model_sha256": "d6f7754e14bbc7adb453eb298559efeebdccad98f59143283dc74a78211b4f40",
+      "operating_point": "validation_fpr_operational",
+      "threshold": 0.615824439899627,
+      "summary": {
+        "all_segments": {
+          "segments": 60,
+          "signaled_segments": 0,
+          "not_signaled_segments": 60,
+          "signal_rate": 0.0,
+          "native_signaled_segments": 0,
+          "score_min": 0.35638580480337134,
+          "score_median": 0.42047722868243054,
+          "score_max": 0.49025671415112404
+        },
+        "with_payload": {
+          "segments": 30,
+          "signaled_segments": 0,
+          "not_signaled_segments": 30,
+          "signal_rate": 0.0,
+          "native_signaled_segments": 0,
+          "score_min": 0.48275421976343474,
+          "score_median": 0.48940724517497547,
+          "score_max": 0.49025671415112404
+        },
+        "zero_payload": {
+          "segments": 30,
+          "signaled_segments": 0,
+          "not_signaled_segments": 30,
+          "signal_rate": 0.0,
+          "native_signaled_segments": 0,
+          "score_min": 0.35638580480337134,
+          "score_median": 0.35741702501054184,
+          "score_max": 0.35820023760142633
+        },
+        "endpoint_groups": {
+          "total": 30,
+          "with_any_signaled_segment": 0
+        },
+        "supervised_metrics_computed": false,
+        "ground_truth_available": false
+      }
+    },
+    "lof": {
+      "model_sha256": "6c014381d6dc5fc70a46941a450e2a60dc7b83b1bb0fcee43a7653107814df41",
+      "operating_point": "validation_fpr_operational",
+      "threshold": 91.08685969933371,
+      "summary": {
+        "all_segments": {
+          "segments": 60,
+          "signaled_segments": 39,
+          "not_signaled_segments": 21,
+          "signal_rate": 0.65,
+          "native_signaled_segments": 60,
+          "score_min": 81.74833865930734,
+          "score_median": 524.086657486684,
+          "score_max": 843.5084466993392
+        },
+        "with_payload": {
+          "segments": 30,
+          "signaled_segments": 9,
+          "not_signaled_segments": 21,
+          "signal_rate": 0.3,
+          "native_signaled_segments": 30,
+          "score_min": 81.74833865930734,
+          "score_median": 86.7470727217455,
+          "score_max": 566.8418871008656
+        },
+        "zero_payload": {
+          "segments": 30,
+          "signaled_segments": 30,
+          "not_signaled_segments": 0,
+          "signal_rate": 1.0,
+          "native_signaled_segments": 30,
+          "score_min": 94.54269249291231,
+          "score_median": 727.2319239508013,
+          "score_max": 843.5084466993392
+        },
+        "endpoint_groups": {
+          "total": 30,
+          "with_any_signaled_segment": 30
+        },
+        "supervised_metrics_computed": false,
+        "ground_truth_available": false
+      }
+    }
+  },
+  "decision_agreement": {
+    "segments": 60,
+    "agree": 21,
+    "disagree": 39,
+    "is_accuracy_measure": false
+  },
+  "integrity": {
+    "protected_files_unchanged": true,
+    "sha256": {
+      "./data/lab/lab03_small/r1/input/4d08662e-9f98-4c52-9c92-bec76eda4683_hn2.pcap": "c415144bb6791be1af904e0551938e74961cab8a230dadea7518c441d7997187",
+      "./data/processed/monday_feature_manifest.json": "6c779db5acdcebf99dabf8e2c112f91d53c2e477aac6d665aa91f00f69786afe",
+      "./experiments/scale_100k/data/splits/split_manifest.json": "35365d8328114a0356b762e68cc94ac12eb52feb5ffb97cdf3f2ac81c5469587",
+      "./reports/operational/model_registry_operational.json": "5705e4c770e6271f8f7fea83f57653d15dc0b1725cdb59b3909d5bbaa84aff74",
+      "./experiments/scale_100k/models/isolation_forest.joblib": "d6f7754e14bbc7adb453eb298559efeebdccad98f59143283dc74a78211b4f40",
+      "./experiments/scale_100k/models/isolation_forest_metadata.json": "a1ebefcb8e97cacbf8150524ed70aee83e1e46e0682c00342895e1f8d787b16e",
+      "./experiments/scale_100k/models/lof.joblib": "6c014381d6dc5fc70a46941a450e2a60dc7b83b1bb0fcee43a7653107814df41",
+      "./experiments/scale_100k/models/lof_metadata.json": "de2a00fbd12face7aef99fc03569c7fb0e94341373350294f94a2bb92a5c01d1",
+      "./data/lab/lab03_small/r1/extracted/4d08662e-9f98-4c52-9c92-bec76eda4683_hn2.pcap_Flow.csv": "00cc552b951be5d71be5b2fe7986a3de98aa296e31a91b3ae4c5dca227422474",
+      "./data/lab/lab03_small/r1/extracted/extraction_run.json": "ddc35afef58cb0b0daea4cdf266e937744198349ee6e99bb7cdc9182b37dee82"
+    },
+    "registered_artifacts": {
+      "isolation_forest/model_artifact": {
+        "registered_sha256": "d6f7754e14bbc7adb453eb298559efeebdccad98f59143283dc74a78211b4f40",
+        "actual_sha256": "d6f7754e14bbc7adb453eb298559efeebdccad98f59143283dc74a78211b4f40",
+        "matches_registry": true,
+        "used_for_inference": true
+      },
+      "isolation_forest/metadata_artifact": {
+        "registered_sha256": "36629c3d3198782f2eb1245ab8e622bbb4a4329030960c9eed23ff479c26bb0d",
+        "actual_sha256": "a1ebefcb8e97cacbf8150524ed70aee83e1e46e0682c00342895e1f8d787b16e",
+        "matches_registry": false,
+        "used_for_inference": false
+      },
+      "lof/model_artifact": {
+        "registered_sha256": "6c014381d6dc5fc70a46941a450e2a60dc7b83b1bb0fcee43a7653107814df41",
+        "actual_sha256": "6c014381d6dc5fc70a46941a450e2a60dc7b83b1bb0fcee43a7653107814df41",
+        "matches_registry": true,
+        "used_for_inference": true
+      },
+      "lof/metadata_artifact": {
+        "registered_sha256": "3984d7d554de780a290cc521f849f60a36fb7cb4551734ce49768532bfdeb288",
+        "actual_sha256": "de2a00fbd12face7aef99fc03569c7fb0e94341373350294f94a2bb92a5c01d1",
+        "matches_registry": false,
+        "used_for_inference": false
+      }
+    },
+    "auxiliary_metadata_used_for_inference": false,
+    "warnings": [
+      "Registered hash mismatch: isolation_forest/metadata_artifact; auxiliary JSON not used for inference.",
+      "Registered hash mismatch: lof/metadata_artifact; auxiliary JSON not used for inference."
+    ]
+  },
+  "runtime": {
+    "python": "3.14.7",
+    "scikit-learn": "1.9.0",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "scipy": "1.18.1",
+    "joblib": "1.5.3"
+  },
+  "implementation_sha256": {
+    "predict_lab_v4.py": "e83f68d480866ce0e11bdd5f0a9356d1d5626c67f6ec62e2631a8e8f32109b9b",
+    "src/lab_v4_adapter.py": "f22862b92be6c8b6ed3c15cd1175672d1b571d05abed7bb5c835481f0d72958e",
+    "src/lab_flow_audit.py": "28d6ed3afb14d7d5e4f2f40c361358b49676a99969044f336fcde59f90aef684",
+    "src/inference_service.py": "74a03c357eee2aa22ff1e04caef596ff30e88b81e32200f4a61b0fdbb3315a0b",
+    "src/data_split.py": "9809f0547b325a51ac6435f9d684f7157b26e740937dcedf8568343afcac6689"
+  },
+  "models_retrained": false,
+  "thresholds_recalibrated": false,
+  "database_written": false,
+  "production_approved": false,
+  "output_sha256": {
+    "model_inputs.json": "c45b5531e9dd27d3ad74edecbec1d22c758acf694d7eeaec3eaac41ec1af82f6",
+    "isolation_forest_predictions.json": "b0f22e7f8621d9b5a293607b4a5603d34ab6351cc5e78de968eaec1e6fbdc18b",
+    "lof_predictions.json": "160bbdc3bf2a07a76fa0ad146151991626e201d6507ff5f623014d63cdd19e75"
+  }
+}

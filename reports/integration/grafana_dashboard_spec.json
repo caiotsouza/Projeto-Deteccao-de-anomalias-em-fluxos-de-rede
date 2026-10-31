@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "title": "Monitoramento de anomalias no fluxo da rede",
+  "status": "design_contract_not_provisioned",
+  "purpose": "Specify the first Grafana page and its backend payloads before choosing a concrete data-source adapter.",
+  "default_model_filter": {
+    "experiment": "expanded_100k",
+    "model": "isolation_forest",
+    "operating_point": "validation_fpr_operational",
+    "model_sha256": "d6f7754e14bbc7adb453eb298559efeebdccad98f59143283dc74a78211b4f40",
+    "threshold": 0.615824439899627,
+    "experimental_warning": "The default candidate uses a laboratory FPR budget but has not been temporally validated on traffic from the target network."
+  },
+  "data_contract": {
+    "transport": "JSON over future FastAPI endpoints",
+    "storage_candidate": "MongoDB collection network_flow_predictions",
+    "grafana_data_source": "to_be_selected_in_dashboard_implementation",
+    "time_field": "observed_at",
+    "required_model_filter": [
+      "model.sha256",
+      "model.operating_point",
+      "model.experiment"
+    ],
+    "score_warning": "anomaly_score is not a probability and raw score scales from different algorithms must not be mixed."
+  },
+  "future_endpoints": [
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/overview",
+      "returns": "totals, anomaly rate and score summary"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/timeseries",
+      "returns": "bucketed flow and anomaly time series"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/breakdowns",
+      "returns": "protocol, source, destination and port rankings"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/anomalies/recent",
+      "returns": "recent anomaly investigation rows"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/model/status",
+      "returns": "active model, hash, threshold and health"
+    }
+  ],
+  "dashboard_variables": [
+    {
+      "name": "model_sha256",
+      "required": true
+    },
+    {
+      "name": "operating_point",
+      "required": true
+    },
+    {
+      "name": "source",
+      "required": false
+    },
+    {
+      "name": "protocol",
+      "required": false
+    },
+    {
+      "name": "src_ip",
+      "required": false
+    },
+    {
+      "name": "dst_ip",
+      "required": false
+    }
+  ],
+  "panels": [
+    {
+      "id": "total_flows",
+      "title": "Fluxos analisados",
+      "visualization": "stat",
+      "field": "totals.flows",
+      "priority": 1
+    },
+    {
+      "id": "total_anomalies",
+      "title": "Anomalias detectadas",
+      "visualization": "stat",
+      "field": "totals.anomalies",
+      "priority": 1
+    },
+    {
+      "id": "anomaly_rate",
+      "title": "Taxa de anomalias",
+      "visualization": "gauge",
+      "field": "totals.anomaly_rate",
+      "priority": 1
+    },
+    {
+      "id": "score_p95",
+      "title": "P95 do anomaly score",
+      "visualization": "stat",
+      "field": "scores.p95",
+      "priority": 2,
+      "note": "Score, not probability; keep the model filter fixed."
+    },
+    {
+      "id": "flow_timeline",
+      "title": "Fluxos normais e anômalos ao longo do tempo",
+      "visualization": "time_series",
+      "fields": [
+        "timeline.bucket_start",
+        "timeline.normal_total",
+        "timeline.anomalies_total"
+      ],
+      "priority": 1
+    },
+    {
+      "id": "anomaly_rate_timeline",
+      "title": "Evolução da taxa de anomalias",
+      "visualization": "time_series",
+      "fields": [
+        "timeline.bucket_start",
+        "timeline.anomaly_rate"
+      ],
+      "priority": 1
+    },
+    {
+      "id": "protocol_distribution",
+      "title": "Distribuição por protocolo",
+      "visualization": "bar_chart",
+      "field": "distributions.protocol",
+      "priority": 2
+    },
+    {
+      "id": "top_anomalous_sources",
+      "title": "Principais IPs de origem com anomalias",
+      "visualization": "bar_chart",
+      "field": "top_anomalous_sources",
+      "priority": 1
+    },
+    {
+      "id": "top_destination_ports",
+      "title": "Portas de destino mais frequentes nas anomalias",
+      "visualization": "bar_chart",
+      "field": "top_anomalous_destination_ports",
+      "priority": 1
+    },
+    {
+      "id": "recent_anomalies",
+      "title": "Anomalias recentes",
+      "visualization": "table",
+      "field": "recent_anomalies",
+      "priority": 1
+    },
+    {
+      "id": "model_status",
+      "title": "Modelo ativo e limiar",
+      "visualization": "table",
+      "field": "model_filter",
+      "priority": 2
+    }
+  ],
+  "intentionally_absent_panels": [
+    {
+      "metric": "live_false_positive_rate",
+      "reason": "A live flow has no immediate ground-truth label; presenting false positives would be methodologically misleading."
+    },
+    {
+      "metric": "attack_category",
+      "reason": "The unsupervised model predicts anomaly, not a specific attack family."
+    }
+  ],
+  "privacy": {
+    "sensitive_fields": [
+      "context.src_ip",
+      "context.dst_ip"
+    ],
+    "recommendation": "Restrict dashboard access and define masking/retention before production use."
+  }
+}

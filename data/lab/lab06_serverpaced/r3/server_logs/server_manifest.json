@@ -1,0 +1,28 @@
+{
+  "started_at_utc": "2026-10-26T00:43:39.804421+00:00",
+  "plan": {
+    "scenario": "lab06_serverpaced",
+    "bind": "172.31.60.10",
+    "port": 8000,
+    "allowed_client": "172.31.50.161",
+    "path": "/benign-v1/large_2m.bin",
+    "http_version": "1.0",
+    "body_bytes": 2097152,
+    "body_sha256": "21ad43464ff341f863b1149c5a11d95fb8a325bb44ad51ed4afc17979ad44245",
+    "chunk_bytes": 16384,
+    "pause_between_chunks_seconds": 0.125,
+    "expected_chunks": 128,
+    "nominal_first_to_last_chunk_seconds": 15.875,
+    "maximum_get_attempts": 6,
+    "pacing_location": "server",
+    "required_client_marker": "server-128k-v1",
+    "ground_truth_labels_generated": false
+  },
+  "python": "3.13.12",
+  "server_script_sha256": "1f1f3deaad867c97361bb9af70000d6758026ecf5f74c1eb05846b7cff50123a",
+  "status": "stopped",
+  "payload_verified": true,
+  "completed_at_utc": "2026-10-26T00:47:45.531198+00:00",
+  "attempted_gets": 6,
+  "successful_gets": 6
+}

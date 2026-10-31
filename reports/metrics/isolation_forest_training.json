@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "stage": "isolation_forest_training_marco_6",
+  "created_at_utc": "2026-08-29T17:26:42.105205+00:00",
+  "status": "completed_without_labels",
+  "configuration": {
+    "n_estimators": 200,
+    "max_samples": 2048,
+    "contamination": "auto",
+    "max_features": 1.0,
+    "bootstrap": false,
+    "random_state": 42,
+    "n_jobs": -1
+  },
+  "effective_max_samples": 2048,
+  "learned_offset": -0.5,
+  "inputs": {
+    "train": {
+      "path": "./data/processed/splits/X_train.parquet",
+      "records": 20000,
+      "features": 60,
+      "schema_sha256": "07bd5818c91930b6ceb8178e160d9365260f6b92f629fa02ef14227cfaa113a4"
+    },
+    "validation": {
+      "path": "./data/processed/splits/X_validation.parquet",
+      "records": 10000,
+      "features": 60,
+      "schema_sha256": "07bd5818c91930b6ceb8178e160d9365260f6b92f629fa02ef14227cfaa113a4"
+    },
+    "test": {
+      "path": "./data/processed/splits/X_test.parquet",
+      "records": 20000,
+      "features": 60,
+      "schema_sha256": "07bd5818c91930b6ceb8178e160d9365260f6b92f629fa02ef14227cfaa113a4"
+    }
+  },
+  "input_validation": {
+    "expected_schema_sha256": "07bd5818c91930b6ceb8178e160d9365260f6b92f629fa02ef14227cfaa113a4",
+    "all_schemas_match": true,
+    "all_features_numeric": true,
+    "nan_count": 0,
+    "infinity_count": 0,
+    "label_columns_loaded": false,
+    "status": "passed"
+  },
+  "methodology": {
+    "training_input": "X_train only",
+    "labels_loaded": false,
+    "labels_used": false,
+    "scaler_used": false,
+    "validation_and_test_used_for_fit": false,
+    "threshold_source": "IsolationForest contamination parameter and learned offset_"
+  },
+  "score_semantics": {
+    "sklearn_prediction": "1=normal, -1=anomaly",
+    "predicted_anomaly": "0=normal, 1=anomaly",
+    "score_samples": "lower values indicate more abnormal observations",
+    "decision_function": "negative values are predicted as anomalies",
+    "anomaly_score": "-score_samples; higher values indicate more abnormal observations"
+  },
+  "timing_seconds": {
+    "training": 0.37622839998221025,
+    "inference_total": 0.3870685000438243,
+    "training_and_inference": 0.7632969000260346
+  },
+  "predictions_without_ground_truth": {
+    "train": {
+      "records": 20000,
+      "predicted_normal": 19333,
+      "predicted_anomaly": 667,
+      "predicted_anomaly_rate": 0.03335,
+      "score_statistics": {
+        "score_samples_lower_is_more_abnormal": {
+          "minimum": -0.7579237625450308,
+          "p01": -0.5676355416873972,
+          "p05": -0.4766824413746697,
+          "p25": -0.357921959175661,
+          "median": -0.3334703485571048,
+          "p75": -0.3157245566502644,
+          "p95": -0.31275255466061747,
+          "p99": -0.3122355600210239,
+          "maximum": -0.31197077638993786,
+          "mean": -0.3513919342825488,
+          "standard_deviation": 0.0538118844804795
+        },
+        "decision_function_negative_is_anomaly": {
+          "minimum": -0.2579237625450308,
+          "p01": -0.0676355416873972,
+          "p05": 0.023317558625330328,
+          "p25": 0.142078040824339,
+          "median": 0.1665296514428952,
+          "p75": 0.1842754433497356,
+          "p95": 0.18724744533938253,
+          "p99": 0.18776443997897613,
+          "maximum": 0.18802922361006214,
+          "mean": 0.14860806571745125,
+          "standard_deviation": 0.0538118844804795
+        },
+        "anomaly_score_higher_is_more_abnormal": {
+          "minimum": 0.31197077638993786,
+          "p01": 0.3122355600210239,
+          "p05": 0.31275255466061747,
+          "p25": 0.3157245566502644,
+          "median": 0.3334703485571048,
+          "p75": 0.357921959175661,
+          "p95": 0.47668244137466953,
+          "p99": 0.5676355416873967,
+          "maximum": 0.7579237625450308,
+          "mean": 0.3513919342825488,
+          "standard_deviation": 0.0538118844804795
+        }
+      },
+      "inference_seconds": 0.14782130002276972
+    },
+    "validation": {
+      "records": 10000,
+      "predicted_normal": 7760,
+      "predicted_anomaly": 2240,
+      "predicted_anomaly_rate": 0.224,
+      "score_statistics": {
+        "score_samples_lower_is_more_abnormal": {
+          "minimum": -0.7302995518647896,
+          "p01": -0.6664099329688226,
+          "p05": -0.6411398955338925,
+          "p25": -0.4871857642769374,
+          "median": -0.3527781405870726,
+          "p75": -0.3293290972252827,
+          "p95": -0.3131372667886132,
+          "p99": -0.3123422710225352,
+          "maximum": -0.3120623102691508,
+          "mean": -0.41656344058906214,
+          "standard_deviation": 0.11834490653501556
+        },
+        "decision_function_negative_is_anomaly": {
+          "minimum": -0.23029955186478956,
+          "p01": -0.16640993296882256,
+          "p05": -0.14113989553389253,
+          "p25": 0.01281423572306259,
+          "median": 0.14722185941292742,
+          "p75": 0.1706709027747173,
+          "p95": 0.1868627332113868,
+          "p99": 0.1876577289774648,
+          "maximum": 0.18793768973084918,
+          "mean": 0.08343655941093792,
+          "standard_deviation": 0.11834490653501556
+        },
+        "anomaly_score_higher_is_more_abnormal": {
+          "minimum": 0.3120623102691508,
+          "p01": 0.3123422710225352,
+          "p05": 0.3131372667886132,
+          "p25": 0.3293290972252827,
+          "median": 0.3527781405870726,
+          "p75": 0.4871857642769374,
+          "p95": 0.6411398955338925,
+          "p99": 0.6664099329688226,
+          "maximum": 0.7302995518647896,
+          "mean": 0.41656344058906214,
+          "standard_deviation": 0.11834490653501556
+        }
+      },
+      "inference_seconds": 0.08451529999729246
+    },
+    "test": {
+      "records": 20000,
+      "predicted_normal": 15436,
+      "predicted_anomaly": 4564,
+      "predicted_anomaly_rate": 0.2282,
+      "score_statistics": {
+        "score_samples_lower_is_more_abnormal": {
+          "minimum": -0.7227589762710871,
+          "p01": -0.6654437257566117,
+          "p05": -0.639709099697363,
+          "p25": -0.48960449290778985,
+          "median": -0.3527781405870726,
+          "p75": -0.3288918923570488,
+          "p95": -0.3131491096622002,
+          "p99": -0.31233276685576755,
+          "maximum": -0.3119612322441056,
+          "mean": -0.4167560976149665,
+          "standard_deviation": 0.11822964448844164
+        },
+        "decision_function_negative_is_anomaly": {
+          "minimum": -0.2227589762710871,
+          "p01": -0.16544372575661165,
+          "p05": -0.13970909969736303,
+          "p25": 0.010395507092210154,
+          "median": 0.14722185941292742,
+          "p75": 0.1711081076429512,
+          "p95": 0.18685089033779978,
+          "p99": 0.18766723314423245,
+          "maximum": 0.1880387677558944,
+          "mean": 0.08324390238503347,
+          "standard_deviation": 0.11822964448844166
+        },
+        "anomaly_score_higher_is_more_abnormal": {
+          "minimum": 0.3119612322441056,
+          "p01": 0.31233276685576755,
+          "p05": 0.3131491096622002,
+          "p25": 0.3288918923570488,
+          "median": 0.3527781405870726,
+          "p75": 0.48960449290778985,
+          "p95": 0.639709099697363,
+          "p99": 0.6654437257566115,
+          "maximum": 0.7227589762710871,
+          "mean": 0.4167560976149665,
+          "standard_deviation": 0.11822964448844164
+        }
+      },
+      "inference_seconds": 0.15473190002376214
+    }
+  },
+  "evaluation_deferred_to_marco_7": true,
+  "metrics_not_calculated": [
+    "confusion_matrix",
+    "precision",
+    "recall",
+    "f1_score",
+    "false_positive_rate",
+    "roc_auc",
+    "pr_auc"
+  ],
+  "libraries": {
+    "python": "3.12.13",
+    "numpy": "2.5.2",
+    "pandas": "3.0.1",
+    "scikit_learn": "1.9.0",
+    "joblib": "1.5.3"
+  },
+  "model_sha256": "1d7bd1b69dd8505cf6b06e813b94a93e34c05bd303de55c3a45f8886176d599c",
+  "artifacts": {
+    "model": "./models/isolation_forest.joblib",
+    "metadata": "./models/isolation_forest_metadata.json",
+    "report": "./reports/metrics/isolation_forest_training.json",
+    "predictions_train": "./data/processed/predictions/isolation_forest_train_predictions.parquet",
+    "predictions_validation": "./data/processed/predictions/isolation_forest_validation_predictions.parquet",
+    "predictions_test": "./data/processed/predictions/isolation_forest_test_predictions.parquet"
+  },
+  "prediction_columns": [
+    "row_position",
+    "record_hash",
+    "sklearn_prediction",
+    "predicted_anomaly",
+    "score_samples",
+    "decision_function",
+    "anomaly_score"
+  ]
+}

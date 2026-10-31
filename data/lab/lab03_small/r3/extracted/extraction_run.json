@@ -1,0 +1,24 @@
+{
+  "status": "extraction_completed",
+  "compatibility_status": "not_yet_validated",
+  "extractor_profile": "v4",
+  "source_repository": "https://github.com/ahlashkari/CICFlowMeter",
+  "source_commit": "98a5ebad0df579cc8b43eedd3421b3ae87699901",
+  "image": "tcc-cicflowmeter:98a5ebad",
+  "image_id": "sha256:c6e330bb0e79ff20f014fe6b6108afda5799a22e78bbd7309b9b7dbaaaa0d508",
+  "started_at_utc": "2026-10-26T01:16:55.7600469Z",
+  "completed_at_utc": "2026-10-26T01:16:58.2619363Z",
+  "pcap": "b13c09b1-4b53-474e-af7c-dc4142c2b5c3_hn2.pcap",
+  "pcap_sha256_before": "9a1565121ca1c0e935e3d787265d43c97e5332ad6fbc1459f867608f996346b2",
+  "pcap_sha256_after": "9a1565121ca1c0e935e3d787265d43c97e5332ad6fbc1459f867608f996346b2",
+  "network": "none",
+  "timezone": "UTC",
+  "model_loaded": false,
+  "model_retrained": false,
+  "csv_files": [
+    {
+      "name": "b13c09b1-4b53-474e-af7c-dc4142c2b5c3_hn2.pcap_Flow.csv",
+      "sha256": "93fa3df253a7768a34236d8562e18594e50c919e963303be2d45bd42c0721783"
+    }
+  ]
+}

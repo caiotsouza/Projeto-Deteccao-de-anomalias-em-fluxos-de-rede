@@ -1,0 +1,249 @@
+{
+  "schema_version": 1,
+  "stage": "marco_12_operational_dashboard",
+  "created_at_utc": "2026-09-06T16:16:51.861916+00:00",
+  "status": "implementation_complete_external_runtime_validation_pending",
+  "model": {
+    "experiment": "expanded_100k",
+    "key": "isolation_forest",
+    "sha256": "d6f7754e14bbc7adb453eb298559efeebdccad98f59143283dc74a78211b4f40",
+    "operating_point": "validation_fpr_operational",
+    "threshold": 0.615824439899627,
+    "positive_rule": "anomaly_score >= threshold"
+  },
+  "validation": {
+    "unit_tests": {
+      "command": "python -m unittest discover -s tests -v",
+      "tests_run": 79,
+      "failures": 0,
+      "errors": 0,
+      "status": "passed"
+    },
+    "real_artifact_dry_run": {
+      "records": 200,
+      "report": "reports/marco12/replay_dry_run_200.json",
+      "sha256": "37142126a820bde18747e6653cee3bd761342fdece53f6ec0e1e814bc83181ee",
+      "status": "passed"
+    },
+    "integrated_in_memory_http": {
+      "records": 5000,
+      "status": "passed"
+    },
+    "grafana_static_contract": {
+      "status": "passed"
+    },
+    "external_mongodb_grafana": {
+      "status": "not_executed_tools_unavailable",
+      "tools_detected": {
+        "docker": null,
+        "docker_compose": null,
+        "mongod": null,
+        "grafana_server": null
+      }
+    }
+  },
+  "dependencies": {
+    "python_packages": {
+      "numpy": "2.5.2",
+      "pandas": "3.0.5",
+      "pyarrow": "25.0.1",
+      "scikit-learn": "1.9.0",
+      "joblib": "1.5.3",
+      "fastapi": "0.141.1",
+      "uvicorn": "0.52.4",
+      "pymongo": "4.18.0",
+      "httpx": "0.28.1",
+      "PyYAML": "6.0.3"
+    },
+    "containers_declared": {
+      "mongodb": "mongo:8.0",
+      "grafana": "grafana/grafana:12.2.5",
+      "infinity_plugin": "yesoreyeram-infinity-datasource@4.0.0",
+      "api_base": "python:3.12.14-slim"
+    }
+  },
+  "generated_artifacts": [
+    {
+      "relative_path": "reports/marco12/openapi.json",
+      "size_bytes": 17888,
+      "sha256": "9180f92931adeb99158b1d41b60b1ce0ecb2f32b6f70cfacce459a1cf9fa0c54"
+    },
+    {
+      "relative_path": "reports/marco12/in_memory_integration_validation.json",
+      "size_bytes": 20003,
+      "sha256": "7e5dea9e9d8009734b5bb22b61d4b4d90ea0a6aae2da24d4e77930e97b1acd98"
+    },
+    {
+      "relative_path": "reports/marco12/grafana_contract_validation.json",
+      "size_bytes": 3737,
+      "sha256": "017f3764e713a4ae5dfb214b1020caad4b4740eb6e1f7e28ad19899f4320b903"
+    },
+    {
+      "relative_path": "reports/marco12/MARCO_12_SUMMARY.md",
+      "size_bytes": 5808,
+      "sha256": "5568950daacb7eff1918e478eb4fc3380fc26002895adee4419dc871e2944d8e"
+    }
+  ],
+  "implementation_inventory": [
+    {
+      "relative_path": "README.md",
+      "size_bytes": 78880,
+      "sha256": "fa2280b721935db335aca4dee747c06eaec06e909940836de018b394580ccab0"
+    },
+    {
+      "relative_path": ".gitignore",
+      "size_bytes": 283,
+      "sha256": "88b86723bf54522b2ebb55e7702605e9a868d69fa2b46468d5c61ecad3d52b0e"
+    },
+    {
+      "relative_path": ".dockerignore",
+      "size_bytes": 387,
+      "sha256": "604a634af836a449f01766ba7583518dbb705beee8baf414ede8813cdcfd9c9e"
+    },
+    {
+      "relative_path": "src/config.py",
+      "size_bytes": 2066,
+      "sha256": "27ed3521bd904f95c4f9c79ff2f4f69cf2a15da1146061fe30c7f85013cdd879"
+    },
+    {
+      "relative_path": "src/runtime_config.py",
+      "size_bytes": 8649,
+      "sha256": "b567fb9a9d02bbd4bea6cbb0d2d9212cec67cad071f50eae24e7ff8f2191adc4"
+    },
+    {
+      "relative_path": "src/monitoring_repository.py",
+      "size_bytes": 28616,
+      "sha256": "aa35b0141c78f64c113607e7a489e8781b3f36a9e27ab9a2b0f78d09972127bc"
+    },
+    {
+      "relative_path": "src/dashboard_reporting.py",
+      "size_bytes": 12930,
+      "sha256": "ce4bc6410e8d70406066a1455116ed4ed0aac93c206070693a97bd8c106ca3b0"
+    },
+    {
+      "relative_path": "src/dashboard_service.py",
+      "size_bytes": 13157,
+      "sha256": "ec8307e7c944b7c1f324892d27fa93b18ab30281f247e2bf45e5e6fa33b38182"
+    },
+    {
+      "relative_path": "src/dashboard_api.py",
+      "size_bytes": 4203,
+      "sha256": "63656de9da23dae628a7ba91d79d628695ffcf6d6f0cb0dd5efe38e506daca3b"
+    },
+    {
+      "relative_path": "src/replay.py",
+      "size_bytes": 18949,
+      "sha256": "c741838a36337339c2897356c5d5f55f25369c59ceda127404e546cced941f39"
+    },
+    {
+      "relative_path": "src/marco12_artifacts.py",
+      "size_bytes": 24103,
+      "sha256": "f1e567672d61931e3637aef2e8af37a646a64a6356067b2578ba7bb7a16a0c36"
+    },
+    {
+      "relative_path": "run_dashboard_api.py",
+      "size_bytes": 114,
+      "sha256": "f97bd694bf890ba87fab4df124679e2d4d8891e6f97842fe706046cea0c99a81"
+    },
+    {
+      "relative_path": "initialize_mongodb.py",
+      "size_bytes": 817,
+      "sha256": "959a12e4dcd2ebe9960ced39eeb5403a569bc18ed7820d45cf68535c80b7b1b5"
+    },
+    {
+      "relative_path": "replay_to_mongodb.py",
+      "size_bytes": 3530,
+      "sha256": "e530b441d46726ece114688ca72de9b4700f50d43b99246f08816433e2f76517"
+    },
+    {
+      "relative_path": "finalize_marco12.py",
+      "size_bytes": 1648,
+      "sha256": "3760088e77ca4bd42ea9f39ef71ddbde3d585e6082032af5c118c4e39752ab0a"
+    },
+    {
+      "relative_path": "generate_grafana_dashboard.py",
+      "size_bytes": 12619,
+      "sha256": "084e6ddcab49e84fc82793dd0cf13f8553649898e7b8d03cd766ad9246cb26b4"
+    },
+    {
+      "relative_path": "requirements.txt",
+      "size_bytes": 207,
+      "sha256": "d5b1066a06905e70cbfdd69b56dc3aa9c5f93629010831a9dbac90d781b1c0ba"
+    },
+    {
+      "relative_path": "requirements.lock.txt",
+      "size_bytes": 774,
+      "sha256": "6f696aca421ccb23d14f334dd748b7c0c2d7ec44bd633718e7b12e782eb4be8f"
+    },
+    {
+      "relative_path": "infra/compose.yaml",
+      "size_bytes": 2181,
+      "sha256": "2d198bad4340b838f114726ccce62d57b8502ed60b75d548d3c45f2a9b7826bf"
+    },
+    {
+      "relative_path": "infra/.env.example",
+      "size_bytes": 155,
+      "sha256": "967462d831c572225a54c49a0a5c01d070bd69eecebabe5a9168311902b070e5"
+    },
+    {
+      "relative_path": "infra/README.md",
+      "size_bytes": 3707,
+      "sha256": "1b0fe8395ca42a86878bba1d16f5d0fe51b4aa85d76247898c8bcf2859f6fc89"
+    },
+    {
+      "relative_path": "infra/api/Dockerfile",
+      "size_bytes": 1098,
+      "sha256": "3a99637a4345d3f9fc31ac505e771220436b3e4c32861c7f01e650627e52eed5"
+    },
+    {
+      "relative_path": "infra/grafana/provisioning/datasources/tcc-fastapi.yaml",
+      "size_bytes": 311,
+      "sha256": "8b3fdfbee18d968cb961b0a9628468ef09eab980d5ecdde88f062e2905485dd4"
+    },
+    {
+      "relative_path": "infra/grafana/provisioning/dashboards/tcc-dashboard.yaml",
+      "size_bytes": 284,
+      "sha256": "8fa1a79856551be33f59556987ed792779e9d17b44db3c936a886ea5c3d5d1a0"
+    },
+    {
+      "relative_path": "infra/grafana/dashboards/tcc-network-anomaly.json",
+      "size_bytes": 26063,
+      "sha256": "3eb2c88a2fb921abb071548dd1eafabe30626921771a1eb02d41e97e1c3210ee"
+    },
+    {
+      "relative_path": "reports/integration/mongodb_prediction.schema.json",
+      "size_bytes": 4879,
+      "sha256": "0cf48379fa0777d161dcf527e644121f8ab87499214d52d4cb1ad9c607a15588"
+    },
+    {
+      "relative_path": "tests/test_marco12_repository.py",
+      "size_bytes": 6950,
+      "sha256": "7be6caebcbc2b341e59de0f825138dbbaba2cd7fef7ddec7f03f7ab280acdf99"
+    },
+    {
+      "relative_path": "tests/test_marco12_replay.py",
+      "size_bytes": 10352,
+      "sha256": "21ad223e9795c1b37076947477606526d8c4f46922e772f463e674060bd27650"
+    },
+    {
+      "relative_path": "tests/test_marco12_api.py",
+      "size_bytes": 8371,
+      "sha256": "ea5c89ad64e907dacd948838d8ec1f5886f9d355419d481ac3a485309573d374"
+    },
+    {
+      "relative_path": "tests/test_marco12_grafana.py",
+      "size_bytes": 5516,
+      "sha256": "249a373f8a5c447d5b567199fb18478201c28d3df5a66ee365fb58adf09f19aa"
+    }
+  ],
+  "methodological_boundaries": [
+    "offline replay of frozen predictions",
+    "balanced test set; no prevalence inference",
+    "simulated timestamps",
+    "no labels or binary labels loaded/persisted",
+    "no IP or protocol fabrication",
+    "anomaly_score is not probability",
+    "not production approved"
+  ],
+  "next_required_validation": "Install Docker Desktop, start infra/compose.yaml, replay records into MongoDB, verify datasource health and visually inspect all 11 Grafana panels."
+}

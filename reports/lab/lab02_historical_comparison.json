@@ -1,0 +1,842 @@
+{
+  "created_at_utc": "2026-10-25T19:51:08.749317+00:00",
+  "status": "comparison_completed_not_approved_for_inference",
+  "pcap": {
+    "sha256": "8052d6aa3b9021787b18ca162d520e88cb093893bb1ac20ab7cf90e35dd66c7d",
+    "packets": 100,
+    "payload_bytes": 4230,
+    "endpoint_groups": 10,
+    "connections": [
+      {
+        "source": [
+          "172.31.50.161",
+          60029
+        ],
+        "destination": [
+          "172.31.60.10",
+          8000
+        ],
+        "packets": 10,
+        "forward_packets": 5,
+        "backward_packets": 5,
+        "payload_bytes": 423,
+        "duration_us": 1685,
+        "first_fin_prefix_packets": 7,
+        "first_fin_prefix_forward_packets": 3,
+        "first_fin_prefix_backward_packets": 4,
+        "first_fin_prefix_duration_us": 1335,
+        "forward_initial_window_raw": 64240,
+        "backward_initial_window_raw": 64240,
+        "backward_last_window_raw": 126
+      },
+      {
+        "source": [
+          "172.31.50.161",
+          60030
+        ],
+        "destination": [
+          "172.31.60.10",
+          8000
+        ],
+        "packets": 10,
+        "forward_packets": 5,
+        "backward_packets": 5,
+        "payload_bytes": 423,
+        "duration_us": 1608,
+        "first_fin_prefix_packets": 7,
+        "first_fin_prefix_forward_packets": 3,
+        "first_fin_prefix_backward_packets": 4,
+        "first_fin_prefix_duration_us": 1230,
+        "forward_initial_window_raw": 64240,
+        "backward_initial_window_raw": 64240,
+        "backward_last_window_raw": 126
+      },
+      {
+        "source": [
+          "172.31.50.161",
+          60031
+        ],
+        "destination": [
+          "172.31.60.10",
+          8000
+        ],
+        "packets": 10,
+        "forward_packets": 5,
+        "backward_packets": 5,
+        "payload_bytes": 423,
+        "duration_us": 7185,
+        "first_fin_prefix_packets": 7,
+        "first_fin_prefix_forward_packets": 3,
+        "first_fin_prefix_backward_packets": 4,
+        "first_fin_prefix_duration_us": 6717,
+        "forward_initial_window_raw": 64240,
+        "backward_initial_window_raw": 64240,
+        "backward_last_window_raw": 126
+      },
+      {
+        "source": [
+          "172.31.50.161",
+          60032
+        ],
+        "destination": [
+          "172.31.60.10",
+          8000
+        ],
+        "packets": 10,
+        "forward_packets": 5,
+        "backward_packets": 5,
+        "payload_bytes": 423,
+        "duration_us": 1552,
+        "first_fin_prefix_packets": 7,
+        "first_fin_prefix_forward_packets": 3,
+        "first_fin_prefix_backward_packets": 4,
+        "first_fin_prefix_duration_us": 1209,
+        "forward_initial_window_raw": 64240,
+        "backward_initial_window_raw": 64240,
+        "backward_last_window_raw": 126
+      },
+      {
+        "source": [
+          "172.31.50.161",
+          60033
+        ],
+        "destination": [
+          "172.31.60.10",
+          8000
+        ],
+        "packets": 10,
+        "forward_packets": 5,
+        "backward_packets": 5,
+        "payload_bytes": 423,
+        "duration_us": 1538,
+        "first_fin_prefix_packets": 7,
+        "first_fin_prefix_forward_packets": 3,
+        "first_fin_prefix_backward_packets": 4,
+        "first_fin_prefix_duration_us": 1210,
+        "forward_initial_window_raw": 64240,
+        "backward_initial_window_raw": 64240,
+        "backward_last_window_raw": 126
+      },
+      {
+        "source": [
+          "172.31.50.161",
+          60034
+        ],
+        "destination": [
+          "172.31.60.10",
+          8000
+        ],
+        "packets": 10,
+        "forward_packets": 5,
+        "backward_packets": 5,
+        "payload_bytes": 423,
+        "duration_us": 1722,
+        "first_fin_prefix_packets": 7,
+        "first_fin_prefix_forward_packets": 3,
+        "first_fin_prefix_backward_packets": 4,
+        "first_fin_prefix_duration_us": 1325,
+        "forward_initial_window_raw": 64240,
+        "backward_initial_window_raw": 64240,
+        "backward_last_window_raw": 126
+      },
+      {
+        "source": [
+          "172.31.50.161",
+          60035
+        ],
+        "destination": [
+          "172.31.60.10",
+          8000
+        ],
+        "packets": 10,
+        "forward_packets": 5,
+        "backward_packets": 5,
+        "payload_bytes": 423,
+        "duration_us": 8150,
+        "first_fin_prefix_packets": 7,
+        "first_fin_prefix_forward_packets": 3,
+        "first_fin_prefix_backward_packets": 4,
+        "first_fin_prefix_duration_us": 7764,
+        "forward_initial_window_raw": 64240,
+        "backward_initial_window_raw": 64240,
+        "backward_last_window_raw": 126
+      },
+      {
+        "source": [
+          "172.31.50.161",
+          60036
+        ],
+        "destination": [
+          "172.31.60.10",
+          8000
+        ],
+        "packets": 10,
+        "forward_packets": 5,
+        "backward_packets": 5,
+        "payload_bytes": 423,
+        "duration_us": 1526,
+        "first_fin_prefix_packets": 7,
+        "first_fin_prefix_forward_packets": 3,
+        "first_fin_prefix_backward_packets": 4,
+        "first_fin_prefix_duration_us": 1190,
+        "forward_initial_window_raw": 64240,
+        "backward_initial_window_raw": 64240,
+        "backward_last_window_raw": 126
+      },
+      {
+        "source": [
+          "172.31.50.161",
+          60037
+        ],
+        "destination": [
+          "172.31.60.10",
+          8000
+        ],
+        "packets": 10,
+        "forward_packets": 5,
+        "backward_packets": 5,
+        "payload_bytes": 423,
+        "duration_us": 1544,
+        "first_fin_prefix_packets": 7,
+        "first_fin_prefix_forward_packets": 3,
+        "first_fin_prefix_backward_packets": 4,
+        "first_fin_prefix_duration_us": 1215,
+        "forward_initial_window_raw": 64240,
+        "backward_initial_window_raw": 64240,
+        "backward_last_window_raw": 126
+      },
+      {
+        "source": [
+          "172.31.50.161",
+          60038
+        ],
+        "destination": [
+          "172.31.60.10",
+          8000
+        ],
+        "packets": 10,
+        "forward_packets": 5,
+        "backward_packets": 5,
+        "payload_bytes": 423,
+        "duration_us": 1577,
+        "first_fin_prefix_packets": 7,
+        "first_fin_prefix_forward_packets": 3,
+        "first_fin_prefix_backward_packets": 4,
+        "first_fin_prefix_duration_us": 1253,
+        "forward_initial_window_raw": 64240,
+        "backward_initial_window_raw": 64240,
+        "backward_last_window_raw": 126
+      }
+    ],
+    "grouping_limitation": "same 5-tuple reuse is not separated; no flow timeout applied"
+  },
+  "profiles": [
+    {
+      "profile": "v4",
+      "source_commit": "98a5ebad0df579cc8b43eedd3421b3ae87699901",
+      "image_id": "sha256:c6e330bb0e79ff20f014fe6b6108afda5799a22e78bbd7309b9b7dbaaaa0d508",
+      "csv_sha256": "3c3d4b8f021157c940c71040b9218d3df7ab6b262ae95033dbfbd1d69c770513",
+      "rows": 20,
+      "raw_columns": 84,
+      "feature_count": 60,
+      "schema_sha256": "07bd5818c91930b6ceb8178e160d9365260f6b92f629fa02ef14227cfaa113a4",
+      "dtypes": {
+        "int64": 39,
+        "float64": 21
+      },
+      "packet_count_sum": 100,
+      "payload_bytes_sum": 4230,
+      "packet_count_pairs": [
+        {
+          "forward": 2,
+          "backward": 1,
+          "rows": 10
+        },
+        {
+          "forward": 3,
+          "backward": 4,
+          "rows": 10
+        }
+      ],
+      "flag_values": {
+        "fin_flag_count": [
+          1
+        ],
+        "syn_flag_count": [
+          0,
+          2
+        ],
+        "rst_flag_count": [
+          0
+        ],
+        "psh_flag_count": [
+          0,
+          3
+        ],
+        "ack_flag_count": [
+          3,
+          6
+        ],
+        "urg_flag_count": [
+          0
+        ],
+        "ece_flag_count": [
+          0
+        ]
+      },
+      "payload_rows": [
+        {
+          "flow_duration": 1335,
+          "total_fwd_packets": 3,
+          "total_backward_packets": 4,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 52.875,
+          "average_packet_size": 60.42857142857143
+        },
+        {
+          "flow_duration": 1230,
+          "total_fwd_packets": 3,
+          "total_backward_packets": 4,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 52.875,
+          "average_packet_size": 60.42857142857143
+        },
+        {
+          "flow_duration": 6717,
+          "total_fwd_packets": 3,
+          "total_backward_packets": 4,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 52.875,
+          "average_packet_size": 60.42857142857143
+        },
+        {
+          "flow_duration": 1209,
+          "total_fwd_packets": 3,
+          "total_backward_packets": 4,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 52.875,
+          "average_packet_size": 60.42857142857143
+        },
+        {
+          "flow_duration": 1210,
+          "total_fwd_packets": 3,
+          "total_backward_packets": 4,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 52.875,
+          "average_packet_size": 60.42857142857143
+        },
+        {
+          "flow_duration": 1325,
+          "total_fwd_packets": 3,
+          "total_backward_packets": 4,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 52.875,
+          "average_packet_size": 60.42857142857143
+        },
+        {
+          "flow_duration": 7764,
+          "total_fwd_packets": 3,
+          "total_backward_packets": 4,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 52.875,
+          "average_packet_size": 60.42857142857143
+        },
+        {
+          "flow_duration": 1190,
+          "total_fwd_packets": 3,
+          "total_backward_packets": 4,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 52.875,
+          "average_packet_size": 60.42857142857143
+        },
+        {
+          "flow_duration": 1215,
+          "total_fwd_packets": 3,
+          "total_backward_packets": 4,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 52.875,
+          "average_packet_size": 60.42857142857143
+        },
+        {
+          "flow_duration": 1253,
+          "total_fwd_packets": 3,
+          "total_backward_packets": 4,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 52.875,
+          "average_packet_size": 60.42857142857143
+        }
+      ],
+      "label_ignored": true,
+      "structural_validation": "passed",
+      "semantic_compatibility": "not_established",
+      "automatic_inference_allowed": false,
+      "packets_not_accounted_by_exported_counts": 0
+    },
+    {
+      "profile": "legacy_pre2019",
+      "source_commit": "99dc82768a0ebbf2be63a506b185113f52ab1edf",
+      "image_id": "sha256:71e6480c9378ed26b8d453a4841f89e91626e9040705bcba6cc459c7263b10b0",
+      "csv_sha256": "2f96c15cc3c571ed009c583853a92e2708c935033aabd92ec76165809169fa6a",
+      "rows": 20,
+      "raw_columns": 84,
+      "feature_count": 60,
+      "schema_sha256": "07bd5818c91930b6ceb8178e160d9365260f6b92f629fa02ef14227cfaa113a4",
+      "dtypes": {
+        "int64": 39,
+        "float64": 21
+      },
+      "packet_count_sum": 90,
+      "payload_bytes_sum": 4230,
+      "packet_count_pairs": [
+        {
+          "forward": 1,
+          "backward": 1,
+          "rows": 10
+        },
+        {
+          "forward": 2,
+          "backward": 5,
+          "rows": 10
+        }
+      ],
+      "flag_values": {
+        "fin_flag_count": [
+          0
+        ],
+        "syn_flag_count": [
+          0,
+          1
+        ],
+        "rst_flag_count": [
+          0
+        ],
+        "psh_flag_count": [
+          0
+        ],
+        "ack_flag_count": [
+          0,
+          1
+        ],
+        "urg_flag_count": [
+          0
+        ],
+        "ece_flag_count": [
+          0
+        ]
+      },
+      "payload_rows": [
+        {
+          "flow_duration": 1335,
+          "total_fwd_packets": 2,
+          "total_backward_packets": 5,
+          "init_win_bytes_forward": -1,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 0,
+          "packet_length_mean": 52.875,
+          "average_packet_size": 60.42857142857143
+        },
+        {
+          "flow_duration": 1230,
+          "total_fwd_packets": 2,
+          "total_backward_packets": 5,
+          "init_win_bytes_forward": -1,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 0,
+          "packet_length_mean": 52.875,
+          "average_packet_size": 60.42857142857143
+        },
+        {
+          "flow_duration": 6717,
+          "total_fwd_packets": 2,
+          "total_backward_packets": 5,
+          "init_win_bytes_forward": -1,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 0,
+          "packet_length_mean": 52.875,
+          "average_packet_size": 60.42857142857143
+        },
+        {
+          "flow_duration": 1209,
+          "total_fwd_packets": 2,
+          "total_backward_packets": 5,
+          "init_win_bytes_forward": -1,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 0,
+          "packet_length_mean": 52.875,
+          "average_packet_size": 60.42857142857143
+        },
+        {
+          "flow_duration": 1210,
+          "total_fwd_packets": 2,
+          "total_backward_packets": 5,
+          "init_win_bytes_forward": -1,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 0,
+          "packet_length_mean": 52.875,
+          "average_packet_size": 60.42857142857143
+        },
+        {
+          "flow_duration": 1325,
+          "total_fwd_packets": 2,
+          "total_backward_packets": 5,
+          "init_win_bytes_forward": -1,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 0,
+          "packet_length_mean": 52.875,
+          "average_packet_size": 60.42857142857143
+        },
+        {
+          "flow_duration": 7764,
+          "total_fwd_packets": 2,
+          "total_backward_packets": 5,
+          "init_win_bytes_forward": -1,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 0,
+          "packet_length_mean": 52.875,
+          "average_packet_size": 60.42857142857143
+        },
+        {
+          "flow_duration": 1190,
+          "total_fwd_packets": 2,
+          "total_backward_packets": 5,
+          "init_win_bytes_forward": -1,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 0,
+          "packet_length_mean": 52.875,
+          "average_packet_size": 60.42857142857143
+        },
+        {
+          "flow_duration": 1215,
+          "total_fwd_packets": 2,
+          "total_backward_packets": 5,
+          "init_win_bytes_forward": -1,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 0,
+          "packet_length_mean": 52.875,
+          "average_packet_size": 60.42857142857143
+        },
+        {
+          "flow_duration": 1253,
+          "total_fwd_packets": 2,
+          "total_backward_packets": 5,
+          "init_win_bytes_forward": -1,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 0,
+          "packet_length_mean": 52.875,
+          "average_packet_size": 60.42857142857143
+        }
+      ],
+      "label_ignored": true,
+      "structural_validation": "passed",
+      "semantic_compatibility": "not_established",
+      "automatic_inference_allowed": false,
+      "packets_not_accounted_by_exported_counts": 10
+    }
+  ],
+  "original_dataset_flags": [
+    {
+      "file": "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv",
+      "rows": 225745,
+      "flag_values": {
+        "fin_flag_count": [
+          0,
+          1
+        ],
+        "syn_flag_count": [
+          0,
+          1
+        ],
+        "rst_flag_count": [
+          0,
+          1
+        ],
+        "psh_flag_count": [
+          0,
+          1
+        ],
+        "ack_flag_count": [
+          0,
+          1
+        ],
+        "urg_flag_count": [
+          0,
+          1
+        ],
+        "ece_flag_count": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "file": "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv",
+      "rows": 286467,
+      "flag_values": {
+        "fin_flag_count": [
+          0,
+          1
+        ],
+        "syn_flag_count": [
+          0,
+          1
+        ],
+        "rst_flag_count": [
+          0,
+          1
+        ],
+        "psh_flag_count": [
+          0,
+          1
+        ],
+        "ack_flag_count": [
+          0,
+          1
+        ],
+        "urg_flag_count": [
+          0,
+          1
+        ],
+        "ece_flag_count": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "file": "Friday-WorkingHours-Morning.pcap_ISCX.csv",
+      "rows": 191033,
+      "flag_values": {
+        "fin_flag_count": [
+          0,
+          1
+        ],
+        "syn_flag_count": [
+          0,
+          1
+        ],
+        "rst_flag_count": [
+          0,
+          1
+        ],
+        "psh_flag_count": [
+          0,
+          1
+        ],
+        "ack_flag_count": [
+          0,
+          1
+        ],
+        "urg_flag_count": [
+          0,
+          1
+        ],
+        "ece_flag_count": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "file": "Monday-WorkingHours.pcap_ISCX.csv",
+      "rows": 529918,
+      "flag_values": {
+        "fin_flag_count": [
+          0,
+          1
+        ],
+        "syn_flag_count": [
+          0,
+          1
+        ],
+        "rst_flag_count": [
+          0,
+          1
+        ],
+        "psh_flag_count": [
+          0,
+          1
+        ],
+        "ack_flag_count": [
+          0,
+          1
+        ],
+        "urg_flag_count": [
+          0,
+          1
+        ],
+        "ece_flag_count": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "file": "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv",
+      "rows": 288602,
+      "flag_values": {
+        "fin_flag_count": [
+          0,
+          1
+        ],
+        "syn_flag_count": [
+          0,
+          1
+        ],
+        "rst_flag_count": [
+          0,
+          1
+        ],
+        "psh_flag_count": [
+          0,
+          1
+        ],
+        "ack_flag_count": [
+          0,
+          1
+        ],
+        "urg_flag_count": [
+          0,
+          1
+        ],
+        "ece_flag_count": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "file": "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv",
+      "rows": 170366,
+      "flag_values": {
+        "fin_flag_count": [
+          0,
+          1
+        ],
+        "syn_flag_count": [
+          0,
+          1
+        ],
+        "rst_flag_count": [
+          0,
+          1
+        ],
+        "psh_flag_count": [
+          0,
+          1
+        ],
+        "ack_flag_count": [
+          0,
+          1
+        ],
+        "urg_flag_count": [
+          0,
+          1
+        ],
+        "ece_flag_count": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "file": "Tuesday-WorkingHours.pcap_ISCX.csv",
+      "rows": 445909,
+      "flag_values": {
+        "fin_flag_count": [
+          0,
+          1
+        ],
+        "syn_flag_count": [
+          0,
+          1
+        ],
+        "rst_flag_count": [
+          0,
+          1
+        ],
+        "psh_flag_count": [
+          0,
+          1
+        ],
+        "ack_flag_count": [
+          0,
+          1
+        ],
+        "urg_flag_count": [
+          0,
+          1
+        ],
+        "ece_flag_count": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "file": "Wednesday-workingHours.pcap_ISCX.csv",
+      "rows": 692703,
+      "flag_values": {
+        "fin_flag_count": [
+          0,
+          1
+        ],
+        "syn_flag_count": [
+          0,
+          1
+        ],
+        "rst_flag_count": [
+          0,
+          1
+        ],
+        "psh_flag_count": [
+          0,
+          1
+        ],
+        "ack_flag_count": [
+          0,
+          1
+        ],
+        "urg_flag_count": [
+          0,
+          1
+        ],
+        "ece_flag_count": [
+          0,
+          1
+        ]
+      }
+    }
+  ],
+  "protected_files_unchanged": true,
+  "frozen_artifacts": {
+    "experiments/scale_100k/models/isolation_forest.joblib": "d6f7754e14bbc7adb453eb298559efeebdccad98f59143283dc74a78211b4f40",
+    "experiments/scale_100k/models/lof.joblib": "6c014381d6dc5fc70a46941a450e2a60dc7b83b1bb0fcee43a7653107814df41",
+    "reports/operational/model_registry_operational.json": "5705e4c770e6271f8f7fea83f57653d15dc0b1725cdb59b3909d5bbaa84aff74",
+    "data/processed/monday_feature_manifest.json": "6c779db5acdcebf99dabf8e2c112f91d53c2e477aac6d665aa91f00f69786afe",
+    "experiments/scale_100k/data/splits/split_manifest.json": "35365d8328114a0356b762e68cc94ac12eb52feb5ffb97cdf3f2ac81c5469587"
+  },
+  "models_loaded": false,
+  "models_retrained": false,
+  "database_written": false,
+  "decision": "Neither tested profile establishes exact CIC-IDS2017 extraction compatibility."
+}

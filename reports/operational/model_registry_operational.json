@@ -1,0 +1,1035 @@
+{
+  "schema_version": 2,
+  "stage": "operational_model_registry_post_marco_11",
+  "created_at_utc": "2026-09-05T19:22:52.404235+00:00",
+  "status": "completed",
+  "methodology": {
+    "models_loaded": false,
+    "models_retrained": false,
+    "predictions_recomputed": false,
+    "metrics_recomputed": false,
+    "thresholds_recalibrated": false,
+    "source": "frozen Marco 9 comparison reports"
+  },
+  "experiments": {
+    "baseline_20k": {
+      "display_name": "Baseline 20k",
+      "experiment_root": ".",
+      "split_records": {
+        "train": 20000,
+        "validation": 10000,
+        "test": 20000
+      },
+      "model_input_schema_sha256": "07bd5818c91930b6ceb8178e160d9365260f6b92f629fa02ef14227cfaa113a4",
+      "models": {
+        "isolation_forest": {
+          "display_name": "Isolation Forest",
+          "model_artifact": {
+            "relative_path": "models/isolation_forest.joblib",
+            "sha256": "1d7bd1b69dd8505cf6b06e813b94a93e34c05bd303de55c3a45f8886176d599c",
+            "size_bytes": 1245806
+          },
+          "metadata_artifact": {
+            "relative_path": "models/isolation_forest_metadata.json",
+            "sha256": "a9f427c6110f823992a1a292f8962deef90a37dab6555b830997b21f4057f850"
+          },
+          "training_report": {
+            "relative_path": "reports/metrics/isolation_forest_training.json",
+            "sha256": "6a39e4a98a9ac8900dd646c3be0c3341a287c3bc5efb83ae409732e52f10a086"
+          },
+          "configuration": {
+            "n_estimators": 200,
+            "max_samples": 2048,
+            "contamination": "auto",
+            "max_features": 1.0,
+            "bootstrap": false,
+            "random_state": 42,
+            "n_jobs": -1
+          },
+          "libraries": {
+            "python": "3.12.13",
+            "numpy": "2.5.2",
+            "pandas": "3.0.1",
+            "scikit_learn": "1.9.0",
+            "joblib": "1.5.3"
+          },
+          "feature_count": 60,
+          "model_input_schema_sha256": "07bd5818c91930b6ceb8178e160d9365260f6b92f629fa02ef14227cfaa113a4",
+          "thresholds": {
+            "native": {
+              "decision_rule": "decision_function < 0",
+              "equivalent_anomaly_score_rule": "anomaly_score > -learned_offset",
+              "learned_offset": -0.5,
+              "equivalent_anomaly_score_threshold": 0.5,
+              "source": "frozen predictions generated before labels were loaded"
+            },
+            "validation_f1_calibrated": {
+              "objective": "maximize_f1",
+              "score": "anomaly_score",
+              "positive_rule": "anomaly_score >= threshold",
+              "threshold": 0.33493336095591913,
+              "validation_f1_at_selection": 0.7853805073431243,
+              "validation_precision_at_selection": 0.6738258877434136,
+              "validation_recall_at_selection": 0.9412,
+              "candidate_threshold_count": 7485,
+              "tied_maximum_count": 1,
+              "tie_breaking": "higher precision, then higher recall, then higher threshold",
+              "test_labels_used": false
+            }
+          },
+          "validation_and_test_metrics": {
+            "validation": {
+              "records": 10000,
+              "ranking_metrics": {
+                "roc_auc": 0.82651698,
+                "average_precision": 0.8092401279105783,
+                "average_precision_note": "weighted precision gain across recall; not trapezoidal PR interpolation"
+              },
+              "operating_points": {
+                "native": {
+                  "confusion_matrix": [
+                    [
+                      4803,
+                      197
+                    ],
+                    [
+                      2957,
+                      2043
+                    ]
+                  ],
+                  "true_negative": 4803,
+                  "false_positive": 197,
+                  "false_negative": 2957,
+                  "true_positive": 2043,
+                  "normal_support": 5000,
+                  "attack_support": 5000,
+                  "predicted_normal": 7760,
+                  "predicted_anomaly": 2240,
+                  "predicted_anomaly_rate": 0.224,
+                  "accuracy": 0.6846,
+                  "balanced_accuracy": 0.6846,
+                  "precision": 0.9120535714285715,
+                  "recall_tpr": 0.4086,
+                  "f1_score": 0.5643646408839779,
+                  "specificity_tnr": 0.9606,
+                  "false_positive_rate": 0.0394,
+                  "false_negative_rate": 0.5914
+                },
+                "validation_f1_calibrated": {
+                  "confusion_matrix": [
+                    [
+                      2722,
+                      2278
+                    ],
+                    [
+                      294,
+                      4706
+                    ]
+                  ],
+                  "true_negative": 2722,
+                  "false_positive": 2278,
+                  "false_negative": 294,
+                  "true_positive": 4706,
+                  "normal_support": 5000,
+                  "attack_support": 5000,
+                  "predicted_normal": 3016,
+                  "predicted_anomaly": 6984,
+                  "predicted_anomaly_rate": 0.6984,
+                  "accuracy": 0.7428,
+                  "balanced_accuracy": 0.7428,
+                  "precision": 0.6738258877434136,
+                  "recall_tpr": 0.9412,
+                  "f1_score": 0.7853805073431241,
+                  "specificity_tnr": 0.5444,
+                  "false_positive_rate": 0.4556,
+                  "false_negative_rate": 0.0588
+                }
+              }
+            },
+            "test": {
+              "records": 20000,
+              "ranking_metrics": {
+                "roc_auc": 0.823602035,
+                "average_precision": 0.8094769434337948,
+                "average_precision_note": "weighted precision gain across recall; not trapezoidal PR interpolation"
+              },
+              "operating_points": {
+                "native": {
+                  "confusion_matrix": [
+                    [
+                      9498,
+                      502
+                    ],
+                    [
+                      5938,
+                      4062
+                    ]
+                  ],
+                  "true_negative": 9498,
+                  "false_positive": 502,
+                  "false_negative": 5938,
+                  "true_positive": 4062,
+                  "normal_support": 10000,
+                  "attack_support": 10000,
+                  "predicted_normal": 15436,
+                  "predicted_anomaly": 4564,
+                  "predicted_anomaly_rate": 0.2282,
+                  "accuracy": 0.678,
+                  "balanced_accuracy": 0.6779999999999999,
+                  "precision": 0.8900087642418931,
+                  "recall_tpr": 0.4062,
+                  "f1_score": 0.5578137874210382,
+                  "specificity_tnr": 0.9498,
+                  "false_positive_rate": 0.0502,
+                  "false_negative_rate": 0.5938
+                },
+                "validation_f1_calibrated": {
+                  "confusion_matrix": [
+                    [
+                      5469,
+                      4531
+                    ],
+                    [
+                      632,
+                      9368
+                    ]
+                  ],
+                  "true_negative": 5469,
+                  "false_positive": 4531,
+                  "false_negative": 632,
+                  "true_positive": 9368,
+                  "normal_support": 10000,
+                  "attack_support": 10000,
+                  "predicted_normal": 6101,
+                  "predicted_anomaly": 13899,
+                  "predicted_anomaly_rate": 0.69495,
+                  "accuracy": 0.74185,
+                  "balanced_accuracy": 0.74185,
+                  "precision": 0.6740053241240377,
+                  "recall_tpr": 0.9368,
+                  "f1_score": 0.7839658563119796,
+                  "specificity_tnr": 0.5469,
+                  "false_positive_rate": 0.4531,
+                  "false_negative_rate": 0.0632
+                }
+              }
+            }
+          },
+          "timing_seconds": {
+            "fit": 0.37622839998221025,
+            "inference_validation": 0.08451529999729246,
+            "inference_test": 0.15473190002376214
+          }
+        },
+        "lof": {
+          "display_name": "Local Outlier Factor",
+          "model_artifact": {
+            "relative_path": "models/lof.joblib",
+            "sha256": "1e4a8b96759bcf1844e8884d2d09c2361065d646096b0e6959fd90cd9d8ce382",
+            "size_bytes": 7149474
+          },
+          "metadata_artifact": {
+            "relative_path": "models/lof_metadata.json",
+            "sha256": "aee42dbcedf2003589265eb01f93e74760852d75b08cb87e5bb3818d7f1631e4"
+          },
+          "training_report": {
+            "relative_path": "reports/metrics/lof_training.json",
+            "sha256": "cd5a1ae92ed8f1b2cfca03cc1e58563939019524a255c372bcd2c7278953e943"
+          },
+          "configuration": {
+            "n_neighbors": 20,
+            "contamination": "auto",
+            "novelty": true,
+            "algorithm": "auto",
+            "leaf_size": 30,
+            "metric": "minkowski",
+            "p": 2,
+            "n_jobs": -1
+          },
+          "libraries": {
+            "python": "3.12.13",
+            "numpy": "2.5.2",
+            "pandas": "3.0.1",
+            "scikit_learn": "1.9.0",
+            "joblib": "1.5.3"
+          },
+          "feature_count": 60,
+          "model_input_schema_sha256": "07bd5818c91930b6ceb8178e160d9365260f6b92f629fa02ef14227cfaa113a4",
+          "thresholds": {
+            "native": {
+              "decision_rule": "decision_function < 0",
+              "equivalent_anomaly_score_rule": "anomaly_score > -learned_offset",
+              "learned_offset": -1.5,
+              "equivalent_anomaly_score_threshold": 1.5,
+              "source": "frozen predictions generated before labels were loaded"
+            },
+            "validation_f1_calibrated": {
+              "objective": "maximize_f1",
+              "score": "anomaly_score",
+              "positive_rule": "anomaly_score >= threshold",
+              "threshold": 1.4449170084747471,
+              "validation_f1_at_selection": 0.7562301302430521,
+              "validation_precision_at_selection": 0.7760471479688487,
+              "validation_recall_at_selection": 0.7374,
+              "candidate_threshold_count": 9820,
+              "tied_maximum_count": 1,
+              "tie_breaking": "higher precision, then higher recall, then higher threshold",
+              "test_labels_used": false
+            }
+          },
+          "validation_and_test_metrics": {
+            "validation": {
+              "records": 10000,
+              "ranking_metrics": {
+                "roc_auc": 0.77768514,
+                "average_precision": 0.7161577332212837,
+                "average_precision_note": "weighted precision gain across recall; not trapezoidal PR interpolation"
+              },
+              "operating_points": {
+                "native": {
+                  "confusion_matrix": [
+                    [
+                      4005,
+                      995
+                    ],
+                    [
+                      1387,
+                      3613
+                    ]
+                  ],
+                  "true_negative": 4005,
+                  "false_positive": 995,
+                  "false_negative": 1387,
+                  "true_positive": 3613,
+                  "normal_support": 5000,
+                  "attack_support": 5000,
+                  "predicted_normal": 5392,
+                  "predicted_anomaly": 4608,
+                  "predicted_anomaly_rate": 0.4608,
+                  "accuracy": 0.7618,
+                  "balanced_accuracy": 0.7618,
+                  "precision": 0.7840711805555556,
+                  "recall_tpr": 0.7226,
+                  "f1_score": 0.7520815986677769,
+                  "specificity_tnr": 0.801,
+                  "false_positive_rate": 0.199,
+                  "false_negative_rate": 0.2774
+                },
+                "validation_f1_calibrated": {
+                  "confusion_matrix": [
+                    [
+                      3936,
+                      1064
+                    ],
+                    [
+                      1313,
+                      3687
+                    ]
+                  ],
+                  "true_negative": 3936,
+                  "false_positive": 1064,
+                  "false_negative": 1313,
+                  "true_positive": 3687,
+                  "normal_support": 5000,
+                  "attack_support": 5000,
+                  "predicted_normal": 5249,
+                  "predicted_anomaly": 4751,
+                  "predicted_anomaly_rate": 0.4751,
+                  "accuracy": 0.7623,
+                  "balanced_accuracy": 0.7623,
+                  "precision": 0.7760471479688487,
+                  "recall_tpr": 0.7374,
+                  "f1_score": 0.756230130243052,
+                  "specificity_tnr": 0.7872,
+                  "false_positive_rate": 0.2128,
+                  "false_negative_rate": 0.2626
+                }
+              }
+            },
+            "test": {
+              "records": 20000,
+              "ranking_metrics": {
+                "roc_auc": 0.781720185,
+                "average_precision": 0.7266010647498519,
+                "average_precision_note": "weighted precision gain across recall; not trapezoidal PR interpolation"
+              },
+              "operating_points": {
+                "native": {
+                  "confusion_matrix": [
+                    [
+                      8004,
+                      1996
+                    ],
+                    [
+                      2725,
+                      7275
+                    ]
+                  ],
+                  "true_negative": 8004,
+                  "false_positive": 1996,
+                  "false_negative": 2725,
+                  "true_positive": 7275,
+                  "normal_support": 10000,
+                  "attack_support": 10000,
+                  "predicted_normal": 10729,
+                  "predicted_anomaly": 9271,
+                  "predicted_anomaly_rate": 0.46355,
+                  "accuracy": 0.76395,
+                  "balanced_accuracy": 0.76395,
+                  "precision": 0.7847049940675224,
+                  "recall_tpr": 0.7275,
+                  "f1_score": 0.755020497120025,
+                  "specificity_tnr": 0.8004,
+                  "false_positive_rate": 0.1996,
+                  "false_negative_rate": 0.2725
+                },
+                "validation_f1_calibrated": {
+                  "confusion_matrix": [
+                    [
+                      7854,
+                      2146
+                    ],
+                    [
+                      2582,
+                      7418
+                    ]
+                  ],
+                  "true_negative": 7854,
+                  "false_positive": 2146,
+                  "false_negative": 2582,
+                  "true_positive": 7418,
+                  "normal_support": 10000,
+                  "attack_support": 10000,
+                  "predicted_normal": 10436,
+                  "predicted_anomaly": 9564,
+                  "predicted_anomaly_rate": 0.4782,
+                  "accuracy": 0.7636,
+                  "balanced_accuracy": 0.7636000000000001,
+                  "precision": 0.7756168966959431,
+                  "recall_tpr": 0.7418,
+                  "f1_score": 0.7583316295236148,
+                  "specificity_tnr": 0.7854,
+                  "false_positive_rate": 0.2146,
+                  "false_negative_rate": 0.2582
+                }
+              }
+            }
+          },
+          "timing_seconds": {
+            "fit": 2.781584800002747,
+            "inference_validation": 0.4685525999957463,
+            "inference_test": 0.5105067000113195
+          }
+        }
+      }
+    },
+    "expanded_100k": {
+      "display_name": "Expandido 100k",
+      "experiment_root": "experiments/scale_100k",
+      "split_records": {
+        "train": 100000,
+        "validation": 50000,
+        "test": 100000
+      },
+      "model_input_schema_sha256": "07bd5818c91930b6ceb8178e160d9365260f6b92f629fa02ef14227cfaa113a4",
+      "models": {
+        "isolation_forest": {
+          "display_name": "Isolation Forest",
+          "model_artifact": {
+            "relative_path": "experiments/scale_100k/models/isolation_forest.joblib",
+            "sha256": "d6f7754e14bbc7adb453eb298559efeebdccad98f59143283dc74a78211b4f40",
+            "size_bytes": 1294831
+          },
+          "metadata_artifact": {
+            "relative_path": "experiments/scale_100k/models/isolation_forest_metadata.json",
+            "sha256": "36629c3d3198782f2eb1245ab8e622bbb4a4329030960c9eed23ff479c26bb0d"
+          },
+          "training_report": {
+            "relative_path": "experiments/scale_100k/metrics/isolation_forest_training.json",
+            "sha256": "d4b66873d62c229a6f9c8e913d4045c0a82e19d444ea4ca9ca573d13aa6c3b1b"
+          },
+          "configuration": {
+            "n_estimators": 200,
+            "max_samples": 2048,
+            "contamination": "auto",
+            "max_features": 1.0,
+            "bootstrap": false,
+            "random_state": 42,
+            "n_jobs": -1
+          },
+          "libraries": {
+            "python": "3.12.14",
+            "numpy": "2.5.2",
+            "pandas": "3.0.1",
+            "scikit_learn": "1.9.0",
+            "joblib": "1.5.3"
+          },
+          "feature_count": 60,
+          "model_input_schema_sha256": "07bd5818c91930b6ceb8178e160d9365260f6b92f629fa02ef14227cfaa113a4",
+          "thresholds": {
+            "native": {
+              "decision_rule": "decision_function < 0",
+              "equivalent_anomaly_score_rule": "anomaly_score > -learned_offset",
+              "learned_offset": -0.5,
+              "equivalent_anomaly_score_threshold": 0.5,
+              "source": "frozen predictions generated before labels were loaded"
+            },
+            "validation_f1_calibrated": {
+              "objective": "maximize_f1",
+              "score": "anomaly_score",
+              "positive_rule": "anomaly_score >= threshold",
+              "threshold": 0.3368281464292285,
+              "validation_f1_at_selection": 0.7843815021142357,
+              "validation_precision_at_selection": 0.6755983350676379,
+              "validation_recall_at_selection": 0.93492,
+              "candidate_threshold_count": 26921,
+              "tied_maximum_count": 1,
+              "tie_breaking": "higher precision, then higher recall, then higher threshold",
+              "test_labels_used": false
+            },
+            "validation_fpr_operational": {
+              "objective": "limit_empirical_false_positive_rate",
+              "score": "anomaly_score",
+              "positive_rule": "anomaly_score >= threshold",
+              "threshold": 0.615824439899627,
+              "target_false_positive_rate": 0.01,
+              "validation_normal_support": 25000,
+              "maximum_validation_false_positives": 250,
+              "achieved_validation_false_positives": 250,
+              "achieved_validation_false_positive_rate": 0.01,
+              "threshold_source": "smallest_observed_benign_score_within_budget",
+              "selection_uses_validation_benign_scores_only": true,
+              "attack_labels_used_for_threshold_selection": false,
+              "test_labels_used": false,
+              "tie_handling": "raises threshold when tied benign scores exceed budget",
+              "operating_point": "validation_fpr_operational",
+              "selected_model_for_operation": true
+            }
+          },
+          "validation_and_test_metrics": {
+            "validation": {
+              "records": 50000,
+              "ranking_metrics": {
+                "roc_auc": 0.8204786111999999,
+                "average_precision": 0.8119375840707366,
+                "average_precision_note": "weighted precision gain across recall; not trapezoidal PR interpolation"
+              },
+              "operating_points": {
+                "native": {
+                  "confusion_matrix": [
+                    [
+                      23815,
+                      1185
+                    ],
+                    [
+                      14802,
+                      10198
+                    ]
+                  ],
+                  "true_negative": 23815,
+                  "false_positive": 1185,
+                  "false_negative": 14802,
+                  "true_positive": 10198,
+                  "normal_support": 25000,
+                  "attack_support": 25000,
+                  "predicted_normal": 38617,
+                  "predicted_anomaly": 11383,
+                  "predicted_anomaly_rate": 0.22766,
+                  "accuracy": 0.68026,
+                  "balanced_accuracy": 0.68026,
+                  "precision": 0.8958973908459984,
+                  "recall_tpr": 0.40792,
+                  "f1_score": 0.5605914850342193,
+                  "specificity_tnr": 0.9526,
+                  "false_positive_rate": 0.0474,
+                  "false_negative_rate": 0.59208
+                },
+                "validation_f1_calibrated": {
+                  "confusion_matrix": [
+                    [
+                      13777,
+                      11223
+                    ],
+                    [
+                      1627,
+                      23373
+                    ]
+                  ],
+                  "true_negative": 13777,
+                  "false_positive": 11223,
+                  "false_negative": 1627,
+                  "true_positive": 23373,
+                  "normal_support": 25000,
+                  "attack_support": 25000,
+                  "predicted_normal": 15404,
+                  "predicted_anomaly": 34596,
+                  "predicted_anomaly_rate": 0.69192,
+                  "accuracy": 0.743,
+                  "balanced_accuracy": 0.743,
+                  "precision": 0.6755983350676379,
+                  "recall_tpr": 0.93492,
+                  "f1_score": 0.7843815021142359,
+                  "specificity_tnr": 0.55108,
+                  "false_positive_rate": 0.44892,
+                  "false_negative_rate": 0.06508
+                },
+                "validation_fpr_operational": {
+                  "confusion_matrix": [
+                    [
+                      24750,
+                      250
+                    ],
+                    [
+                      18045,
+                      6955
+                    ]
+                  ],
+                  "true_negative": 24750,
+                  "false_positive": 250,
+                  "false_negative": 18045,
+                  "true_positive": 6955,
+                  "normal_support": 25000,
+                  "attack_support": 25000,
+                  "predicted_normal": 42795,
+                  "predicted_anomaly": 7205,
+                  "predicted_anomaly_rate": 0.1441,
+                  "accuracy": 0.6341,
+                  "balanced_accuracy": 0.6341,
+                  "precision": 0.9653018736988203,
+                  "recall_tpr": 0.2782,
+                  "f1_score": 0.43192050923769604,
+                  "specificity_tnr": 0.99,
+                  "false_positive_rate": 0.01,
+                  "false_negative_rate": 0.7218
+                }
+              }
+            },
+            "test": {
+              "records": 100000,
+              "ranking_metrics": {
+                "roc_auc": 0.8231742362,
+                "average_precision": 0.8142302884703011,
+                "average_precision_note": "weighted precision gain across recall; not trapezoidal PR interpolation"
+              },
+              "operating_points": {
+                "native": {
+                  "confusion_matrix": [
+                    [
+                      47652,
+                      2348
+                    ],
+                    [
+                      29470,
+                      20530
+                    ]
+                  ],
+                  "true_negative": 47652,
+                  "false_positive": 2348,
+                  "false_negative": 29470,
+                  "true_positive": 20530,
+                  "normal_support": 50000,
+                  "attack_support": 50000,
+                  "predicted_normal": 77122,
+                  "predicted_anomaly": 22878,
+                  "predicted_anomaly_rate": 0.22878,
+                  "accuracy": 0.68182,
+                  "balanced_accuracy": 0.68182,
+                  "precision": 0.8973686511058659,
+                  "recall_tpr": 0.4106,
+                  "f1_score": 0.5634073382913911,
+                  "specificity_tnr": 0.95304,
+                  "false_positive_rate": 0.04696,
+                  "false_negative_rate": 0.5894
+                },
+                "validation_f1_calibrated": {
+                  "confusion_matrix": [
+                    [
+                      27913,
+                      22087
+                    ],
+                    [
+                      3110,
+                      46890
+                    ]
+                  ],
+                  "true_negative": 27913,
+                  "false_positive": 22087,
+                  "false_negative": 3110,
+                  "true_positive": 46890,
+                  "normal_support": 50000,
+                  "attack_support": 50000,
+                  "predicted_normal": 31023,
+                  "predicted_anomaly": 68977,
+                  "predicted_anomaly_rate": 0.68977,
+                  "accuracy": 0.74803,
+                  "balanced_accuracy": 0.74803,
+                  "precision": 0.6797918146628587,
+                  "recall_tpr": 0.9378,
+                  "f1_score": 0.7882195718500214,
+                  "specificity_tnr": 0.55826,
+                  "false_positive_rate": 0.44174,
+                  "false_negative_rate": 0.0622
+                },
+                "validation_fpr_operational": {
+                  "confusion_matrix": [
+                    [
+                      49488,
+                      512
+                    ],
+                    [
+                      35971,
+                      14029
+                    ]
+                  ],
+                  "true_negative": 49488,
+                  "false_positive": 512,
+                  "false_negative": 35971,
+                  "true_positive": 14029,
+                  "normal_support": 50000,
+                  "attack_support": 50000,
+                  "predicted_normal": 85459,
+                  "predicted_anomaly": 14541,
+                  "predicted_anomaly_rate": 0.14541,
+                  "accuracy": 0.63517,
+                  "balanced_accuracy": 0.63517,
+                  "precision": 0.9647892166976136,
+                  "recall_tpr": 0.28058,
+                  "f1_score": 0.4347314110410437,
+                  "specificity_tnr": 0.98976,
+                  "false_positive_rate": 0.01024,
+                  "false_negative_rate": 0.71942
+                }
+              }
+            }
+          },
+          "timing_seconds": {
+            "fit": 0.9313533999957144,
+            "inference_validation": 0.6063212999724783,
+            "inference_test": 1.123455599998124
+          }
+        },
+        "lof": {
+          "display_name": "Local Outlier Factor",
+          "model_artifact": {
+            "relative_path": "experiments/scale_100k/models/lof.joblib",
+            "sha256": "6c014381d6dc5fc70a46941a450e2a60dc7b83b1bb0fcee43a7653107814df41",
+            "size_bytes": 35737321
+          },
+          "metadata_artifact": {
+            "relative_path": "experiments/scale_100k/models/lof_metadata.json",
+            "sha256": "3984d7d554de780a290cc521f849f60a36fb7cb4551734ce49768532bfdeb288"
+          },
+          "training_report": {
+            "relative_path": "experiments/scale_100k/metrics/lof_training.json",
+            "sha256": "7b4b6a4e16fb26996572fff50e29e594e3906f1da59b52d53b8dfd35cae30ad5"
+          },
+          "configuration": {
+            "n_neighbors": 20,
+            "contamination": "auto",
+            "novelty": true,
+            "algorithm": "auto",
+            "leaf_size": 30,
+            "metric": "minkowski",
+            "p": 2,
+            "n_jobs": -1
+          },
+          "libraries": {
+            "python": "3.12.14",
+            "numpy": "2.5.2",
+            "pandas": "3.0.1",
+            "scikit_learn": "1.9.0",
+            "joblib": "1.5.3"
+          },
+          "feature_count": 60,
+          "model_input_schema_sha256": "07bd5818c91930b6ceb8178e160d9365260f6b92f629fa02ef14227cfaa113a4",
+          "thresholds": {
+            "native": {
+              "decision_rule": "decision_function < 0",
+              "equivalent_anomaly_score_rule": "anomaly_score > -learned_offset",
+              "learned_offset": -1.5,
+              "equivalent_anomaly_score_threshold": 1.5,
+              "source": "frozen predictions generated before labels were loaded"
+            },
+            "validation_f1_calibrated": {
+              "objective": "maximize_f1",
+              "score": "anomaly_score",
+              "positive_rule": "anomaly_score >= threshold",
+              "threshold": 1.6046928359157646,
+              "validation_f1_at_selection": 0.8434316956261235,
+              "validation_precision_at_selection": 0.7928400450577302,
+              "validation_recall_at_selection": 0.90092,
+              "candidate_threshold_count": 49114,
+              "tied_maximum_count": 1,
+              "tie_breaking": "higher precision, then higher recall, then higher threshold",
+              "test_labels_used": false
+            },
+            "validation_fpr_operational": {
+              "objective": "limit_empirical_false_positive_rate",
+              "score": "anomaly_score",
+              "positive_rule": "anomaly_score >= threshold",
+              "threshold": 91.08685969933371,
+              "target_false_positive_rate": 0.01,
+              "validation_normal_support": 25000,
+              "maximum_validation_false_positives": 250,
+              "achieved_validation_false_positives": 250,
+              "achieved_validation_false_positive_rate": 0.01,
+              "threshold_source": "smallest_observed_benign_score_within_budget",
+              "selection_uses_validation_benign_scores_only": true,
+              "attack_labels_used_for_threshold_selection": false,
+              "test_labels_used": false,
+              "tie_handling": "raises threshold when tied benign scores exceed budget",
+              "operating_point": "validation_fpr_operational",
+              "selected_model_for_operation": false
+            }
+          },
+          "validation_and_test_metrics": {
+            "validation": {
+              "records": 50000,
+              "ranking_metrics": {
+                "roc_auc": 0.8710299016,
+                "average_precision": 0.8046573904716341,
+                "average_precision_note": "weighted precision gain across recall; not trapezoidal PR interpolation"
+              },
+              "operating_points": {
+                "native": {
+                  "confusion_matrix": [
+                    [
+                      18539,
+                      6461
+                    ],
+                    [
+                      2133,
+                      22867
+                    ]
+                  ],
+                  "true_negative": 18539,
+                  "false_positive": 6461,
+                  "false_negative": 2133,
+                  "true_positive": 22867,
+                  "normal_support": 25000,
+                  "attack_support": 25000,
+                  "predicted_normal": 20672,
+                  "predicted_anomaly": 29328,
+                  "predicted_anomaly_rate": 0.58656,
+                  "accuracy": 0.82812,
+                  "balanced_accuracy": 0.82812,
+                  "precision": 0.7796985815602837,
+                  "recall_tpr": 0.91468,
+                  "f1_score": 0.8418126932705051,
+                  "specificity_tnr": 0.74156,
+                  "false_positive_rate": 0.25844,
+                  "false_negative_rate": 0.08532
+                },
+                "validation_f1_calibrated": {
+                  "confusion_matrix": [
+                    [
+                      19115,
+                      5885
+                    ],
+                    [
+                      2477,
+                      22523
+                    ]
+                  ],
+                  "true_negative": 19115,
+                  "false_positive": 5885,
+                  "false_negative": 2477,
+                  "true_positive": 22523,
+                  "normal_support": 25000,
+                  "attack_support": 25000,
+                  "predicted_normal": 21592,
+                  "predicted_anomaly": 28408,
+                  "predicted_anomaly_rate": 0.56816,
+                  "accuracy": 0.83276,
+                  "balanced_accuracy": 0.83276,
+                  "precision": 0.7928400450577302,
+                  "recall_tpr": 0.90092,
+                  "f1_score": 0.8434316956261234,
+                  "specificity_tnr": 0.7646,
+                  "false_positive_rate": 0.2354,
+                  "false_negative_rate": 0.09908
+                },
+                "validation_fpr_operational": {
+                  "confusion_matrix": [
+                    [
+                      24750,
+                      250
+                    ],
+                    [
+                      24167,
+                      833
+                    ]
+                  ],
+                  "true_negative": 24750,
+                  "false_positive": 250,
+                  "false_negative": 24167,
+                  "true_positive": 833,
+                  "normal_support": 25000,
+                  "attack_support": 25000,
+                  "predicted_normal": 48917,
+                  "predicted_anomaly": 1083,
+                  "predicted_anomaly_rate": 0.02166,
+                  "accuracy": 0.51166,
+                  "balanced_accuracy": 0.51166,
+                  "precision": 0.7691597414589104,
+                  "recall_tpr": 0.03332,
+                  "f1_score": 0.06387302074147913,
+                  "specificity_tnr": 0.99,
+                  "false_positive_rate": 0.01,
+                  "false_negative_rate": 0.96668
+                }
+              }
+            },
+            "test": {
+              "records": 100000,
+              "ranking_metrics": {
+                "roc_auc": 0.8712791064,
+                "average_precision": 0.8044410566070392,
+                "average_precision_note": "weighted precision gain across recall; not trapezoidal PR interpolation"
+              },
+              "operating_points": {
+                "native": {
+                  "confusion_matrix": [
+                    [
+                      37134,
+                      12866
+                    ],
+                    [
+                      4158,
+                      45842
+                    ]
+                  ],
+                  "true_negative": 37134,
+                  "false_positive": 12866,
+                  "false_negative": 4158,
+                  "true_positive": 45842,
+                  "normal_support": 50000,
+                  "attack_support": 50000,
+                  "predicted_normal": 41292,
+                  "predicted_anomaly": 58708,
+                  "predicted_anomaly_rate": 0.58708,
+                  "accuracy": 0.82976,
+                  "balanced_accuracy": 0.82976,
+                  "precision": 0.7808475846562649,
+                  "recall_tpr": 0.91684,
+                  "f1_score": 0.8433969901019244,
+                  "specificity_tnr": 0.74268,
+                  "false_positive_rate": 0.25732,
+                  "false_negative_rate": 0.08316
+                },
+                "validation_f1_calibrated": {
+                  "confusion_matrix": [
+                    [
+                      38312,
+                      11688
+                    ],
+                    [
+                      4910,
+                      45090
+                    ]
+                  ],
+                  "true_negative": 38312,
+                  "false_positive": 11688,
+                  "false_negative": 4910,
+                  "true_positive": 45090,
+                  "normal_support": 50000,
+                  "attack_support": 50000,
+                  "predicted_normal": 43222,
+                  "predicted_anomaly": 56778,
+                  "predicted_anomaly_rate": 0.56778,
+                  "accuracy": 0.83402,
+                  "balanced_accuracy": 0.83402,
+                  "precision": 0.79414561978231,
+                  "recall_tpr": 0.9018,
+                  "f1_score": 0.8445559946805522,
+                  "specificity_tnr": 0.76624,
+                  "false_positive_rate": 0.23376,
+                  "false_negative_rate": 0.0982
+                },
+                "validation_fpr_operational": {
+                  "confusion_matrix": [
+                    [
+                      49502,
+                      498
+                    ],
+                    [
+                      48359,
+                      1641
+                    ]
+                  ],
+                  "true_negative": 49502,
+                  "false_positive": 498,
+                  "false_negative": 48359,
+                  "true_positive": 1641,
+                  "normal_support": 50000,
+                  "attack_support": 50000,
+                  "predicted_normal": 97861,
+                  "predicted_anomaly": 2139,
+                  "predicted_anomaly_rate": 0.02139,
+                  "accuracy": 0.51143,
+                  "balanced_accuracy": 0.51143,
+                  "precision": 0.7671809256661991,
+                  "recall_tpr": 0.03282,
+                  "f1_score": 0.06294712211588255,
+                  "specificity_tnr": 0.99004,
+                  "false_positive_rate": 0.00996,
+                  "false_negative_rate": 0.96718
+                }
+              }
+            }
+          },
+          "timing_seconds": {
+            "fit": 9.984387000033166,
+            "inference_validation": 4.299916300049517,
+            "inference_test": 7.389643399976194
+          }
+        }
+      }
+    }
+  },
+  "observed_best_test_f1": {
+    "experiment": "expanded_100k",
+    "model": "lof",
+    "operating_point": "validation_f1_calibrated",
+    "test_f1_score": 0.8445559946805522,
+    "test_precision": 0.79414561978231,
+    "test_recall_tpr": 0.9018,
+    "test_false_positive_rate": 0.23376,
+    "interpretation": "Descriptive result among already frozen candidates; it is not a production approval or a new threshold selection."
+  },
+  "warnings": [
+    "Validation and test use controlled 50/50 prevalence; production precision and alert volume will differ.",
+    "The 20k-versus-100k experiment changed training and evaluation sample sizes together.",
+    "Um FPR de 1% ainda representa cerca de 10.000 fluxos falso-positivos por milhão de fluxos benignos antes da agregação.",
+    "E-mails por fluxo não são recomendados; os eventos devem ser agregados e deduplicados primeiro.",
+    "O tráfego de validação do CICIDS não substitui tráfego temporalmente separado da rede-alvo.",
+    "A precision medida no teste balanceado 50/50 não representa a precision de produção."
+  ],
+  "parent_registry": {
+    "relative_path": "reports/final/model_registry.json",
+    "sha256": "5771ff34b671759d86a801abf100ce708f6ec0204a636f7989be7ae8f0b58d26"
+  },
+  "operational_methodology": {
+    "primary_objective": "cap validation false-positive rate",
+    "target_false_positive_rate": 0.01,
+    "thresholds_selected_from_validation_benign_scores_only": true,
+    "attack_labels_used_for_numeric_threshold_selection": false,
+    "validation_attack_labels_used_for_model_recommendation": true,
+    "test_labels_used_for_threshold_or_model_selection": false,
+    "test_opened_after_all_thresholds_and_recommendation_were_frozen": true,
+    "models_retrained": false,
+    "predictions_recomputed": false,
+    "previous_operating_points_preserved": true
+  },
+  "recommended_operational_candidate": {
+    "experiment": "expanded_100k",
+    "model": "isolation_forest",
+    "model_display_name": "Isolation Forest",
+    "operating_point": "validation_fpr_operational",
+    "threshold": 0.615824439899627,
+    "selection_rule": "highest validation recall subject to target FPR",
+    "frozen_at_utc": "2026-09-05T19:22:52.404235+00:00",
+    "production_approved": false,
+    "reason_not_production_approved": "Target and threshold still require temporal calibration with representative benign traffic and an explicit analyst alert budget."
+  }
+}

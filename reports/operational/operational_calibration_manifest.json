@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "stage": "operational_threshold_calibration_post_marco_11",
+  "created_at_utc": "2026-09-05T19:22:52.404235+00:00",
+  "status": "completed",
+  "target_false_positive_rate": 0.01,
+  "recommendation": {
+    "experiment": "expanded_100k",
+    "model": "isolation_forest",
+    "model_display_name": "Isolation Forest",
+    "operating_point": "validation_fpr_operational",
+    "threshold": 0.615824439899627,
+    "selection_rule": "highest validation recall subject to target FPR",
+    "frozen_at_utc": "2026-09-05T19:22:52.404235+00:00",
+    "production_approved": false,
+    "reason_not_production_approved": "Target and threshold still require temporal calibration with representative benign traffic and an explicit analyst alert budget."
+  },
+  "source_integrity": {
+    "hashes_before": {
+      "reports/final/model_registry.json": "5771ff34b671759d86a801abf100ce708f6ec0204a636f7989be7ae8f0b58d26",
+      "experiments/scale_100k/data/evaluation/isolation_forest_validation_evaluated.parquet": "f9f0ba78baba7b0d5016710b17707f2a06bc7e47c48479eb7d6a1cadca14650b",
+      "experiments/scale_100k/data/evaluation/lof_validation_evaluated.parquet": "6f4f057d4e62b3e5e1561a38f71d078a1deabd94c7c31e9a16321221ab82a59e",
+      "experiments/scale_100k/data/evaluation/isolation_forest_test_evaluated.parquet": "373d592754db796cd08ba99ceb6a9062f17b5c5ee0fb9ce661ee7a337d622bf3",
+      "experiments/scale_100k/data/evaluation/lof_test_evaluated.parquet": "0119e9bb9527bedba51c61d752ea22f85fa7600c8e18f3ebaa8134797dd66b07"
+    },
+    "hashes_after": {
+      "reports/final/model_registry.json": "5771ff34b671759d86a801abf100ce708f6ec0204a636f7989be7ae8f0b58d26",
+      "experiments/scale_100k/data/evaluation/isolation_forest_validation_evaluated.parquet": "f9f0ba78baba7b0d5016710b17707f2a06bc7e47c48479eb7d6a1cadca14650b",
+      "experiments/scale_100k/data/evaluation/lof_validation_evaluated.parquet": "6f4f057d4e62b3e5e1561a38f71d078a1deabd94c7c31e9a16321221ab82a59e",
+      "experiments/scale_100k/data/evaluation/isolation_forest_test_evaluated.parquet": "373d592754db796cd08ba99ceb6a9062f17b5c5ee0fb9ce661ee7a337d622bf3",
+      "experiments/scale_100k/data/evaluation/lof_test_evaluated.parquet": "0119e9bb9527bedba51c61d752ea22f85fa7600c8e18f3ebaa8134797dd66b07"
+    },
+    "unchanged": true
+  },
+  "outputs": {
+    "report": {
+      "relative_path": "reports/operational/operational_calibration.json",
+      "sha256": "5d39db0927368ba59cdda9da8ba53460f94cd33eddf60114cbb53a58a9b65022",
+      "size_bytes": 36119
+    },
+    "sensitivity": {
+      "relative_path": "reports/operational/threshold_sensitivity.csv",
+      "sha256": "b69b5cbc226cf0727511023ee6a7594fb94912999d82123c33dc29a7d813bf0b",
+      "size_bytes": 2715
+    },
+    "figure": {
+      "relative_path": "reports/operational/operational_threshold_tradeoff.png",
+      "sha256": "7a1222ab41e1ba48a38bc0646783e9ee476ffdd1aad76b9eb8a58741c77a5692",
+      "size_bytes": 85924
+    },
+    "registry": {
+      "relative_path": "reports/operational/model_registry_operational.json",
+      "sha256": "5705e4c770e6271f8f7fea83f57653d15dc0b1725cdb59b3909d5bbaa84aff74",
+      "size_bytes": 42019
+    },
+    "summary": {
+      "relative_path": "reports/operational/OPERATIONAL_CALIBRATION_SUMMARY.md",
+      "sha256": "7c8d1ccb07f005eb0751a3b02ae5e86dfb6ccf1f2b2cdf0050d918769c71051b",
+      "size_bytes": 1326
+    }
+  },
+  "validation": {
+    "models_compared": [
+      "isolation_forest",
+      "lof"
+    ],
+    "sensitivity_budget_count": 5,
+    "test_labels_used_for_selection": false,
+    "previous_operating_points_preserved": true,
+    "status": "passed"
+  }
+}

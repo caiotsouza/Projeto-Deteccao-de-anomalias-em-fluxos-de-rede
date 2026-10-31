@@ -1,0 +1,569 @@
+{
+  "schema_version": 1,
+  "stage": "isolation_forest_evaluation_marco_7",
+  "created_at_utc": "2026-08-30T18:39:09.748186+00:00",
+  "status": "completed_with_labels_after_frozen_predictions",
+  "methodology": {
+    "predictions_generated_before_labels_loaded": true,
+    "model_loaded": false,
+    "model_refitted_or_modified": false,
+    "labels_used_for_model_fit": false,
+    "validation_labels_used_for_threshold_selection": true,
+    "test_labels_used_for_threshold_selection": false,
+    "test_labels_loaded_after_threshold_selection": true,
+    "test_labels_used_for_final_evaluation_only": true,
+    "primary_baseline": "frozen Isolation Forest default predictions",
+    "secondary_operating_point": "validation F1-calibrated threshold",
+    "positive_class": "attack=1",
+    "score_direction": "higher anomaly_score means more anomalous",
+    "balanced_split_warning": "validation and test are 50/50 controlled samples; precision and accuracy do not estimate production prevalence"
+  },
+  "integrity": {
+    "model_sha256_expected": "1d7bd1b69dd8505cf6b06e813b94a93e34c05bd303de55c3a45f8886176d599c",
+    "model_sha256_observed": "1d7bd1b69dd8505cf6b06e813b94a93e34c05bd303de55c3a45f8886176d599c",
+    "model_sha256_verified": true,
+    "joins": {
+      "validation": {
+        "prediction_records": 10000,
+        "label_records": 10000,
+        "joined_records": 10000,
+        "unique_prediction_hashes": 10000,
+        "unique_label_hashes": 10000,
+        "hash_sets_identical": true,
+        "hash_order_already_identical": true,
+        "missing_predictions": 0,
+        "missing_labels": 0,
+        "score_orientation_valid": true,
+        "binary_mapping_valid": true,
+        "status": "passed"
+      },
+      "test": {
+        "prediction_records": 20000,
+        "label_records": 20000,
+        "joined_records": 20000,
+        "unique_prediction_hashes": 20000,
+        "unique_label_hashes": 20000,
+        "hash_sets_identical": true,
+        "hash_order_already_identical": true,
+        "missing_predictions": 0,
+        "missing_labels": 0,
+        "score_orientation_valid": true,
+        "binary_mapping_valid": true,
+        "status": "passed"
+      }
+    },
+    "status": "passed"
+  },
+  "inputs": {
+    "training_report": {
+      "path": "./reports/metrics/isolation_forest_training.json",
+      "sha256": "6a39e4a98a9ac8900dd646c3be0c3341a287c3bc5efb83ae409732e52f10a086"
+    },
+    "model": {
+      "path": "./models/isolation_forest.joblib",
+      "sha256": "1d7bd1b69dd8505cf6b06e813b94a93e34c05bd303de55c3a45f8886176d599c"
+    },
+    "predictions_validation": {
+      "path": "./data/processed/predictions/isolation_forest_validation_predictions.parquet",
+      "sha256": "faf5e400fd2b6f3b994e30b01812057e8be1fb9c153c23f639fe894e0f011513"
+    },
+    "predictions_test": {
+      "path": "./data/processed/predictions/isolation_forest_test_predictions.parquet",
+      "sha256": "665c8a03a0dac31a3b6d8cc2a27d966edfce2c2ae275cdaa4ba1ab12b351990f"
+    },
+    "labels_validation": {
+      "path": "./data/processed/splits/y_validation.parquet",
+      "sha256": "1849c0df90e3f0165d7db46ea5d694daf3ca0bbd60d7127644f2834f42b604d4"
+    },
+    "labels_test": {
+      "path": "./data/processed/splits/y_test.parquet",
+      "sha256": "0b4ab6aa1249768b6f8e658eaf6a22d089db5476a4923afab370e7dffb6acb80"
+    }
+  },
+  "thresholds": {
+    "isolation_forest_default": {
+      "decision_rule": "decision_function < 0",
+      "equivalent_anomaly_score_rule": "anomaly_score > -learned_offset",
+      "learned_offset": -0.5,
+      "equivalent_anomaly_score_threshold": 0.5,
+      "source": "frozen Marco 6 predictions"
+    },
+    "validation_f1_calibrated": {
+      "objective": "maximize_f1",
+      "score": "anomaly_score",
+      "positive_rule": "anomaly_score >= threshold",
+      "threshold": 0.33493336095591913,
+      "validation_f1_at_selection": 0.7853805073431243,
+      "validation_precision_at_selection": 0.6738258877434136,
+      "validation_recall_at_selection": 0.9412,
+      "candidate_threshold_count": 7485,
+      "tied_maximum_count": 1,
+      "tie_breaking": "higher precision, then higher recall, then higher threshold",
+      "test_labels_used": false
+    }
+  },
+  "splits": {
+    "validation": {
+      "records": 10000,
+      "true_distribution": {
+        "normal": 5000,
+        "attack": 5000
+      },
+      "ranking_metrics": {
+        "roc_auc": 0.82651698,
+        "average_precision": 0.8092401279105783,
+        "average_precision_note": "weighted precision gain across recall; not trapezoidal PR interpolation"
+      },
+      "operating_points": {
+        "isolation_forest_default": {
+          "confusion_matrix": [
+            [
+              4803,
+              197
+            ],
+            [
+              2957,
+              2043
+            ]
+          ],
+          "true_negative": 4803,
+          "false_positive": 197,
+          "false_negative": 2957,
+          "true_positive": 2043,
+          "normal_support": 5000,
+          "attack_support": 5000,
+          "predicted_normal": 7760,
+          "predicted_anomaly": 2240,
+          "predicted_anomaly_rate": 0.224,
+          "accuracy": 0.6846,
+          "balanced_accuracy": 0.6846,
+          "precision": 0.9120535714285715,
+          "recall_tpr": 0.4086,
+          "f1_score": 0.5643646408839779,
+          "specificity_tnr": 0.9606,
+          "false_positive_rate": 0.0394,
+          "false_negative_rate": 0.5914
+        },
+        "validation_f1_calibrated": {
+          "confusion_matrix": [
+            [
+              2722,
+              2278
+            ],
+            [
+              294,
+              4706
+            ]
+          ],
+          "true_negative": 2722,
+          "false_positive": 2278,
+          "false_negative": 294,
+          "true_positive": 4706,
+          "normal_support": 5000,
+          "attack_support": 5000,
+          "predicted_normal": 3016,
+          "predicted_anomaly": 6984,
+          "predicted_anomaly_rate": 0.6984,
+          "accuracy": 0.7428,
+          "balanced_accuracy": 0.7428,
+          "precision": 0.6738258877434136,
+          "recall_tpr": 0.9412,
+          "f1_score": 0.7853805073431241,
+          "specificity_tnr": 0.5444,
+          "false_positive_rate": 0.4556,
+          "false_negative_rate": 0.0588
+        }
+      },
+      "anomaly_score_by_true_class": {
+        "normal": {
+          "minimum": 0.3120623102691508,
+          "p05": 0.3127618218846657,
+          "median": 0.3314390453191368,
+          "p95": 0.48326790188548063,
+          "maximum": 0.7147371996604126,
+          "mean": 0.35472910474384184,
+          "standard_deviation": 0.06252373616755247
+        },
+        "attack": {
+          "minimum": 0.31895175285352595,
+          "p05": 0.33286857451032276,
+          "median": 0.47856877581023805,
+          "p95": 0.6471881396639528,
+          "maximum": 0.7302995518647896,
+          "mean": 0.47839777643428233,
+          "standard_deviation": 0.12827644383274137
+        }
+      },
+      "attack_categories": {
+        "Bot": {
+          "support": 23,
+          "default_detected": 0,
+          "default_detection_rate": 0.0,
+          "calibrated_f1_detected": 10,
+          "calibrated_f1_detection_rate": 0.43478260869565216,
+          "anomaly_score_mean": 0.3372867377291785,
+          "anomaly_score_median": 0.33426708986414894
+        },
+        "DDoS": {
+          "support": 1137,
+          "default_detected": 232,
+          "default_detection_rate": 0.2040457343887423,
+          "calibrated_f1_detected": 979,
+          "calibrated_f1_detection_rate": 0.86103781882146,
+          "anomaly_score_mean": 0.4564792491512933,
+          "anomaly_score_median": 0.4787799660339426
+        },
+        "DoS GoldenEye": {
+          "support": 96,
+          "default_detected": 31,
+          "default_detection_rate": 0.3229166666666667,
+          "calibrated_f1_detected": 94,
+          "calibrated_f1_detection_rate": 0.9791666666666666,
+          "anomaly_score_mean": 0.48369214674067296,
+          "anomaly_score_median": 0.4842572789043772
+        },
+        "DoS Hulk": {
+          "support": 2048,
+          "default_detected": 1691,
+          "default_detection_rate": 0.82568359375,
+          "calibrated_f1_detected": 1952,
+          "calibrated_f1_detection_rate": 0.953125,
+          "anomaly_score_mean": 0.5880980323437676,
+          "anomaly_score_median": 0.6243037835968074
+        },
+        "DoS Slowhttptest": {
+          "support": 54,
+          "default_detected": 49,
+          "default_detection_rate": 0.9074074074074074,
+          "calibrated_f1_detected": 54,
+          "calibrated_f1_detection_rate": 1.0,
+          "anomaly_score_mean": 0.5389494785382433,
+          "anomaly_score_median": 0.522878105871184
+        },
+        "DoS slowloris": {
+          "support": 56,
+          "default_detected": 29,
+          "default_detection_rate": 0.5178571428571429,
+          "calibrated_f1_detected": 54,
+          "calibrated_f1_detection_rate": 0.9642857142857143,
+          "anomaly_score_mean": 0.47960557161594025,
+          "anomaly_score_median": 0.5470590930785368
+        },
+        "FTP-Patator": {
+          "support": 75,
+          "default_detected": 0,
+          "default_detection_rate": 0.0,
+          "calibrated_f1_detected": 75,
+          "calibrated_f1_detection_rate": 1.0,
+          "anomaly_score_mean": 0.3511835788862417,
+          "anomaly_score_median": 0.3493839305566999
+        },
+        "Heartbleed": {
+          "support": 5,
+          "default_detected": 5,
+          "default_detection_rate": 1.0,
+          "calibrated_f1_detected": 5,
+          "calibrated_f1_detection_rate": 1.0,
+          "anomaly_score_mean": 0.693694674968158,
+          "anomaly_score_median": 0.7053147588043474
+        },
+        "Infiltration": {
+          "support": 5,
+          "default_detected": 5,
+          "default_detection_rate": 1.0,
+          "calibrated_f1_detected": 5,
+          "calibrated_f1_detection_rate": 1.0,
+          "anomaly_score_mean": 0.6407443918360349,
+          "anomaly_score_median": 0.6269480909892426
+        },
+        "PortScan": {
+          "support": 1410,
+          "default_detected": 1,
+          "default_detection_rate": 0.0007092198581560284,
+          "calibrated_f1_detected": 1393,
+          "calibrated_f1_detection_rate": 0.9879432624113476,
+          "anomaly_score_mean": 0.3489529601816671,
+          "anomaly_score_median": 0.3499440320301938
+        },
+        "SSH-Patator": {
+          "support": 57,
+          "default_detected": 0,
+          "default_detection_rate": 0.0,
+          "calibrated_f1_detected": 54,
+          "calibrated_f1_detection_rate": 0.9473684210526315,
+          "anomaly_score_mean": 0.3706778807476934,
+          "anomaly_score_median": 0.37467947201695845
+        },
+        "Web Attack - Brute Force": {
+          "support": 18,
+          "default_detected": 0,
+          "default_detection_rate": 0.0,
+          "calibrated_f1_detected": 18,
+          "calibrated_f1_detection_rate": 1.0,
+          "anomaly_score_mean": 0.36738973670002745,
+          "anomaly_score_median": 0.350878505695524
+        },
+        "Web Attack - Sql Injection": {
+          "support": 5,
+          "default_detected": 0,
+          "default_detection_rate": 0.0,
+          "calibrated_f1_detected": 3,
+          "calibrated_f1_detection_rate": 0.6,
+          "anomaly_score_mean": 0.3579803689969506,
+          "anomaly_score_median": 0.3641830311703855
+        },
+        "Web Attack - XSS": {
+          "support": 11,
+          "default_detected": 0,
+          "default_detection_rate": 0.0,
+          "calibrated_f1_detected": 10,
+          "calibrated_f1_detection_rate": 0.9090909090909091,
+          "anomaly_score_mean": 0.3479806204616469,
+          "anomaly_score_median": 0.35042368361837245
+        }
+      }
+    },
+    "test": {
+      "records": 20000,
+      "true_distribution": {
+        "normal": 10000,
+        "attack": 10000
+      },
+      "ranking_metrics": {
+        "roc_auc": 0.823602035,
+        "average_precision": 0.8094769434337948,
+        "average_precision_note": "weighted precision gain across recall; not trapezoidal PR interpolation"
+      },
+      "operating_points": {
+        "isolation_forest_default": {
+          "confusion_matrix": [
+            [
+              9498,
+              502
+            ],
+            [
+              5938,
+              4062
+            ]
+          ],
+          "true_negative": 9498,
+          "false_positive": 502,
+          "false_negative": 5938,
+          "true_positive": 4062,
+          "normal_support": 10000,
+          "attack_support": 10000,
+          "predicted_normal": 15436,
+          "predicted_anomaly": 4564,
+          "predicted_anomaly_rate": 0.2282,
+          "accuracy": 0.678,
+          "balanced_accuracy": 0.6779999999999999,
+          "precision": 0.8900087642418931,
+          "recall_tpr": 0.4062,
+          "f1_score": 0.5578137874210382,
+          "specificity_tnr": 0.9498,
+          "false_positive_rate": 0.0502,
+          "false_negative_rate": 0.5938
+        },
+        "validation_f1_calibrated": {
+          "confusion_matrix": [
+            [
+              5469,
+              4531
+            ],
+            [
+              632,
+              9368
+            ]
+          ],
+          "true_negative": 5469,
+          "false_positive": 4531,
+          "false_negative": 632,
+          "true_positive": 9368,
+          "normal_support": 10000,
+          "attack_support": 10000,
+          "predicted_normal": 6101,
+          "predicted_anomaly": 13899,
+          "predicted_anomaly_rate": 0.69495,
+          "accuracy": 0.74185,
+          "balanced_accuracy": 0.74185,
+          "precision": 0.6740053241240377,
+          "recall_tpr": 0.9368,
+          "f1_score": 0.7839658563119796,
+          "specificity_tnr": 0.5469,
+          "false_positive_rate": 0.4531,
+          "false_negative_rate": 0.0632
+        }
+      },
+      "anomaly_score_by_true_class": {
+        "normal": {
+          "minimum": 0.3119612322441056,
+          "p05": 0.3127177055405749,
+          "median": 0.33115591650002224,
+          "p95": 0.5002241924106124,
+          "maximum": 0.7227589762710871,
+          "mean": 0.3558410522286478,
+          "standard_deviation": 0.06415692349711774
+        },
+        "attack": {
+          "minimum": 0.3203156259293753,
+          "p05": 0.33235708230750965,
+          "median": 0.4787056813062022,
+          "p95": 0.6467209571012245,
+          "maximum": 0.7053147588043474,
+          "mean": 0.4776711430012852,
+          "standard_deviation": 0.12813704121087333
+        }
+      },
+      "attack_categories": {
+        "Bot": {
+          "support": 40,
+          "default_detected": 1,
+          "default_detection_rate": 0.025,
+          "calibrated_f1_detected": 13,
+          "calibrated_f1_detection_rate": 0.325,
+          "anomaly_score_mean": 0.34051191503107797,
+          "anomaly_score_median": 0.3323431797642808
+        },
+        "DDoS": {
+          "support": 2285,
+          "default_detected": 444,
+          "default_detection_rate": 0.19431072210065645,
+          "calibrated_f1_detected": 1941,
+          "calibrated_f1_detection_rate": 0.84945295404814,
+          "anomaly_score_mean": 0.4549695444053955,
+          "anomaly_score_median": 0.4793477734869458
+        },
+        "DoS GoldenEye": {
+          "support": 188,
+          "default_detected": 62,
+          "default_detection_rate": 0.32978723404255317,
+          "calibrated_f1_detected": 187,
+          "calibrated_f1_detection_rate": 0.9946808510638298,
+          "anomaly_score_mean": 0.48169098415561523,
+          "anomaly_score_median": 0.4857684149722739
+        },
+        "DoS Hulk": {
+          "support": 4121,
+          "default_detected": 3394,
+          "default_detection_rate": 0.8235865081290948,
+          "calibrated_f1_detected": 3907,
+          "calibrated_f1_detection_rate": 0.9480708565882068,
+          "anomaly_score_mean": 0.5868347729070156,
+          "anomaly_score_median": 0.6241680785847791
+        },
+        "DoS Slowhttptest": {
+          "support": 103,
+          "default_detected": 81,
+          "default_detection_rate": 0.7864077669902912,
+          "calibrated_f1_detected": 103,
+          "calibrated_f1_detection_rate": 1.0,
+          "anomaly_score_mean": 0.5248259285296196,
+          "anomaly_score_median": 0.522878105871184
+        },
+        "DoS slowloris": {
+          "support": 108,
+          "default_detected": 66,
+          "default_detection_rate": 0.6111111111111112,
+          "calibrated_f1_detected": 106,
+          "calibrated_f1_detection_rate": 0.9814814814814815,
+          "anomaly_score_mean": 0.4957364088643076,
+          "anomaly_score_median": 0.5476653246846312
+        },
+        "FTP-Patator": {
+          "support": 146,
+          "default_detected": 0,
+          "default_detection_rate": 0.0,
+          "calibrated_f1_detected": 144,
+          "calibrated_f1_detection_rate": 0.9863013698630136,
+          "anomaly_score_mean": 0.3511456269833284,
+          "anomaly_score_median": 0.34964241175578986
+        },
+        "Heartbleed": {
+          "support": 5,
+          "default_detected": 5,
+          "default_detection_rate": 1.0,
+          "calibrated_f1_detected": 5,
+          "calibrated_f1_detection_rate": 1.0,
+          "anomaly_score_mean": 0.6958097110707208,
+          "anomaly_score_median": 0.6963064736285234
+        },
+        "Infiltration": {
+          "support": 5,
+          "default_detected": 4,
+          "default_detection_rate": 0.8,
+          "calibrated_f1_detected": 5,
+          "calibrated_f1_detection_rate": 1.0,
+          "anomaly_score_mean": 0.5607298865227446,
+          "anomaly_score_median": 0.5464657685407688
+        },
+        "PortScan": {
+          "support": 2836,
+          "default_detected": 4,
+          "default_detection_rate": 0.0014104372355430183,
+          "calibrated_f1_detected": 2811,
+          "calibrated_f1_detection_rate": 0.9911847672778561,
+          "anomaly_score_mean": 0.3490628718250542,
+          "anomaly_score_median": 0.3497334493601406
+        },
+        "SSH-Patator": {
+          "support": 110,
+          "default_detected": 0,
+          "default_detection_rate": 0.0,
+          "calibrated_f1_detected": 101,
+          "calibrated_f1_detection_rate": 0.9181818181818182,
+          "anomaly_score_mean": 0.371673636692512,
+          "anomaly_score_median": 0.37429981067463414
+        },
+        "Web Attack - Brute Force": {
+          "support": 32,
+          "default_detected": 0,
+          "default_detection_rate": 0.0,
+          "calibrated_f1_detected": 27,
+          "calibrated_f1_detection_rate": 0.84375,
+          "anomaly_score_mean": 0.3470607845574354,
+          "anomaly_score_median": 0.35065835404541146
+        },
+        "Web Attack - Sql Injection": {
+          "support": 5,
+          "default_detected": 0,
+          "default_detection_rate": 0.0,
+          "calibrated_f1_detected": 3,
+          "calibrated_f1_detection_rate": 0.6,
+          "anomaly_score_mean": 0.3482892362600576,
+          "anomaly_score_median": 0.34508264937710187
+        },
+        "Web Attack - XSS": {
+          "support": 16,
+          "default_detected": 1,
+          "default_detection_rate": 0.0625,
+          "calibrated_f1_detected": 15,
+          "calibrated_f1_detection_rate": 0.9375,
+          "anomaly_score_mean": 0.3600738832259949,
+          "anomaly_score_median": 0.350878505695524
+        }
+      }
+    }
+  },
+  "model_timing_seconds_from_marco_6": {
+    "training": 0.37622839998221025,
+    "inference_validation": 0.08451529999729246,
+    "inference_test": 0.15473190002376214,
+    "inference_all_splits": 0.3870685000438243
+  },
+  "evaluation_seconds_excluding_artifact_writes": 0.2040317999999388,
+  "libraries": {
+    "python": "3.12.13",
+    "numpy": "2.5.2",
+    "pandas": "3.0.1",
+    "scikit_learn": "1.9.0",
+    "matplotlib": "3.11.1"
+  },
+  "artifacts": {
+    "evaluated_validation": "./data/processed/evaluation/isolation_forest_validation_evaluated.parquet",
+    "evaluated_test": "./data/processed/evaluation/isolation_forest_test_evaluated.parquet",
+    "report": "./reports/metrics/isolation_forest_evaluation.json",
+    "confusion_matrices_figure": "./reports/figures/isolation_forest_confusion_matrices.png",
+    "roc_pr_curves_figure": "./reports/figures/isolation_forest_roc_pr_curves.png",
+    "score_distributions_figure": "./reports/figures/isolation_forest_score_distributions.png"
+  }
+}

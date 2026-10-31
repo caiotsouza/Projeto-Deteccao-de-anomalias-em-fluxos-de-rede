@@ -1,0 +1,117 @@
+{
+  "status": "validated_for_exploratory_v4_extraction",
+  "scenario": "lab06_serverpaced",
+  "repetition": 3,
+  "source_files_unchanged": true,
+  "source_sha256": {
+    "received/dfd0b203-cb60-461d-82f7-5cdfd262dbfb.zip": "28b523ae13acdb5b1addd3347f3d7903a06cc6644b31e36b8da34ee9de6322b3",
+    "received/run_manifest.json": "070a5a1bd5016b77aa0cc85cb4c5c403e9342f0bfb875331dc1169d492295bf9",
+    "received/requests.jsonl": "d00918149f28e0c1f8f68d55a4fe49242bcd4b8288d9eedaaf444df739a61a30",
+    "received/server_manifest.json": "e4a3769ce381c8855ccc6752ba5244a4490a1c1fcb9faef450b5ae4e8f6245c2",
+    "received/server_requests.jsonl": "800b28ac38b95679ce3925d64f42103e24c9fb619bb5023485e06fdfaf357559"
+  },
+  "pcap_sha256": "9f933004d4d7baf019a6b2b746c7301d59f27c530286ba9704120040caf25008",
+  "packets": 10098,
+  "connections": 6,
+  "successful_http_responses": 6,
+  "total_http_body_bytes": 12582912,
+  "truncated_packet_records": 0,
+  "tcp_rst_packets": 0,
+  "capture_drop_counter_available": false,
+  "capture_span_seconds": 110.619341,
+  "connection_start_interval_seconds": {
+    "min": 18.923501014709473,
+    "median": 18.938673973083496,
+    "max": 18.977298974990845
+  },
+  "details": [
+    {
+      "request_number": 1,
+      "source_port": 61038,
+      "packets": 1691,
+      "started_at_utc": "2026-10-26T00:44:27.468369+00:00",
+      "http_status": 200,
+      "body_bytes": 2097152,
+      "body_sha256": "21ad43464ff341f863b1149c5a11d95fb8a325bb44ad51ed4afc17979ad44245",
+      "server_payload_span_seconds": 15.8955,
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    },
+    {
+      "request_number": 2,
+      "source_port": 61039,
+      "packets": 1682,
+      "started_at_utc": "2026-10-26T00:44:46.445668+00:00",
+      "http_status": 200,
+      "body_bytes": 2097152,
+      "body_sha256": "21ad43464ff341f863b1149c5a11d95fb8a325bb44ad51ed4afc17979ad44245",
+      "server_payload_span_seconds": 15.896568,
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    },
+    {
+      "request_number": 3,
+      "source_port": 61040,
+      "packets": 1684,
+      "started_at_utc": "2026-10-26T00:45:05.384342+00:00",
+      "http_status": 200,
+      "body_bytes": 2097152,
+      "body_sha256": "21ad43464ff341f863b1149c5a11d95fb8a325bb44ad51ed4afc17979ad44245",
+      "server_payload_span_seconds": 15.895143,
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    },
+    {
+      "request_number": 4,
+      "source_port": 61041,
+      "packets": 1681,
+      "started_at_utc": "2026-10-26T00:45:24.326614+00:00",
+      "http_status": 200,
+      "body_bytes": 2097152,
+      "body_sha256": "21ad43464ff341f863b1149c5a11d95fb8a325bb44ad51ed4afc17979ad44245",
+      "server_payload_span_seconds": 15.895658,
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    },
+    {
+      "request_number": 5,
+      "source_port": 61043,
+      "packets": 1678,
+      "started_at_utc": "2026-10-26T00:45:43.250115+00:00",
+      "http_status": 200,
+      "body_bytes": 2097152,
+      "body_sha256": "21ad43464ff341f863b1149c5a11d95fb8a325bb44ad51ed4afc17979ad44245",
+      "server_payload_span_seconds": 15.896707,
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    },
+    {
+      "request_number": 6,
+      "source_port": 61044,
+      "packets": 1682,
+      "started_at_utc": "2026-10-26T00:46:02.187449+00:00",
+      "http_status": 200,
+      "body_bytes": 2097152,
+      "body_sha256": "21ad43464ff341f863b1149c5a11d95fb8a325bb44ad51ed4afc17979ad44245",
+      "server_payload_span_seconds": 15.8965,
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    }
+  ],
+  "pcap": "./data/lab/lab06_serverpaced/r3/input/dfd0b203-cb60-461d-82f7-5cdfd262dbfb_hn2.pcap",
+  "limitations": [
+    "Only filtered traffic was examined; no claim about all VM traffic.",
+    "No packet-drop counter was supplied; do not claim zero capture drops.",
+    "Parser restricted to one HTTP/1.0 GET per distinct TCP 5-tuple.",
+    "Planned activity does not create independent ground-truth labels."
+  ],
+  "server_evidence": {
+    "server_script_sha256": "1f1f3deaad867c97361bb9af70000d6758026ecf5f74c1eb05846b7cff50123a",
+    "successful_gets": 6,
+    "chunks_per_get": 128,
+    "server_write_pacing_trace_validated": true,
+    "clock_note": "Server elapsed times are not assumed synchronized to capture timestamps."
+  },
+  "server_pacing_observed_at_capture": true,
+  "minimum_required_payload_span_seconds": 12.0
+}

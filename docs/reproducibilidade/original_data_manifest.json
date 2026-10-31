@@ -1,0 +1,102 @@
+{
+  "source": "https://www.unb.ca/cic/datasets/ids-2017.html",
+  "files": [
+    {
+      "path": "data/raw/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv",
+      "bytes": 77123859,
+      "sha256": "6ff1580f5f81c0ae28a26f7631721018577f5f7c5e0feac28b795fcfe7b411ee",
+      "distributed_in_git": false
+    },
+    {
+      "path": "data/raw/Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv",
+      "bytes": 76906168,
+      "sha256": "ca1824c51bfbb7b3c72290a11be04366ba8815878c6a1cc5c44cb1cee269e99b",
+      "distributed_in_git": false
+    },
+    {
+      "path": "data/raw/Friday-WorkingHours-Morning.pcap_ISCX.csv",
+      "bytes": 58316725,
+      "sha256": "53a41c24d570ea83b7ac55b2e94df94e7a8216aeb80a2af0246b6bc8bb543000",
+      "distributed_in_git": false
+    },
+    {
+      "path": "data/raw/Monday-WorkingHours.pcap_ISCX.csv",
+      "bytes": 176927918,
+      "sha256": "852c4beb34eda186f32561fa79df7a0747e92e1a6535b01270820dd9ffe17f34",
+      "distributed_in_git": false
+    },
+    {
+      "path": "data/raw/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv",
+      "bytes": 83102436,
+      "sha256": "6bcda3857c2504676034e3ea57762d38393cc734cb377a726bd5cb153961b1b5",
+      "distributed_in_git": false
+    },
+    {
+      "path": "data/raw/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv",
+      "bytes": 52023263,
+      "sha256": "d67066211fb1689c78406f1506f4c44704ecb92088353d5c96d96d6474eb819d",
+      "distributed_in_git": false
+    },
+    {
+      "path": "data/raw/Tuesday-WorkingHours.pcap_ISCX.csv",
+      "bytes": 135078995,
+      "sha256": "52b8692ae8c7d2ed04671fe2b98335693c0a92c7ab157d8c8b534d6523080851",
+      "distributed_in_git": false
+    },
+    {
+      "path": "data/raw/Wednesday-workingHours.pcap_ISCX.csv",
+      "bytes": 225166395,
+      "sha256": "893c27dc968bf7a8adef1689f90be55ca4a4dc3088fb63d6ff247ac56856df2a",
+      "distributed_in_git": false
+    },
+    {
+      "path": "data/reference/generated_labelled_flows/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv",
+      "bytes": 96101069,
+      "sha256": "1f779b4f0d78f9225554c4de53b5a2c07912b60dcd136ee4c5c1d0d2496b7cc4",
+      "distributed_in_git": false
+    },
+    {
+      "path": "data/reference/generated_labelled_flows/Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv",
+      "bytes": 101874777,
+      "sha256": "7e2ddaa80a5849ba629463296b6128436c161b4a32e8034bb5beae06b0c45e08",
+      "distributed_in_git": false
+    },
+    {
+      "path": "data/reference/generated_labelled_flows/Friday-WorkingHours-Morning.pcap_ISCX.csv",
+      "bytes": 75386737,
+      "sha256": "c061cd98f39d8054aeaed6244a5129a20b3985983d0d022b860ae8aa07fe8d21",
+      "distributed_in_git": false
+    },
+    {
+      "path": "data/reference/generated_labelled_flows/Monday-WorkingHours.pcap_ISCX.csv",
+      "bytes": 268649908,
+      "sha256": "96f26aea87d513073769b48ce204c2921791149e1c6225f7db65a3fed7973820",
+      "distributed_in_git": false
+    },
+    {
+      "path": "data/reference/generated_labelled_flows/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv",
+      "bytes": 108723183,
+      "sha256": "d74238e054023c8bd4d8056650463cadb25c100fb0e26ebd4272c07b5c022c4b",
+      "distributed_in_git": false
+    },
+    {
+      "path": "data/reference/generated_labelled_flows/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv",
+      "bytes": 92030223,
+      "sha256": "e3deaff483d18b53b100a441dff9b8919416df8876b4edcc0f0d1e4bf48397d0",
+      "distributed_in_git": false
+    },
+    {
+      "path": "data/reference/generated_labelled_flows/Tuesday-WorkingHours.pcap_ISCX.csv",
+      "bytes": 174696560,
+      "sha256": "ae9c88e10c41a8eb1ff454ae98bc513454925097d0b0b57180f94e79de445815",
+      "distributed_in_git": false
+    },
+    {
+      "path": "data/reference/generated_labelled_flows/Wednesday-workingHours.pcap_ISCX.csv",
+      "bytes": 285642925,
+      "sha256": "ed538e85b84181e8897dedb3d37d365982f44b27eccd67c477581a8b65f3d170",
+      "distributed_in_git": false
+    }
+  ],
+  "note": "Original third-party CSVs are obtained at the official source; derived results are included."
+}

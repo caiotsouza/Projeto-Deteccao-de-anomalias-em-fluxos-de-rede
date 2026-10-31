@@ -1,0 +1,166 @@
+{
+  "status": "validated_for_exploratory_v4_extraction",
+  "scenario": "lab04_medium",
+  "repetition": 1,
+  "source_files_unchanged": true,
+  "source_sha256": {
+    "received/63a3484e-e5f1-468c-b64e-b27e6a54b4c5.zip": "886ec974ca64009d95dd110f898d2f310f0ef777807fd84c665aa65776fe9cff",
+    "received/run_manifest (1).json": "77b74b9e5236bef8640c68a2b0df421a70a999163a44de287c05c364eb947e49",
+    "received/requests (1).jsonl": "0463ec767ae72d7f97d5f6ff826a28b59484e4858afd76e46eed649b04fb35ae"
+  },
+  "pcap_sha256": "8fa12eb047dd655e95943732c6aac33f858e022441ee5556529b544e9563b049",
+  "packets": 2474,
+  "connections": 12,
+  "successful_http_responses": 12,
+  "total_http_body_bytes": 3145728,
+  "truncated_packet_records": 0,
+  "tcp_rst_packets": 0,
+  "capture_drop_counter_available": false,
+  "capture_span_seconds": 40.932764,
+  "connection_start_interval_seconds": {
+    "min": 3.031031847000122,
+    "median": 3.047039031982422,
+    "max": 9.593187808990479
+  },
+  "details": [
+    {
+      "request_number": 1,
+      "source_port": 60828,
+      "packets": 208,
+      "started_at_utc": "2026-10-25T21:35:25.807461+00:00",
+      "http_status": 200,
+      "body_bytes": 262144,
+      "body_sha256": "c8c95472f06e76d11771f52fe3fdefcbc535340dfe3cd8dcfad010546eee633c",
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    },
+    {
+      "request_number": 2,
+      "source_port": 60829,
+      "packets": 204,
+      "started_at_utc": "2026-10-25T21:35:29.716172+00:00",
+      "http_status": 200,
+      "body_bytes": 262144,
+      "body_sha256": "c8c95472f06e76d11771f52fe3fdefcbc535340dfe3cd8dcfad010546eee633c",
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    },
+    {
+      "request_number": 3,
+      "source_port": 60830,
+      "packets": 207,
+      "started_at_utc": "2026-10-25T21:35:32.762858+00:00",
+      "http_status": 200,
+      "body_bytes": 262144,
+      "body_sha256": "c8c95472f06e76d11771f52fe3fdefcbc535340dfe3cd8dcfad010546eee633c",
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    },
+    {
+      "request_number": 4,
+      "source_port": 60831,
+      "packets": 203,
+      "started_at_utc": "2026-10-25T21:35:35.812761+00:00",
+      "http_status": 200,
+      "body_bytes": 262144,
+      "body_sha256": "c8c95472f06e76d11771f52fe3fdefcbc535340dfe3cd8dcfad010546eee633c",
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    },
+    {
+      "request_number": 5,
+      "source_port": 60832,
+      "packets": 206,
+      "started_at_utc": "2026-10-25T21:35:38.869204+00:00",
+      "http_status": 200,
+      "body_bytes": 262144,
+      "body_sha256": "c8c95472f06e76d11771f52fe3fdefcbc535340dfe3cd8dcfad010546eee633c",
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    },
+    {
+      "request_number": 6,
+      "source_port": 60833,
+      "packets": 212,
+      "started_at_utc": "2026-10-25T21:35:41.900236+00:00",
+      "http_status": 200,
+      "body_bytes": 262144,
+      "body_sha256": "c8c95472f06e76d11771f52fe3fdefcbc535340dfe3cd8dcfad010546eee633c",
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    },
+    {
+      "request_number": 7,
+      "source_port": 60834,
+      "packets": 208,
+      "started_at_utc": "2026-10-25T21:35:44.933297+00:00",
+      "http_status": 200,
+      "body_bytes": 262144,
+      "body_sha256": "c8c95472f06e76d11771f52fe3fdefcbc535340dfe3cd8dcfad010546eee633c",
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    },
+    {
+      "request_number": 8,
+      "source_port": 60835,
+      "packets": 210,
+      "started_at_utc": "2026-10-25T21:35:47.978804+00:00",
+      "http_status": 200,
+      "body_bytes": 262144,
+      "body_sha256": "c8c95472f06e76d11771f52fe3fdefcbc535340dfe3cd8dcfad010546eee633c",
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    },
+    {
+      "request_number": 9,
+      "source_port": 60836,
+      "packets": 203,
+      "started_at_utc": "2026-10-25T21:35:51.012662+00:00",
+      "http_status": 200,
+      "body_bytes": 262144,
+      "body_sha256": "c8c95472f06e76d11771f52fe3fdefcbc535340dfe3cd8dcfad010546eee633c",
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    },
+    {
+      "request_number": 10,
+      "source_port": 60838,
+      "packets": 205,
+      "started_at_utc": "2026-10-25T21:35:54.075195+00:00",
+      "http_status": 200,
+      "body_bytes": 262144,
+      "body_sha256": "c8c95472f06e76d11771f52fe3fdefcbc535340dfe3cd8dcfad010546eee633c",
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    },
+    {
+      "request_number": 11,
+      "source_port": 60839,
+      "packets": 210,
+      "started_at_utc": "2026-10-25T21:36:03.668383+00:00",
+      "http_status": 200,
+      "body_bytes": 262144,
+      "body_sha256": "c8c95472f06e76d11771f52fe3fdefcbc535340dfe3cd8dcfad010546eee633c",
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    },
+    {
+      "request_number": 12,
+      "source_port": 60840,
+      "packets": 198,
+      "started_at_utc": "2026-10-25T21:36:06.715422+00:00",
+      "http_status": 200,
+      "body_bytes": 262144,
+      "body_sha256": "c8c95472f06e76d11771f52fe3fdefcbc535340dfe3cd8dcfad010546eee633c",
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    }
+  ],
+  "pcap": "./data/lab/lab04_medium/r1/input/63a3484e-e5f1-468c-b64e-b27e6a54b4c5_hn2.pcap",
+  "limitations": [
+    "Only filtered traffic was examined; no claim about all VM traffic.",
+    "No packet-drop counter was supplied; do not claim zero capture drops.",
+    "Parser restricted to one HTTP/1.0 GET per distinct TCP 5-tuple.",
+    "Planned activity does not create independent ground-truth labels."
+  ]
+}

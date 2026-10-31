@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.99 scan initiated Sun Oct 25 22:48:19 2026 as: /usr/lib/nmap/nmap -n -Pn -sT -p 21,22,23,25,53,80,110,135,139,143,443,445,3389,8000,8080 -&#45;max-rate 10 -&#45;scan-delay 100ms -&#45;max-retries 1 -&#45;host-timeout 120s -oA /tmp/lab07-r1/scan 172.31.50.161 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -n -Pn -sT -p 21,22,23,25,53,80,110,135,139,143,443,445,3389,8000,8080 -&#45;max-rate 10 -&#45;scan-delay 100ms -&#45;max-retries 1 -&#45;host-timeout 120s -oA /tmp/lab07-r1/scan 172.31.50.161" start="1792979299" startstr="Sun Oct 25 22:48:19 2026" version="7.99" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="15" services="21-23,25,53,80,110,135,139,143,443,445,3389,8000,8080"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1792979299" endtime="1792979304"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="172.31.50.161" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="ftp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="22"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="23"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="telnet" method="table" conf="3"/></port>
+<port protocol="tcp" portid="25"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="smtp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="53"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="110"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="pop3" method="table" conf="3"/></port>
+<port protocol="tcp" portid="135"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="msrpc" method="table" conf="3"/></port>
+<port protocol="tcp" portid="139"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="netbios-ssn" method="table" conf="3"/></port>
+<port protocol="tcp" portid="143"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="imap" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="445"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3389"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="ms-wbt-server" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8000"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+</ports>
+</host>
+<runstats><finished time="1792979304" timestr="Sun Oct 25 22:48:24 2026" summary="Nmap done at Sun Oct 25 22:48:24 2026; 1 IP address (1 host up) scanned in 5.56 seconds" elapsed="5.56" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

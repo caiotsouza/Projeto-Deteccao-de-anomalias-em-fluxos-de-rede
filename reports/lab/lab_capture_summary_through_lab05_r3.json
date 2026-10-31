@@ -1,0 +1,1244 @@
+{
+  "status": "descriptive_comparison_completed",
+  "fixed_model_identity": {
+    "isolation_forest": {
+      "model_sha256": "d6f7754e14bbc7adb453eb298559efeebdccad98f59143283dc74a78211b4f40",
+      "operating_point": "validation_fpr_operational",
+      "threshold": 0.615824439899627
+    },
+    "lof": {
+      "model_sha256": "6c014381d6dc5fc70a46941a450e2a60dc7b83b1bb0fcee43a7653107814df41",
+      "operating_point": "validation_fpr_operational",
+      "threshold": 91.08685969933371
+    }
+  },
+  "sessions": {
+    "lab02_http": {
+      "run_manifest_relative_path": "data\\lab\\lab02_http\\inference_v4_run1\\run_manifest.json",
+      "run_manifest_sha256": "76b5d78a6aaca0968fad683ed6fa550c8449b08e8c42c4a2d2aabb15a8f9fdff",
+      "connections": 10,
+      "packets": 100,
+      "segments": 20,
+      "observed_http_body_sizes_bytes": [
+        187
+      ],
+      "total_http_body_bytes": 1870,
+      "tcp_connection_duration_seconds": {
+        "min": 0.001526,
+        "median": 0.0015925000000000002,
+        "max": 0.00815
+      },
+      "server_payload_packet_span_seconds": {
+        "min": 2.4e-05,
+        "median": 2.5e-05,
+        "max": 3.7e-05
+      },
+      "v4_segment_duration_seconds": {
+        "with_payload": {
+          "min": 0.00119,
+          "median": 0.0012415,
+          "max": 0.007764
+        },
+        "zero_payload": {
+          "min": 0.00014,
+          "median": 0.0001615,
+          "max": 0.000223
+        }
+      },
+      "models": {
+        "isolation_forest": {
+          "all_segments": {
+            "segments": 20,
+            "signaled_segments": 0,
+            "not_signaled_segments": 20,
+            "signal_rate": 0.0,
+            "native_signaled_segments": 0,
+            "score_min": 0.3580567819607792,
+            "score_median": 0.38499732795238706,
+            "score_max": 0.41440155117564814
+          },
+          "with_payload": {
+            "segments": 10,
+            "signaled_segments": 0,
+            "not_signaled_segments": 10,
+            "signal_rate": 0.0,
+            "native_signaled_segments": 0,
+            "score_min": 0.4115075533697057,
+            "score_median": 0.414181507997356,
+            "score_max": 0.41440155117564814
+          },
+          "zero_payload": {
+            "segments": 10,
+            "signaled_segments": 0,
+            "not_signaled_segments": 10,
+            "signal_rate": 0.0,
+            "native_signaled_segments": 0,
+            "score_min": 0.3580567819607792,
+            "score_median": 0.3583436700682474,
+            "score_max": 0.35848710253506844
+          },
+          "endpoint_groups": {
+            "total": 10,
+            "with_any_signaled_segment": 0
+          },
+          "supervised_metrics_computed": false,
+          "ground_truth_available": false
+        },
+        "lof": {
+          "all_segments": {
+            "segments": 20,
+            "signaled_segments": 20,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 20,
+            "score_min": 94.54273724328003,
+            "score_median": 251.30478256381687,
+            "score_max": 1784.9793849242112
+          },
+          "with_payload": {
+            "segments": 10,
+            "signaled_segments": 10,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 10,
+            "score_min": 391.339996568693,
+            "score_median": 417.91898538134365,
+            "score_max": 1784.9793849242112
+          },
+          "zero_payload": {
+            "segments": 10,
+            "signaled_segments": 10,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 10,
+            "score_min": 94.54273724328003,
+            "score_median": 111.26231066291045,
+            "score_max": 111.26956855894075
+          },
+          "endpoint_groups": {
+            "total": 10,
+            "with_any_signaled_segment": 10
+          },
+          "supervised_metrics_computed": false,
+          "ground_truth_available": false
+        }
+      }
+    },
+    "lab03_small_r1": {
+      "run_manifest_relative_path": "data\\lab\\lab03_small\\r1\\inference\\run_manifest.json",
+      "run_manifest_sha256": "b65c6b7b92e33bc51b71b2effdaadc8016aea21ab023f0f2732c636f50491966",
+      "connections": 30,
+      "packets": 663,
+      "segments": 60,
+      "observed_http_body_sizes_bytes": [
+        16384
+      ],
+      "total_http_body_bytes": 491520,
+      "tcp_connection_duration_seconds": {
+        "min": 0.001952,
+        "median": 0.0250925,
+        "max": 0.04012
+      },
+      "server_payload_packet_span_seconds": {
+        "min": 0.000325,
+        "median": 0.000387,
+        "max": 0.000549
+      },
+      "v4_segment_duration_seconds": {
+        "with_payload": {
+          "min": 0.001563,
+          "median": 0.001859,
+          "max": 0.012072
+        },
+        "zero_payload": {
+          "min": 0.000143,
+          "median": 0.023115499999999997,
+          "max": 0.038212
+        }
+      },
+      "models": {
+        "isolation_forest": {
+          "all_segments": {
+            "segments": 60,
+            "signaled_segments": 0,
+            "not_signaled_segments": 60,
+            "signal_rate": 0.0,
+            "native_signaled_segments": 0,
+            "score_min": 0.35638580480337134,
+            "score_median": 0.42047722868243054,
+            "score_max": 0.49025671415112404
+          },
+          "with_payload": {
+            "segments": 30,
+            "signaled_segments": 0,
+            "not_signaled_segments": 30,
+            "signal_rate": 0.0,
+            "native_signaled_segments": 0,
+            "score_min": 0.48275421976343474,
+            "score_median": 0.48940724517497547,
+            "score_max": 0.49025671415112404
+          },
+          "zero_payload": {
+            "segments": 30,
+            "signaled_segments": 0,
+            "not_signaled_segments": 30,
+            "signal_rate": 0.0,
+            "native_signaled_segments": 0,
+            "score_min": 0.35638580480337134,
+            "score_median": 0.35741702501054184,
+            "score_max": 0.35820023760142633
+          },
+          "endpoint_groups": {
+            "total": 30,
+            "with_any_signaled_segment": 0
+          },
+          "supervised_metrics_computed": false,
+          "ground_truth_available": false
+        },
+        "lof": {
+          "all_segments": {
+            "segments": 60,
+            "signaled_segments": 39,
+            "not_signaled_segments": 21,
+            "signal_rate": 0.65,
+            "native_signaled_segments": 60,
+            "score_min": 81.74833865930734,
+            "score_median": 524.086657486684,
+            "score_max": 843.5084466993392
+          },
+          "with_payload": {
+            "segments": 30,
+            "signaled_segments": 9,
+            "not_signaled_segments": 21,
+            "signal_rate": 0.3,
+            "native_signaled_segments": 30,
+            "score_min": 81.74833865930734,
+            "score_median": 86.7470727217455,
+            "score_max": 566.8418871008656
+          },
+          "zero_payload": {
+            "segments": 30,
+            "signaled_segments": 30,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 30,
+            "score_min": 94.54269249291231,
+            "score_median": 727.2319239508013,
+            "score_max": 843.5084466993392
+          },
+          "endpoint_groups": {
+            "total": 30,
+            "with_any_signaled_segment": 30
+          },
+          "supervised_metrics_computed": false,
+          "ground_truth_available": false
+        }
+      }
+    },
+    "lab04_medium_r1": {
+      "run_manifest_relative_path": "data\\lab\\lab04_medium\\r1\\inference\\run_manifest.json",
+      "run_manifest_sha256": "d140ed4876411c8c37d61492463c9fccec11f77e58b0f87e9cdaf4ee35322c24",
+      "connections": 12,
+      "packets": 2474,
+      "segments": 24,
+      "observed_http_body_sizes_bytes": [
+        262144
+      ],
+      "total_http_body_bytes": 3145728,
+      "tcp_connection_duration_seconds": {
+        "min": 0.024697,
+        "median": 0.026547,
+        "max": 0.040503
+      },
+      "server_payload_packet_span_seconds": {
+        "min": 0.00168,
+        "median": 0.0019085,
+        "max": 0.002157
+      },
+      "v4_segment_duration_seconds": {
+        "with_payload": {
+          "min": 0.002906,
+          "median": 0.0032725000000000002,
+          "max": 0.011879
+        },
+        "zero_payload": {
+          "min": 0.013502,
+          "median": 0.022972,
+          "max": 0.037385
+        }
+      },
+      "models": {
+        "isolation_forest": {
+          "all_segments": {
+            "segments": 24,
+            "signaled_segments": 0,
+            "not_signaled_segments": 24,
+            "signal_rate": 0.0,
+            "native_signaled_segments": 12,
+            "score_min": 0.35982574512147014,
+            "score_median": 0.46271298054528553,
+            "score_max": 0.5777044340140828
+          },
+          "with_payload": {
+            "segments": 12,
+            "signaled_segments": 0,
+            "not_signaled_segments": 12,
+            "signal_rate": 0.0,
+            "native_signaled_segments": 12,
+            "score_min": 0.5597909040219721,
+            "score_median": 0.5765742813903674,
+            "score_max": 0.5777044340140828
+          },
+          "zero_payload": {
+            "segments": 12,
+            "signaled_segments": 0,
+            "not_signaled_segments": 12,
+            "signal_rate": 0.0,
+            "native_signaled_segments": 0,
+            "score_min": 0.35982574512147014,
+            "score_median": 0.3616364193985583,
+            "score_max": 0.365635057068599
+          },
+          "endpoint_groups": {
+            "total": 12,
+            "with_any_signaled_segment": 0
+          },
+          "supervised_metrics_computed": false,
+          "ground_truth_available": false
+        },
+        "lof": {
+          "all_segments": {
+            "segments": 24,
+            "signaled_segments": 24,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 24,
+            "score_min": 92.9372385590881,
+            "score_median": 799.7305617971296,
+            "score_max": 3454.5224393953313
+          },
+          "with_payload": {
+            "segments": 12,
+            "signaled_segments": 12,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 12,
+            "score_min": 92.9372385590881,
+            "score_median": 104.4943086832568,
+            "score_max": 239.64567182968798
+          },
+          "zero_payload": {
+            "segments": 12,
+            "signaled_segments": 12,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 12,
+            "score_min": 1359.8154517645712,
+            "score_median": 2099.628203211397,
+            "score_max": 3454.5224393953313
+          },
+          "endpoint_groups": {
+            "total": 12,
+            "with_any_signaled_segment": 12
+          },
+          "supervised_metrics_computed": false,
+          "ground_truth_available": false
+        }
+      }
+    },
+    "lab05_slow_r1": {
+      "run_manifest_relative_path": "data\\lab\\lab05_slow\\r1\\inference\\run_manifest.json",
+      "run_manifest_sha256": "1ce753bb164f50eed77a4bb5f18a63d531c40e289f1484efacf572e63bbc372c",
+      "connections": 6,
+      "packets": 9245,
+      "segments": 12,
+      "observed_http_body_sizes_bytes": [
+        2097152
+      ],
+      "total_http_body_bytes": 12582912,
+      "tcp_connection_duration_seconds": {
+        "min": 15.470343,
+        "median": 15.48938,
+        "max": 15.498362
+      },
+      "server_payload_packet_span_seconds": {
+        "min": 0.006416,
+        "median": 0.0072274999999999995,
+        "max": 0.008443
+      },
+      "v4_segment_duration_seconds": {
+        "with_payload": {
+          "min": 0.007652,
+          "median": 0.008525000000000001,
+          "max": 0.009854
+        },
+        "zero_payload": {
+          "min": 15.461488,
+          "median": 15.479903,
+          "max": 15.490689
+        }
+      },
+      "models": {
+        "isolation_forest": {
+          "all_segments": {
+            "segments": 12,
+            "signaled_segments": 6,
+            "not_signaled_segments": 6,
+            "signal_rate": 0.5,
+            "native_signaled_segments": 6,
+            "score_min": 0.4206080475848895,
+            "score_median": 0.5346327563953346,
+            "score_max": 0.6530848176418931
+          },
+          "with_payload": {
+            "segments": 6,
+            "signaled_segments": 6,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 6,
+            "score_min": 0.6453772572459657,
+            "score_median": 0.6475760380897656,
+            "score_max": 0.6530848176418931
+          },
+          "zero_payload": {
+            "segments": 6,
+            "signaled_segments": 0,
+            "not_signaled_segments": 6,
+            "signal_rate": 0.0,
+            "native_signaled_segments": 0,
+            "score_min": 0.4206080475848895,
+            "score_median": 0.42259385167267594,
+            "score_max": 0.4238882555447035
+          },
+          "endpoint_groups": {
+            "total": 6,
+            "with_any_signaled_segment": 6
+          },
+          "supervised_metrics_computed": false,
+          "ground_truth_available": false
+        },
+        "lof": {
+          "all_segments": {
+            "segments": 12,
+            "signaled_segments": 12,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 12,
+            "score_min": 592.0002604399908,
+            "score_median": 874.2828787213203,
+            "score_max": 2653.8793964139486
+          },
+          "with_payload": {
+            "segments": 6,
+            "signaled_segments": 6,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 6,
+            "score_min": 697.1667683251911,
+            "score_median": 820.3690565487966,
+            "score_max": 924.1579751631476
+          },
+          "zero_payload": {
+            "segments": 6,
+            "signaled_segments": 6,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 6,
+            "score_min": 592.0002604399908,
+            "score_median": 1757.6124864633161,
+            "score_max": 2653.8793964139486
+          },
+          "endpoint_groups": {
+            "total": 6,
+            "with_any_signaled_segment": 6
+          },
+          "supervised_metrics_computed": false,
+          "ground_truth_available": false
+        }
+      }
+    },
+    "lab06_serverpaced_r1": {
+      "run_manifest_relative_path": "data\\lab\\lab06_serverpaced\\r1\\inference\\run_manifest.json",
+      "run_manifest_sha256": "7a7de52f95c51c9752f5d21c2380bfac4654721103f69cd4a9ce7b5d6d21d343",
+      "connections": 6,
+      "packets": 10116,
+      "segments": 12,
+      "observed_http_body_sizes_bytes": [
+        2097152
+      ],
+      "total_http_body_bytes": 12582912,
+      "tcp_connection_duration_seconds": {
+        "min": 15.898618,
+        "median": 15.899808,
+        "max": 15.90586
+      },
+      "server_payload_packet_span_seconds": {
+        "min": 15.895647,
+        "median": 15.896877499999999,
+        "max": 15.903066
+      },
+      "v4_segment_duration_seconds": {
+        "with_payload": {
+          "min": 15.898083,
+          "median": 15.899257500000001,
+          "max": 15.905243
+        },
+        "zero_payload": {
+          "min": 0.000199,
+          "median": 0.0002285,
+          "max": 0.000392
+        }
+      },
+      "models": {
+        "isolation_forest": {
+          "all_segments": {
+            "segments": 12,
+            "signaled_segments": 6,
+            "not_signaled_segments": 6,
+            "signal_rate": 0.5,
+            "native_signaled_segments": 6,
+            "score_min": 0.3573057671135349,
+            "score_median": 0.4918782974691725,
+            "score_max": 0.6241558741921124
+          },
+          "with_payload": {
+            "segments": 6,
+            "signaled_segments": 6,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 6,
+            "score_min": 0.6240240840789611,
+            "score_median": 0.6241558741921124,
+            "score_max": 0.6241558741921124
+          },
+          "zero_payload": {
+            "segments": 6,
+            "signaled_segments": 0,
+            "not_signaled_segments": 6,
+            "signal_rate": 0.0,
+            "native_signaled_segments": 0,
+            "score_min": 0.3573057671135349,
+            "score_median": 0.35840477134866433,
+            "score_max": 0.35973251085938385
+          },
+          "endpoint_groups": {
+            "total": 6,
+            "with_any_signaled_segment": 6
+          },
+          "supervised_metrics_computed": false,
+          "ground_truth_available": false
+        },
+        "lof": {
+          "all_segments": {
+            "segments": 12,
+            "signaled_segments": 12,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 12,
+            "score_min": 111.25954369395565,
+            "score_median": 500.08449867252966,
+            "score_max": 812.3977730611273
+          },
+          "with_payload": {
+            "segments": 6,
+            "signaled_segments": 6,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 6,
+            "score_min": 804.2931275965296,
+            "score_median": 805.961250333971,
+            "score_max": 812.3977730611273
+          },
+          "zero_payload": {
+            "segments": 6,
+            "signaled_segments": 6,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 6,
+            "score_min": 111.25954369395565,
+            "score_median": 158.72335784719087,
+            "score_max": 195.87586974852962
+          },
+          "endpoint_groups": {
+            "total": 6,
+            "with_any_signaled_segment": 6
+          },
+          "supervised_metrics_computed": false,
+          "ground_truth_available": false
+        }
+      }
+    },
+    "lab03_small_r2": {
+      "run_manifest_relative_path": "data\\lab\\lab03_small\\r2\\inference\\run_manifest.json",
+      "run_manifest_sha256": "35162dd204edd49f55b3e544a244f2a53700c44f801378383e59d1902aef4212",
+      "connections": 30,
+      "packets": 662,
+      "segments": 60,
+      "observed_http_body_sizes_bytes": [
+        16384
+      ],
+      "total_http_body_bytes": 491520,
+      "tcp_connection_duration_seconds": {
+        "min": 0.0245,
+        "median": 0.039793999999999996,
+        "max": 0.040633
+      },
+      "server_payload_packet_span_seconds": {
+        "min": 0.000403,
+        "median": 0.0004945,
+        "max": 0.000672
+      },
+      "v4_segment_duration_seconds": {
+        "with_payload": {
+          "min": 0.001676,
+          "median": 0.0018805,
+          "max": 0.009616
+        },
+        "zero_payload": {
+          "min": 0.022412,
+          "median": 0.037558999999999995,
+          "max": 0.038777
+        }
+      },
+      "models": {
+        "isolation_forest": {
+          "all_segments": {
+            "segments": 60,
+            "signaled_segments": 0,
+            "not_signaled_segments": 60,
+            "signal_rate": 0.0,
+            "native_signaled_segments": 0,
+            "score_min": 0.35699661291339785,
+            "score_median": 0.4209286312194752,
+            "score_max": 0.49025671415112404
+          },
+          "with_payload": {
+            "segments": 30,
+            "signaled_segments": 0,
+            "not_signaled_segments": 30,
+            "signal_rate": 0.0,
+            "native_signaled_segments": 0,
+            "score_min": 0.48408601031815657,
+            "score_median": 0.4889887906696118,
+            "score_max": 0.49025671415112404
+          },
+          "zero_payload": {
+            "segments": 30,
+            "signaled_segments": 0,
+            "not_signaled_segments": 30,
+            "signal_rate": 0.0,
+            "native_signaled_segments": 0,
+            "score_min": 0.35699661291339785,
+            "score_median": 0.35741702501054184,
+            "score_max": 0.3577712521207939
+          },
+          "endpoint_groups": {
+            "total": 30,
+            "with_any_signaled_segment": 0
+          },
+          "supervised_metrics_computed": false,
+          "ground_truth_available": false
+        },
+        "lof": {
+          "all_segments": {
+            "segments": 60,
+            "signaled_segments": 31,
+            "not_signaled_segments": 29,
+            "signal_rate": 0.5166666666666667,
+            "native_signaled_segments": 60,
+            "score_min": 81.74826161742136,
+            "score_median": 603.5541739277854,
+            "score_max": 728.9077294901156
+          },
+          "with_payload": {
+            "segments": 30,
+            "signaled_segments": 1,
+            "not_signaled_segments": 29,
+            "signal_rate": 0.03333333333333333,
+            "native_signaled_segments": 30,
+            "score_min": 81.74826161742136,
+            "score_median": 86.74687713322633,
+            "score_max": 481.33129685818614
+          },
+          "zero_payload": {
+            "segments": 30,
+            "signaled_segments": 30,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 30,
+            "score_min": 725.7770509973847,
+            "score_median": 728.8135696247201,
+            "score_max": 728.9077294901156
+          },
+          "endpoint_groups": {
+            "total": 30,
+            "with_any_signaled_segment": 30
+          },
+          "supervised_metrics_computed": false,
+          "ground_truth_available": false
+        }
+      }
+    },
+    "lab04_medium_r2": {
+      "run_manifest_relative_path": "data\\lab\\lab04_medium\\r2\\inference\\run_manifest.json",
+      "run_manifest_sha256": "12b3ec40913efef0c68a1bbea6d9e2dfd13b63f440d33c4790733b3b02203277",
+      "connections": 12,
+      "packets": 2459,
+      "segments": 24,
+      "observed_http_body_sizes_bytes": [
+        262144
+      ],
+      "total_http_body_bytes": 3145728,
+      "tcp_connection_duration_seconds": {
+        "min": 0.018546,
+        "median": 0.038539000000000004,
+        "max": 0.085081
+      },
+      "server_payload_packet_span_seconds": {
+        "min": 0.0016,
+        "median": 0.002255,
+        "max": 0.003968
+      },
+      "v4_segment_duration_seconds": {
+        "with_payload": {
+          "min": 0.003078,
+          "median": 0.004819,
+          "max": 0.026425
+        },
+        "zero_payload": {
+          "min": 0.011697,
+          "median": 0.030977499999999998,
+          "max": 0.058608
+        }
+      },
+      "models": {
+        "isolation_forest": {
+          "all_segments": {
+            "segments": 24,
+            "signaled_segments": 0,
+            "not_signaled_segments": 24,
+            "signal_rate": 0.0,
+            "native_signaled_segments": 12,
+            "score_min": 0.35963024454958226,
+            "score_median": 0.4619551495505183,
+            "score_max": 0.577287571782268
+          },
+          "with_payload": {
+            "segments": 12,
+            "signaled_segments": 0,
+            "not_signaled_segments": 12,
+            "signal_rate": 0.0,
+            "native_signaled_segments": 12,
+            "score_min": 0.5589311211271335,
+            "score_median": 0.5715117516826353,
+            "score_max": 0.577287571782268
+          },
+          "zero_payload": {
+            "segments": 12,
+            "signaled_segments": 0,
+            "not_signaled_segments": 12,
+            "signal_rate": 0.0,
+            "native_signaled_segments": 0,
+            "score_min": 0.35963024454958226,
+            "score_median": 0.36183577554189367,
+            "score_max": 0.36497917797390317
+          },
+          "endpoint_groups": {
+            "total": 12,
+            "with_any_signaled_segment": 0
+          },
+          "supervised_metrics_computed": false,
+          "ground_truth_available": false
+        },
+        "lof": {
+          "all_segments": {
+            "segments": 24,
+            "signaled_segments": 24,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 24,
+            "score_min": 93.00495626037866,
+            "score_median": 614.7529586430675,
+            "score_max": 2695.6876068519755
+          },
+          "with_payload": {
+            "segments": 12,
+            "signaled_segments": 12,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 12,
+            "score_min": 93.00495626037866,
+            "score_median": 121.77215338834496,
+            "score_max": 190.39422367264962
+          },
+          "zero_payload": {
+            "segments": 12,
+            "signaled_segments": 12,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 12,
+            "score_min": 1039.1116936134854,
+            "score_median": 2303.420162339165,
+            "score_max": 2695.6876068519755
+          },
+          "endpoint_groups": {
+            "total": 12,
+            "with_any_signaled_segment": 12
+          },
+          "supervised_metrics_computed": false,
+          "ground_truth_available": false
+        }
+      }
+    },
+    "lab05_slow_r2": {
+      "run_manifest_relative_path": "data\\lab\\lab05_slow\\r2\\inference\\run_manifest.json",
+      "run_manifest_sha256": "1005935798d31015177b67f2bb2b49fd45515cca9041f695267d2a7e41ef7a70",
+      "connections": 6,
+      "packets": 9422,
+      "segments": 12,
+      "observed_http_body_sizes_bytes": [
+        2097152
+      ],
+      "total_http_body_bytes": 12582912,
+      "tcp_connection_duration_seconds": {
+        "min": 15.398487,
+        "median": 15.485686000000001,
+        "max": 15.49483
+      },
+      "server_payload_packet_span_seconds": {
+        "min": 0.006116,
+        "median": 0.007461,
+        "max": 0.010141
+      },
+      "v4_segment_duration_seconds": {
+        "with_payload": {
+          "min": 0.007348,
+          "median": 0.0087465,
+          "max": 0.011641
+        },
+        "zero_payload": {
+          "min": 15.386784,
+          "median": 15.4768945,
+          "max": 15.486056
+        }
+      },
+      "models": {
+        "isolation_forest": {
+          "all_segments": {
+            "segments": 12,
+            "signaled_segments": 6,
+            "not_signaled_segments": 6,
+            "signal_rate": 0.5,
+            "native_signaled_segments": 6,
+            "score_min": 0.41509983433122777,
+            "score_median": 0.5351175334451435,
+            "score_max": 0.6543431633244603
+          },
+          "with_payload": {
+            "segments": 6,
+            "signaled_segments": 6,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 6,
+            "score_min": 0.6477318544634808,
+            "score_median": 0.6515802132600643,
+            "score_max": 0.6543431633244603
+          },
+          "zero_payload": {
+            "segments": 6,
+            "signaled_segments": 0,
+            "not_signaled_segments": 6,
+            "signal_rate": 0.0,
+            "native_signaled_segments": 0,
+            "score_min": 0.41509983433122777,
+            "score_median": 0.4205574514123074,
+            "score_max": 0.422503212426806
+          },
+          "endpoint_groups": {
+            "total": 6,
+            "with_any_signaled_segment": 6
+          },
+          "supervised_metrics_computed": false,
+          "ground_truth_available": false
+        },
+        "lof": {
+          "all_segments": {
+            "segments": 12,
+            "signaled_segments": 12,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 12,
+            "score_min": 591.981981311467,
+            "score_median": 824.6924861019913,
+            "score_max": 1427.5788837788145
+          },
+          "with_payload": {
+            "segments": 6,
+            "signaled_segments": 6,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 6,
+            "score_min": 735.8921800040841,
+            "score_median": 790.3362701258967,
+            "score_max": 825.4391040405083
+          },
+          "zero_payload": {
+            "segments": 6,
+            "signaled_segments": 6,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 6,
+            "score_min": 591.981981311467,
+            "score_median": 1146.0643939322097,
+            "score_max": 1427.5788837788145
+          },
+          "endpoint_groups": {
+            "total": 6,
+            "with_any_signaled_segment": 6
+          },
+          "supervised_metrics_computed": false,
+          "ground_truth_available": false
+        }
+      }
+    },
+    "lab06_serverpaced_r2": {
+      "run_manifest_relative_path": "data\\lab\\lab06_serverpaced\\r2\\inference\\run_manifest.json",
+      "run_manifest_sha256": "c27fe3a5cd6bc5c6387adf5004792e0c4d75123cddc1de9ff7a98b7103ac2e85",
+      "connections": 6,
+      "packets": 10087,
+      "segments": 12,
+      "observed_http_body_sizes_bytes": [
+        2097152
+      ],
+      "total_http_body_bytes": 12582912,
+      "tcp_connection_duration_seconds": {
+        "min": 15.898031,
+        "median": 15.89884,
+        "max": 15.899227
+      },
+      "server_payload_packet_span_seconds": {
+        "min": 15.895314,
+        "median": 15.896014000000001,
+        "max": 15.89672
+      },
+      "v4_segment_duration_seconds": {
+        "with_payload": {
+          "min": 15.897645,
+          "median": 15.8983785,
+          "max": 15.898933
+        },
+        "zero_payload": {
+          "min": 0.000155,
+          "median": 0.00017549999999999998,
+          "max": 0.000223
+        }
+      },
+      "models": {
+        "isolation_forest": {
+          "all_segments": {
+            "segments": 12,
+            "signaled_segments": 6,
+            "not_signaled_segments": 6,
+            "signal_rate": 0.5,
+            "native_signaled_segments": 6,
+            "score_min": 0.35848710253506844,
+            "score_median": 0.4916061967278853,
+            "score_max": 0.6241558741921124
+          },
+          "with_payload": {
+            "segments": 6,
+            "signaled_segments": 6,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 6,
+            "score_min": 0.6238555841746322,
+            "score_median": 0.6240057291833723,
+            "score_max": 0.6241558741921124
+          },
+          "zero_payload": {
+            "segments": 6,
+            "signaled_segments": 0,
+            "not_signaled_segments": 6,
+            "signal_rate": 0.0,
+            "native_signaled_segments": 0,
+            "score_min": 0.35848710253506844,
+            "score_median": 0.3592703531172806,
+            "score_max": 0.3593568092811384
+          },
+          "endpoint_groups": {
+            "total": 6,
+            "with_any_signaled_segment": 6
+          },
+          "supervised_metrics_computed": false,
+          "ground_truth_available": false
+        },
+        "lof": {
+          "all_segments": {
+            "segments": 12,
+            "signaled_segments": 12,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 12,
+            "score_min": 111.26456098826945,
+            "score_median": 480.79503327257083,
+            "score_max": 806.6757322153464
+          },
+          "with_payload": {
+            "segments": 6,
+            "signaled_segments": 6,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 6,
+            "score_min": 802.8626947189005,
+            "score_median": 804.0547211098321,
+            "score_max": 806.6757322153464
+          },
+          "zero_payload": {
+            "segments": 6,
+            "signaled_segments": 6,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 6,
+            "score_min": 111.26456098826945,
+            "score_median": 146.79439003552875,
+            "score_max": 158.72737182624118
+          },
+          "endpoint_groups": {
+            "total": 6,
+            "with_any_signaled_segment": 6
+          },
+          "supervised_metrics_computed": false,
+          "ground_truth_available": false
+        }
+      }
+    },
+    "lab06_serverpaced_r3": {
+      "run_manifest_relative_path": "data\\lab\\lab06_serverpaced\\r3\\inference\\run_manifest.json",
+      "run_manifest_sha256": "3b441c9be24e27177c83f0329ad2abb8882d65d05e1e73257c7c7996c077669d",
+      "connections": 6,
+      "packets": 10098,
+      "segments": 12,
+      "observed_http_body_sizes_bytes": [
+        2097152
+      ],
+      "total_http_body_bytes": 12582912,
+      "tcp_connection_duration_seconds": {
+        "min": 15.898175,
+        "median": 15.8993945,
+        "max": 15.912954
+      },
+      "server_payload_packet_span_seconds": {
+        "min": 15.895143,
+        "median": 15.896079,
+        "max": 15.896707
+      },
+      "v4_segment_duration_seconds": {
+        "with_payload": {
+          "min": 15.897714,
+          "median": 15.8989245,
+          "max": 15.912355
+        },
+        "zero_payload": {
+          "min": 0.000171,
+          "median": 0.0002115,
+          "max": 0.000259
+        }
+      },
+      "models": {
+        "isolation_forest": {
+          "all_segments": {
+            "segments": 12,
+            "signaled_segments": 6,
+            "not_signaled_segments": 6,
+            "signal_rate": 0.5,
+            "native_signaled_segments": 6,
+            "score_min": 0.3580567819607792,
+            "score_median": 0.4915175739901626,
+            "score_max": 0.6241558741921124
+          },
+          "with_payload": {
+            "segments": 6,
+            "signaled_segments": 6,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 6,
+            "score_min": 0.6238555841746322,
+            "score_median": 0.6241558741921124,
+            "score_max": 0.6241558741921124
+          },
+          "zero_payload": {
+            "segments": 6,
+            "signaled_segments": 0,
+            "not_signaled_segments": 6,
+            "signal_rate": 0.0,
+            "native_signaled_segments": 0,
+            "score_min": 0.3580567819607792,
+            "score_median": 0.35820023760142633,
+            "score_max": 0.3591795638056931
+          },
+          "endpoint_groups": {
+            "total": 6,
+            "with_any_signaled_segment": 6
+          },
+          "supervised_metrics_computed": false,
+          "ground_truth_available": false
+        },
+        "lof": {
+          "all_segments": {
+            "segments": 12,
+            "signaled_segments": 12,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 12,
+            "score_min": 111.26193800105416,
+            "score_median": 505.5111705746031,
+            "score_max": 808.5830475954051
+          },
+          "with_payload": {
+            "segments": 6,
+            "signaled_segments": 6,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 6,
+            "score_min": 803.3395036614207,
+            "score_median": 805.0083510810479,
+            "score_max": 808.5830475954051
+          },
+          "zero_payload": {
+            "segments": 6,
+            "signaled_segments": 6,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 6,
+            "score_min": 111.26193800105416,
+            "score_median": 124.28398441348483,
+            "score_max": 207.6828374877855
+          },
+          "endpoint_groups": {
+            "total": 6,
+            "with_any_signaled_segment": 6
+          },
+          "supervised_metrics_computed": false,
+          "ground_truth_available": false
+        }
+      }
+    },
+    "lab05_slow_r3": {
+      "run_manifest_relative_path": "data\\lab\\lab05_slow\\r3\\inference\\run_manifest.json",
+      "run_manifest_sha256": "752d399a00ac6f6f4eb702eb095db14fc40c4aa7d30bf251c8e52e996464479f",
+      "connections": 6,
+      "packets": 9358,
+      "segments": 12,
+      "observed_http_body_sizes_bytes": [
+        2097152
+      ],
+      "total_http_body_bytes": 12582912,
+      "tcp_connection_duration_seconds": {
+        "min": 15.472964,
+        "median": 15.485365000000002,
+        "max": 15.498714
+      },
+      "server_payload_packet_span_seconds": {
+        "min": 0.006183,
+        "median": 0.006836999999999999,
+        "max": 0.007736
+      },
+      "v4_segment_duration_seconds": {
+        "with_payload": {
+          "min": 0.007581,
+          "median": 0.0081245,
+          "max": 0.009315
+        },
+        "zero_payload": {
+          "min": 15.464856,
+          "median": 15.4766005,
+          "max": 15.490336
+        }
+      },
+      "models": {
+        "isolation_forest": {
+          "all_segments": {
+            "segments": 12,
+            "signaled_segments": 6,
+            "not_signaled_segments": 6,
+            "signal_rate": 0.5,
+            "native_signaled_segments": 6,
+            "score_min": 0.4206080475848895,
+            "score_median": 0.5353447714999038,
+            "score_max": 0.6537136877066095
+          },
+          "with_payload": {
+            "segments": 6,
+            "signaled_segments": 6,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 6,
+            "score_min": 0.6474202217160504,
+            "score_median": 0.6533205777179323,
+            "score_max": 0.6537136877066095
+          },
+          "zero_payload": {
+            "segments": 6,
+            "signaled_segments": 0,
+            "not_signaled_segments": 6,
+            "signal_rate": 0.0,
+            "native_signaled_segments": 0,
+            "score_min": 0.4206080475848895,
+            "score_median": 0.421090723411934,
+            "score_max": 0.42326932128375705
+          },
+          "endpoint_groups": {
+            "total": 6,
+            "with_any_signaled_segment": 6
+          },
+          "supervised_metrics_computed": false,
+          "ground_truth_available": false
+        },
+        "lof": {
+          "all_segments": {
+            "segments": 12,
+            "signaled_segments": 12,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 12,
+            "score_min": 698.0737550851544,
+            "score_median": 844.256402803258,
+            "score_max": 2370.498709398141
+          },
+          "with_payload": {
+            "segments": 6,
+            "signaled_segments": 6,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 6,
+            "score_min": 698.0737550851544,
+            "score_median": 761.1943309915027,
+            "score_max": 822.2430873055251
+          },
+          "zero_payload": {
+            "segments": 6,
+            "signaled_segments": 6,
+            "not_signaled_segments": 0,
+            "signal_rate": 1.0,
+            "native_signaled_segments": 6,
+            "score_min": 866.2697183009908,
+            "score_median": 1380.689766989665,
+            "score_max": 2370.498709398141
+          },
+          "endpoint_groups": {
+            "total": 6,
+            "with_any_signaled_segment": 6
+          },
+          "supervised_metrics_computed": false,
+          "ground_truth_available": false
+        }
+      }
+    }
+  },
+  "limitations": [
+    "Descriptive results, not precision, recall, FPR or accuracy.",
+    "Correlated segments and differing capture conditions; no causal feature attribution.",
+    "Long client transfer does not imply sustained packet transmission at the capture point.",
+    "No model load, training, threshold change or database write performed by this summary."
+  ]
+}

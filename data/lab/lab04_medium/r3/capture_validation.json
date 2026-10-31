@@ -1,0 +1,178 @@
+{
+  "status": "validated_for_exploratory_v4_extraction",
+  "scenario": "lab04_medium",
+  "repetition": 3,
+  "source_files_unchanged": true,
+  "source_sha256": {
+    "received/0621e505-fef3-4dd8-9dee-62238de1b542.zip": "5c2dc47147bcb4257818703788850e86c8d6105c983b4d67406dea7f9c0a1e83",
+    "received/run_manifest.json": "80ac691e561c0f514649494e0d2e4d5905d23785b7acacfde698be8a6c7acde2",
+    "received/requests.jsonl": "57ff4c1f16cafea586619ab00f3ab2a9e5971983c1481e7a42d6053561ecc2a2"
+  },
+  "pcap_sha256": "aef48101307e594ede75e0a5b3253faae13c7f14900c3b1f505188cdb7898a71",
+  "packets": 2482,
+  "connections": 12,
+  "successful_http_responses": 12,
+  "total_http_body_bytes": 3145728,
+  "truncated_packet_records": 0,
+  "tcp_rst_packets": 0,
+  "capture_drop_counter_available": false,
+  "capture_span_seconds": 33.574312,
+  "connection_start_interval_seconds": {
+    "min": 3.027667999267578,
+    "median": 3.0462770462036133,
+    "max": 3.080981969833374
+  },
+  "details": [
+    {
+      "request_number": 1,
+      "source_port": 61075,
+      "packets": 203,
+      "started_at_utc": "2026-10-26T01:08:23.853355+00:00",
+      "http_status": 200,
+      "body_bytes": 262144,
+      "body_sha256": "c8c95472f06e76d11771f52fe3fdefcbc535340dfe3cd8dcfad010546eee633c",
+      "server_payload_span_seconds": 0.002254,
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    },
+    {
+      "request_number": 2,
+      "source_port": 61076,
+      "packets": 224,
+      "started_at_utc": "2026-10-26T01:08:26.934337+00:00",
+      "http_status": 200,
+      "body_bytes": 262144,
+      "body_sha256": "c8c95472f06e76d11771f52fe3fdefcbc535340dfe3cd8dcfad010546eee633c",
+      "server_payload_span_seconds": 0.00291,
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    },
+    {
+      "request_number": 3,
+      "source_port": 61077,
+      "packets": 202,
+      "started_at_utc": "2026-10-26T01:08:29.986798+00:00",
+      "http_status": 200,
+      "body_bytes": 262144,
+      "body_sha256": "c8c95472f06e76d11771f52fe3fdefcbc535340dfe3cd8dcfad010546eee633c",
+      "server_payload_span_seconds": 0.001883,
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    },
+    {
+      "request_number": 4,
+      "source_port": 61078,
+      "packets": 208,
+      "started_at_utc": "2026-10-26T01:08:33.030401+00:00",
+      "http_status": 200,
+      "body_bytes": 262144,
+      "body_sha256": "c8c95472f06e76d11771f52fe3fdefcbc535340dfe3cd8dcfad010546eee633c",
+      "server_payload_span_seconds": 0.00207,
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    },
+    {
+      "request_number": 5,
+      "source_port": 61079,
+      "packets": 206,
+      "started_at_utc": "2026-10-26T01:08:36.072137+00:00",
+      "http_status": 200,
+      "body_bytes": 262144,
+      "body_sha256": "c8c95472f06e76d11771f52fe3fdefcbc535340dfe3cd8dcfad010546eee633c",
+      "server_payload_span_seconds": 0.001797,
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    },
+    {
+      "request_number": 6,
+      "source_port": 61080,
+      "packets": 211,
+      "started_at_utc": "2026-10-26T01:08:39.133681+00:00",
+      "http_status": 200,
+      "body_bytes": 262144,
+      "body_sha256": "c8c95472f06e76d11771f52fe3fdefcbc535340dfe3cd8dcfad010546eee633c",
+      "server_payload_span_seconds": 0.001826,
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    },
+    {
+      "request_number": 7,
+      "source_port": 61081,
+      "packets": 203,
+      "started_at_utc": "2026-10-26T01:08:42.179958+00:00",
+      "http_status": 200,
+      "body_bytes": 262144,
+      "body_sha256": "c8c95472f06e76d11771f52fe3fdefcbc535340dfe3cd8dcfad010546eee633c",
+      "server_payload_span_seconds": 0.00191,
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    },
+    {
+      "request_number": 8,
+      "source_port": 61082,
+      "packets": 206,
+      "started_at_utc": "2026-10-26T01:08:45.233014+00:00",
+      "http_status": 200,
+      "body_bytes": 262144,
+      "body_sha256": "c8c95472f06e76d11771f52fe3fdefcbc535340dfe3cd8dcfad010546eee633c",
+      "server_payload_span_seconds": 0.001796,
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    },
+    {
+      "request_number": 9,
+      "source_port": 61083,
+      "packets": 199,
+      "started_at_utc": "2026-10-26T01:08:48.271890+00:00",
+      "http_status": 200,
+      "body_bytes": 262144,
+      "body_sha256": "c8c95472f06e76d11771f52fe3fdefcbc535340dfe3cd8dcfad010546eee633c",
+      "server_payload_span_seconds": 0.002079,
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    },
+    {
+      "request_number": 10,
+      "source_port": 61084,
+      "packets": 206,
+      "started_at_utc": "2026-10-26T01:08:51.314019+00:00",
+      "http_status": 200,
+      "body_bytes": 262144,
+      "body_sha256": "c8c95472f06e76d11771f52fe3fdefcbc535340dfe3cd8dcfad010546eee633c",
+      "server_payload_span_seconds": 0.00227,
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    },
+    {
+      "request_number": 11,
+      "source_port": 61085,
+      "packets": 207,
+      "started_at_utc": "2026-10-26T01:08:54.341687+00:00",
+      "http_status": 200,
+      "body_bytes": 262144,
+      "body_sha256": "c8c95472f06e76d11771f52fe3fdefcbc535340dfe3cd8dcfad010546eee633c",
+      "server_payload_span_seconds": 0.002012,
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    },
+    {
+      "request_number": 12,
+      "source_port": 61086,
+      "packets": 207,
+      "started_at_utc": "2026-10-26T01:08:57.402517+00:00",
+      "http_status": 200,
+      "body_bytes": 262144,
+      "body_sha256": "c8c95472f06e76d11771f52fe3fdefcbc535340dfe3cd8dcfad010546eee633c",
+      "server_payload_span_seconds": 0.002038,
+      "duplicate_payload_bytes": 0,
+      "handshake_and_bidirectional_close_observed": true
+    }
+  ],
+  "pcap": "./data/lab/lab04_medium/r3/input/0621e505-fef3-4dd8-9dee-62238de1b542_hn2.pcap",
+  "limitations": [
+    "Only filtered traffic was examined; no claim about all VM traffic.",
+    "No packet-drop counter was supplied; do not claim zero capture drops.",
+    "Parser restricted to one HTTP/1.0 GET per distinct TCP 5-tuple.",
+    "Planned activity does not create independent ground-truth labels."
+  ]
+}

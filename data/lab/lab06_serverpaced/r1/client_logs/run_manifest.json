@@ -1,0 +1,32 @@
+{
+    "schema_version":  1,
+    "status":  "completed",
+    "definition":  {
+                       "scenario":  "lab06_serverpaced",
+                       "repetition":  1,
+                       "source_ip":  "172.31.50.161",
+                       "target_ip":  "172.31.60.10",
+                       "url":  "http://172.31.60.10:8000/benign-v1/large_2m.bin",
+                       "requests":  6,
+                       "expected_bytes_per_request":  2097152,
+                       "expected_total_body_bytes":  12582912,
+                       "interval_seconds":  3,
+                       "maximum_transfer_rate":  null,
+                       "concurrency":  1,
+                       "http_version":  "1.0",
+                       "redirects":  false,
+                       "retries":  0,
+                       "pacing_location":  "server",
+                       "required_server_marker":  "server-128k-v1",
+                       "expected_server_chunk_bytes":  16384,
+                       "expected_server_pause_seconds":  0.125,
+                       "purpose":  "controlled HTTP with server pacing; no inferred ground-truth labels"
+                   },
+    "started_at_utc":  "2026-10-25T22:27:15.0037139Z",
+    "completed_at_utc":  "2026-10-25T22:29:05.8606325Z",
+    "attempted_requests":  6,
+    "successful_requests":  6,
+    "error":  null,
+    "ground_truth_labels_generated":  false,
+    "capture_started_acknowledged":  true
+}

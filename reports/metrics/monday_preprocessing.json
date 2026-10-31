@@ -1,0 +1,677 @@
+{
+  "stage": "preprocessing_marco_3",
+  "configuration": {
+    "label_column": "label",
+    "drop_invalid_rows": true,
+    "drop_duplicates": true,
+    "drop_constant_columns": false,
+    "drop_duplicate_columns": false,
+    "near_constant_threshold": 0.999,
+    "downcast_numeric": true
+  },
+  "input": {
+    "records": 529918,
+    "columns_including_label": 79,
+    "feature_columns": 78,
+    "memory_usage_mb": 343.146,
+    "label_distribution": {
+      "BENIGN": 529918
+    },
+    "feature_dtypes": {
+      "destination_port": "int64",
+      "flow_duration": "int64",
+      "total_fwd_packets": "int64",
+      "total_backward_packets": "int64",
+      "total_length_of_fwd_packets": "int64",
+      "total_length_of_bwd_packets": "int64",
+      "fwd_packet_length_max": "int64",
+      "fwd_packet_length_min": "int64",
+      "fwd_packet_length_mean": "float64",
+      "fwd_packet_length_std": "float64",
+      "bwd_packet_length_max": "int64",
+      "bwd_packet_length_min": "int64",
+      "bwd_packet_length_mean": "float64",
+      "bwd_packet_length_std": "float64",
+      "flow_bytes_s": "float64",
+      "flow_packets_s": "float64",
+      "flow_iat_mean": "float64",
+      "flow_iat_std": "float64",
+      "flow_iat_max": "int64",
+      "flow_iat_min": "int64",
+      "fwd_iat_total": "int64",
+      "fwd_iat_mean": "float64",
+      "fwd_iat_std": "float64",
+      "fwd_iat_max": "int64",
+      "fwd_iat_min": "int64",
+      "bwd_iat_total": "int64",
+      "bwd_iat_mean": "float64",
+      "bwd_iat_std": "float64",
+      "bwd_iat_max": "int64",
+      "bwd_iat_min": "int64",
+      "fwd_psh_flags": "int64",
+      "bwd_psh_flags": "int64",
+      "fwd_urg_flags": "int64",
+      "bwd_urg_flags": "int64",
+      "fwd_header_length": "int64",
+      "bwd_header_length": "int64",
+      "fwd_packets_s": "float64",
+      "bwd_packets_s": "float64",
+      "min_packet_length": "int64",
+      "max_packet_length": "int64",
+      "packet_length_mean": "float64",
+      "packet_length_std": "float64",
+      "packet_length_variance": "float64",
+      "fin_flag_count": "int64",
+      "syn_flag_count": "int64",
+      "rst_flag_count": "int64",
+      "psh_flag_count": "int64",
+      "ack_flag_count": "int64",
+      "urg_flag_count": "int64",
+      "cwe_flag_count": "int64",
+      "ece_flag_count": "int64",
+      "down_up_ratio": "int64",
+      "average_packet_size": "float64",
+      "avg_fwd_segment_size": "float64",
+      "avg_bwd_segment_size": "float64",
+      "fwd_header_length_1": "int64",
+      "fwd_avg_bytes_bulk": "int64",
+      "fwd_avg_packets_bulk": "int64",
+      "fwd_avg_bulk_rate": "int64",
+      "bwd_avg_bytes_bulk": "int64",
+      "bwd_avg_packets_bulk": "int64",
+      "bwd_avg_bulk_rate": "int64",
+      "subflow_fwd_packets": "int64",
+      "subflow_fwd_bytes": "int64",
+      "subflow_bwd_packets": "int64",
+      "subflow_bwd_bytes": "int64",
+      "init_win_bytes_forward": "int64",
+      "init_win_bytes_backward": "int64",
+      "act_data_pkt_fwd": "int64",
+      "min_seg_size_forward": "int64",
+      "active_mean": "float64",
+      "active_std": "float64",
+      "active_max": "int64",
+      "active_min": "int64",
+      "idle_mean": "float64",
+      "idle_std": "float64",
+      "idle_max": "int64",
+      "idle_min": "int64"
+    }
+  },
+  "label_separation": {
+    "label_column": "label",
+    "label_present_in_features": false,
+    "output_strategy": "features_and_labels_saved_separately"
+  },
+  "numeric_conversion": {},
+  "invalid_values": {
+    "missing_cells_before_infinity_replacement": 64,
+    "missing_by_column_before_infinity_replacement": {
+      "flow_bytes_s": 64
+    },
+    "positive_infinity_total": 810,
+    "positive_infinity_by_column": {
+      "flow_bytes_s": 373,
+      "flow_packets_s": 437
+    },
+    "negative_infinity_total": 0,
+    "negative_infinity_by_column": {},
+    "infinity_replacement": "inf_and_minus_inf_to_nan",
+    "rows_with_invalid_features": 437,
+    "rows_with_missing_label": 0,
+    "invalid_rows_removed": 437,
+    "records_after_invalid_removal": 529481
+  },
+  "duplicates": {
+    "exact_duplicate_rows_found": 26831,
+    "exact_duplicate_rows_removed": 26831,
+    "records_after_duplicate_removal": 502650,
+    "feature_patterns_with_conflicting_labels": 0,
+    "rows_in_conflicting_label_patterns": 0
+  },
+  "column_analysis": {
+    "constant_columns_found": [
+      "bwd_psh_flags",
+      "fwd_urg_flags",
+      "bwd_urg_flags",
+      "cwe_flag_count",
+      "fwd_avg_bytes_bulk",
+      "fwd_avg_packets_bulk",
+      "fwd_avg_bulk_rate",
+      "bwd_avg_bytes_bulk",
+      "bwd_avg_packets_bulk",
+      "bwd_avg_bulk_rate"
+    ],
+    "constant_columns_removed": [],
+    "duplicate_columns_found": {
+      "syn_flag_count": "fwd_psh_flags",
+      "fwd_header_length_1": "fwd_header_length",
+      "subflow_fwd_packets": "total_fwd_packets",
+      "subflow_fwd_bytes": "total_length_of_fwd_packets",
+      "subflow_bwd_packets": "total_backward_packets",
+      "subflow_bwd_bytes": "total_length_of_bwd_packets"
+    },
+    "duplicate_columns_removed": [],
+    "near_constant_threshold": 0.999,
+    "near_constant_columns_retained": {
+      "rst_flag_count": {
+        "most_frequent_value": "0",
+        "most_frequent_count": 502578,
+        "most_frequent_ratio": 0.99985676,
+        "unique_values": 2,
+        "action": "retained_for_feature_selection_review"
+      },
+      "ece_flag_count": {
+        "most_frequent_value": "0",
+        "most_frequent_count": 502577,
+        "most_frequent_ratio": 0.99985477,
+        "unique_values": 2,
+        "action": "retained_for_feature_selection_review"
+      }
+    }
+  },
+  "numeric_optimization": {
+    "enabled": true,
+    "dtype_changes": {
+      "destination_port": {
+        "from": "int64",
+        "to": "int32"
+      },
+      "flow_duration": {
+        "from": "int64",
+        "to": "int32"
+      },
+      "total_fwd_packets": {
+        "from": "int64",
+        "to": "int32"
+      },
+      "total_backward_packets": {
+        "from": "int64",
+        "to": "int32"
+      },
+      "total_length_of_fwd_packets": {
+        "from": "int64",
+        "to": "int32"
+      },
+      "total_length_of_bwd_packets": {
+        "from": "int64",
+        "to": "int32"
+      },
+      "fwd_packet_length_max": {
+        "from": "int64",
+        "to": "int16"
+      },
+      "fwd_packet_length_min": {
+        "from": "int64",
+        "to": "int16"
+      },
+      "fwd_packet_length_mean": {
+        "from": "float64",
+        "to": "float32"
+      },
+      "fwd_packet_length_std": {
+        "from": "float64",
+        "to": "float32"
+      },
+      "bwd_packet_length_max": {
+        "from": "int64",
+        "to": "int16"
+      },
+      "bwd_packet_length_min": {
+        "from": "int64",
+        "to": "int16"
+      },
+      "bwd_packet_length_mean": {
+        "from": "float64",
+        "to": "float32"
+      },
+      "bwd_packet_length_std": {
+        "from": "float64",
+        "to": "float32"
+      },
+      "flow_bytes_s": {
+        "from": "float64",
+        "to": "float32"
+      },
+      "flow_packets_s": {
+        "from": "float64",
+        "to": "float32"
+      },
+      "flow_iat_mean": {
+        "from": "float64",
+        "to": "float32"
+      },
+      "flow_iat_std": {
+        "from": "float64",
+        "to": "float32"
+      },
+      "flow_iat_max": {
+        "from": "int64",
+        "to": "int32"
+      },
+      "flow_iat_min": {
+        "from": "int64",
+        "to": "int32"
+      },
+      "fwd_iat_total": {
+        "from": "int64",
+        "to": "int32"
+      },
+      "fwd_iat_mean": {
+        "from": "float64",
+        "to": "float32"
+      },
+      "fwd_iat_std": {
+        "from": "float64",
+        "to": "float32"
+      },
+      "fwd_iat_max": {
+        "from": "int64",
+        "to": "int32"
+      },
+      "fwd_iat_min": {
+        "from": "int64",
+        "to": "int32"
+      },
+      "bwd_iat_total": {
+        "from": "int64",
+        "to": "int32"
+      },
+      "bwd_iat_mean": {
+        "from": "float64",
+        "to": "float32"
+      },
+      "bwd_iat_std": {
+        "from": "float64",
+        "to": "float32"
+      },
+      "bwd_iat_max": {
+        "from": "int64",
+        "to": "int32"
+      },
+      "bwd_iat_min": {
+        "from": "int64",
+        "to": "int32"
+      },
+      "fwd_psh_flags": {
+        "from": "int64",
+        "to": "int8"
+      },
+      "bwd_psh_flags": {
+        "from": "int64",
+        "to": "int8"
+      },
+      "fwd_urg_flags": {
+        "from": "int64",
+        "to": "int8"
+      },
+      "bwd_urg_flags": {
+        "from": "int64",
+        "to": "int8"
+      },
+      "fwd_header_length": {
+        "from": "int64",
+        "to": "int32"
+      },
+      "bwd_header_length": {
+        "from": "int64",
+        "to": "int32"
+      },
+      "fwd_packets_s": {
+        "from": "float64",
+        "to": "float32"
+      },
+      "bwd_packets_s": {
+        "from": "float64",
+        "to": "float32"
+      },
+      "min_packet_length": {
+        "from": "int64",
+        "to": "int16"
+      },
+      "max_packet_length": {
+        "from": "int64",
+        "to": "int16"
+      },
+      "packet_length_mean": {
+        "from": "float64",
+        "to": "float32"
+      },
+      "packet_length_std": {
+        "from": "float64",
+        "to": "float32"
+      },
+      "packet_length_variance": {
+        "from": "float64",
+        "to": "float32"
+      },
+      "fin_flag_count": {
+        "from": "int64",
+        "to": "int8"
+      },
+      "syn_flag_count": {
+        "from": "int64",
+        "to": "int8"
+      },
+      "rst_flag_count": {
+        "from": "int64",
+        "to": "int8"
+      },
+      "psh_flag_count": {
+        "from": "int64",
+        "to": "int8"
+      },
+      "ack_flag_count": {
+        "from": "int64",
+        "to": "int8"
+      },
+      "urg_flag_count": {
+        "from": "int64",
+        "to": "int8"
+      },
+      "cwe_flag_count": {
+        "from": "int64",
+        "to": "int8"
+      },
+      "ece_flag_count": {
+        "from": "int64",
+        "to": "int8"
+      },
+      "down_up_ratio": {
+        "from": "int64",
+        "to": "int8"
+      },
+      "average_packet_size": {
+        "from": "float64",
+        "to": "float32"
+      },
+      "avg_fwd_segment_size": {
+        "from": "float64",
+        "to": "float32"
+      },
+      "avg_bwd_segment_size": {
+        "from": "float64",
+        "to": "float32"
+      },
+      "fwd_header_length_1": {
+        "from": "int64",
+        "to": "int32"
+      },
+      "fwd_avg_bytes_bulk": {
+        "from": "int64",
+        "to": "int8"
+      },
+      "fwd_avg_packets_bulk": {
+        "from": "int64",
+        "to": "int8"
+      },
+      "fwd_avg_bulk_rate": {
+        "from": "int64",
+        "to": "int8"
+      },
+      "bwd_avg_bytes_bulk": {
+        "from": "int64",
+        "to": "int8"
+      },
+      "bwd_avg_packets_bulk": {
+        "from": "int64",
+        "to": "int8"
+      },
+      "bwd_avg_bulk_rate": {
+        "from": "int64",
+        "to": "int8"
+      },
+      "subflow_fwd_packets": {
+        "from": "int64",
+        "to": "int32"
+      },
+      "subflow_fwd_bytes": {
+        "from": "int64",
+        "to": "int32"
+      },
+      "subflow_bwd_packets": {
+        "from": "int64",
+        "to": "int32"
+      },
+      "subflow_bwd_bytes": {
+        "from": "int64",
+        "to": "int32"
+      },
+      "init_win_bytes_forward": {
+        "from": "int64",
+        "to": "int32"
+      },
+      "init_win_bytes_backward": {
+        "from": "int64",
+        "to": "int32"
+      },
+      "act_data_pkt_fwd": {
+        "from": "int64",
+        "to": "int32"
+      },
+      "min_seg_size_forward": {
+        "from": "int64",
+        "to": "int32"
+      },
+      "active_mean": {
+        "from": "float64",
+        "to": "float32"
+      },
+      "active_std": {
+        "from": "float64",
+        "to": "float32"
+      },
+      "active_max": {
+        "from": "int64",
+        "to": "int32"
+      },
+      "active_min": {
+        "from": "int64",
+        "to": "int32"
+      },
+      "idle_mean": {
+        "from": "float64",
+        "to": "float32"
+      },
+      "idle_std": {
+        "from": "float64",
+        "to": "float32"
+      },
+      "idle_max": {
+        "from": "int64",
+        "to": "int32"
+      },
+      "idle_min": {
+        "from": "int64",
+        "to": "int32"
+      }
+    },
+    "memory_before_downcast_mb": 302.958,
+    "memory_after_downcast_mb": 120.32
+  },
+  "output": {
+    "records": 502650,
+    "feature_columns": 78,
+    "label_records": 502650,
+    "label_distribution": {
+      "BENIGN": 502650
+    },
+    "feature_columns_list": [
+      "destination_port",
+      "flow_duration",
+      "total_fwd_packets",
+      "total_backward_packets",
+      "total_length_of_fwd_packets",
+      "total_length_of_bwd_packets",
+      "fwd_packet_length_max",
+      "fwd_packet_length_min",
+      "fwd_packet_length_mean",
+      "fwd_packet_length_std",
+      "bwd_packet_length_max",
+      "bwd_packet_length_min",
+      "bwd_packet_length_mean",
+      "bwd_packet_length_std",
+      "flow_bytes_s",
+      "flow_packets_s",
+      "flow_iat_mean",
+      "flow_iat_std",
+      "flow_iat_max",
+      "flow_iat_min",
+      "fwd_iat_total",
+      "fwd_iat_mean",
+      "fwd_iat_std",
+      "fwd_iat_max",
+      "fwd_iat_min",
+      "bwd_iat_total",
+      "bwd_iat_mean",
+      "bwd_iat_std",
+      "bwd_iat_max",
+      "bwd_iat_min",
+      "fwd_psh_flags",
+      "bwd_psh_flags",
+      "fwd_urg_flags",
+      "bwd_urg_flags",
+      "fwd_header_length",
+      "bwd_header_length",
+      "fwd_packets_s",
+      "bwd_packets_s",
+      "min_packet_length",
+      "max_packet_length",
+      "packet_length_mean",
+      "packet_length_std",
+      "packet_length_variance",
+      "fin_flag_count",
+      "syn_flag_count",
+      "rst_flag_count",
+      "psh_flag_count",
+      "ack_flag_count",
+      "urg_flag_count",
+      "cwe_flag_count",
+      "ece_flag_count",
+      "down_up_ratio",
+      "average_packet_size",
+      "avg_fwd_segment_size",
+      "avg_bwd_segment_size",
+      "fwd_header_length_1",
+      "fwd_avg_bytes_bulk",
+      "fwd_avg_packets_bulk",
+      "fwd_avg_bulk_rate",
+      "bwd_avg_bytes_bulk",
+      "bwd_avg_packets_bulk",
+      "bwd_avg_bulk_rate",
+      "subflow_fwd_packets",
+      "subflow_fwd_bytes",
+      "subflow_bwd_packets",
+      "subflow_bwd_bytes",
+      "init_win_bytes_forward",
+      "init_win_bytes_backward",
+      "act_data_pkt_fwd",
+      "min_seg_size_forward",
+      "active_mean",
+      "active_std",
+      "active_max",
+      "active_min",
+      "idle_mean",
+      "idle_std",
+      "idle_max",
+      "idle_min"
+    ],
+    "feature_dtypes": {
+      "destination_port": "int32",
+      "flow_duration": "int32",
+      "total_fwd_packets": "int32",
+      "total_backward_packets": "int32",
+      "total_length_of_fwd_packets": "int32",
+      "total_length_of_bwd_packets": "int32",
+      "fwd_packet_length_max": "int16",
+      "fwd_packet_length_min": "int16",
+      "fwd_packet_length_mean": "float32",
+      "fwd_packet_length_std": "float32",
+      "bwd_packet_length_max": "int16",
+      "bwd_packet_length_min": "int16",
+      "bwd_packet_length_mean": "float32",
+      "bwd_packet_length_std": "float32",
+      "flow_bytes_s": "float32",
+      "flow_packets_s": "float32",
+      "flow_iat_mean": "float32",
+      "flow_iat_std": "float32",
+      "flow_iat_max": "int32",
+      "flow_iat_min": "int32",
+      "fwd_iat_total": "int32",
+      "fwd_iat_mean": "float32",
+      "fwd_iat_std": "float32",
+      "fwd_iat_max": "int32",
+      "fwd_iat_min": "int32",
+      "bwd_iat_total": "int32",
+      "bwd_iat_mean": "float32",
+      "bwd_iat_std": "float32",
+      "bwd_iat_max": "int32",
+      "bwd_iat_min": "int32",
+      "fwd_psh_flags": "int8",
+      "bwd_psh_flags": "int8",
+      "fwd_urg_flags": "int8",
+      "bwd_urg_flags": "int8",
+      "fwd_header_length": "int32",
+      "bwd_header_length": "int32",
+      "fwd_packets_s": "float32",
+      "bwd_packets_s": "float32",
+      "min_packet_length": "int16",
+      "max_packet_length": "int16",
+      "packet_length_mean": "float32",
+      "packet_length_std": "float32",
+      "packet_length_variance": "float32",
+      "fin_flag_count": "int8",
+      "syn_flag_count": "int8",
+      "rst_flag_count": "int8",
+      "psh_flag_count": "int8",
+      "ack_flag_count": "int8",
+      "urg_flag_count": "int8",
+      "cwe_flag_count": "int8",
+      "ece_flag_count": "int8",
+      "down_up_ratio": "int8",
+      "average_packet_size": "float32",
+      "avg_fwd_segment_size": "float32",
+      "avg_bwd_segment_size": "float32",
+      "fwd_header_length_1": "int32",
+      "fwd_avg_bytes_bulk": "int8",
+      "fwd_avg_packets_bulk": "int8",
+      "fwd_avg_bulk_rate": "int8",
+      "bwd_avg_bytes_bulk": "int8",
+      "bwd_avg_packets_bulk": "int8",
+      "bwd_avg_bulk_rate": "int8",
+      "subflow_fwd_packets": "int32",
+      "subflow_fwd_bytes": "int32",
+      "subflow_bwd_packets": "int32",
+      "subflow_bwd_bytes": "int32",
+      "init_win_bytes_forward": "int32",
+      "init_win_bytes_backward": "int32",
+      "act_data_pkt_fwd": "int32",
+      "min_seg_size_forward": "int32",
+      "active_mean": "float32",
+      "active_std": "float32",
+      "active_max": "int32",
+      "active_min": "int32",
+      "idle_mean": "float32",
+      "idle_std": "float32",
+      "idle_max": "int32",
+      "idle_min": "int32"
+    },
+    "remaining_missing_feature_values": 0,
+    "remaining_infinite_feature_values": 0,
+    "total_rows_removed": 27268,
+    "rows_removed_percentage": 5.145702
+  },
+  "source_files": [
+    "./data/raw/Monday-WorkingHours.pcap_ISCX.csv"
+  ],
+  "sampling": {
+    "enabled": false,
+    "maximum_rows_per_file": null
+  },
+  "artifacts": {
+    "features_path": "./data/processed/monday_features.parquet",
+    "labels_path": "./data/processed/monday_labels.parquet",
+    "report_path": "./reports/metrics/monday_preprocessing.json",
+    "format": "parquet_snappy"
+  }
+}

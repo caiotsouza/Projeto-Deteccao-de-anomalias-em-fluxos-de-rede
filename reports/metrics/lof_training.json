@@ -1,0 +1,561 @@
+{
+  "schema_version": 1,
+  "stage": "lof_training_marco_8",
+  "created_at_utc": "2026-08-30T23:18:36.065898+00:00",
+  "status": "completed_without_labels",
+  "configuration": {
+    "n_neighbors": 20,
+    "contamination": "auto",
+    "novelty": true,
+    "algorithm": "auto",
+    "leaf_size": 30,
+    "metric": "minkowski",
+    "p": 2,
+    "n_jobs": -1
+  },
+  "effective_n_neighbors": 20,
+  "effective_metric": "euclidean",
+  "learned_offset": -1.5,
+  "inputs": {
+    "train": {
+      "path": "./data/processed/splits/X_train.parquet",
+      "records": 20000,
+      "features": 60,
+      "schema_sha256": "07bd5818c91930b6ceb8178e160d9365260f6b92f629fa02ef14227cfaa113a4"
+    },
+    "validation": {
+      "path": "./data/processed/splits/X_validation.parquet",
+      "records": 10000,
+      "features": 60,
+      "schema_sha256": "07bd5818c91930b6ceb8178e160d9365260f6b92f629fa02ef14227cfaa113a4"
+    },
+    "test": {
+      "path": "./data/processed/splits/X_test.parquet",
+      "records": 20000,
+      "features": 60,
+      "schema_sha256": "07bd5818c91930b6ceb8178e160d9365260f6b92f629fa02ef14227cfaa113a4"
+    }
+  },
+  "input_validation": {
+    "all_schemas_match": true,
+    "hash_overlaps": {
+      "train_validation": 0,
+      "train_test": 0,
+      "validation_test": 0
+    },
+    "all_evaluation_records_unseen_during_fit": true,
+    "all_features_numeric": true,
+    "nan_count": 0,
+    "infinity_count": 0,
+    "label_columns_loaded": false,
+    "status": "passed"
+  },
+  "methodology": {
+    "training_input": "X_train only",
+    "labels_loaded": false,
+    "labels_used": false,
+    "scaler_fitted_on": "X_train only",
+    "validation_and_test_used_for_fit": false,
+    "novelty": true,
+    "novelty_methods_called_on_training": false,
+    "training_diagnostic_source": "negative_outlier_factor_",
+    "validation_and_test_confirmed_unseen_by_record_hash": true,
+    "random_state": "not applicable; LOF and StandardScaler are deterministic"
+  },
+  "scaler": {
+    "fitted_on": "X_train only",
+    "with_mean": true,
+    "with_std": true,
+    "feature_count": 60,
+    "zero_variance_features": [],
+    "maximum_absolute_scaled_train_mean": 1.310951347477385e-16,
+    "maximum_scaled_train_std_deviation_from_one_nonzero_features": 2.220446049250313e-16,
+    "statistics_by_feature": {
+      "destination_port": {
+        "mean": 11165.5887,
+        "variance": 474710132.5215323,
+        "scale": 21787.843686825283
+      },
+      "flow_duration": {
+        "mean": 10949432.99815,
+        "variance": 866180961210636.4,
+        "scale": 29430952.434650097
+      },
+      "total_fwd_packets": {
+        "mean": 8.35865,
+        "variance": 25783.012820177497,
+        "scale": 160.5708965540689
+      },
+      "total_backward_packets": {
+        "mean": 8.67135,
+        "variance": 37211.9353391775,
+        "scale": 192.9039536639348
+      },
+      "total_length_of_fwd_packets": {
+        "mean": 565.2253,
+        "variance": 13312667.099639911,
+        "scale": 3648.6527787170858
+      },
+      "total_length_of_bwd_packets": {
+        "mean": 11258.29815,
+        "variance": 249759182871.63675,
+        "scale": 499759.1248507993
+      },
+      "fwd_packet_length_max": {
+        "mean": 203.96875,
+        "variance": 209975.5694734375,
+        "scale": 458.23091283046097
+      },
+      "fwd_packet_length_min": {
+        "mean": 19.6153,
+        "variance": 752.50790591,
+        "scale": 27.431877549850647
+      },
+      "fwd_packet_length_mean": {
+        "mean": 52.502314421886204,
+        "variance": 8342.974528618395,
+        "scale": 91.33988465406772
+      },
+      "fwd_packet_length_std": {
+        "mean": 62.07111835823655,
+        "variance": 23104.274222111493,
+        "scale": 152.0009020437428
+      },
+      "bwd_packet_length_max": {
+        "mean": 427.973,
+        "variance": 642521.7085710001,
+        "scale": 801.5745184142271
+      },
+      "bwd_packet_length_min": {
+        "mean": 50.21035,
+        "variance": 5768.469202877499,
+        "scale": 75.95043912234806
+      },
+      "bwd_packet_length_mean": {
+        "mean": 173.14014863395988,
+        "variance": 81203.65907132925,
+        "scale": 284.9625573146922
+      },
+      "bwd_packet_length_std": {
+        "mean": 139.9490741336286,
+        "variance": 79507.80168175093,
+        "scale": 281.97127811490117
+      },
+      "flow_bytes_s": {
+        "mean": 1633781.9085746324,
+        "variance": 544038182585230.75,
+        "scale": 23324626.09743682
+      },
+      "flow_packets_s": {
+        "mean": 58655.95637594669,
+        "variance": 50177121830.99292,
+        "scale": 224002.50407304137
+      },
+      "flow_iat_mean": {
+        "mean": 1093197.0675374866,
+        "variance": 25358326490426.875,
+        "scale": 5035705.163174952
+      },
+      "flow_iat_std": {
+        "mean": 1650813.647851609,
+        "variance": 40352267044023.77,
+        "scale": 6352343.429319905
+      },
+      "flow_iat_max": {
+        "mean": 4579410.5691,
+        "variance": 208234208463655.7,
+        "scale": 14430322.534983607
+      },
+      "flow_iat_min": {
+        "mean": 261682.32665,
+        "variance": 12990061661429.86,
+        "scale": 3604172.8123703864
+      },
+      "fwd_iat_total": {
+        "mean": 10628912.68235,
+        "variance": 855228973561457.0,
+        "scale": 29244298.137610637
+      },
+      "fwd_iat_mean": {
+        "mean": 2219778.8196200617,
+        "variance": 112917504437481.14,
+        "scale": 10626264.839419406
+      },
+      "fwd_iat_std": {
+        "mean": 1078492.578246793,
+        "variance": 15180895604762.541,
+        "scale": 3896266.880587435
+      },
+      "fwd_iat_max": {
+        "mean": 4395982.50825,
+        "variance": 204924240148657.3,
+        "scale": 14315175.170030484
+      },
+      "fwd_iat_min": {
+        "mean": 1555372.67355,
+        "variance": 108978076182220.34,
+        "scale": 10439256.495661955
+      },
+      "bwd_iat_total": {
+        "mean": 9645766.27575,
+        "variance": 805356714828112.4,
+        "scale": 28378807.494821068
+      },
+      "bwd_iat_mean": {
+        "mean": 1958136.0097708625,
+        "variance": 104998194264431.02,
+        "scale": 10246862.654707098
+      },
+      "bwd_iat_std": {
+        "mean": 822670.75613353,
+        "variance": 12466459405539.352,
+        "scale": 3530787.3633991824
+      },
+      "bwd_iat_max": {
+        "mean": 3581996.17685,
+        "variance": 176524595412628.16,
+        "scale": 13286255.883906052
+      },
+      "bwd_iat_min": {
+        "mean": 1378907.7368,
+        "variance": 100571465603989.77,
+        "scale": 10028532.574808229
+      },
+      "fwd_psh_flags": {
+        "mean": 0.06485,
+        "variance": 0.06064447749999998,
+        "scale": 0.2462609946784102
+      },
+      "fwd_header_length": {
+        "mean": -50114.7026,
+        "variance": 50661700379045.53,
+        "scale": 7117703.307882785
+      },
+      "bwd_header_length": {
+        "mean": 216.0266,
+        "variance": 15390286.07849244,
+        "scale": 3923.045510632325
+      },
+      "fwd_packets_s": {
+        "mean": 52736.9671056429,
+        "variance": 46764903709.49803,
+        "scale": 216251.9449843123
+      },
+      "bwd_packets_s": {
+        "mean": 6018.989274414564,
+        "variance": 1321350235.646337,
+        "scale": 36350.38150620069
+      },
+      "min_packet_length": {
+        "mean": 19.27705,
+        "variance": 539.4167932975,
+        "scale": 23.225348076993377
+      },
+      "max_packet_length": {
+        "mean": 472.0582,
+        "variance": 730758.7866127599,
+        "scale": 854.844305480688
+      },
+      "packet_length_mean": {
+        "mean": 107.33615213325619,
+        "variance": 26947.10335521105,
+        "scale": 164.15572897468746
+      },
+      "packet_length_std": {
+        "mean": 143.31596889509558,
+        "variance": 58373.97026107502,
+        "scale": 241.6070575564278
+      },
+      "fin_flag_count": {
+        "mean": 0.01395,
+        "variance": 0.0137553975,
+        "scale": 0.11728340675474941
+      },
+      "syn_flag_count": {
+        "mean": 0.06485,
+        "variance": 0.06064447749999998,
+        "scale": 0.2462609946784102
+      },
+      "rst_flag_count": {
+        "mean": 0.0002,
+        "variance": 0.00019995999999999998,
+        "scale": 0.014140721339450827
+      },
+      "psh_flag_count": {
+        "mean": 0.26255,
+        "variance": 0.1936174975,
+        "scale": 0.44001988307348117
+      },
+      "ack_flag_count": {
+        "mean": 0.3086,
+        "variance": 0.21336604000000003,
+        "scale": 0.4619156200000169
+      },
+      "urg_flag_count": {
+        "mean": 0.1232,
+        "variance": 0.10802176000000002,
+        "scale": 0.3286666396213647
+      },
+      "ece_flag_count": {
+        "mean": 0.0002,
+        "variance": 0.00019995999999999998,
+        "scale": 0.014140721339450827
+      },
+      "down_up_ratio": {
+        "mean": 0.64475,
+        "variance": 0.27584743749999996,
+        "scale": 0.5252118025139952
+      },
+      "average_packet_size": {
+        "mean": 121.60709448568821,
+        "variance": 28806.291280527425,
+        "scale": 169.72416233561862
+      },
+      "init_win_bytes_forward": {
+        "mean": 9455.9504,
+        "variance": 341360024.07423985,
+        "scale": 18475.930939312362
+      },
+      "init_win_bytes_backward": {
+        "mean": 3117.78695,
+        "variance": 103090307.57875969,
+        "scale": 10153.33972536917
+      },
+      "act_data_pkt_fwd": {
+        "mean": 4.99885,
+        "variance": 17565.3064486775,
+        "scale": 132.53417087180762
+      },
+      "min_seg_size_forward": {
+        "mean": -4167.95955,
+        "variance": 351819915702.30896,
+        "scale": 593144.093540776
+      },
+      "active_mean": {
+        "mean": 75194.01096376362,
+        "variance": 289412805931.6763,
+        "scale": 537971.0084490393
+      },
+      "active_std": {
+        "mean": 50385.8105944565,
+        "variance": 220522599814.3904,
+        "scale": 469598.33881136164
+      },
+      "active_max": {
+        "mean": 164895.5279,
+        "variance": 1415447065466.6716,
+        "scale": 1189725.6261284244
+      },
+      "active_min": {
+        "mean": 46436.02695,
+        "variance": 176497762438.15775,
+        "scale": 420116.3677341764
+      },
+      "idle_mean": {
+        "mean": 3723651.46245,
+        "variance": 181061998557314.9,
+        "scale": 13455928.008031067
+      },
+      "idle_std": {
+        "mean": 216353.31730635252,
+        "variance": 4869995905115.434,
+        "scale": 2206806.7212865367
+      },
+      "idle_max": {
+        "mean": 3894787.83025,
+        "variance": 193005712253313.8,
+        "scale": 13892649.576423995
+      },
+      "idle_min": {
+        "mean": 3524038.9347,
+        "variance": 174932282785541.1,
+        "scale": 13226196.837547107
+      }
+    }
+  },
+  "score_semantics": {
+    "sklearn_prediction": "1=normal, -1=anomaly",
+    "predicted_anomaly": "0=normal, 1=anomaly",
+    "score_samples": "opposite LOF; lower values indicate more abnormal observations",
+    "decision_function": "score_samples - offset_; negative values are anomalies",
+    "anomaly_score": "-score_samples; higher values indicate more abnormal observations",
+    "training_negative_outlier_factor": "training-only attribute; lower values indicate more abnormal observations"
+  },
+  "training_diagnostics": {
+    "records": 20000,
+    "diagnostic_normal": 16871,
+    "diagnostic_anomaly": 3129,
+    "diagnostic_anomaly_rate": 0.15645,
+    "negative_outlier_factor_lower_is_more_abnormal": {
+      "minimum": -2498.4605525597294,
+      "p01": -15.02687684658018,
+      "p05": -3.3438415367098444,
+      "p25": -1.266285331688278,
+      "median": -1.0588816993544992,
+      "p75": -1.0000074880598087,
+      "p95": -0.9735551550368026,
+      "p99": -0.9561681185015828,
+      "maximum": -0.907534759351728,
+      "mean": -3.7909477395808526,
+      "standard_deviation": 51.28044018457538
+    },
+    "training_anomaly_score_higher_is_more_abnormal": {
+      "minimum": 0.907534759351728,
+      "p01": 0.9561681185015827,
+      "p05": 0.9735551550368026,
+      "p25": 1.0000074880598087,
+      "median": 1.0588816993544992,
+      "p75": 1.266285331688278,
+      "p95": 3.3438415367098435,
+      "p99": 15.026876846580128,
+      "maximum": 2498.4605525597294,
+      "mean": 3.7909477395808526,
+      "standard_deviation": 51.28044018457538
+    },
+    "novelty_predict_called_on_training": false,
+    "novelty_decision_function_called_on_training": false,
+    "novelty_score_samples_called_on_training": false,
+    "diagnostic_source": "negative_outlier_factor_ training attribute"
+  },
+  "predictions_without_ground_truth": {
+    "validation": {
+      "records": 10000,
+      "predicted_normal": 5392,
+      "predicted_anomaly": 4608,
+      "predicted_anomaly_rate": 0.4608,
+      "score_statistics": {
+        "score_samples_lower_is_more_abnormal": {
+          "minimum": -2207.960583418581,
+          "p01": -13.308095865838473,
+          "p05": -5.113406085564875,
+          "p25": -2.5167808368750926,
+          "median": -1.3619995583647657,
+          "p75": -1.0363830817448478,
+          "p95": -0.9846248407458791,
+          "p99": -0.962316599365084,
+          "maximum": -0.9001698515255206,
+          "mean": -3.9954010550511376,
+          "standard_deviation": 40.71034166228049
+        },
+        "decision_function_negative_is_anomaly": {
+          "minimum": -2206.460583418581,
+          "p01": -11.808095865838473,
+          "p05": -3.613406085564875,
+          "p25": -1.0167808368750926,
+          "median": 0.13800044163523428,
+          "p75": 0.46361691825515217,
+          "p95": 0.5153751592541209,
+          "p99": 0.537683400634916,
+          "maximum": 0.5998301484744794,
+          "mean": -2.4954010550511376,
+          "standard_deviation": 40.71034166228049
+        },
+        "anomaly_score_higher_is_more_abnormal": {
+          "minimum": 0.9001698515255206,
+          "p01": 0.962316599365084,
+          "p05": 0.9846248407458791,
+          "p25": 1.0363830817448478,
+          "median": 1.3619995583647657,
+          "p75": 2.5167808368750926,
+          "p95": 5.113406085564875,
+          "p99": 13.308095865838482,
+          "maximum": 2207.960583418581,
+          "mean": 3.9954010550511376,
+          "standard_deviation": 40.71034166228049
+        }
+      },
+      "inference_seconds": 0.4685525999957463,
+      "neighbor_searches_performed": 1,
+      "prediction_derived_from": "score_samples - offset_"
+    },
+    "test": {
+      "records": 20000,
+      "predicted_normal": 10729,
+      "predicted_anomaly": 9271,
+      "predicted_anomaly_rate": 0.46355,
+      "score_statistics": {
+        "score_samples_lower_is_more_abnormal": {
+          "minimum": -4111.420488156442,
+          "p01": -11.447340158784717,
+          "p05": -5.12689016268741,
+          "p25": -2.5275907787579417,
+          "median": -1.3611150183566285,
+          "p75": -1.0375043549143979,
+          "p95": -0.9844656832842136,
+          "p99": -0.962346644693745,
+          "maximum": -0.9001698515255206,
+          "mean": -3.4627246355659365,
+          "standard_deviation": 41.121202277943866
+        },
+        "decision_function_negative_is_anomaly": {
+          "minimum": -4109.920488156442,
+          "p01": -9.947340158784717,
+          "p05": -3.6268901626874097,
+          "p25": -1.0275907787579417,
+          "median": 0.13888498164337149,
+          "p75": 0.4624956450856021,
+          "p95": 0.5155343167157864,
+          "p99": 0.537653355306255,
+          "maximum": 0.5998301484744794,
+          "mean": -1.962724635565936,
+          "standard_deviation": 41.121202277943866
+        },
+        "anomaly_score_higher_is_more_abnormal": {
+          "minimum": 0.9001698515255206,
+          "p01": 0.9623466446937448,
+          "p05": 0.9844656832842136,
+          "p25": 1.0375043549143979,
+          "median": 1.3611150183566285,
+          "p75": 2.5275907787579417,
+          "p95": 5.12689016268741,
+          "p99": 11.447340158784675,
+          "maximum": 4111.420488156442,
+          "mean": 3.4627246355659365,
+          "standard_deviation": 41.121202277943866
+        }
+      },
+      "inference_seconds": 0.5105067000113195,
+      "neighbor_searches_performed": 1,
+      "prediction_derived_from": "score_samples - offset_"
+    }
+  },
+  "timing_seconds": {
+    "pipeline_fit": 2.781584800002747,
+    "inference_validation_and_test": 0.9790593000070658,
+    "fit_and_inference": 3.760644100009813
+  },
+  "evaluation_deferred_to_marco_9": true,
+  "libraries": {
+    "python": "3.12.13",
+    "numpy": "2.5.2",
+    "pandas": "3.0.1",
+    "scikit_learn": "1.9.0",
+    "joblib": "1.5.3"
+  },
+  "pipeline_sha256": "1e4a8b96759bcf1844e8884d2d09c2361065d646096b0e6959fd90cd9d8ce382",
+  "artifacts": {
+    "model": "./models/lof.joblib",
+    "metadata": "./models/lof_metadata.json",
+    "train_diagnostics": "./data/processed/predictions/lof_train_diagnostics.parquet",
+    "predictions_validation": "./data/processed/predictions/lof_validation_predictions.parquet",
+    "predictions_test": "./data/processed/predictions/lof_test_predictions.parquet",
+    "report": "./reports/metrics/lof_training.json"
+  },
+  "prediction_columns": [
+    "row_position",
+    "record_hash",
+    "sklearn_prediction",
+    "predicted_anomaly",
+    "score_samples",
+    "decision_function",
+    "anomaly_score"
+  ],
+  "train_diagnostic_columns": [
+    "row_position",
+    "record_hash",
+    "negative_outlier_factor",
+    "training_anomaly_score",
+    "diagnostic_sklearn_prediction",
+    "diagnostic_predicted_anomaly"
+  ]
+}

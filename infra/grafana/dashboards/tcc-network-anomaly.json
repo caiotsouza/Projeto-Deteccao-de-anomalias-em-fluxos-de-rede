@@ -1,0 +1,993 @@
+{
+  "annotations": {
+    "list": []
+  },
+  "description": "MARCO 12 — VISUALIZAÇÃO EXPERIMENTAL. Dados provenientes de replay offline do teste CIC-IDS2017 balanceado, com timestamps simulados. Não representa prevalência ou cronologia de uma rede real. IPs e protocolos só são exibidos quando validados contra GeneratedLabelledFlows; nunca são fabricados. anomaly_score não é probabilidade.",
+  "editable": false,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 1,
+  "id": null,
+  "links": [],
+  "panels": [
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "tcc-fastapi"
+      },
+      "description": "Quantidade de previsões do modelo ativo no intervalo [início, fim).",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {},
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 1
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 0,
+        "y": 0
+      },
+      "id": 1,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.5",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "flows",
+              "text": "Fluxos",
+              "type": "number"
+            }
+          ],
+          "filters": [],
+          "format": "table",
+          "parser": "backend",
+          "refId": "A",
+          "root_selector": "$.rows",
+          "source": "url",
+          "type": "json",
+          "url": "http://api:8000/api/v1/dashboard/overview?start=${__from:date:iso}&end=${__to:date:iso}",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "Fluxos analisados",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "tcc-fastapi"
+      },
+      "description": "Decisões cujo anomaly_score atingiu ou superou o limiar operacional ativo.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {},
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 1
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 6,
+        "y": 0
+      },
+      "id": 2,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.5",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "anomalies",
+              "text": "Anomalias",
+              "type": "number"
+            }
+          ],
+          "filters": [],
+          "format": "table",
+          "parser": "backend",
+          "refId": "A",
+          "root_selector": "$.rows",
+          "source": "url",
+          "type": "json",
+          "url": "http://api:8000/api/v1/dashboard/overview?start=${__from:date:iso}&end=${__to:date:iso}",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "Anomalias sinalizadas",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "tcc-fastapi"
+      },
+      "description": "Fração de previsões sinalizadas. No replay balanceado, não estima a prevalência de uma rede real.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {},
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 1
+              }
+            ]
+          },
+          "unit": "percentunit",
+          "decimals": 2
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 12,
+        "y": 0
+      },
+      "id": 3,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.5",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "anomaly_rate",
+              "text": "Taxa",
+              "type": "number"
+            }
+          ],
+          "filters": [],
+          "format": "table",
+          "parser": "backend",
+          "refId": "A",
+          "root_selector": "$.rows",
+          "source": "url",
+          "type": "json",
+          "url": "http://api:8000/api/v1/dashboard/overview?start=${__from:date:iso}&end=${__to:date:iso}",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "Taxa de anomalias",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "tcc-fastapi"
+      },
+      "description": "Percentil 95 do anomaly_score. Esse escore não é probabilidade e só é comparável na mesma versão e ponto operacional.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {},
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 1
+              }
+            ]
+          },
+          "unit": "short",
+          "decimals": 4
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 18,
+        "y": 0
+      },
+      "id": 4,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.5",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "score_p95",
+              "text": "P95",
+              "type": "number"
+            }
+          ],
+          "filters": [],
+          "format": "table",
+          "parser": "backend",
+          "refId": "A",
+          "root_selector": "$.rows",
+          "source": "url",
+          "type": "json",
+          "url": "http://api:8000/api/v1/dashboard/overview?start=${__from:date:iso}&end=${__to:date:iso}",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "Anomaly score — P95",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "tcc-fastapi"
+      },
+      "description": "Contagens em janelas de 5 minutos. Os horários são simulados e preservam apenas a sequência do replay.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {},
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 1
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 16,
+        "x": 0,
+        "y": 4
+      },
+      "id": 5,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.2.5",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "bucket_start",
+              "text": "Tempo",
+              "type": "timestamp"
+            },
+            {
+              "selector": "normal_total",
+              "text": "Normais",
+              "type": "number"
+            },
+            {
+              "selector": "anomalies_total",
+              "text": "Anomalias",
+              "type": "number"
+            }
+          ],
+          "filters": [],
+          "format": "timeseries",
+          "parser": "backend",
+          "refId": "A",
+          "root_selector": "$.items",
+          "source": "url",
+          "type": "json",
+          "url": "http://api:8000/api/v1/dashboard/timeseries?bucket_minutes=5&start=${__from:date:iso}&end=${__to:date:iso}",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "Fluxos normais e anomalias ao longo do replay",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "tcc-fastapi"
+      },
+      "description": "Fração sinalizada por janela. Não interpretar como taxa natural de ataques por causa do teste balanceado.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {},
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 1
+              }
+            ]
+          },
+          "unit": "percentunit",
+          "decimals": 2
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 16,
+        "y": 4
+      },
+      "id": 6,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.2.5",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "bucket_start",
+              "text": "Tempo",
+              "type": "timestamp"
+            },
+            {
+              "selector": "anomaly_rate",
+              "text": "Taxa de anomalias",
+              "type": "number"
+            }
+          ],
+          "filters": [],
+          "format": "timeseries",
+          "parser": "backend",
+          "refId": "A",
+          "root_selector": "$.items",
+          "source": "url",
+          "type": "json",
+          "url": "http://api:8000/api/v1/dashboard/timeseries?bucket_minutes=5&start=${__from:date:iso}&end=${__to:date:iso}",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "Taxa de anomalias ao longo do replay",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "tcc-fastapi"
+      },
+      "description": "Protocolos do GeneratedLabelledFlows, associados somente após a validação das features contra X_test. Sem contexto validado, a API retorna uma série vazia em vez de fabricar valores.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {},
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 1
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 0,
+        "y": 12
+      },
+      "id": 7,
+      "options": {
+        "barRadius": 0,
+        "barWidth": 0.8,
+        "fullHighlight": false,
+        "groupWidth": 0.7,
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "orientation": "horizontal",
+        "showValue": "always",
+        "stacking": "none",
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        },
+        "xTickLabelRotation": 0,
+        "xTickLabelSpacing": 0
+      },
+      "pluginVersion": "12.2.5",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "value",
+              "text": "Protocolo",
+              "type": "string"
+            },
+            {
+              "selector": "count",
+              "text": "Fluxos",
+              "type": "number"
+            }
+          ],
+          "filters": [],
+          "format": "table",
+          "parser": "backend",
+          "refId": "A",
+          "root_selector": "$.protocols",
+          "source": "url",
+          "type": "json",
+          "url": "http://api:8000/api/v1/dashboard/breakdowns?top_n=10&start=${__from:date:iso}&end=${__to:date:iso}",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "Protocolos observados no replay",
+      "type": "barchart"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "tcc-fastapi"
+      },
+      "description": "IPs de origem do GeneratedLabelledFlows, associados somente após a validação das features contra X_test. O ranking inclui apenas fluxos sinalizados como anomalia pelo modelo.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {},
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 1
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 8,
+        "y": 12
+      },
+      "id": 8,
+      "options": {
+        "barRadius": 0,
+        "barWidth": 0.8,
+        "fullHighlight": false,
+        "groupWidth": 0.7,
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "orientation": "horizontal",
+        "showValue": "always",
+        "stacking": "none",
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        },
+        "xTickLabelRotation": 0,
+        "xTickLabelSpacing": 0
+      },
+      "pluginVersion": "12.2.5",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "value",
+              "text": "IP de origem",
+              "type": "string"
+            },
+            {
+              "selector": "count",
+              "text": "Anomalias",
+              "type": "number"
+            }
+          ],
+          "filters": [],
+          "format": "table",
+          "parser": "backend",
+          "refId": "A",
+          "root_selector": "$.top_anomalous_sources",
+          "source": "url",
+          "type": "json",
+          "url": "http://api:8000/api/v1/dashboard/breakdowns?top_n=10&start=${__from:date:iso}&end=${__to:date:iso}",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "IPs de origem das anomalias",
+      "type": "barchart"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "tcc-fastapi"
+      },
+      "description": "Ranking baseado em destination_port, que existe no conjunto de features selecionadas.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {},
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 1
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 16,
+        "y": 12
+      },
+      "id": 9,
+      "options": {
+        "barRadius": 0,
+        "barWidth": 0.8,
+        "fullHighlight": false,
+        "groupWidth": 0.7,
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "orientation": "horizontal",
+        "showValue": "always",
+        "stacking": "none",
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        },
+        "xTickLabelRotation": 0,
+        "xTickLabelSpacing": 0
+      },
+      "pluginVersion": "12.2.5",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "value",
+              "text": "Porta",
+              "type": "string"
+            },
+            {
+              "selector": "count",
+              "text": "Anomalias",
+              "type": "number"
+            }
+          ],
+          "filters": [],
+          "format": "table",
+          "parser": "backend",
+          "refId": "A",
+          "root_selector": "$.destination_ports",
+          "source": "url",
+          "type": "json",
+          "url": "http://api:8000/api/v1/dashboard/breakdowns?top_n=10&start=${__from:date:iso}&end=${__to:date:iso}",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "Portas de destino mais frequentes nas anomalias",
+      "type": "barchart"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "tcc-fastapi"
+      },
+      "description": "Últimas decisões positivas no intervalo. Exibe previsões, não rótulos verdadeiros do teste.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {},
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 1
+              }
+            ]
+          },
+          "unit": "short",
+          "decimals": 4
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 16,
+        "x": 0,
+        "y": 19
+      },
+      "id": 10,
+      "options": {
+        "cellHeight": "sm",
+        "showHeader": true
+      },
+      "pluginVersion": "12.2.5",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "observed_at",
+              "text": "Observado em",
+              "type": "timestamp"
+            },
+            {
+              "selector": "event_id",
+              "text": "Evento",
+              "type": "string"
+            },
+            {
+              "selector": "anomaly_score",
+              "text": "Anomaly score",
+              "type": "number"
+            },
+            {
+              "selector": "threshold_distance",
+              "text": "Distância do limiar",
+              "type": "number"
+            },
+            {
+              "selector": "dst_port",
+              "text": "Porta de destino",
+              "type": "number"
+            },
+            {
+              "selector": "dataset_provenance_ref",
+              "text": "Referência de proveniência",
+              "type": "string"
+            }
+          ],
+          "filters": [],
+          "format": "table",
+          "parser": "backend",
+          "refId": "A",
+          "root_selector": "$.items",
+          "source": "url",
+          "type": "json",
+          "url": "http://api:8000/api/v1/anomalies/recent?limit=20&start=${__from:date:iso}&end=${__to:date:iso}",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "Anomalias recentes",
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "tcc-fastapi"
+      },
+      "description": "Fixação completa do modelo, limiar e ponto operacional usada em todas as consultas.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {},
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 1
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 8,
+        "x": 16,
+        "y": 19
+      },
+      "id": 11,
+      "options": {
+        "cellHeight": "sm",
+        "showHeader": true
+      },
+      "pluginVersion": "12.2.5",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "display_name",
+              "text": "Modelo",
+              "type": "string"
+            },
+            {
+              "selector": "experiment",
+              "text": "Experimento",
+              "type": "string"
+            },
+            {
+              "selector": "operating_point",
+              "text": "Ponto operacional",
+              "type": "string"
+            },
+            {
+              "selector": "threshold",
+              "text": "Limiar",
+              "type": "number"
+            },
+            {
+              "selector": "model_sha256",
+              "text": "SHA-256",
+              "type": "string"
+            },
+            {
+              "selector": "stored_documents",
+              "text": "Documentos",
+              "type": "number"
+            },
+            {
+              "selector": "mode",
+              "text": "Modo",
+              "type": "string"
+            }
+          ],
+          "filters": [],
+          "format": "table",
+          "parser": "backend",
+          "refId": "A",
+          "root_selector": "$.rows",
+          "source": "url",
+          "type": "json",
+          "url": "http://api:8000/api/v1/model/status",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "Identidade operacional e estado do repositório",
+      "type": "table"
+    }
+  ],
+  "refresh": "30s",
+  "schemaVersion": 41,
+  "tags": [
+    "tcc",
+    "cibersegurança",
+    "anomalias",
+    "offline-replay",
+    "experimental"
+  ],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "2026-01-01T00:00:00Z",
+    "to": "2026-01-02T04:00:00Z"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "30s",
+      "1m",
+      "5m",
+      "15m"
+    ]
+  },
+  "timezone": "utc",
+  "title": "TCC — Detecção de Anomalias de Rede (Replay Experimental)",
+  "uid": "tcc-network-anomaly",
+  "version": 1,
+  "weekStart": "monday"
+}

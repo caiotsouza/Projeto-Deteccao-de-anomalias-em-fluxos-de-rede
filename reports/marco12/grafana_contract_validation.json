@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "dashboard_path": "infra/grafana/dashboards/tcc-network-anomaly.json",
+  "dashboard_sha256": "3eb2c88a2fb921abb071548dd1eafabe30626921771a1eb02d41e97e1c3210ee",
+  "checks": {
+    "json_valid": true,
+    "panel_count": 11,
+    "panel_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "unique_panel_ids": true,
+    "datasource_uid_fixed": true,
+    "used_routes": [
+      "/api/v1/anomalies/recent",
+      "/api/v1/dashboard/breakdowns",
+      "/api/v1/dashboard/overview",
+      "/api/v1/dashboard/timeseries",
+      "/api/v1/model/status"
+    ],
+    "expected_routes": [
+      "/api/v1/anomalies/recent",
+      "/api/v1/dashboard/breakdowns",
+      "/api/v1/dashboard/overview",
+      "/api/v1/dashboard/timeseries",
+      "/api/v1/model/status"
+    ],
+    "all_routes_implemented": true,
+    "forbidden_terms_found": [],
+    "offline_replay_warning_present": true,
+    "balanced_warning_present": true,
+    "simulated_time_warning_present": true,
+    "score_probability_warning_present": true,
+    "timezone": "utc",
+    "refresh": "30s"
+  },
+  "targets": [
+    {
+      "panel_id": 1,
+      "route": "/api/v1/dashboard/overview",
+      "route_exists_in_openapi": true,
+      "datasource_uid": "tcc-fastapi",
+      "parser": "backend",
+      "root_selector": "$.rows"
+    },
+    {
+      "panel_id": 2,
+      "route": "/api/v1/dashboard/overview",
+      "route_exists_in_openapi": true,
+      "datasource_uid": "tcc-fastapi",
+      "parser": "backend",
+      "root_selector": "$.rows"
+    },
+    {
+      "panel_id": 3,
+      "route": "/api/v1/dashboard/overview",
+      "route_exists_in_openapi": true,
+      "datasource_uid": "tcc-fastapi",
+      "parser": "backend",
+      "root_selector": "$.rows"
+    },
+    {
+      "panel_id": 4,
+      "route": "/api/v1/dashboard/overview",
+      "route_exists_in_openapi": true,
+      "datasource_uid": "tcc-fastapi",
+      "parser": "backend",
+      "root_selector": "$.rows"
+    },
+    {
+      "panel_id": 5,
+      "route": "/api/v1/dashboard/timeseries",
+      "route_exists_in_openapi": true,
+      "datasource_uid": "tcc-fastapi",
+      "parser": "backend",
+      "root_selector": "$.items"
+    },
+    {
+      "panel_id": 6,
+      "route": "/api/v1/dashboard/timeseries",
+      "route_exists_in_openapi": true,
+      "datasource_uid": "tcc-fastapi",
+      "parser": "backend",
+      "root_selector": "$.items"
+    },
+    {
+      "panel_id": 7,
+      "route": "/api/v1/dashboard/breakdowns",
+      "route_exists_in_openapi": true,
+      "datasource_uid": "tcc-fastapi",
+      "parser": "backend",
+      "root_selector": "$.protocols"
+    },
+    {
+      "panel_id": 8,
+      "route": "/api/v1/dashboard/breakdowns",
+      "route_exists_in_openapi": true,
+      "datasource_uid": "tcc-fastapi",
+      "parser": "backend",
+      "root_selector": "$.top_anomalous_sources"
+    },
+    {
+      "panel_id": 9,
+      "route": "/api/v1/dashboard/breakdowns",
+      "route_exists_in_openapi": true,
+      "datasource_uid": "tcc-fastapi",
+      "parser": "backend",
+      "root_selector": "$.destination_ports"
+    },
+    {
+      "panel_id": 10,
+      "route": "/api/v1/anomalies/recent",
+      "route_exists_in_openapi": true,
+      "datasource_uid": "tcc-fastapi",
+      "parser": "backend",
+      "root_selector": "$.items"
+    },
+    {
+      "panel_id": 11,
+      "route": "/api/v1/model/status",
+      "route_exists_in_openapi": true,
+      "datasource_uid": "tcc-fastapi",
+      "parser": "backend",
+      "root_selector": "$.rows"
+    }
+  ]
+}

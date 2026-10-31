@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "collection": "network_flow_predictions",
+  "validation_level": "strict",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "required": [
+        "schema_version",
+        "event_id",
+        "observed_at",
+        "processed_at_utc",
+        "source",
+        "model",
+        "classification",
+        "context"
+      ],
+      "properties": {
+        "schema_version": {
+          "bsonType": "int"
+        },
+        "event_id": {
+          "bsonType": "string",
+          "minLength": 1
+        },
+        "observed_at": {
+          "bsonType": "date",
+          "description": "Persist as BSON Date in MongoDB. ISO strings exist only at the application boundary."
+        },
+        "processed_at_utc": {
+          "bsonType": "date"
+        },
+        "source": {
+          "bsonType": "string"
+        },
+        "model": {
+          "bsonType": "object",
+          "required": [
+            "experiment",
+            "key",
+            "display_name",
+            "sha256",
+            "operating_point",
+            "threshold",
+            "positive_rule"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "experiment": {"bsonType": "string"},
+            "key": {"bsonType": "string"},
+            "display_name": {"bsonType": "string"},
+            "sha256": {"bsonType": "string", "pattern": "^[0-9a-f]{64}$"},
+            "operating_point": {"bsonType": "string"},
+            "threshold": {"bsonType": "double"},
+            "positive_rule": {"bsonType": "string"}
+          }
+        },
+        "classification": {
+          "bsonType": "object",
+          "required": [
+            "status",
+            "is_anomaly",
+            "predicted_anomaly",
+            "native_predicted_anomaly",
+            "sklearn_native_prediction",
+            "anomaly_score",
+            "score_samples",
+            "decision_function",
+            "threshold_distance",
+            "anomaly_score_is_probability"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "status": {"enum": ["normal", "anomaly"]},
+            "is_anomaly": {"bsonType": "bool"},
+            "predicted_anomaly": {"enum": [0, 1]},
+            "native_predicted_anomaly": {"enum": [0, 1]},
+            "sklearn_native_prediction": {"enum": [-1, 1]},
+            "anomaly_score": {"bsonType": "double"},
+            "score_samples": {"bsonType": "double"},
+            "decision_function": {"bsonType": "double"},
+            "threshold_distance": {"bsonType": "double"},
+            "anomaly_score_is_probability": {"enum": [false]}
+          }
+        },
+        "context": {
+          "bsonType": "object",
+          "additionalProperties": false,
+          "properties": {
+            "dataset": {"bsonType": "string"},
+            "dataset_split": {"bsonType": "string"},
+            "dataset_provenance_ref": {"bsonType": "string"},
+            "dataset_source_row": {"bsonType": ["int", "long"]},
+            "dataset_record_hash": {"bsonType": "string"},
+            "replay_namespace": {"bsonType": "string"},
+            "replay_sequence": {"bsonType": ["int", "long"]},
+            "timestamp_origin": {"bsonType": "string"},
+            "context_origin": {"bsonType": "string"},
+            "dataset_balance_warning": {"bsonType": "string"},
+            "src_ip": {"bsonType": "string"},
+            "dst_ip": {"bsonType": "string"},
+            "protocol": {"bsonType": "string"},
+            "dst_port": {"bsonType": ["int", "long"]},
+            "flow_duration": {"bsonType": ["int", "long", "double"]},
+            "total_fwd_packets": {"bsonType": ["int", "long", "double"]},
+            "total_backward_packets": {"bsonType": ["int", "long", "double"]},
+            "total_fwd_bytes": {"bsonType": ["int", "long", "double"]},
+            "total_backward_bytes": {"bsonType": ["int", "long", "double"]}
+          }
+        }
+      }
+    }
+  },
+  "recommended_indexes": [
+    {
+      "keys": {
+        "event_id": 1
+      },
+      "unique": true,
+      "purpose": "Idempotent ingestion"
+    },
+    {
+      "keys": {
+        "observed_at": -1
+      },
+      "purpose": "Grafana time-range filtering"
+    },
+    {
+      "keys": {
+        "classification.is_anomaly": 1,
+        "observed_at": -1
+      },
+      "purpose": "Recent anomaly panels"
+    },
+    {
+      "keys": {
+        "context.src_ip": 1,
+        "observed_at": -1
+      },
+      "purpose": "Top anomalous source investigation"
+    },
+    {
+      "keys": {
+        "context.dst_port": 1,
+        "observed_at": -1
+      },
+      "purpose": "Destination port analysis"
+    }
+  ],
+  "retention": {
+    "ttl_enabled_by_default": false,
+    "note": "Define retention with the TCC data-governance policy first."
+  }
+}

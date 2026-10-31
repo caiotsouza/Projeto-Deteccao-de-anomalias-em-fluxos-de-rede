@@ -1,0 +1,28 @@
+{
+    "schema_version":  1,
+    "status":  "completed",
+    "definition":  {
+                       "scenario":  "lab03_small",
+                       "repetition":  2,
+                       "source_ip":  "172.31.50.161",
+                       "target_ip":  "172.31.60.10",
+                       "url":  "http://172.31.60.10:8000/benign-v1/small_16k.bin",
+                       "requests":  30,
+                       "expected_bytes_per_request":  16384,
+                       "expected_total_body_bytes":  491520,
+                       "interval_seconds":  2,
+                       "maximum_transfer_rate":  "512K",
+                       "concurrency":  1,
+                       "http_version":  "1.0",
+                       "redirects":  false,
+                       "retries":  0,
+                       "purpose":  "controlled benign HTTP activity; no inferred ground-truth labels"
+                   },
+    "started_at_utc":  "2026-10-25T23:53:40.9650842Z",
+    "completed_at_utc":  "2026-10-25T23:54:40.4235958Z",
+    "attempted_requests":  30,
+    "successful_requests":  30,
+    "error":  null,
+    "ground_truth_labels_generated":  false,
+    "capture_started_acknowledged":  true
+}

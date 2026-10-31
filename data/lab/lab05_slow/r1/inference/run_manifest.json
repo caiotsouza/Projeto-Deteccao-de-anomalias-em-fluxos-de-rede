@@ -1,0 +1,369 @@
+{
+  "schema_version": 1,
+  "status": "exploratory_inference_completed",
+  "created_at_utc": "2026-10-25T21:52:49.904459+00:00",
+  "methodology": {
+    "adapter_version": "lab-v4-exploratory-v1",
+    "scenario": "lab05_slow_r1",
+    "experimental_v4_accepted": true,
+    "structural_audit": {
+      "profile": "v4",
+      "source_commit": "98a5ebad0df579cc8b43eedd3421b3ae87699901",
+      "image_id": "sha256:c6e330bb0e79ff20f014fe6b6108afda5799a22e78bbd7309b9b7dbaaaa0d508",
+      "csv_sha256": "c28b7b233225b8880ec08c72221e6f2cf70c06521545cdc74b12f0ed4b3e4cc7",
+      "rows": 12,
+      "raw_columns": 84,
+      "feature_count": 60,
+      "schema_sha256": "07bd5818c91930b6ceb8178e160d9365260f6b92f629fa02ef14227cfaa113a4",
+      "dtypes": {
+        "int64": 39,
+        "float64": 21
+      },
+      "packet_count_sum": 9245,
+      "payload_bytes_sum": 12584760,
+      "packet_count_pairs": [
+        {
+          "forward": 6,
+          "backward": 1,
+          "rows": 1
+        },
+        {
+          "forward": 13,
+          "backward": 1,
+          "rows": 1
+        },
+        {
+          "forward": 14,
+          "backward": 1,
+          "rows": 1
+        },
+        {
+          "forward": 23,
+          "backward": 1,
+          "rows": 1
+        },
+        {
+          "forward": 26,
+          "backward": 1,
+          "rows": 1
+        },
+        {
+          "forward": 28,
+          "backward": 1,
+          "rows": 1
+        },
+        {
+          "forward": 65,
+          "backward": 1440,
+          "rows": 1
+        },
+        {
+          "forward": 69,
+          "backward": 1440,
+          "rows": 1
+        },
+        {
+          "forward": 78,
+          "backward": 1440,
+          "rows": 1
+        },
+        {
+          "forward": 81,
+          "backward": 1440,
+          "rows": 1
+        },
+        {
+          "forward": 98,
+          "backward": 1440,
+          "rows": 2
+        }
+      ],
+      "flag_values": {
+        "fin_flag_count": [
+          1
+        ],
+        "syn_flag_count": [
+          0,
+          2
+        ],
+        "rst_flag_count": [
+          0
+        ],
+        "psh_flag_count": [
+          0,
+          43,
+          45,
+          47,
+          48,
+          49
+        ],
+        "ack_flag_count": [
+          7,
+          14,
+          15,
+          24,
+          27,
+          29,
+          1504,
+          1508,
+          1517,
+          1520,
+          1537
+        ],
+        "urg_flag_count": [
+          0
+        ],
+        "ece_flag_count": [
+          0
+        ]
+      },
+      "payload_rows": [
+        {
+          "flow_duration": 7652,
+          "total_fwd_packets": 69,
+          "total_backward_packets": 1440,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 1389.0463576158957,
+          "average_packet_size": 1389.9668654738236
+        },
+        {
+          "flow_duration": 9854,
+          "total_fwd_packets": 98,
+          "total_backward_packets": 1440,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 1362.8719948018183,
+          "average_packet_size": 1363.7581274382314
+        },
+        {
+          "flow_duration": 8821,
+          "total_fwd_packets": 98,
+          "total_backward_packets": 1440,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 1362.8719948018188,
+          "average_packet_size": 1363.7581274382314
+        },
+        {
+          "flow_duration": 8822,
+          "total_fwd_packets": 65,
+          "total_backward_packets": 1440,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 1392.7357237715792,
+          "average_packet_size": 1393.6611295681064
+        },
+        {
+          "flow_duration": 8229,
+          "total_fwd_packets": 81,
+          "total_backward_packets": 1440,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 1378.0946123521712,
+          "average_packet_size": 1379.000657462196
+        },
+        {
+          "flow_duration": 7919,
+          "total_fwd_packets": 78,
+          "total_backward_packets": 1440,
+          "init_win_bytes_forward": 64240,
+          "init_win_bytes_backward": 126,
+          "min_seg_size_forward": 20,
+          "packet_length_mean": 1380.816326530609,
+          "average_packet_size": 1381.725955204216
+        }
+      ],
+      "label_ignored": true,
+      "structural_validation": "passed",
+      "semantic_compatibility": "not_established",
+      "automatic_inference_allowed": false
+    },
+    "label_used": false,
+    "rows_dropped": 0,
+    "features_imputed": false,
+    "flags_clipped": false,
+    "segments_merged": false,
+    "timestamp_timezone": "UTC",
+    "timestamp_precision": "second",
+    "semantic_compatibility": "not_established",
+    "limitations": [
+      "Exact feature-calculation equivalence with CIC-IDS2017 is not established.",
+      "Environment shift and extractor changes are confounded in this experiment.",
+      "Exported segments are not independent connections or requests.",
+      "CSV timestamps have second precision and refer to exported flow starts in UTC.",
+      "Scores are not probabilities; signal rate is not precision, recall or FPR.",
+      "Endpoint grouping does not separate reuse of the same TCP 5-tuple.",
+      "No ground-truth labels are inferred from the extractor Label column."
+    ]
+  },
+  "models": {
+    "isolation_forest": {
+      "model_sha256": "d6f7754e14bbc7adb453eb298559efeebdccad98f59143283dc74a78211b4f40",
+      "operating_point": "validation_fpr_operational",
+      "threshold": 0.615824439899627,
+      "summary": {
+        "all_segments": {
+          "segments": 12,
+          "signaled_segments": 6,
+          "not_signaled_segments": 6,
+          "signal_rate": 0.5,
+          "native_signaled_segments": 6,
+          "score_min": 0.4206080475848895,
+          "score_median": 0.5346327563953346,
+          "score_max": 0.6530848176418931
+        },
+        "with_payload": {
+          "segments": 6,
+          "signaled_segments": 6,
+          "not_signaled_segments": 0,
+          "signal_rate": 1.0,
+          "native_signaled_segments": 6,
+          "score_min": 0.6453772572459657,
+          "score_median": 0.6475760380897656,
+          "score_max": 0.6530848176418931
+        },
+        "zero_payload": {
+          "segments": 6,
+          "signaled_segments": 0,
+          "not_signaled_segments": 6,
+          "signal_rate": 0.0,
+          "native_signaled_segments": 0,
+          "score_min": 0.4206080475848895,
+          "score_median": 0.42259385167267594,
+          "score_max": 0.4238882555447035
+        },
+        "endpoint_groups": {
+          "total": 6,
+          "with_any_signaled_segment": 6
+        },
+        "supervised_metrics_computed": false,
+        "ground_truth_available": false
+      }
+    },
+    "lof": {
+      "model_sha256": "6c014381d6dc5fc70a46941a450e2a60dc7b83b1bb0fcee43a7653107814df41",
+      "operating_point": "validation_fpr_operational",
+      "threshold": 91.08685969933371,
+      "summary": {
+        "all_segments": {
+          "segments": 12,
+          "signaled_segments": 12,
+          "not_signaled_segments": 0,
+          "signal_rate": 1.0,
+          "native_signaled_segments": 12,
+          "score_min": 592.0002604399908,
+          "score_median": 874.2828787213203,
+          "score_max": 2653.8793964139486
+        },
+        "with_payload": {
+          "segments": 6,
+          "signaled_segments": 6,
+          "not_signaled_segments": 0,
+          "signal_rate": 1.0,
+          "native_signaled_segments": 6,
+          "score_min": 697.1667683251911,
+          "score_median": 820.3690565487966,
+          "score_max": 924.1579751631476
+        },
+        "zero_payload": {
+          "segments": 6,
+          "signaled_segments": 6,
+          "not_signaled_segments": 0,
+          "signal_rate": 1.0,
+          "native_signaled_segments": 6,
+          "score_min": 592.0002604399908,
+          "score_median": 1757.6124864633161,
+          "score_max": 2653.8793964139486
+        },
+        "endpoint_groups": {
+          "total": 6,
+          "with_any_signaled_segment": 6
+        },
+        "supervised_metrics_computed": false,
+        "ground_truth_available": false
+      }
+    }
+  },
+  "decision_agreement": {
+    "segments": 12,
+    "agree": 6,
+    "disagree": 6,
+    "is_accuracy_measure": false
+  },
+  "integrity": {
+    "protected_files_unchanged": true,
+    "sha256": {
+      "./data/lab/lab05_slow/r1/input/a21d9530-64fc-4145-a022-ac55d3d8c1f5_hn2.pcap": "45c0fc51781d6bd92b20ffbe976e416cd724400dc67f43dbf18e443e9c4f69d3",
+      "./data/processed/monday_feature_manifest.json": "6c779db5acdcebf99dabf8e2c112f91d53c2e477aac6d665aa91f00f69786afe",
+      "./experiments/scale_100k/data/splits/split_manifest.json": "35365d8328114a0356b762e68cc94ac12eb52feb5ffb97cdf3f2ac81c5469587",
+      "./reports/operational/model_registry_operational.json": "5705e4c770e6271f8f7fea83f57653d15dc0b1725cdb59b3909d5bbaa84aff74",
+      "./experiments/scale_100k/models/isolation_forest.joblib": "d6f7754e14bbc7adb453eb298559efeebdccad98f59143283dc74a78211b4f40",
+      "./experiments/scale_100k/models/isolation_forest_metadata.json": "a1ebefcb8e97cacbf8150524ed70aee83e1e46e0682c00342895e1f8d787b16e",
+      "./experiments/scale_100k/models/lof.joblib": "6c014381d6dc5fc70a46941a450e2a60dc7b83b1bb0fcee43a7653107814df41",
+      "./experiments/scale_100k/models/lof_metadata.json": "de2a00fbd12face7aef99fc03569c7fb0e94341373350294f94a2bb92a5c01d1",
+      "./data/lab/lab05_slow/r1/extracted/a21d9530-64fc-4145-a022-ac55d3d8c1f5_hn2.pcap_Flow.csv": "c28b7b233225b8880ec08c72221e6f2cf70c06521545cdc74b12f0ed4b3e4cc7",
+      "./data/lab/lab05_slow/r1/extracted/extraction_run.json": "ac5b5dd15ef4b485408849b91b801a05e10a43853ec18dbe9317eaa16d3fe495"
+    },
+    "registered_artifacts": {
+      "isolation_forest/model_artifact": {
+        "registered_sha256": "d6f7754e14bbc7adb453eb298559efeebdccad98f59143283dc74a78211b4f40",
+        "actual_sha256": "d6f7754e14bbc7adb453eb298559efeebdccad98f59143283dc74a78211b4f40",
+        "matches_registry": true,
+        "used_for_inference": true
+      },
+      "isolation_forest/metadata_artifact": {
+        "registered_sha256": "36629c3d3198782f2eb1245ab8e622bbb4a4329030960c9eed23ff479c26bb0d",
+        "actual_sha256": "a1ebefcb8e97cacbf8150524ed70aee83e1e46e0682c00342895e1f8d787b16e",
+        "matches_registry": false,
+        "used_for_inference": false
+      },
+      "lof/model_artifact": {
+        "registered_sha256": "6c014381d6dc5fc70a46941a450e2a60dc7b83b1bb0fcee43a7653107814df41",
+        "actual_sha256": "6c014381d6dc5fc70a46941a450e2a60dc7b83b1bb0fcee43a7653107814df41",
+        "matches_registry": true,
+        "used_for_inference": true
+      },
+      "lof/metadata_artifact": {
+        "registered_sha256": "3984d7d554de780a290cc521f849f60a36fb7cb4551734ce49768532bfdeb288",
+        "actual_sha256": "de2a00fbd12face7aef99fc03569c7fb0e94341373350294f94a2bb92a5c01d1",
+        "matches_registry": false,
+        "used_for_inference": false
+      }
+    },
+    "auxiliary_metadata_used_for_inference": false,
+    "warnings": [
+      "Registered hash mismatch: isolation_forest/metadata_artifact; auxiliary JSON not used for inference.",
+      "Registered hash mismatch: lof/metadata_artifact; auxiliary JSON not used for inference."
+    ]
+  },
+  "runtime": {
+    "python": "3.14.7",
+    "scikit-learn": "1.9.0",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "scipy": "1.18.1",
+    "joblib": "1.5.3"
+  },
+  "implementation_sha256": {
+    "predict_lab_v4.py": "e83f68d480866ce0e11bdd5f0a9356d1d5626c67f6ec62e2631a8e8f32109b9b",
+    "src/lab_v4_adapter.py": "f22862b92be6c8b6ed3c15cd1175672d1b571d05abed7bb5c835481f0d72958e",
+    "src/lab_flow_audit.py": "28d6ed3afb14d7d5e4f2f40c361358b49676a99969044f336fcde59f90aef684",
+    "src/inference_service.py": "74a03c357eee2aa22ff1e04caef596ff30e88b81e32200f4a61b0fdbb3315a0b",
+    "src/data_split.py": "9809f0547b325a51ac6435f9d684f7157b26e740937dcedf8568343afcac6689"
+  },
+  "models_retrained": false,
+  "thresholds_recalibrated": false,
+  "database_written": false,
+  "production_approved": false,
+  "output_sha256": {
+    "model_inputs.json": "2e8431b97f008e4b7f2368dfcb975d7f3cea22ed5a90a01e48a4deaa302e3dae",
+    "isolation_forest_predictions.json": "b02bdfcf3dd44a33379367a7a0a4693a42b2f97e8a647d264a2c287cdbf109d3",
+    "lof_predictions.json": "65a69febae2f5f332c2853f67fb9fa2354491cc9bfe500605ede253ed99c9896"
+  }
+}
